@@ -16,12 +16,16 @@ vlan_pool:
     start_vlan: 1101
     stop_vlan: 1200
     action: created,modified
-- name: test2_vlan_pool
-  alloc_mode: dynamic
+- name: test2
+  action: deleted
+
+- name: ACILab_VMM-VLANs-test
   action: created,modified
+  alloc_mode: dynamic
   vlan_range:
   - name:
     start_vlan: 2000
     stop_vlan: 2100
     alloc_mode: dynamic
     action: created,modified
+  
