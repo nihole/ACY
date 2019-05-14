@@ -5,25 +5,25 @@ global:
 
 link_level:
 - name: Link-40Gbps
-  auto_negotiation: on
+  auto_negotiation: "on"
   speed: 40G
   debounce_interval: 100
   description:
   action: created,modified
 - name: Link-10Gbps
-  auto_negotiation: on
+  auto_negotiation: "on"
   speed: 10G
   debounce_interval: 100
   description:
   action: created,modified
 - name: Link-1Gbps-auto
-  auto_negotiation: on
+  auto_negotiation: "on"
   speed: 1G
   debounce_interval: 100
   description:
   action: created,modified
 - name: Link-1Gbps
-  auto_negotiation: off
+  auto_negotiation: "off"
   speed: 1G
   debounce_interval: 100
   description:
