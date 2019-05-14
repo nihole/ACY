@@ -12,20 +12,7 @@
 		<vmmRsDefaultCdpIfPol tnCdpIfPolName="default"/>
 		<vmmRsDefaultLacpLagPol tnLacpLagPolName="default"/>
 		<vmmRsDefaultL2InstPol tnL2InstPolName="default"/>
-		<vmmUsrAccP descr="None" name="administrator" usr="administrator@vsphere.local" pwd="C1sco12345!"/>
-	</vmmDomP>
-	<vmmDomP   enfPref="hw" mcastAddr="0.0.0.0" mode="default" name="ACILab-vDS-test2" status="created,modified">
-		<vmmRsDefaultStpIfPol tnStpIfPolName="default"/>
-		<vmmRsDefaultFwPol tnNwsFwPolName="default"/>
-		<infraRsVlanNs tDn="uni/infra/vlanns-[ACILab_VMM-VLANs-test]-dynamic"/>
-		<vmmCtrlrP dvsVersion="unmanaged" hostOrIp="198.18.133.30" inventoryTrigSt="untriggered" mode="default" msftConfigIssues="" name="VC" port="0" rootContName="dCloud-DC" scope="vm" statsMode="disabled">
-		 <vmmRsAcc tDn="uni/vmmp-VMware/dom-ACILab-vDS-test2/usracc-administrator"/>
-		</vmmCtrlrP>
-		<vmmRsDefaultLldpIfPol tnLldpIfPolName="default"/>
-		<vmmRsDefaultCdpIfPol tnCdpIfPolName="default"/>
-		<vmmRsDefaultLacpLagPol tnLacpLagPolName="default"/>
-		<vmmRsDefaultL2InstPol tnL2InstPolName="default"/>
-		<vmmUsrAccP descr="None" name="administrator" usr="administrator@vsphere.local" pwd="C1sco12345!"/>
+		<vmmUsrAccP descr="" name="administrator" usr="administrator@vsphere.local" pwd="C1sco12345!"/>
 	</vmmDomP>
  </vmmProvP>
 </polUni>
