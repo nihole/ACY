@@ -3,7 +3,7 @@ global:
   name: ""
   description: ""
   lldp_pol: lldp_enabled
-  stp_pol: bpdu_filter_guard
+  stp_pol: bpdu-guard-filter-enabled
   cdp_pol: cdp_disabled
   monitor: default
   l2_int_pol: global_vlan_scope
