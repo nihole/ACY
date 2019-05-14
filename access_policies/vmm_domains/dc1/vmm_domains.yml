@@ -4,7 +4,7 @@ global:
   description: ""
 
 vmm_domain:
-- name: ACILab-vDS-test1
+  name: ACILab-vDS-test1
   action: created,modified
   vlan_dynamic_pool: ACILab_VMM-VLANs-test
   vcenter_hostname_ip: 198.18.133.30
