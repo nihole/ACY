@@ -1,0 +1,27 @@
+global:
+  action: ignore
+  name: ""
+  description: ""
+  alloc_mode: static
+
+vlan_pool:
+- name: test1_vlan_pool
+  action: created,modified
+  vlan_range:
+  - name:
+    start_vlan: 1000
+    stop_vlan: 1100
+    action: created,modified
+  - name:
+    start_vlan: 1101
+    stop_vlan: 1200
+    action: created,modified
+- name: test2_vlan_pool
+  alloc_mode: dynamic
+  action: created,modified
+  vlan_range:
+  - name:
+    start_vlan: 2000
+    stop_vlan: 2100
+    alloc_mode: dynamic
+    action: created,modified

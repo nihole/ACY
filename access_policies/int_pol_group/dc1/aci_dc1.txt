@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+   	 <infraInfra>
+	    	<infraFuncP>
+			<infraAccBndlGrp ownerTag="" ownerKey="" name="test1_int_pol_group" lagT="link" descr="" status="created, modified">
+				<infraRsMonIfInfraPol tnMonInfraPolName=""/>
+				<infraRsLldpIfPol tnLldpIfPolName="ldp_enabled"/>
+				<infraRsStpIfPol tnStpIfPolName="bpdu_filter_guard"/>
+				<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+				<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+				<infraRsMcpIfPol tnMcpIfPolName="mcp_enabled"/>
+				<infraRsAttEntP tDn="uni/infra/attentp-test1_aaep"/>
+				<infraRsStormctrlIfPol tnStormctrlIfPolName="storm_control_40Gbs_interface"/>
+				<infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
+				<infraRsLacpPol tnLacpLagPolName="lacp_active_min2"/>
+			</infraAccBndlGrp>
+			<infraAccBndlGrp ownerTag="" ownerKey="" name="test2_int_pol_group" lagT="node" descr="" status="created, modified">
+				<infraRsMonIfInfraPol tnMonInfraPolName=""/>
+				<infraRsLldpIfPol tnLldpIfPolName="ldp_enabled"/>
+				<infraRsStpIfPol tnStpIfPolName="bpdu_filter_guard"/>
+				<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
+				<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+				<infraRsMcpIfPol tnMcpIfPolName="mcp_enabled"/>
+				<infraRsAttEntP tDn="uni/infra/attentp-test2_aaep"/>
+				<infraRsStormctrlIfPol tnStormctrlIfPolName="storm_control_10Gbs_interface"/>
+				<infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
+				<infraRsLacpPol tnLacpLagPolName="lacp_active_min2"/>
+			</infraAccBndlGrp>
+		</infraFuncP>
+	</infraInfra>
+</polUni>

@@ -1,0 +1,13 @@
+global:
+  name: ""
+  action: ignore
+  description: ""
+  type:
+  vlan_pool:
+  status:
+
+phys_domain:
+- name: test2_l3out_dom
+  type: external_l3
+  vlan_pool: test1_vlan_pool
+  action: created,modified

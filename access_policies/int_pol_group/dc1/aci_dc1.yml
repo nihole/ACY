@@ -1,0 +1,35 @@
+global:
+  action: ignore
+  name: ""
+  description: ""
+  lldp_pol: ldp_enabled
+  stp_pol: bpdu_filter_guard
+  cdp_pol: cdp_disabled
+  monitor: default
+  l2_int_pol: global_vlan_scope
+  mcp_pol: mcp_enabled
+  ipv4_netflow: netflow_IPv4
+  ipv6_netflow: netflow_IPv6
+  ingress_pol: no_policing
+  egress_pol: no_policing
+  port_security: port_security_disabled
+
+
+int_pol_group: 
+- name: test1_int_pol_group
+  type: PC
+  aaep: test1_aaep
+  lacp_pol: lacp_active_min2
+  storm_pol: storm_control_40Gbs_interface
+  link_pol: 40gig_auto
+  action: created,modified
+  description:
+- name: test2_int_pol_group
+  type: vPC
+  aaep: test2_aaep
+  lacp_pol: lacp_active_min2
+  storm_pol: storm_control_10Gbs_interface
+  link_pol: 10gig_auto
+  action: created,modified
+  description:
+
