@@ -1,23 +1,26 @@
 global:
   action: ignore
   name: ""
+  description: ""
   vlan_dynamic_pool:
-  vcenter_hostname_ip:
-  vcenter_controller_name: 
-  vcenter_datacenter_name: dc1
-  vcenter_credential_profile: vcenter-profile
-  vcenter_username: admin
-  vcenter_password: cisco123
+  vcenter_hostname_ip: 198.18.133.30
+  vcenter_controller_name: VC
+  vcenter_datacenter_name: dCloud-DC
+  vcenter_credential_profile: administrator
+  vcenter_username: administrator@vsphere.local
+  vcenter_password: C1sco12345!
   description:
 
 vmm_domain:
-- name: test_vmm
+- name: ACILab-vDS-test1
   action: created,modified
-  vlan_dynamic_pool: vmm_vlpool
-  vcenter_hostname_ip: vcenter.local
-  vcenter_controller_name: vcenter_controller
-  vcenter_datacenter_name:
+  vlan_dynamic_pool: ACILab_VMM-VLANs-test
+  vcenter_hostname_ip: 
+  vcenter_controller_name:
+  vcenter_datacenter_name: 
   vcenter_credential_profile:
   vcenter_username:
   vcenter_password:
+  pc_mode: MAC Pinning+
+  control: cdp
   description:

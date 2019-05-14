@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+<vmmProvP vendor="VMware">
+	<vmmDomP   enfPref="hw" mcastAddr="0.0.0.0" mode="default" name="ACILab-vDS-test1" status="created,modified">
+		<vmmRsDefaultStpIfPol tnStpIfPolName="default"/>
+		<vmmRsDefaultFwPol tnNwsFwPolName="default"/>
+		<infraRsVlanNs tDn="uni/infra/vlanns-[ACILab_VMM-VLANs-test]-dynamic"/>
+		<vmmCtrlrP dvsVersion="unmanaged" hostOrIp="198.18.133.30" inventoryTrigSt="untriggered" mode="default" msftConfigIssues="" name="VC" port="0" rootContName="" scope="vm" statsMode="disabled">
+		 <vmmRsAcc tDn="uni/vmmp-VMware/dom-ACILab-vDS-test1/usracc-administrator"/>
+		</vmmCtrlrP>
+		<vmmRsDefaultLldpIfPol tnLldpIfPolName="default"/>
+		<vmmRsDefaultCdpIfPol tnCdpIfPolName="default"/>
+		<vmmRsDefaultLacpLagPol tnLacpLagPolName="default"/>
+		<vmmRsDefaultL2InstPol tnL2InstPolName="default"/>
+		<vmmUsrAccP descr="None" name="administrator" usr="administrator@vsphere.local" pwd="C1sco12345!"/>
+	</vmmDomP>
+ </vmmProvP>
+</polUni>
