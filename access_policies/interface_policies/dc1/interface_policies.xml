@@ -2,14 +2,14 @@
 <polUni>
 	<infraInfra>
 		<lldpIfPol adminRxSt="disabled" adminTxSt="disabled" descr="" dn="uni/infra/lldpIfP-LLDP-disabled" name="LLDP-disabled" ownerKey="" ownerTag="" />
-		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active" maxLinks="16" minLinks="" mode="active" name="LACP-active" ownerKey="" ownerTag="" />
-		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active-min1-max1" maxLinks="1" minLinks="" mode="active" name="LACP-active-min1-max1" ownerKey="" ownerTag="" />
-		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active-min1-max2" maxLinks="2" minLinks="" mode="active" name="LACP-active-min1-max2" ownerKey="" ownerTag="" />
-		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active-min2-max4" maxLinks="4" minLinks="" mode="active" name="LACP-active-min2-max4" ownerKey="" ownerTag="" />
-		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active-min3-max6" maxLinks="6" minLinks="" mode="active" name="LACP-active-min3-max6" ownerKey="" ownerTag="" />
-		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active-min4-max8" maxLinks="8" minLinks="" mode="active" name="LACP-active-min4-max8" ownerKey="" ownerTag="" />
-		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active-min3-max4" maxLinks="4" minLinks="" mode="active" name="LACP-active-min3-max4" ownerKey="" ownerTag="" />
-		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-off" maxLinks="16" minLinks="" mode="False" name="LACP-off" ownerKey="" ownerTag="" />
+		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active" maxLinks="16" minLinks="1" mode="active" name="LACP-active" ownerKey="" ownerTag="" />
+		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active-min1-max1" maxLinks="1" minLinks="1" mode="active" name="LACP-active-min1-max1" ownerKey="" ownerTag="" />
+		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active-min1-max2" maxLinks="2" minLinks="1" mode="active" name="LACP-active-min1-max2" ownerKey="" ownerTag="" />
+		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active-min2-max4" maxLinks="4" minLinks="2" mode="active" name="LACP-active-min2-max4" ownerKey="" ownerTag="" />
+		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active-min3-max6" maxLinks="6" minLinks="3" mode="active" name="LACP-active-min3-max6" ownerKey="" ownerTag="" />
+		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active-min4-max8" maxLinks="8" minLinks="4" mode="active" name="LACP-active-min4-max8" ownerKey="" ownerTag="" />
+		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active-min3-max4" maxLinks="4" minLinks="3" mode="active" name="LACP-active-min3-max4" ownerKey="" ownerTag="" />
+		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-off" maxLinks="16" minLinks="1" mode="False" name="LACP-off" ownerKey="" ownerTag="" />
 		<stpIfPol ctrl="" descr="" dn="uni/infra/ifPol-bpdu-guard-filter-disabled" name="bpdu-guard-filter-disabled" ownerKey="" ownerTag="" />
 		<stpIfPol ctrl="bpdu-guard,bpdu-filter" descr="" dn="uni/infra/ifPol-bpdu-guard-filter-enabled" name="bpdu-guard-filter-enabled" ownerKey="" ownerTag="" />
 		<fabricHIfPol autoNeg="True" descr="" dn="uni/infra/hintfpol-Link-40Gbps" linkDebounce="100" name="Link-40Gbps" ownerKey="" ownerTag="" speed="40G"/>

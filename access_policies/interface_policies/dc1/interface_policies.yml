@@ -50,56 +50,56 @@ lldp:
 port_channel:
 - name: LACP-active
   mode: active
-  min_link: 1
+  min_links: 1
   max_links: 16
   control: fast-sel-hot-stdby,graceful-conv,susp-individual
   description:
   action: created,modified
 - name: LACP-active-min1-max1
   mode: active
-  min_link: 1
+  min_links: 1
   max_links: 1
   control: fast-sel-hot-stdby,graceful-conv,susp-individual
   description:
   action: created,modified
 - name: LACP-active-min1-max2
   mode: active
-  min_link: 1
+  min_links: 1
   max_links: 2
   control: fast-sel-hot-stdby,graceful-conv,susp-individual
   description:
   action: created,modified
 - name: LACP-active-min2-max4
   mode: active
-  min_link: 2
+  min_links: 2
   max_links: 4
   control: fast-sel-hot-stdby,graceful-conv,susp-individual
   description:
   action: created,modified
 - name: LACP-active-min3-max6
   mode: active
-  min_link: 3
+  min_links: 3
   max_links: 6
   control: fast-sel-hot-stdby,graceful-conv,susp-individual
   description:
   action: created,modified
 - name: LACP-active-min4-max8
   mode: active
-  min_link: 4
+  min_links: 4
   max_links: 8
   control: fast-sel-hot-stdby,graceful-conv,susp-individual
   description:
   action: created,modified
 - name: LACP-active-min3-max4
   mode: active
-  min_link: 3
+  min_links: 3
   max_links: 4
   control: fast-sel-hot-stdby,graceful-conv,susp-individual
   description:
   action: created,modified
 - name: LACP-off
   mode: off
-  min_link: 1
+  min_links: 1
   max_links: 16
   control: fast-sel-hot-stdby,graceful-conv,susp-individual
   description:
