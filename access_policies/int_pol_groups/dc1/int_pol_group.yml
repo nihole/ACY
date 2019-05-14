@@ -19,7 +19,7 @@ int_pol_group:
 - name: test1_int_pol_group
   type: PC
   aaep: test1_aaep
-  lacp_pol: LACP_active_min2_max4
+  lacp_pol: LACP-active-min2-max4
   storm_pol: 
   link_pol: 40gig_auto
   action: created,modified
@@ -27,7 +27,7 @@ int_pol_group:
 - name: test2_int_pol_group
   type: vPC
   aaep: test2_aaep
-  lacp_pol: LACP_active_min2_max4
+  lacp_pol: LACP-active-min2-max4
   storm_pol: ""
   link_pol: 10gig_auto
   action: created,modified
