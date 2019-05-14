@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<infraInfra>
+	  <lldpIfPol adminRxSt="enabled" adminTxSt="enabled" descr="" dn="uni/infra/lldpIfP-lldp_enabled" name="lldp_enabled" ownerKey="" ownerTag="" />
+	  <lldpIfPol adminRxSt="disabled" adminTxSt="disabled" descr="" dn="uni/infra/lldpIfP-lldp_disabled" name="lldp_disabled" ownerKey="" ownerTag="" />
+	  <lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="" dn="uni/infra/lacplagp-static_on" maxLinks="16" minLinks="1" mode="off" name="static_on" ownerKey="" ownerTag="" />
+	  <lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="" dn="uni/infra/lacplagp-mac_pinning" maxLinks="16" minLinks="1" mode="mac-pin" name="mac_pinning" ownerKey="" ownerTag="" />
+	  <lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="" dn="uni/infra/lacplagp-lacp_passive" maxLinks="16" minLinks="1" mode="passive" name="lacp_passive" ownerKey="" ownerTag="" />
+	  <lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="" dn="uni/infra/lacplagp-lacp_active" maxLinks="16" minLinks="1" mode="active" name="lacp_active" ownerKey="" ownerTag="" />
+	  <stpIfPol ctrl="bpdu-guard" descr="" dn="uni/infra/ifPol-bpdu_guard" name="bpdu_guard" ownerKey="" ownerTag="" />
+	  <stpIfPol ctrl="bpdu-filter" descr="" dn="uni/infra/ifPol-bpdu_filter" name="bpdu_filter" ownerKey="" ownerTag=""/>
+	  <stpIfPol ctrl="bpdu-filter,bpdu-guard" descr="" dn="uni/infra/ifPol-bpdu_filter_guard_enabled" name="bpdu_filter_guard_enabled" ownerKey="" ownerTag="" />
+	  <fabricHIfPol autoNeg="on" descr="" dn="uni/infra/hintfpol-10gig_auto" linkDebounce="100" name="10gig_auto" ownerKey="" ownerTag="" speed="10G"/>
+	  <fabricHIfPol autoNeg="off" descr="" dn="uni/infra/hintfpol-1gig_off" linkDebounce="100" name="1gig_off" ownerKey="" ownerTag="" speed="1G"/>
+	  <fabricHIfPol autoNeg="on" descr="" dn="uni/infra/hintfpol-1gig_auto" linkDebounce="100" name="1gig_auto" ownerKey="" ownerTag="" speed="1G"/>
+	  <fabricHIfPol autoNeg="on" descr="" dn="uni/infra/hintfpol-auto" linkDebounce="100" name="auto" ownerKey="" ownerTag="" speed="inherit" />
+	  <fabricHIfPol autoNeg="off" descr="" dn="uni/infra/hintfpol-10gig_off" linkDebounce="100" name="10gig_off" ownerKey="" ownerTag="" speed="10G"/>
+	  <fabricHIfPol autoNeg="on" descr="" dn="uni/infra/hintfpol-40gig_auto" linkDebounce="100" name="40gig_auto" ownerKey="" ownerTag="" speed="40G"/>
+      <cdpIfPol adminSt="enabled" descr="" dn="uni/infra/cdpIfP-cdp_enabled" name="cdp_enabled" ownerKey="" ownerTag="" />
+	  <cdpIfPol adminSt="disabled" descr="" dn="uni/infra/cdpIfP-cdp_disabled" name="cdp_disabled" ownerKey="" ownerTag="" />
+	  <l2IfPol descr="" dn="uni/infra/l2IfP-portlocal_vlan_scope" name="portlocal_vlan_scope" ownerKey="" ownerTag="" vlanScope="portlocal" />
+	  <l2IfPol descr="" dn="uni/infra/l2IfP-global_vlan_scope" name="global_vlan_scope" ownerKey="" ownerTag="" vlanScope="global" />
+	 </infraInfra>
+</polUni>

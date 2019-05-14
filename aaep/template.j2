@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<infraInfra>
+		{% for j in aaep %}
+                {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                {%if not action=="ignore"%}
+		{% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
+		{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+		{% set phys_dom %}{%if j.phys_dom%}{{j.phys_dom}}{%else%}{{global.phys_dom}}{%endif%}{% endset %}
+		{% set l3_ext_dom %}{%if j.l3_ext_dom%}{{j.l3_ext_dom}}{%else%}{{global.l3_ext_dom}}{%endif%}{% endset %}
+		{% set vmm_dom %}{%if j.vmm_dom%}{{j.vmm_dom}}{%else%}{{global.vmm_dom}}{%endif%}{% endset %}
+		<infraAttEntityP name="{{name}}" descr="{{description}}" status="{{action}}">
+		{% if phys_dom != "" %} 
+		  	<infraRsDomP tDn="uni/phys-{{phys_dom}}"/>
+		{% endif %}
+		{% if l3_ext_dom != "" %} 
+			<infraRsDomP tDn="uni/l3dom-{{l3_ext_dom}}"/>
+		{% endif %}
+		{% if vmm_dom != "" %} 
+		<infraRsDomP tDn="uni/vmmp-VMware/dom-{{vmm_dom}}"/>
+		{% endif %}
+		</infraAttEntityP>
+		{%endif%}{%endfor%}
+   	</infraInfra>
+</polUni>

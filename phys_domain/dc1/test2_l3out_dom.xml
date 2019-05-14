@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+        <l3extDomP name="test2_l3out_dom">
+		<infraRsVlanNs tDn="uni/infra/vlanns-test1_vlan_pool-static" status="created,modified"/>
+	</l3extDomP>
+</polUni>

@@ -1,0 +1,117 @@
+interface_policies:
+- type: link_level
+  policies:
+  - name: Link-40Gbps
+    auto_negotiation: on
+    speed: 40G
+    debounce_interval: 100
+  - name: Link-10Gbps
+    auto_negotiation: on
+    speed: 10G
+    debounce_interval: 100
+  - name: Link-1Gbps-auto
+    auto_negotiation: on
+    speed: 1G
+    debounce_interval: 100
+  - name: Link-1Gbps
+    auto_negotiation: off
+    speed: 1G
+    debounce_interval: 100
+- type: cdp
+  policies:
+  - name: CDP-enabled
+    admin_state: enabled
+  - name: CDP-disabled
+    admin_state: disabled
+
+- type: lldp
+  policies:
+  - name: LLDP-enabled
+    receive_state: enabled
+    transmit_state: enabled
+  - name: LLDP-disabled
+    receive_state: disabled
+    transmit_state: disabled
+
+- type: ports_channel
+  policies:
+  - name: LACP-active
+    mode: active
+    min_link: 1
+    max_links: 16
+    control: fast-sel-hot-stdby,graceful-conv,susp-individual
+  - name: LACP-active-min1-max1
+    mode: active
+    min_link: 1
+    max_links: 1
+    control: fast-sel-hot-stdby,graceful-conv,susp-individual
+  - name: LACP-active-min1-max2
+    mode: active
+    min_link: 1
+    max_links: 2
+    control: fast-sel-hot-stdby,graceful-conv,susp-individual
+  - name: LACP-active-min2-max4
+    mode: active
+    min_link: 2
+    max_links: 4
+    control: fast-sel-hot-stdby,graceful-conv,susp-individual
+  - name: LACP-active-min3-max6
+    mode: active
+    min_link: 3
+    max_links: 6
+    control: fast-sel-hot-stdby,graceful-conv,susp-individual
+  - name: LACP-active-min4-max8
+    mode: active
+    min_link: 4
+    max_links: 8
+    control: fast-sel-hot-stdby,graceful-conv,susp-individual
+  - name: LACP-active-min3-max4
+    mode: active
+    min_link: 3
+    max_links: 4
+    control: fast-sel-hot-stdby,graceful-conv,susp-individual
+  - name: LACP-off
+    mode: off
+    min_link: 1
+    max_links: 16
+    control: fast-sel-hot-stdby,graceful-conv,susp-individual
+
+- type: stp
+  policies: 
+  - name: BPDU-GUARD-FILTER-disabled
+    control:
+    description: BPDU filter and guard disabled
+  - name: BPDU-GUARD-FILTER-enabled
+    control: bpdu=guard,bpdu-filter
+    description: BPDU filter and guard enabled
+
+- type: storm
+  policies: 
+  - name: StormControl-01
+    rate_type: percentage
+    rate: 0.1
+    max_burst: 0.1
+  - name: StormControl-05
+    rate_type: percentage
+    rate: 0.5
+    max_burst: 0.5
+  - name: StormControl-100
+    rate_type: percentage
+    rate: 100
+    max_burst: 100
+
+- type: port_channel_member
+  policies:
+  - name: default
+    priority: 32768
+    transmit_rate: normal
+
+- type: l2_interface
+  policies:
+  - name: L2-GLOBAL-VLAM
+    vlan_scope: global
+  - name: L2-LOCAL-VLAM
+    vlan_scope: portlocal
+
+
+

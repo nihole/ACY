@@ -1,0 +1,24 @@
+global:
+  action: ignore
+  name: ""
+  description: ""
+  interface_profile:
+  interface_selector:
+  
+interface_range:
+- name: test1_int_range
+  interface_profile: test1_int_profile
+  interface_selector: test1_int_selector
+  slot_is: 201
+  form_port: 1/13
+  to_port: 1/13
+  action: created,modified
+  description:
+- name: test2_int_range
+  interface_profile: test2_int_profile
+  interface_selector: test2_int_selector
+  slot_is: 201
+  form_port: 1/14
+  to_port: 1/14
+  action: created,modified
+  description:
