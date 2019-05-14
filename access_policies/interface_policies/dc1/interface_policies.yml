@@ -98,7 +98,7 @@ port_channel:
   description:
   action: created,modified
 - name: LACP-off
-  mode: off
+  mode: "off"
   min_links: 1
   max_links: 16
   control: fast-sel-hot-stdby,graceful-conv,susp-individual
