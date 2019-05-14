@@ -10,9 +10,9 @@
 				<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
 				<infraRsMcpIfPol tnMcpIfPolName=""/>
 				<infraRsAttEntP tDn="uni/infra/attentp-test1_aaep"/>
-				<infraRsStormctrlIfPol tnStormctrlIfPolName="storm_control_40Gbs_interface"/>
+				<infraRsStormctrlIfPol tnStormctrlIfPolName=""/>
 				<infraRsHIfPol tnFabricHIfPolName="40gig_auto"/>
-				<infraRsLacpPol tnLacpLagPolName="lacp_active_min2"/>
+				<infraRsLacpPol tnLacpLagPolName="LACP_active_min2_max4"/>
 			</infraAccBndlGrp>
 			<infraAccBndlGrp ownerTag="" ownerKey="" name="test2_int_pol_group" lagT="node" descr="" status="created,modified">
 				<infraRsMonIfInfraPol tnMonInfraPolName=""/>
@@ -22,9 +22,9 @@
 				<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
 				<infraRsMcpIfPol tnMcpIfPolName=""/>
 				<infraRsAttEntP tDn="uni/infra/attentp-test2_aaep"/>
-				<infraRsStormctrlIfPol tnStormctrlIfPolName="storm_control_10Gbs_interface"/>
+				<infraRsStormctrlIfPol tnStormctrlIfPolName=""/>
 				<infraRsHIfPol tnFabricHIfPolName="10gig_auto"/>
-				<infraRsLacpPol tnLacpLagPolName="lacp_active_min2"/>
+				<infraRsLacpPol tnLacpLagPolName="LACP_active_min2_max4"/>
 			</infraAccBndlGrp>
 		</infraFuncP>
 	</infraInfra>
