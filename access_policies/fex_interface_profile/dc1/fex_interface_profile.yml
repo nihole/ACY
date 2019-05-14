@@ -1,0 +1,32 @@
+global:
+  name: ""
+  action: ignore
+  parent_leaf_id:
+  int_pol_group:
+  int_pol_group_type:
+  slot_id:
+  description:
+
+fex_interface_profile:
+- name: test1_fex_interface_profile
+  parent_leaf_id: 202
+  fex_id: 1202
+  int_pol_group: test1_int_pol_group
+  interface_selector: test1_interface_selector
+  int_pol_group_type: PC
+  slot_id: 1
+  from_port: 13
+  to_port: 13
+  action: created,modified
+  description:
+- name: test2_fex_interface_profile
+  parent_leaf_id: 202
+  fex_id: 1202
+  int_pol_group: test21_int_pol_group
+  interface_selector: test2_interface_selector
+  int_pol_group_type: PC
+  slot_id: 1
+  from_port: 14
+  to_port: 14
+  action: created,modified
+  description:
