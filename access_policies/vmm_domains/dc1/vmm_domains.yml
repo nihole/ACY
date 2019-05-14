@@ -21,6 +21,16 @@ vmm_domain:
   vcenter_credential_profile:
   vcenter_username:
   vcenter_password:
-  pc_mode: MAC Pinning+
-  control: cdp
   description:
+- name: ACILab-vDS-test2
+  action: created,modified
+  vlan_dynamic_pool: ACILab_VMM-VLANs-test
+  vcenter_hostname_ip:
+  vcenter_controller_name:
+  vcenter_datacenter_name:
+  vcenter_credential_profile:
+  vcenter_username:
+  vcenter_password:
+  description:
+
+
