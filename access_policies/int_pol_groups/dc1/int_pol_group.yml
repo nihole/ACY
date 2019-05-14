@@ -2,12 +2,12 @@ global:
   action: ignore
   name: ""
   description: ""
-  lldp_pol: ldp_enabled
+  lldp_pol: lldp_enabled
   stp_pol: bpdu_filter_guard
   cdp_pol: cdp_disabled
   monitor: default
   l2_int_pol: global_vlan_scope
-  mcp_pol: mcp_enabled
+  mcp_pol: ""
   ipv4_netflow: netflow_IPv4
   ipv6_netflow: netflow_IPv6
   ingress_pol: no_policing
