@@ -10,8 +10,8 @@
 		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active-min4-max8" maxLinks="8" minLinks="" mode="active" name="LACP-active-min4-max8" ownerKey="" ownerTag="" />
 		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active-min3-max4" maxLinks="4" minLinks="" mode="active" name="LACP-active-min3-max4" ownerKey="" ownerTag="" />
 		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-off" maxLinks="16" minLinks="" mode="False" name="LACP-off" ownerKey="" ownerTag="" />
-		<stpIfPol ctrl="None" descr="" dn="uni/infra/ifPol-BPDU-GUARD-FILTER-disabled" name="BPDU-GUARD-FILTER-disabled" ownerKey="" ownerTag="" />
-		<stpIfPol ctrl="bpdu-guard,bpdu-filter" descr="" dn="uni/infra/ifPol-BPDU-GUARD-FILTER-enabled" name="BPDU-GUARD-FILTER-enabled" ownerKey="" ownerTag="" />
+		<stpIfPol ctrl="" descr="" dn="uni/infra/ifPol-bpdu-guard-filter-disabled" name="bpdu-guard-filter-disabled" ownerKey="" ownerTag="" />
+		<stpIfPol ctrl="bpdu-guard,bpdu-filter" descr="" dn="uni/infra/ifPol-bpdu-guard-filter-enabled" name="bpdu-guard-filter-enabled" ownerKey="" ownerTag="" />
 		<fabricHIfPol autoNeg="True" descr="" dn="uni/infra/hintfpol-Link-40Gbps" linkDebounce="100" name="Link-40Gbps" ownerKey="" ownerTag="" speed="40G"/>
 		<fabricHIfPol autoNeg="True" descr="" dn="uni/infra/hintfpol-Link-10Gbps" linkDebounce="100" name="Link-10Gbps" ownerKey="" ownerTag="" speed="10G"/>
 		<fabricHIfPol autoNeg="True" descr="" dn="uni/infra/hintfpol-Link-1Gbps-auto" linkDebounce="100" name="Link-1Gbps-auto" ownerKey="" ownerTag="" speed="1G"/>

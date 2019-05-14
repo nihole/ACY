@@ -106,12 +106,12 @@ port_channel:
   action: created,modified
 
 stp:
-- name: BPDU-GUARD-FILTER-disabled
-  control:
+- name: bpdu-guard-filter-disabled
+  control: ""
   description: BPDU filter and guard disabled
   description:
   action: created,modified
-- name: BPDU-GUARD-FILTER-enabled
+- name: bpdu-guard-filter-enabled
   control: bpdu-guard,bpdu-filter
   description: BPDU filter and guard enabled
   description:
