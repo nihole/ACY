@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
 <vmmProvP vendor="VMware">
-	{% for j in vmm_domain %}
-	{% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
-	{%if not j.action=="ignore"%}
-	{% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
-	{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-	{% set vlan_dynamic_pool %}{%if j.vlan_dynamic_pool%}{{j.vlan_dynamic_pool}}{%else%}{{global.vlan_dynamic_pool}}{%endif%}{% endset %}
-	{% set vcenter_hostname_ip %}{%if j.vcenter_hostname_ip%}{{j.vcenter_hostname_ip}}{%else%}{{global.vcenter_hostname_ip}}{%endif%}{% endset %}
-	{% set vcenter_controller_name %}{%if j.vcenter_controller_name%}{{j.vcenter_controller_name}}{%else%}{{global.vcenter_controller_name}}{%endif%}{% endset %}
-	{% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
-	{% set vcenter_credential_profile %}{%if j.vcenter_credential_profile%}{{j.vcenter_credential_profile}}{%else%}{{global.vcenter_credential_profile}}{%endif%}{% endset %}
-	{% set vcenter_username %}{%if j.vcenter_username%}{{j.vcenter_username}}{%else%}{{global.vcenter_username}}{%endif%}{% endset %}
-	{% set vcenter_password %}{%if j.vcenter_password%}{{j.vcenter_password}}{%else%}{{global.vcenter_password}}{%endif%}{% endset %}
+	{% set action %}{%if vmm_domain.action%}{{vmm_domain.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+	{%if not action=="ignore"%}
+	{% set name %}{%if vmm_domain.name%}{{vmm_domain.name}}{%else%}{{global.name}}{%endif%}{% endset %}
+	{% set description %}{%if vmm_domain.description%}{{vmm_domain.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+	{% set vlan_dynamic_pool %}{{vmm_domain.vlan_dynamic_pool}}{%endset%}
+	{% set vcenter_hostname_ip %}{{vmm_domain.vcenter_hostname_ip}}{% endset %}
+	{% set vcenter_controller_name %}{{vmm_domain.vcenter_controller_name}}{% endset %}
+	{% set vcenter_datacenter_name %}{{vmm_domain.vcenter_datacenter_name}}{% endset %}
+	{% set vcenter_credential_profile %}{{vmm_domain.vcenter_credential_profile}}{% endset %}
+	{% set vcenter_username %}{{vmm_domain.vcenter_username}}{% endset %}
+	{% set vcenter_password %}{{vmm_domain.vcenter_password}}{% endset %}
 
 	<vmmDomP   enfPref="hw" mcastAddr="0.0.0.0" mode="default" name="{{name}}" status="{{action}}">
 		<vmmRsDefaultStpIfPol tnStpIfPolName="default"/>
@@ -27,6 +26,6 @@
 		<vmmRsDefaultL2InstPol tnL2InstPolName="default"/>
 		<vmmUsrAccP descr="{{description}}" name="{{vcenter_credential_profile}}" usr="{{vcenter_username}}" pwd="{{vcenter_password}}"/>
 	</vmmDomP>
-	{%endif%}{%endfor%}
+	{%endif%}
  </vmmProvP>
 </polUni>
