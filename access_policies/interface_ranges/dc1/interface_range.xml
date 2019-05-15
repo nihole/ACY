@@ -7,8 +7,8 @@
 				<infraPortBlk name="1616" descr="" toPort="16" toCard="1" fromPort="16" fromCard="1" status="created,modified"/>
 			</infraHPortS>
 			<infraHPortS name="test2_int_selector" descr="None" type="range">
-				<infraPortBlk name="1315" descr="" toPort="15" toCard="1" fromPort="13" fromCard="1" status="created,modified"/>
-				<infraPortBlk name="1616" descr="" toPort="16" toCard="1" fromPort="16" fromCard="1" status="created,modified"/>
+				<infraPortBlk name="1315" descr="" toPort="15" toCard="2" fromPort="13" fromCard="2" status="created,modified"/>
+				<infraPortBlk name="1616" descr="" toPort="16" toCard="2" fromPort="16" fromCard="2" status="created,modified"/>
 			</infraHPortS>
 		</infraAccPortP>
 		<infraAccPortP name="test2_int_profile">
@@ -17,8 +17,8 @@
 				<infraPortBlk name="1616" descr="" toPort="16" toCard="1" fromPort="16" fromCard="1" status="created,modified"/>
 			</infraHPortS>
 			<infraHPortS name="test2_int_selector" descr="None" type="range">
-				<infraPortBlk name="1315" descr="" toPort="15" toCard="1" fromPort="13" fromCard="1" status="created,modified"/>
-				<infraPortBlk name="1616" descr="" toPort="16" toCard="1" fromPort="16" fromCard="1" status="created,modified"/>
+				<infraPortBlk name="1315" descr="" toPort="15" toCard="2" fromPort="13" fromCard="2" status="created,modified"/>
+				<infraPortBlk name="1616" descr="" toPort="16" toCard="2" fromPort="16" fromCard="2" status="created,modified"/>
 			</infraHPortS>
 		</infraAccPortP>
    </infraInfra>

@@ -26,13 +26,13 @@ interface_profiles:
     description:
     interface_ranges:
     - name: 1315
-      slot_id: 1
+      slot_id: 2
       from_port: 13
       to_port: 15
       action: created,modified
       description:
     - name: 1616
-      slot_id: 1
+      slot_id: 2
       from_port: 16
       to_port: 16
       action: created,modified
@@ -59,13 +59,13 @@ interface_profiles:
     description:
     interface_ranges:
     - name: 1315
-      slot_id: 1
+      slot_id: 2
       from_port: 13
       to_port: 15
       action: created,modified
       description:
     - name: 1616
-      slot_id: 1
+      slot_id: 2
       from_port: 16
       to_port: 16
       action: created,modified
