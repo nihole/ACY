@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
 	<infraInfra>
-		{% for i in fex_interface_profiles %}
+		{% for i in interface_profiles %}
 		{% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
 		{% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
 		<infraFexP name="{{i.name}}" descr="description" status="{{action}}">
