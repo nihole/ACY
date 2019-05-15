@@ -2,16 +2,16 @@
 <polUni>
 	<infraInfra>
 		{% for i in interface_profiles %}
-		  {% set name %}{%if i.name%}{{i.name}}{%else%}{{global.name}}{%endif%}{% endset %}
-                  {% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-		  {% for j in i.interface_selectors %}
-		    {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
-	            {%if not j.action=="ignore"%}
-        	    {% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
-		    {% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-		    {% set int_pol_group_type %}{%if j.int_pol_group_type%}{{j.int_pol_group_type}}{%else%}{{global.int_pol_group_type}}{%endif%}{% endset %}
-		    {% set int_pol_group %}{%if j.int_pol_group%}{{j.int_pol_group}}{%else%}{{global.int_pol_group}}{%endif%}{% endset %}
-		<infraAccPortP name="{{i.name}}">
+		{% set name %}{%if i.name%}{{i.name}}{%else%}{{global.name}}{%endif%}{% endset %}
+		{% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+		<infraAccPortP name="{{name}}">
+		  	{% for j in i.interface_selectors %}
+		    	{% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+	            	{%if not j.action=="ignore"%}
+        	    	{% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
+		    	{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+		    	{% set int_pol_group_type %}{%if j.int_pol_group_type%}{{j.int_pol_group_type}}{%else%}{{global.int_pol_group_type}}{%endif%}{% endset %}
+		    	{% set int_pol_group %}{%if j.int_pol_group%}{{j.int_pol_group}}{%else%}{{global.int_pol_group}}{%endif%}{% endset %}
 			<infraHPortS name="{{name}}" descr="{{description}}" type="range" status="{{action}}">
 				{% if int_pol_group_type == 'Access'%}
 				{% set port_type %}accportgrp{% endset %}
@@ -20,7 +20,8 @@
 				{% endif %}
 				<infraRsAccBaseGrp tDn="uni/infra/funcprof/{{port_type}}-{{int_pol_group}}" fexId="101"/>
 			</infraHPortS>
+			{%endif%}{%endfor%}
 		</infraAccPortP>
-		{%endif%}{%endfor%}{%endfor%}
+		{%endfor%}
    	</infraInfra>
 </polUni>
