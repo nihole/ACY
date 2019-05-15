@@ -3,6 +3,6 @@ global:
   action: ignore
   description: ""
 interface_profiles:
-- name:
-  action:
+- name: test1_int_profile
+  action: created,modified
   description:

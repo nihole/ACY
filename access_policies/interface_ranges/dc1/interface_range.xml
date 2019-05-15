@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<infraInfra>
+	    	<infraAccPortP name="test1_int_profile">
+			<infraHPortS name="test1_int_selector" descr="" type="range">
+				<infraPortBlk name="test1_int_range" descr="" toPort="" toCard="" fromPort="" fromCard="" status="created,modified"/>
+			</infraHPortS>
+		</infraAccPortP>
+	    	<infraAccPortP name="test2_int_profile">
+			<infraHPortS name="test2_int_selector" descr="" type="range">
+				<infraPortBlk name="test2_int_range" descr="" toPort="" toCard="" fromPort="" fromCard="" status="created,modified"/>
+			</infraHPortS>
+		</infraAccPortP>
+   </infraInfra>
+</polUni>

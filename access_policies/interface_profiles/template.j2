@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
 	<infraInfra>
-		{% for j in interface_profile %}
+		{% for j in interface_profiles %}
                 {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
                 {%if not action=="ignore"%}
 		{% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
