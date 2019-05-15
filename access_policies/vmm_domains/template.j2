@@ -1,30 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
 <vmmProvP vendor="VMware">
-	{% set action %}{%if vmm_domain.action%}{{vmm_domain.action}}{%else%}{{global.action}}{%endif%}{% endset %}
-	{%if not action=="ignore"%}
-	{% set name %}{%if vmm_domain.name%}{{vmm_domain.name}}{%else%}{{global.name}}{%endif%}{% endset %}
-	{% set description %}{%if vmm_domain.description%}{{vmm_domain.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-	{% set vlan_dynamic_pool %}{{vmm_domain.vlan_dynamic_pool}}{%endset%}
-	{% set vcenter_hostname_ip %}{{vmm_domain.vcenter_hostname_ip}}{% endset %}
-	{% set vcenter_controller_name %}{{vmm_domain.vcenter_controller_name}}{% endset %}
-	{% set vcenter_datacenter_name %}{{vmm_domain.vcenter_datacenter_name}}{% endset %}
-	{% set vcenter_credential_profile %}{{vmm_domain.vcenter_credential_profile}}{% endset %}
-	{% set vcenter_username %}{{vmm_domain.vcenter_username}}{% endset %}
-	{% set vcenter_password %}{{vmm_domain.vcenter_password}}{% endset %}
-
-	<vmmDomP   enfPref="hw" mcastAddr="0.0.0.0" mode="default" name="{{name}}" status="{{action}}">
+	{%if not vmm_domain.action=="ignore"%}
+	<vmmDomP   enfPref="hw" mcastAddr="0.0.0.0" mode="default" name="{{vmm_domain.name}}" status="{{vmm_domain.action}}">
 		<vmmRsDefaultStpIfPol tnStpIfPolName="default"/>
 		<vmmRsDefaultFwPol tnNwsFwPolName="default"/>
-		<infraRsVlanNs tDn="uni/infra/vlanns-[{{vlan_dynamic_pool}}]-dynamic"/>
-		<vmmCtrlrP dvsVersion="unmanaged" hostOrIp="{{vcenter_hostname_ip}}" inventoryTrigSt="untriggered" mode="default" msftConfigIssues="" name="{{vcenter_controller_name}}" port="0" rootContName="{{vcenter_datacenter_name}}" scope="vm" statsMode="disabled">
-		 <vmmRsAcc tDn="uni/vmmp-VMware/dom-{{name}}/usracc-{{vcenter_credential_profile}}"/>
+		<infraRsVlanNs tDn="uni/infra/vlanns-[{{vmm_domain.vlan_dynamic_pool}}]-dynamic"/>
+		<vmmCtrlrP dvsVersion="unmanaged" hostOrIp="{{vmm_domain.vcenter_hostname_ip}}" inventoryTrigSt="untriggered" mode="default" msftConfigIssues="" name="{{vmm_domain.vcenter_controller_name}}" port="0" rootContName="{{vmm_domain.vcenter_datacenter_name}}" scope="vm" statsMode="disabled">
+		 <vmmRsAcc tDn="uni/vmmp-VMware/dom-{{vmm_domain.name}}/usracc-{{vmm_domain.vcenter_credential_profile}}"/>
 		</vmmCtrlrP>
 		<vmmRsDefaultLldpIfPol tnLldpIfPolName="default"/>
 		<vmmRsDefaultCdpIfPol tnCdpIfPolName="default"/>
 		<vmmRsDefaultLacpLagPol tnLacpLagPolName="default"/>
 		<vmmRsDefaultL2InstPol tnL2InstPolName="default"/>
-		<vmmUsrAccP descr="{{description}}" name="{{vcenter_credential_profile}}" usr="{{vcenter_username}}" pwd="{{vcenter_password}}"/>
+		<vmmUsrAccP descr="{{vmm_domain.description}}" name="{{vmm_domain.vcenter_credential_profile}}" usr="{{vmm_domain.vcenter_username}}" pwd="{{vmm_domain.vcenter_password}}"/>
 	</vmmDomP>
 	{%endif%}
  </vmmProvP>
