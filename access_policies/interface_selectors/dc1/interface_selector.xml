@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
 	<infraInfra>
-		<infraAccPortP name="test1_pol_group">
+		<infraAccPortP name="test1_int_profile">
 			<infraHPortS name="test" descr="" type="range" status="deleted">
 				<infraRsAccBaseGrp tDn="uni/infra/funcprof/accbundle-test1_pol_group" fexId="101"/>
 			</infraHPortS>
 		</infraAccPortP>
-		<infraAccPortP name="test2_pol_group">
+		<infraAccPortP name="test2_int_profile">
 			<infraHPortS name="test" descr="" type="range" status="deleted">
 				<infraRsAccBaseGrp tDn="uni/infra/funcprof/accbundle-test2_pol_group" fexId="101"/>
 			</infraHPortS>
