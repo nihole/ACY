@@ -13,7 +13,7 @@ interface_selector:
   int_pol_group: test1_pol_group
   int_pol_group_type: PC
   description:
-- name: "test2_int_selector"
+- name: "test1_int_selector"
   action: created,modified
   interface_profile: test1_int_profile
   int_pol_group: test1_pol_group
@@ -21,7 +21,7 @@ interface_selector:
   description:
 - name: "test2_int_selector"
   action: created,modified
-  interface_profile: test1_int_profile
-  int_pol_group: test1_pol_group
+  interface_profile: test2_int_profile
+  int_pol_group: test2_pol_group
   int_pol_group_type: PC
   description:

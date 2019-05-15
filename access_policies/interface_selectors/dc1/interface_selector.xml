@@ -7,13 +7,13 @@
 			</infraHPortS>
 		</infraAccPortP>
 		<infraAccPortP name="test1_int_profile">
-			<infraHPortS name="test2_int_selector" descr="" type="range" status="created,modified">
+			<infraHPortS name="test1_int_selector" descr="" type="range" status="created,modified">
 				<infraRsAccBaseGrp tDn="uni/infra/funcprof/accbundle-test1_pol_group" fexId="101"/>
 			</infraHPortS>
 		</infraAccPortP>
-		<infraAccPortP name="test1_int_profile">
+		<infraAccPortP name="test2_int_profile">
 			<infraHPortS name="test2_int_selector" descr="" type="range" status="created,modified">
-				<infraRsAccBaseGrp tDn="uni/infra/funcprof/accbundle-test1_pol_group" fexId="101"/>
+				<infraRsAccBaseGrp tDn="uni/infra/funcprof/accbundle-test2_pol_group" fexId="101"/>
 			</infraHPortS>
 		</infraAccPortP>
    	</infraInfra>
