@@ -2,10 +2,12 @@
 <polUni>
 	<infraInfra>
 		{% for i in interface_profiles %}
-		<infraAccPortP name="{{i.name}}">
+		{% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+		{% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+		<infraAccPortP name="{{i.name}}" descr="description" status="{{action}}">
 			{% for k in i.interface_selectors %}
                         {% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-			<infraHPortS name="{{k.name}}" descr="{{k.description}}" type="range">
+			<infraHPortS name="{{k.name}}" descr="{{description}}" status="{{action}}"  type="range">
 				{% for j in k.interface_ranges %}
         			{% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
         			{%if not j.action=="ignore"%}
