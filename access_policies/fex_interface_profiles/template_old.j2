@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+  	<infraInfra>
+		{% for j in fex_interface_profile %}
+        	{% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+        	{%if not j.action=="ignore"%}
+        	{% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
+        	{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+		{% set parent_leaf_id %}{%if j.parent_leaf_id%}{{j.parent_leaf_id}}{%else%}{{global.parent_leaf_id}}{%endif%}{% endset %}
+		{% set int_pol_group %}{%if j.int_pol_group%}{{j.int_pol_group}}{%else%}{{global.int_pol_group}}{%endif%}{% endset %}
+		{% set int_pol_group_type %}{%if j.int_pol_group_type%}{{j.int_pol_group_type}}{%else%}{{global.int_pol_group_type}}{%endif%}{% endset %}
+		{% set slot_id %}{%if j.slot_id%}{{j.slot_id}}{%else%}{{global.slot_id}}{%endif%}{% endset %}
+		{% set interface_selector %}{%if j.interface_selector%}{{j.interface_selector}}{%else%}{{global.interface_selector}}{%endif%}{% endset %}
+		{% set fex_id %}{%if j.fex_id%}{{j.fex_id}}{%else%}{{global.fex_id}}{%endif%}{% endset %}
+    		<infraFexP name="{{name}}" status="{{action}}">
+      			<infraHPortS name="{{interface_selector}}" descr="{{description}}" type="range">
+        		{% if int_pol_group_type == 'Access'%}
+        		{% set port_type %}accportgrp{% endset %}
+        		{% else %}
+        		{% set port_type %}accbundle{% endset %}
+        		{% endif %}
+        			<infraRsAccBaseGrp tDn="uni/infra/funcprof/{{port_type}}-{{int_pol_group}}" fexId="101" />
+        			{% if from_port != "" %}
+        			<infraPortBlk name="Block{{j.from_port}}{{j.to_port}}" descr="{{description}}" toPort="{{j.to_port}}" toCard="{{slot_id}}" fromPort="{{j.from_port}}" fromCard="{{slot_id}}" />
+        		{% endif %}
+      			</infraHPortS>
+    		</infraFexP>
+		{%endif%}{%endfor%}
+  	</infraInfra>
+</polUni>
