@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
 	<infraInfra>
-		{% for j in interface_selector %}
-		{% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
-	        {%if not j.action=="ignore"%}
-        	{% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
-		{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-		{% set interface_profile %}{%if j.interface_profile%}{{j.interface_profile}}{%else%}{{global.interface_profile}}{%endif%}{% endset %}
-		{% set int_pol_group_type %}{%if j.int_pol_group_type%}{{j.int_pol_group_type}}{%else%}{{global.int_pol_group_type}}{%endif%}{% endset %}
-		{% set int_pol_group %}{%if j.int_pol_group%}{{j.int_pol_group}}{%else%}{{global.int_pol_group}}{%endif%}{% endset %}
-		<infraAccPortP name="{{interface_profile}}">
+		{% for i in interface_profiles %}
+		  {% set name %}{%if i.name%}{{i.name}}{%else%}{{global.name}}{%endif%}{% endset %}
+                  {% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+		  {% for j in i.interface_selectors %}
+		    {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+	            {%if not j.action=="ignore"%}
+        	    {% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
+		    {% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+		    {% set int_pol_group_type %}{%if j.int_pol_group_type%}{{j.int_pol_group_type}}{%else%}{{global.int_pol_group_type}}{%endif%}{% endset %}
+		    {% set int_pol_group %}{%if j.int_pol_group%}{{j.int_pol_group}}{%else%}{{global.int_pol_group}}{%endif%}{% endset %}
+		<infraAccPortP name="{{i.name}}">
 			<infraHPortS name="{{name}}" descr="{{description}}" type="range" status="{{action}}">
 				{% if int_pol_group_type == 'Access'%}
 				{% set port_type %}accportgrp{% endset %}
@@ -19,6 +21,6 @@
 				<infraRsAccBaseGrp tDn="uni/infra/funcprof/{{port_type}}-{{int_pol_group}}" fexId="101"/>
 			</infraHPortS>
 		</infraAccPortP>
-		{%endif%}{%endfor%}
+		{%endif%}{%endfor%}{%endfor%}
    	</infraInfra>
 </polUni>

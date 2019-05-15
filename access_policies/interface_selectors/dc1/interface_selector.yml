@@ -6,28 +6,31 @@ global:
   int_pol_group_type:
   description: ""
 
-interface_selector:
-- name: "test"
-  action: deleted
-  interface_profile: test1_int_profile
-  int_pol_group: test1_pol_group
-  int_pol_group_type: PC
-  description:
-- name: "test"
-  action: deleted
-  interface_profile: test2_int_profile
-  int_pol_group: test2_pol_group
-  int_pol_group_type: PC
-  description:
-- name: "test1_int_selector"
-  action: created,modified
-  interface_profile: test1_int_profile
-  int_pol_group: test1_pol_group
-  int_pol_group_type: PC
-  description:
-- name: "test2_int_selector"
-  action: created,modified
-  interface_profile: test2_int_profile
-  int_pol_group: test2_pol_group
-  int_pol_group_type: PC
-  description:
+interface_profiles:
+- name: "test1_int_profile"
+  description: ""
+  interface_selectors:
+  - name: "test"
+    action: deleted
+    int_pol_group: test1_pol_group
+    int_pol_group_type: PC
+    description:
+  - name: "test1_int_selector"
+    action: created,modified
+    int_pol_group: test1_pol_group
+    int_pol_group_type: PC
+    description:
+- name: "test2_int_profile"
+  description: ""
+  interface_selectors:
+  - name: "test"
+    action: deleted
+    int_pol_group: test2_pol_group
+    int_pol_group_type: PC
+    description:
+  - name: "test2_int_selector"
+    action: created,modified
+    int_pol_group: test2_pol_group
+    int_pol_group_type: PC
+    description:
+
