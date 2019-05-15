@@ -12,7 +12,7 @@
         			{% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
 				{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
 				{% if from_port != "" %}
-				<infraPortBlk name="{{name}}" descr="{{description}}" toPort="{{to_port}}" toCard="{{slot_id}}" fromPort="{{from_port}}" fromCard="{{slot_id}}" status="{{action}}"/>
+				<infraPortBlk name="{{name}}" descr="{{description}}" toPort="{{j.to_port}}" toCard="{{j.slot_id}}" fromPort="{{j.from_port}}" fromCard="{{j.slot_id}}" status="{{action}}"/>
 				{% endif %}{%endif%}{%endfor%}		
 			</infraHPortS>
 			{%endfor%}
