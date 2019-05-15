@@ -3,7 +3,7 @@
 	<infraInfra>
 		<infraAccPortP name="test1_int_profile">
 			<infraHPortS name="test1_int_selector" descr="None" type="range">
-				<infraPortBlk name="" descr="" toPort="" toCard="1" fromPort="13" fromCard="1" status="created,modified"/>
+				<infraPortBlk name="" descr="" toPort="15" toCard="1" fromPort="13" fromCard="1" status="created,modified"/>
 			</infraHPortS>
 		</infraAccPortP>
    </infraInfra>

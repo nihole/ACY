@@ -12,6 +12,6 @@ interface_profiles:
     interface_ranges:
     - slot_id: 1
       from_port: 13
-      to_ports: 15
+      to_port: 15
       action: created,modified
       description:
