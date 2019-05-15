@@ -10,8 +10,63 @@ interface_profiles:
   - name: test1_int_selector
     description:
     interface_ranges:
-    - slot_id: 1
+    - name: 1315
+      slot_id: 1
       from_port: 13
       to_port: 15
+      action: created,modified
+      description:
+    - name: 1616
+      slot_id: 1
+      from_port: 16
+      to_port: 16
+      action: created,modified
+      description:
+  - name: test2_int_selector
+    description:
+    interface_ranges:
+    - name: 1315
+      slot_id: 1
+      from_port: 13
+      to_port: 15
+      action: created,modified
+      description:
+    - name: 1616
+      slot_id: 1
+      from_port: 16
+      to_port: 16
+      action: created,modified
+      description:
+- name: test2_int_profile
+  description:
+  interface_selectors:
+  - name: test1_int_selector
+    description:
+    interface_ranges:
+    - name: 1315
+      slot_id: 1
+      from_port: 13
+      to_port: 15
+      action: created,modified
+      description:
+    - name: 1616
+      slot_id: 1
+      from_port: 16
+      to_port: 16
+      action: created,modified
+      description:
+  - name: test2_int_selector
+    description:
+    interface_ranges:
+    - name: 1315
+      slot_id: 1
+      from_port: 13
+      to_port: 15
+      action: created,modified
+      description:
+    - name: 1616
+      slot_id: 1
+      from_port: 16
+      to_port: 16
       action: created,modified
       description:
