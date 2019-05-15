@@ -2,23 +2,16 @@ global:
   action: ignore
   name: ""
   description: ""
-  interface_profile:
-  interface_selector:
   
-interface_range:
-- name: test1_int_range
-  interface_profile: test1_int_profile
-  interface_selector: test1_int_selector
-  slot_id: 2
-  form_port: 13
-  to_port: 13
-  action: created,modified
+interface_profiles:
+- name: test1_int_profile
   description:
-- name: test2_int_range
-  interface_profile: test2_int_profile
-  interface_selector: test2_int_selector
-  slot_is: 2
-  form_port: 14
-  to_port: 14
-  action: created,modified
-  description:
+  interface_selectors: 
+  - name: test1_int_selector
+    description:
+    interface_ranges:
+    - slot_id: 1
+      from_port: 13
+      to_ports: 15
+      action: created,modified
+      description:
