@@ -9,8 +9,14 @@ global:
 interface_selector:
 - name: "test"
   action: deleted
-  interface_profile: test
+  interface_profile: test1_pol_group
   int_pol_group: test1_pol_group
+  int_pol_group_type: PC
+  description:
+- name: "test"
+  action: deleted
+  interface_profile: test2_pol_group
+  int_pol_group: test2_pol_group
   int_pol_group_type: PC
   description:
 - name: "test1_int_selector"
