@@ -5,8 +5,6 @@
 			<infraHPortS name="test" descr="" type="range" status="deleted">
 				<infraRsAccBaseGrp tDn="uni/infra/funcprof/accbundle-test1_pol_group" fexId="101"/>
 			</infraHPortS>
-		</infraAccPortP>
-		<infraAccPortP name="test1_int_profile">
 			<infraHPortS name="test1_int_selector" descr="" type="range" status="created,modified">
 				<infraRsAccBaseGrp tDn="uni/infra/funcprof/accbundle-test1_pol_group" fexId="101"/>
 			</infraHPortS>
@@ -15,8 +13,6 @@
 			<infraHPortS name="test" descr="" type="range" status="deleted">
 				<infraRsAccBaseGrp tDn="uni/infra/funcprof/accbundle-test2_pol_group" fexId="101"/>
 			</infraHPortS>
-		</infraAccPortP>
-		<infraAccPortP name="test2_int_profile">
 			<infraHPortS name="test2_int_selector" descr="" type="range" status="created,modified">
 				<infraRsAccBaseGrp tDn="uni/infra/funcprof/accbundle-test2_pol_group" fexId="101"/>
 			</infraHPortS>
