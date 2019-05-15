@@ -3,6 +3,9 @@ global:
   action: ignore
   description: ""
 interface_profiles:
+- name: test
+  action: deleted
+  description:
 - name: test1_int_profile
   action: created,modified
   description:
