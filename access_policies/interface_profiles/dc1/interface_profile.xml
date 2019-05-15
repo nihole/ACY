@@ -3,5 +3,7 @@
 	<infraInfra>
 		<infraAccPortP name="test1_int_profile" status="created,modified">
 		</infraAccPortP>
+		<infraAccPortP name="test2_int_profile" status="created,modified">
+		</infraAccPortP>
    	</infraInfra>
 </polUni>

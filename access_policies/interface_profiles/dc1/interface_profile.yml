@@ -6,3 +6,6 @@ interface_profiles:
 - name: test1_int_profile
   action: created,modified
   description:
+- name: test2_int_profile
+  action: created,modified
+  description:
