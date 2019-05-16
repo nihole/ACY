@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<fabricInst>
+		<fabricProtPol descr="" name="default" pairT="explicit">
+			<fabricExplicitGEp id="" name="leaf_1201_1202_vpcgrp" status="created,modified"> 
+				<fabricRsVpcInstPol tnVpcInstPolName="default"/>
+				<fabricNodePEp descr="" id="1201" name=""/>
+				<fabricNodePEp descr="" id="1202" name=""/>
+			</fabricExplicitGEp>
+		</fabricProtPol>
+		<fabricProtPol descr="" name="default" pairT="explicit">
+			<fabricExplicitGEp id="" name="leaf_1203_1204_vpcgrp" status="created,modified"> 
+				<fabricRsVpcInstPol tnVpcInstPolName="default"/>
+				<fabricNodePEp descr="" id="1203" name=""/>
+				<fabricNodePEp descr="" id="1204" name=""/>
+			</fabricExplicitGEp>
+		</fabricProtPol>
+ 	</fabricInst>
+</polUni>

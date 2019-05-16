@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+        <infraInfra>
+                <infraNodP name="test1_int_profile" dn="uni/infra/nprof-test1_int_profile" descr="description" status="leaf_1201_profile">
+                        <infraLeafS name="test1_sw_selector" dn="uni/infra/nprof-test1_sw_selector" descr="" status="created,modified"  type="range">
+                        </infraLeafS>
+                </infraNodP>
+   </infraInfra>
+</polUni>
+
