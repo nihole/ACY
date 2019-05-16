@@ -8,6 +8,7 @@
 		{% for j in i.vrfs %}
                 {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
 		{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+		{%if not action=="ignore"%}
 		{% set policy_enforcement %}{%if j.policy_enforcement%}{{j.policy_enforcement}}{%else%}{{global.policy_enforcement}}{%endif%}{% endset %}
 		{% set bgp_timers %}{%if j.bgp_timers%}{{j.bgp_timers}}{%else%}{{global.bgp_timers}}{%endif%}{% endset %}
 		{% set ep_retention %}{%if j.ep_retention%}{{j.ep_retention}}{%else%}{{global.ep_retention}}{%endif%}{% endset %}

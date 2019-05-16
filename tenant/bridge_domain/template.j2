@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
-	<fvTenant name="{{config['tenant']}}" >	
-		<fvBD unkMcastAct="{{config['l3_unknown_multicast']}}" unkMacUcastAct="{{config['l2_unknown_unicast']}}" unicastRoute="{{config['unicast_routing']}}" name="{{config['name']}}" multiDstPktAct="{{config['multi_dest_flood']}}"  limitIpLearnToSubnets="no" descr="{{config['description']}}" arpFlood="{{config['arp_flood']}}" status="{{config['action']}}">
-			<fvRsCtx tnFvCtxName="{{config['context']}}"/>
-			<fvRsIgmpsn tnIgmpSnoopPolName="{{config['igmp_snoop']}}"/>
-			{% if config['Legacy_BD'] != "" %}
-			<fvAccP descr="" encap="vlan-{{config['Legacy_BD']}}" name="" ownerKey="" ownerTag=""/>
+	{% for i in tenants %}
+        {% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+	{% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+	{%if not action=="ignore"%}
+	<fvTenant name="{{i.tenant}}" >	
+		{% for j in i.bridge_domains %}
+                {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                {% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                {%if not action=="ignore"%}
+                {% set l2_unknown_unicast %}{%if j.l2_unknown_unicast %}{{j.l2_unknown_unicast}}{%else%}{{global.l2_unknown_unicast}}{%endif%}{% endset %}
+                {% set l3_unknown_multicast %}{%if j.l3_unknown_multicast%}{{j.l3_unknown_multicast}}{%else%}{{global.l3_unknown_multicast}}{%endif%}{% endset %}
+                {% set multi_dest_flood %}{%if j.multi_dest_flood%}{{j.multi_dest_flood}}{%else%}{{global.multi_dest_flood}}{%endif%}{% endset %}
+                {% set arp_flood %}{%if j.arp_flood%}{{j.arp_flood}}{%else%}{{global.arp_flood}}{%endif%}{% endset %}
+                {% set unicast_routing %}{%if j.unicast_routing%}{{j.unicast_routing}}{%else%}{{global.unicast_routing}}{%endif%}{% endset %}
+		{% set monitoring_policy %}{%if j.monitoring_policy%}{{j.monitoring_policy}}{%else%}{{global.monitoring_policy}}{%endif%}{% endset %}
+		{% set limit_ip_learn_to_subnet %}{%if j.limit_ip_learn_to_subnet%}{{j.limit_ip_learn_to_subnet}}{%else%}{{global.limit_ip_learn_to_subnet}}{%endif%}{% endset %}
+		{% set subnet_type %}{%if j.subnet_type%}{{j.subnet_type}}{%else%}{{global.subnet_type}}{%endif%}{% endset %}
+		{% set igmp_snoop %}{%if j.igmp_snoop%}{{j.igmp_snoop}}{%else%}{{global.igmp_snoop}}{%endif%}{% endset %}
+		<fvBD unkMcastAct="{{l3_unknown_multicast}}" unkMacUcastAct="{{l2_unknown_unicast}}" unicastRoute="{{unicast_routing}}" name="{{name}}" multiDstPktAct="{{multi_dest_flood}}"  limitIpLearnToSubnets="no" descr="{{description}}" arpFlood="{{arp_flood}}" status="{{action}}">
+			<fvRsCtx tnFvCtxName="{{j.context}}"/>
+			<fvRsIgmpsn tnIgmpSnoopPolName="{{j.igmp_snoop}}"/>
+			{% if j.legacy_bd %}
+			<fvAccP descr="description" encap="vlan-{{j.legacy_bd}}" name="" ownerKey="" ownerTag=""/>
 			{% endif %}
-			<fvRsBdToEpRet tnFvEpRetPolName="{{config['E_R_Policy']}}" resolveAct="resolve"/>
-			{% if config['bd_gateway_ip'] != "" %}
-				<fvSubnet ctrl="" descr="" ip="{{config['bd_gateway_ip']}}" name="" preferred="no" scope="{{config['subnet_type']}}"/>
+			<fvRsBdToEpRet tnFvEpRetPolName="{{j.e_r_policy}}" resolveAct="resolve"/>
+			{% if j.bd_gateway_ip %}
+			<fvSubnet ctrl="" descr="description" ip="{{j.bd_gateway_ip}}" name="" preferred="no" scope="{{j.subnet_type}}"/>
 			{% endif %}
-			{% if config['l3_out'] != "" %}
-				<fvRsBDToOut tnL3extOutName="{{config['l3_out']}}"/>
+			{% if j.l3_out %}
+			<fvRsBDToOut tnL3extOutName="{{j.l3_out}}"/>
 			{% endif %}
 		</fvBD>
+		{%endif%}{%endfor%}
 	</fvTenant>
+	{%endif%}{%endfor%}
 </polUni>
