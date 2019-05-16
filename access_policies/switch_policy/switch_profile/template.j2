@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+        <infraInfra>
+                {% for i in switch_profiles %}
+                {% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+		{% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+		{%if not action=="ignore"%}
+                <infraNodP name="{{i.name}}" dn="uni/infra/nprof-{{i.name}}" descr="description" status="{{action}}">
+			{% for k in i.switch_selectors %}
+			{% set action %}{%if k.action%}{{k.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+			{% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+			{%if not action=="ignore"%}
+                        <infraLeafS name="{{k.name}}" dn="uni/infra/nprof-{{k.name}}" descr="{{description}}" status="{{action}}"  type="range">
+                                {% for j in k.switch_ranges %}
+                                {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                                {%if not action=="ignore"%}
+                                {% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
+                                {% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                                {% if from_port != "" %}
+                                <infraNodeBlk name="{{name}}" descr="{{description}}" to_="{{j.to_node_id}}" toCard="{{j.slot_id}}" from_="{{j.node_id}}" status="{{action}}"/>
+                                {% endif %}{%endif%}{%endfor%}
+                        </infraLeafS>
+			{%endif%}{%endfor%}
+                </infraNodP>
+		{%endif%}{%endfor%}
+   </infraInfra>
+</polUni>
+

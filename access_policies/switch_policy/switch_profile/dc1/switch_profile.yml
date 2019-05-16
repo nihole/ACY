@@ -1,0 +1,24 @@
+global:
+  name: ""
+  description: ""
+  action: "ignore"
+  policy_group:
+
+  policy_group:
+  action:
+
+switch_profiles:
+- name: test1_int_profile
+  description:
+  action: leaf_1201_profile
+  switch_selectors:
+  - name: test1_sw_selector
+    description:
+    action: created,modified
+    interface_ranges:
+    - name: 12011201
+      from_: 1201
+      to_: 1201
+      action: created,modified
+      description:
+
