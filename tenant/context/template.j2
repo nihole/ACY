@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
-	<fvTenant name="{{config['tenant']}}">
-		<fvCtx descr="{{config['description']}}" knwMcastAct="permit" name="{{config['name']}}" pcEnfPref="{{config['policy_enforcement']}}" status="{{config['action']}}">
-			<fvRsBgpCtxPol tnBgpCtxPolName="{{config['bgp_timers']}}"/>
-			<fvRsCtxToExtRouteTagPol tnL3extRouteTagPolName="{{config['route_tag_policy']}}"/>
-			<fvRsOspfCtxPol tnOspfCtxPolName="{{config['ospf_timers']}}"/>
+	{% for i in tenants %}
+        {% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+        {% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+	{%if not action=="ignore"%}
+	<fvTenant name="{{name}}" status="{{action}}">
+		{% for j in i.vrfs %}
+                {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+		{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+		{% set policy_enforcement %}{%if j.policy_enforcement%}{{j.policy_enforcement}}{%else%}{{global.policy_enforcement}}{%endif%}{% endset %}
+		{% set bgp_timers %}{%if j.bgp_timers%}{{j.bgp_timers}}{%else%}{{global.bgp_timers}}{%endif%}{% endset %}
+		{% set ep_retention %}{%if j.ep_retention%}{{j.ep_retention}}{%else%}{{global.ep_retention}}{%endif%}{% endset %}
+		{% set monitoring_policy %}{%if j.monitoring_policy%}{{j.monitoring_policy}}{%else%}{{global.monitoring_policy}}{%endif%}{% endset %}
+		{% set dns_label %}{%if j.dns_label%}{{j.dns_label}}{%else%}{{global.dns_label}}{%endif%}{% endset %}
+		{% set route_tag_policy %}{%if j.route_tag_policy%}{{j.route_tag_policy}}{%else%}{{global.route_tag_policy}}{%endif%}{% endset %}
+
+		<fvCtx descr="{{description}}" knwMcastAct="permit" name="{{name}}" pcEnfPref="{{policy_enforcement}}" status="{{action}}">
+			<fvRsBgpCtxPol tnBgpCtxPolName="{{bgp_timers}}"/>
+			<fvRsCtxToExtRouteTagPol tnL3extRouteTagPolName="{{route_tag_policy}}"/>
+			<fvRsOspfCtxPol tnOspfCtxPolName="{{ospf_timers}}"/>
 			<vzAny descr="" matchT="AtleastOne" name=""/>
-			<fvRsCtxToEpRet tnFvEpRetPolName="{{config['ep_retention']}}"/>
+			<fvRsCtxToEpRet tnFvEpRetPolName="{{ep_retention}}"/>
 		</fvCtx>
+		{%endfor%}
 	</fvTenant>
+	{%endif%}{%endfor%}
 </polUni>

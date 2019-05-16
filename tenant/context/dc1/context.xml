@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<fvTenant name="" status="created,mofified">
+		<fvCtx descr="" knwMcastAct="permit" name="" pcEnfPref="enforced" status="created,modified">
+			<fvRsBgpCtxPol tnBgpCtxPolName="default"/>
+			<fvRsCtxToExtRouteTagPol tnL3extRouteTagPolName="default"/>
+			<fvRsOspfCtxPol tnOspfCtxPolName=""/>
+			<vzAny descr="" matchT="AtleastOne" name=""/>
+			<fvRsCtxToEpRet tnFvEpRetPolName="default"/>
+		</fvCtx>
+		<fvCtx descr="" knwMcastAct="permit" name="" pcEnfPref="enforced" status="created,modified">
+			<fvRsBgpCtxPol tnBgpCtxPolName="default"/>
+			<fvRsCtxToExtRouteTagPol tnL3extRouteTagPolName="default"/>
+			<fvRsOspfCtxPol tnOspfCtxPolName=""/>
+			<vzAny descr="" matchT="AtleastOne" name=""/>
+			<fvRsCtxToEpRet tnFvEpRetPolName="default"/>
+		</fvCtx>
+	</fvTenant>
+	<fvTenant name="" status="created,modified">
+		<fvCtx descr="" knwMcastAct="permit" name="" pcEnfPref="enforced" status="created,modified">
+			<fvRsBgpCtxPol tnBgpCtxPolName="default"/>
+			<fvRsCtxToExtRouteTagPol tnL3extRouteTagPolName="default"/>
+			<fvRsOspfCtxPol tnOspfCtxPolName=""/>
+			<vzAny descr="" matchT="AtleastOne" name=""/>
+			<fvRsCtxToEpRet tnFvEpRetPolName="default"/>
+		</fvCtx>
+		<fvCtx descr="" knwMcastAct="permit" name="" pcEnfPref="enforced" status="created,modified">
+			<fvRsBgpCtxPol tnBgpCtxPolName="default"/>
+			<fvRsCtxToExtRouteTagPol tnL3extRouteTagPolName="default"/>
+			<fvRsOspfCtxPol tnOspfCtxPolName=""/>
+			<vzAny descr="" matchT="AtleastOne" name=""/>
+			<fvRsCtxToEpRet tnFvEpRetPolName="default"/>
+		</fvCtx>
+	</fvTenant>
+</polUni>
