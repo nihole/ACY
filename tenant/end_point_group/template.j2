@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+  <fvTenant name="{{config['tenant']}}">
+    <fvAp prio="unspecified" name="{{config['app_profile']}}">
+      <fvAEPg prio="unspecified" name="{{config['name']}}" matchT="AtleastOne" descr="{{config['description']}}" status="{{config['action']}}">
+        <fvRsCustQosPol tnQosCustomPolName="{{config['custom_qos_policy']}}"/>
+        <fvRsBd tnFvBDName="{{config['bridge_domain']}}" />
+        {%- if config['phys_domain'] != "" %}
+
+        <fvRsDomAtt tDn="uni/phys-{{config['phys_domain']}}" instrImedcy="immediate" encap="unknown" resImedcy="immediate" />
+        {% endif %}
+        {%- if config['vmm_domain'] != "" %}
+
+        <fvRsDomAtt encap="unknown" instrImedcy="immediate" resImedcy="immediate" tDn="uni/vmmp-VMware/dom-{{config['vmm_domain']}}">
+          <vmmSecP allowPromiscuous="reject" descr="" forgedTransmits="reject" macChanges="reject" name="" ownerKey="" ownerTag="" />
+        </fvRsDomAtt>
+        {% endif %}
+      </fvAEPg>
+    </fvAp>
+  </fvTenant>
+</polUni>

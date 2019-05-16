@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<fvTenant name="{{config['tenant']}}">
+		<fvCtx descr="{{config['description']}}" knwMcastAct="permit" name="{{config['name']}}" pcEnfPref="{{config['policy_enforcement']}}" status="{{config['action']}}">
+			<fvRsBgpCtxPol tnBgpCtxPolName="{{config['bgp_timers']}}"/>
+			<fvRsCtxToExtRouteTagPol tnL3extRouteTagPolName="{{config['route_tag_policy']}}"/>
+			<fvRsOspfCtxPol tnOspfCtxPolName="{{config['ospf_timers']}}"/>
+			<vzAny descr="" matchT="AtleastOne" name=""/>
+			<fvRsCtxToEpRet tnFvEpRetPolName="{{config['ep_retention']}}"/>
+		</fvCtx>
+	</fvTenant>
+</polUni>

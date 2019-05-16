@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<fvTenant name="{{config['tenant']}}" >
+		<fvAp prio="unspecified" name="{{config['app_profile']}}" >
+			<fvAEPg prio="unspecified" name="{{config['name']}}" matchT="AtleastOne" >
+				{% if config['static_binding_type'] == "vPC" %}
+				<fvRsPathAtt descr="" tDn="topology/pod-{{config['pod_id']}}/protpaths-{{config['left_node_id']}}-{{config['right_node_id']}}/pathep-[{{config['interface_policy']}}]" mode="{{config['mode']}}" instrImedcy="immediate" encap="vlan-{{config['encap_vlan_id']}}" status="{{config['action']}}"/>
+				{% elif config['static_binding_type'] == "PC" %}
+				<fvRsPathAtt descr="" tDn="topology/pod-{{config['pod_id']}}/paths-{{config['left_node_id']}}/pathep-[{{config['interface_policy']}}]" mode="{{config['mode']}}" instrImedcy="immediate" encap="vlan-{{config['encap_vlan_id']}}" status="{{config['action']}}"/>
+				{% elif config['static_binding_type'] == "Access" %}
+				<fvRsPathAtt descr="" tDn="topology/pod-{{config['pod_id']}}/paths-{{config['left_node_id']}}/pathep-[eth{{config['access_port_id']}}]" mode="{{config['mode']}}" instrImedcy="immediate" encap="vlan-{{config['encap_vlan_id']}}" status="{{config['action']}}"/>
+			{% endif %}
+			</fvAEPg>
+		</fvAp>
+	</fvTenant>
+</polUni>

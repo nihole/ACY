@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+ <fvTenant descr="" name="{{config['tenant']}}">
+	<fvAp descr="" name="{{config['name']}}" prio="unspecified" status="{{config['action']}}">
+		<fvRsApMonPol tnMonEPGPolName="{{config['monitoring_policy']}}"/>
+	</fvAp>
+ </fvTenant>
+</polUni>
