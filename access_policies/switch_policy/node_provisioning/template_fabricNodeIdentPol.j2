@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<ctrlrInst>
+		{% for j in nodes %}
+                {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                {%if not action=="ignore"%}
+                {% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
+		{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+		{% set role %}{%if j.role%}{{j.role}}{%else%}{{global.role}}{%endif%}{% endset %}
+		{% set pod_id %}{%if j.pod_id%}{{j.pod_id}}{%else%}{{global.pod_id}}{%endif%}{% endset %}
+		<fabricNodeIdentPol>
+			<fabricNodeIdentP serial="{{j.serial_number}}" name="{{j.name}}" nodeId="{{j.node_id}}" podId="{{pod_id}}" role="{{role}}" descr="description" status="{{action}}"/>
+		</fabricNodeIdentPol>
+		{%endif%}{%endfor%}
+	</ctrlrInst>
+</polUni>

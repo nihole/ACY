@@ -1,0 +1,32 @@
+global:
+  name: ""
+  description: ""
+  action: "ignore"
+  pod_id: 1
+  role: "unspecified"
+
+nodes:
+- name: "test1_node"
+  serial_number: 123456
+  oob_ip: "10.0.0.2/24"
+  oob_gw: "10.0.0.1"
+  inband_ip: "10.10.10.2/24" 
+  inband_gw: "10.10.10.1"
+  node_id: "1201"
+  device_type: "N93108TC-EX"
+  pod_id: 1
+  role: "leaf"
+  action: "created,modified"
+  description: 
+- name: "test2_node"
+  serial_number: 234567
+  oob_ip: "10.0.0.3/24"
+  oob_gw: "10.0.0.1"
+  inband_ip: "10.10.10.3/24"
+  inband_gw: "10.10.10.1"
+  node_id: "1202"
+  device_type: "N93108TC-EX"
+  pod_id: 1
+  role: "leaf"
+  action: "created,modified"
+  description:

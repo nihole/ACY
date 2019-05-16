@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<fvTenant name="mgmt">
+		<mgmtMgmtP name="default">
+			{% for j in nodes %}
+                	{% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                	{%if not action=="ignore"%}
+                	{% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
+                	{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                	{% set role %}{%if j.role%}{{j.role}}{%else%}{{global.role}}{%endif%}{% endset %}
+                	{% set pod_id %}{%if j.pod_id%}{{j.pod_id}}{%else%}{{global.pod_id}}{%endif%}{% endset %}
+			{% set inband_ip %}{%if j.inband_ip%}{{j.inband_ip}}{%else%}{{global.inband_ip}}{%endif%}{% endset %}
+			{% set oob_ip %}{%if j.oob_ip%}{{j.oob_ip}}{%else%}{{global.oob_ip}}{%endif%}{% endset %}
+			
+			{% if inband_ip %}
+			<mgmtInB dn="uni/tn-mgmt/mgmtp-default/inb-default">
+				<mgmtRsInBStNode dn="uni/tn-mgmt/mgmtp-default/inb-default/rsinBStNode-[topology/pod-{{pod_id}}/node-{{j.node_id}}]" addr="{{j.inband_ip}}" gw="{{j.inband_gw}}" tDn="topology/pod-1/node-{{j.node_id}}" status="{{action}}">
+				</mgmtRsInBStNode>
+			</mgmtInB>
+			{% endif %}
+			{% if oob_ip %}
+			<mgmtOoB dn="uni/tn-mgmt/mgmtp-default/oob-default">
+				<mgmtRsOoBStNode dn="uni/tn-mgmt/mgmtp-default/oob-default/rsooBStNode-[topology/pod-{{pod_id}}/node-{{j.node_id}}]" addr="{{oob_ip}}" gw="{{oob_gw}}" tDn="topology/pod-1/node-{{j.node_id}}" status="{{action}}" >
+				</mgmtRsOoBStNode>
+			</mgmtOoB>
+			{% endif %}{%endif%}{%endfor%}
+	 	</mgmtMgmtP>
+	</fvTenant>
+</polUni>
