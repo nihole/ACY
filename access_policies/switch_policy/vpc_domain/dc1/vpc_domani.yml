@@ -1,0 +1,23 @@
+global:
+  name: ""
+  description: ""
+  action: "ignore"
+
+vpc_domains:
+- name: leaf_1201_1202_vpcgrp
+  domain_policy: default
+  left_node_id: 1201
+  right_node_id: 1202
+  logical_paer_id: 1
+  action: "created,modified"
+  description:
+- name: leaf_1203_1204_vpcgrp
+  domain_policy: default
+  left_node_id: 1203
+  right_node_id: 1204
+  logical_paer_id: 2
+  action: "created,modified"
+  description:
+
+  
+
