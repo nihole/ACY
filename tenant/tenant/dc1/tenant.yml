@@ -1,0 +1,15 @@
+global:
+  name: ""
+  tags: ""
+  mon_policy: ""
+  ctrl_mgmt_policy: ""
+  security_domain: ""
+  description: ""
+  action: "ignore"
+
+tenants:  
+- name: test1_tenant
+  action: "created,modified"
+- name: test2_tenant
+  action: "created,modified"
+

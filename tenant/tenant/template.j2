@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
-	<fvTenant descr="" name="{{config['name']}}" status="{{config['action']}}">
+	{% for j in tenants %}
+        {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+        {%if not action=="ignore"%}
+        {% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
+        {% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+	{% set tags %}{%if j.tags%}{{j.tags}}{%else%}{{global.tags}}{%endif%}{% endset %}
+	{% set mon_policy %}{%if j.mon_policy%}{{j.mon_policy}}{%else%}{{global.mon_policy}}{%endif%}{% endset %}
+	{% set ctrl_mgmt_policy %}{%if j.ctrl_mgmt_policy%}{{j.ctrl_mgmt_policy}}{%else%}{{global.ctrl_mgmt_policy}}{%endif%}{% endset %}
+        {% set security_domain %}{%if j.security_domain%}{{j.security_domain}}{%else%}{{global.security_domain}}{%endif%}{% endset %}
+	<fvTenant descr="" name="{{name}}" status="{{action}}">
 	</fvTenant>
+	{%endif%}{%endfor%}
 </polUni>
