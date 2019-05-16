@@ -13,6 +13,7 @@ switch_profiles:
   action: leaf_1201_profile
   switch_selectors:
   - name: test1_sw_selector
+    int_profile: leaf_1201_intprof
     description:
     action: created,modified
     interface_ranges:

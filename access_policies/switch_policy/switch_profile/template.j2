@@ -10,6 +10,7 @@
 			{% set action %}{%if k.action%}{{k.action}}{%else%}{{global.action}}{%endif%}{% endset %}
 			{% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
 			{%if not action=="ignore"%}
+			<infraRsAccPortP tDn="uni/infra/accportprof-{{k.int_profile}}" status="{{action}}"/>
                         <infraLeafS name="{{k.name}}" dn="uni/infra/nprof-{{k.name}}" descr="{{description}}" status="{{action}}"  type="range">
                                 {% for j in k.switch_ranges %}
                                 {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
