@@ -1,21 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
-  <fvTenant name="{{config['tenant']}}">
-    <fvAp prio="unspecified" name="{{config['app_profile']}}">
-      <fvAEPg prio="unspecified" name="{{config['name']}}" matchT="AtleastOne" descr="{{config['description']}}" status="{{config['action']}}">
-        <fvRsCustQosPol tnQosCustomPolName="{{config['custom_qos_policy']}}"/>
-        <fvRsBd tnFvBDName="{{config['bridge_domain']}}" />
-        {%- if config['phys_domain'] != "" %}
+	{% for i in tenants %}
+        {% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+        {% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+        {%if not action=="ignore"%}
+	<fvTenant name="{{name}}">
+		{% for k in i.app %}
+                {% set action %}{%if k.action%}{{k.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                {%if not action=="ignore"%}
+                {% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+		<fvAp prio="unspecified" desc = "description" name="{{name}}">
+			{% for j in k.epg %}
+                        {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                        {%if not action=="ignore"%}
+                        {% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
+			{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+			{% set phys_domain %}{%if j.phys_domain%}{{j.phys_domain}}{%else%}{{global.phys_domain}}{%endif%}{% endset %}
+			{% set vmm_domain %}{%if j.vmm_domain%}{{j.vmm_domain}}{%else%}{{global.vmm_domain}}{%endif%}{% endset %}
+			{% set custom_qos_policy %}{%if j.custom_qos_policy%}{{j.custom_qos_policy}}{%else%}{{global.custom_qos_policy}}{%endif%}{% endset %}
 
-        <fvRsDomAtt tDn="uni/phys-{{config['phys_domain']}}" instrImedcy="immediate" encap="unknown" resImedcy="immediate" />
-        {% endif %}
-        {%- if config['vmm_domain'] != "" %}
+			<fvAEPg prio="unspecified" name="{{name}}" matchT="AtleastOne" descr="{{description}}" status="{{action}}">
+        			<fvRsCustQosPol tnQosCustomPolName="{{custom_qos_policy}}"/>
+        			<fvRsBd tnFvBDName="{{j.bridge_domain}}" />
+       				 {%- if phys_domain%}
 
-        <fvRsDomAtt encap="unknown" instrImedcy="immediate" resImedcy="immediate" tDn="uni/vmmp-VMware/dom-{{config['vmm_domain']}}">
-          <vmmSecP allowPromiscuous="reject" descr="" forgedTransmits="reject" macChanges="reject" name="" ownerKey="" ownerTag="" />
-        </fvRsDomAtt>
-        {% endif %}
-      </fvAEPg>
-    </fvAp>
-  </fvTenant>
+        			<fvRsDomAtt tDn="uni/phys-{{phys_domain}}" instrImedcy="immediate" encap="unknown" resImedcy="immediate" />
+        			{% endif %}
+        			{%- if vmm_domain %}
+
+        			<fvRsDomAtt encap="unknown" instrImedcy="immediate" resImedcy="immediate" tDn="uni/vmmp-VMware/dom-{{vmm_domain}}">
+          				<vmmSecP allowPromiscuous="reject" descr="" forgedTransmits="reject" macChanges="reject" name="" ownerKey="" ownerTag="" />
+        			</fvRsDomAtt>
+        			{% endif %}
+			</fvAEPg>
+			{%endif%}{%endfor%}
+		</fvAp>
+		{%endif%}{%endfor%}
+	</fvTenant>
+	{%endif%}{%endfor%}
 </polUni>
