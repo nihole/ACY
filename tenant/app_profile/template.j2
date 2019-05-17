@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
- <fvTenant descr="" name="{{config['tenant']}}">
-	<fvAp descr="" name="{{config['name']}}" prio="unspecified" status="{{config['action']}}">
-		<fvRsApMonPol tnMonEPGPolName="{{config['monitoring_policy']}}"/>
-	</fvAp>
- </fvTenant>
+	{% for i in tenants %}
+        {% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+        {% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+	<fvTenant descr="description" name="{{name}}">
+		{% for j in i.app %}
+                {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+		{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+		{%if not action=="ignore"%}
+		<fvAp descr="description" name="{{name}}" prio="unspecified" status="{{action}}">
+		</fvAp>
+		{%endif%}{%endfor%}
+	</fvTenant>
+	{%endfor%}
 </polUni>
