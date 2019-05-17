@@ -15,7 +15,7 @@
                         {%if not action=="ignore"%}
                         {% set name %}{%if l.name%}{{l.name}}{%else%}{{global.name}}{%endif%}{% endset %}
                         {% set description %}{%if l.description%}{{l.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-			<fvAEPg prio="unspecified" name="{{config['name']}}" matchT="AtleastOne" >
+			<fvAEPg prio="unspecified" name="{{name}}" matchT="AtleastOne" >
 				{% for j in l.static_bindings %}
                         	{% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
                         	{%if not action=="ignore"%}
@@ -24,13 +24,13 @@
 				{% set pod_id %}{%if j.pod_id%}{{j.pod_id}}{%else%}{{global.pod_id}}{%endif%}{% endset %}
 				{% set access_port_id %}{%if j.access_port_id%}{{j.access_port_id}}{%else%}{{global.access_port_id}}{%endif%}{% endset %}
 
-				{% if j.static_binding_type] == "vPC" %}
+				{% if j.static_binding_type == "vPC" %}
 				<fvRsPathAtt descr="" tDn="topology/pod-{{pod_id}}/protpaths-{{j.left_node_id}}-{{j.right_node_id}}/pathep-[{{j.int_pol_group}}]" mode="{{mode}}" instrImedcy="immediate" encap="vlan-{{j.encap_vlan_id}}" status="{{action}}"/>
 				{% elif j.static_binding_type == "PC" %}
 				<fvRsPathAtt descr="" tDn="topology/pod-{{pod_id}}/paths-{{j.left_node_id}}/pathep-[{{j.int_pol_group}}]" mode="{{mode}}" instrImedcy="immediate" encap="vlan-{{j.encap_vlan_id}}" status="{{action}}"/>
 				{% elif j.static_binding_type == "Access" %}
 				<fvRsPathAtt descr="" tDn="topology/pod-{{pod_id}}/paths-{{j.left_node_id}}/pathep-[eth{{j.access_port_id}}]" mode="{{mode}}" instrImedcy="immediate" encap="vlan-{{j.encap_vlan_id}}" status="{{action}}"/>
-			{% endif %}
+				{% endif %}{%endif%}{%endfor%}
 			</fvAEPg>
 			{%endif%}{%endfor%}
 		</fvAp>

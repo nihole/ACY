@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+        <fvTenant name="">
+                <fvAp prio="unspecified" desc = "description" name="">
+			<fvAEPg prio="unspecified" name="test1_epg" matchT="AtleastOne" >
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1201/pathep-[test1_int_pol_group]" mode="regular" instrImedcy="immediate" encap="vlan-101" status="created,modified"/>
+			</fvAEPg>
+			<fvAEPg prio="unspecified" name="test2_epg" matchT="AtleastOne" >
+				<fvRsPathAtt descr="" tDn="topology/pod-1/protpaths-1201-1202/pathep-[test2_int_pol_group]" mode="regular" instrImedcy="immediate" encap="vlan-101" status="created,modified"/>
+			</fvAEPg>
+		</fvAp>
+	</fvTenant>
+</polUni>
