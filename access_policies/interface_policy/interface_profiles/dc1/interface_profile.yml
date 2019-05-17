@@ -9,6 +9,8 @@ interface_profiles:
   action: created,modified
   interface_selectors: 
   - name: test1_int_selector
+    int_pol_group: test1_int_pol_group
+    int_pol_group_type: PC
     description:
     action: created,modified
     interface_ranges:
@@ -25,6 +27,8 @@ interface_profiles:
       action: created,modified
       description:
   - name: test2_int_selector
+    int_pol_group: test1_int_pol_group
+    int_pol_group_type: PC
     description:
     action: created,modified
     interface_ranges:
@@ -45,6 +49,8 @@ interface_profiles:
   action: created,modified
   interface_selectors:
   - name: test1_int_selector
+    int_pol_group: test2_int_pol_group
+    int_pol_group_type: vPC
     description:
     action: created,modified
     interface_ranges:
@@ -61,6 +67,8 @@ interface_profiles:
       action: created,modified
       description:
   - name: test2_int_selector
+    int_pol_group: test2_int_pol_group
+    int_pol_group_type: vPC
     description:
     action: created,modified
     interface_ranges:
