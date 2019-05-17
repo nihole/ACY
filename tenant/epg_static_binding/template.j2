@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
-	<fvTenant name="{{config['tenant']}}" >
-		<fvAp prio="unspecified" name="{{config['app_profile']}}" >
+	{% for i in tenants %}
+        {% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+        {% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+        {%if not action=="ignore"%}
+        <fvTenant name="{{name}}">
+                {% for k in i.app %}
+                {% set action %}{%if k.action%}{{k.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                {%if not action=="ignore"%}
+                {% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                <fvAp prio="unspecified" desc = "description" name="{{name}}">
+                        {% for l in k.epg %}
+                        {% set action %}{%if l.action%}{{l.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                        {%if not action=="ignore"%}
+                        {% set name %}{%if l.name%}{{l.name}}{%else%}{{global.name}}{%endif%}{% endset %}
+                        {% set description %}{%if l.description%}{{l.description}}{%else%}{{global.description}}{%endif%}{% endset %}
 			<fvAEPg prio="unspecified" name="{{config['name']}}" matchT="AtleastOne" >
-				{% if config['static_binding_type'] == "vPC" %}
-				<fvRsPathAtt descr="" tDn="topology/pod-{{config['pod_id']}}/protpaths-{{config['left_node_id']}}-{{config['right_node_id']}}/pathep-[{{config['interface_policy']}}]" mode="{{config['mode']}}" instrImedcy="immediate" encap="vlan-{{config['encap_vlan_id']}}" status="{{config['action']}}"/>
-				{% elif config['static_binding_type'] == "PC" %}
-				<fvRsPathAtt descr="" tDn="topology/pod-{{config['pod_id']}}/paths-{{config['left_node_id']}}/pathep-[{{config['interface_policy']}}]" mode="{{config['mode']}}" instrImedcy="immediate" encap="vlan-{{config['encap_vlan_id']}}" status="{{config['action']}}"/>
-				{% elif config['static_binding_type'] == "Access" %}
-				<fvRsPathAtt descr="" tDn="topology/pod-{{config['pod_id']}}/paths-{{config['left_node_id']}}/pathep-[eth{{config['access_port_id']}}]" mode="{{config['mode']}}" instrImedcy="immediate" encap="vlan-{{config['encap_vlan_id']}}" status="{{config['action']}}"/>
+				{% for j in l.static_bindings %}
+                        	{% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                        	{%if not action=="ignore"%}
+                        	{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+				{% set mode %}{%if j.mode%}{{j.mode}}{%else%}{{global.mode}}{%endif%}{% endset %}
+				{% set pod_id %}{%if j.pod_id%}{{j.pod_id}}{%else%}{{global.pod_id}}{%endif%}{% endset %}
+				{% set access_port_id %}{%if j.access_port_id%}{{j.access_port_id}}{%else%}{{global.access_port_id}}{%endif%}{% endset %}
+
+				{% if j.static_binding_type] == "vPC" %}
+				<fvRsPathAtt descr="" tDn="topology/pod-{{pod_id}}/protpaths-{{j.left_node_id}}-{{j.right_node_id}}/pathep-[{{j.int_pol_group}}]" mode="{{mode}}" instrImedcy="immediate" encap="vlan-{{j.encap_vlan_id}}" status="{{action}}"/>
+				{% elif j.static_binding_type == "PC" %}
+				<fvRsPathAtt descr="" tDn="topology/pod-{{pod_id}}/paths-{{j.left_node_id}}/pathep-[{{j.int_pol_group}}]" mode="{{mode}}" instrImedcy="immediate" encap="vlan-{{j.encap_vlan_id}}" status="{{action}}"/>
+				{% elif j.static_binding_type == "Access" %}
+				<fvRsPathAtt descr="" tDn="topology/pod-{{pod_id}}/paths-{{j.left_node_id}}/pathep-[eth{{j.access_port_id}}]" mode="{{mode}}" instrImedcy="immediate" encap="vlan-{{j.encap_vlan_id}}" status="{{action}}"/>
 			{% endif %}
 			</fvAEPg>
+			{%endif%}{%endfor%}
 		</fvAp>
+		{%endif%}{%endfor%}
 	</fvTenant>
+	{%endif%}{%endfor%}
 </polUni>
