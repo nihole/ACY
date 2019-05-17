@@ -18,7 +18,7 @@ tenants:
       action: "modified"
       static_bindings:
       - access_port_id:
-        int_port_group: test1_int_pol_group
+        int_pol_group: test1_int_pol_group
         static_binding_type: "PC"
         left_node_id: 1201
         right_node:
@@ -28,7 +28,7 @@ tenants:
       action: "modified"
       static_bindings:
       - access_port_id: 
-        int_port_group: test2_int_pol_group
+        int_pol_group: test2_int_pol_group
         static_binding_type: "vPC"
         left_node_id: 1201
         right_node_id: 1202
