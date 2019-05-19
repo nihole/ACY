@@ -17,7 +17,7 @@
                                 {% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
                                 {% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
                                 {% if from_port != "" %}
-                                <infraNodeBlk name="{{name}}" descr="{{description}}" to_="{{j.to_node_id}}" toCard="{{j.slot_id}}" from_="{{j.node_id}}" status="{{action}}"/>
+                                <infraNodeBlk name="{{name}}" descr="{{description}}" to_="{{j.to_node_id}}"  from_="{{j.from_node_id}}" status="{{action}}"/>
                                 {% endif %}{%endif%}{%endfor%}
                         </infraLeafS>
 			{%endif%}{%endfor%}
