@@ -20,7 +20,7 @@
                                 <infraNodeBlk name="{{name}}" descr="{{description}}" to_="{{j.to_node_id}}"  from_="{{j.from_node_id}}" status="{{action}}"/>
                                 {% endif %}{%endif%}{%endfor%}
 			</infraLeafS>
-			<infraRsAccPortPc tDn="uni/infra/accportprof-{{k.interface_profile}}"/>
+			<infraRsAccPortP tDn="uni/infra/accportprof-{{k.interface_profile}}"/>
 			{%endif%}{%endfor%}
                 </infraNodeP>
 		{%endif%}{%endfor%}
