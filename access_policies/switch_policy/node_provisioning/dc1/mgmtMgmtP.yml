@@ -1,0 +1,26 @@
+global:
+  name: ""
+  description: ""
+  action: "ignore"
+  pod_id: 1
+
+inband:
+- name: "test1_node"
+  inband_ip: "10.10.10.2/24"
+  inband_gw: "10.10.10.1"
+  action: "created,modified"
+- name: "test2_node"
+  inband_ip: "10.10.10.3/24"
+  inband_gw: "10.10.10.1"
+  action: "created,modified"
+
+oob:
+- name: "test1_node"
+  oob_ip: "10.100.100.2/24"
+  oob_gw: "10.100.100.1"
+  action: "created,modified"
+- name: "test2_node"
+  oob_ip: "10.100.100.3/24"
+  oob_gw: "100.100.100.1"
+  action: "created,modified"
+  
