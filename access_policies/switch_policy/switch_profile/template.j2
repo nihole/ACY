@@ -5,7 +5,7 @@
                 {% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
 		{% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
 		{%if not action=="ignore"%}
-                <infraNodP name="{{i.name}}" dn="uni/infra/nprof-{{i.name}}" descr="description" status="{{action}}">
+                <infraNodeP name="{{i.name}}" dn="uni/infra/nprof-{{i.name}}" descr="description" status="{{action}}">
 			{% for k in i.switch_selectors %}
 			{% set action %}{%if k.action%}{{k.action}}{%else%}{{global.action}}{%endif%}{% endset %}
 			{% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
@@ -22,7 +22,7 @@
                                 {% endif %}{%endif%}{%endfor%}
                         </infraLeafS>
 			{%endif%}{%endfor%}
-                </infraNodP>
+                </infraNodeP>
 		{%endif%}{%endfor%}
    </infraInfra>
 </polUni>
