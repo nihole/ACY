@@ -15,11 +15,11 @@ switch_profiles:
   - name: test1_sw_selector
     int_profile: leaf_1201_intprof
     description:
-    action: created,modified
-    interface_ranges:
+    action: "created,modified"
+    switch_ranges:
     - name: 12011201
       from_: 1201
       to_: 1201
-      action: created,modified
+      action: "created,modified"
       description:
 

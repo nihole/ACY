@@ -3,6 +3,7 @@
         <infraInfra>
                 <infraNodeP name="test1_int_profile" dn="uni/infra/nprof-test1_int_profile" descr="description" status="created,modified">
                         <infraLeafS name="test1_sw_selector" descr="" status="created,modified"  type="range">
+                                <infraNodeBlk name="12011201" descr="" to_="" toCard="" from_="" status="created,modified"/>
                         </infraLeafS>
                 </infraNodeP>
    </infraInfra>
