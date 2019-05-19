@@ -5,13 +5,13 @@
                         <infraLeafS name="test1_sw_selector" descr="" status="created,modified"  type="range">
                                 <infraNodeBlk name="12011201" descr="" to_="1201"  from_="1201" status="created,modified"/>
 			</infraLeafS>
-			<infraRsAccPortPc tDn="uni/infra/accportprof-test1_int_profile"/>
+			<infraRsAccPortP tDn="uni/infra/accportprof-test1_int_profile"/>
                 </infraNodeP>
                 <infraNodeP name="test2_int_profile" dn="uni/infra/nprof-test2_int_profile" descr="description" status="created,modified">
                         <infraLeafS name="test2_sw_selector" descr="" status="created,modified"  type="range">
                                 <infraNodeBlk name="12021202" descr="" to_="1202"  from_="1202" status="created,modified"/>
 			</infraLeafS>
-			<infraRsAccPortPc tDn="uni/infra/accportprof-test2_int_profile"/>
+			<infraRsAccPortP tDn="uni/infra/accportprof-test2_int_profile"/>
                 </infraNodeP>
    </infraInfra>
 </polUni>
