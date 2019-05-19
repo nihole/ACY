@@ -2,8 +2,7 @@
 <polUni>
         <infraInfra>
                 <infraNodeP name="test1_int_profile" dn="uni/infra/nprof-test1_int_profile" descr="description" status="created,modified">
-			<infraRsAccPortP tDn="uni/infra/accportprof-leaf_1201_intprof" status="created,modified"/>
-                        <infraLeafS name="test1_sw_selector" dn="uni/infra/nprof-test1_sw_selector" descr="" status="created,modified"  type="range">
+                        <infraLeafS name="test1_sw_selector" descr="" status="created,modified"  type="range">
                         </infraLeafS>
                 </infraNodeP>
    </infraInfra>
