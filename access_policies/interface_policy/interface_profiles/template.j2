@@ -17,7 +17,6 @@
                                 {% set port_type %}accbundle{% endset %}
                                 {% endif %}
                                 <infraRsAccBaseGrp tDn="uni/infra/funcprof/{{port_type}}-{{k.int_pol_group}}" fexId="101"/>
-                        </infraHPortS>
 
 				{% for j in k.interface_ranges %}
         			{% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
