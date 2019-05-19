@@ -5,7 +5,7 @@ global:
 
 fexes:
 - name: test1_fex
-  parend_leaf_id: 1201
+  parent_leaf_id: 1201
   fex_id: 111
   from_slot: 1
   from_port: 21
@@ -14,7 +14,7 @@ fexes:
   action: "created,modified"
   description:
 - name: test1_fex
-  parend_leaf_id: 1201
+  parent_leaf_id: 1201
   fex_id: 111
   from_slot: 1
   from_port: 22
