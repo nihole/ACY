@@ -10,7 +10,7 @@ global:
 switch_profiles:
 - name: test1_int_profile
   description:
-  action: leaf_1201_profile
+  action: "created,modified"
   switch_selectors:
   - name: test1_sw_selector
     int_profile: leaf_1201_intprof
