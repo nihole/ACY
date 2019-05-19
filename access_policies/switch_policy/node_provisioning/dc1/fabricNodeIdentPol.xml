@@ -3,9 +3,7 @@
 	<ctrlrInst>
 		<fabricNodeIdentPol>
 			<fabricNodeIdentP serial="123456" name="test1_node" nodeId="1201" podId="1" role="leaf" descr="description" status="created,modified"/>
-		</fabricNodeIdentPol>
-		<fabricNodeIdentPol>
 			<fabricNodeIdentP serial="234567" name="test2_node" nodeId="1202" podId="1" role="leaf" descr="description" status="created,modified"/>
-		</fabricNodeIdentPol>
+	</fabricNodeIdentPol>
 	</ctrlrInst>
 </polUni>
