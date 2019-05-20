@@ -4,10 +4,10 @@
 	    	<infraFuncP>
 			<infraAccBndlGrp ownerTag="" ownerKey="" name="test1_int_pol_group" lagT="link" descr="" status="created,modified">
 				<infraRsMonIfInfraPol tnMonInfraPolName=""/>
-				<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+				<infraRsLldpIfPol tnLldpIfPolName="lldp-enabled"/>
 				<infraRsStpIfPol tnStpIfPolName="bpdu-guard-filter-enabled"/>
-				<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
-				<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+				<infraRsL2IfPol tnL2IfPolName="global-vlan-scope"/>
+				<infraRsCdpIfPol tnCdpIfPolName="cdp-disabled"/>
 				<infraRsMcpIfPol tnMcpIfPolName=""/>
 				<infraRsAttEntP tDn="uni/infra/attentp-test1_aaep"/>
 				<infraRsStormctrlIfPol tnStormctrlIfPolName=""/>
@@ -16,10 +16,10 @@
 			</infraAccBndlGrp>
 			<infraAccBndlGrp ownerTag="" ownerKey="" name="test2_int_pol_group" lagT="node" descr="" status="created,modified">
 				<infraRsMonIfInfraPol tnMonInfraPolName=""/>
-				<infraRsLldpIfPol tnLldpIfPolName="lldp_enabled"/>
+				<infraRsLldpIfPol tnLldpIfPolName="lldp-enabled"/>
 				<infraRsStpIfPol tnStpIfPolName="bpdu-guard-filter-enabled"/>
-				<infraRsL2IfPol tnL2IfPolName="global_vlan_scope"/>
-				<infraRsCdpIfPol tnCdpIfPolName="cdp_disabled"/>
+				<infraRsL2IfPol tnL2IfPolName="global-vlan-scope"/>
+				<infraRsCdpIfPol tnCdpIfPolName="cdp-disabled"/>
 				<infraRsMcpIfPol tnMcpIfPolName=""/>
 				<infraRsAttEntP tDn="uni/infra/attentp-test2_aaep"/>
 				<infraRsStormctrlIfPol tnStormctrlIfPolName=""/>
