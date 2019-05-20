@@ -7,6 +7,7 @@
 		<infraFexP name="{{i.name}}" descr="description" status="{{action}}">
 			{% for k in i.interface_selectors %}
                         {% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+			<infraFexBndlGrp name="fex{{config['fex_id']}}_Bndle" ownerKey="" ownerTag="" />
 			<infraHPortS name="{{k.name}}" descr="{{description}}" status="{{action}}"  type="range">
 				{% if k.int_pol_group_type == 'Access'%}
                                 {% set port_type %}accportgrp{% endset %}
@@ -25,6 +26,7 @@
 				{% endif %}{%endif%}{%endfor%}		
 			</infraHPortS>
 			{%endfor%}
+		
 		</infraFexP>
 		{%endfor%}
    </infraInfra>
