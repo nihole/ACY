@@ -145,11 +145,11 @@ port_channel_memeber:
   action: created,modified
 
 l2_interface:
-- name: L2-GLOBAL-VLAM
+- name: L2-GLOBAL-VLAN
   vlan_scope: global
   description:
   action: created,modified
-- name: L2-LOCAL-VLAM
+- name: L2-LOCAL-VLAN
   vlan_scope: portlocal
   description:
   action: created,modified
