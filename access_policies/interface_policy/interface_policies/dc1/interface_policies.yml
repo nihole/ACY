@@ -41,6 +41,7 @@ lldp:
 - name: LLDP-enabled
   receive_state: enabled
   transmit_state: enabled
+  action: created,modified
 - name: LLDP-disabled
   receive_state: disabled
   transmit_state: disabled

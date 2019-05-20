@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
 	<infraInfra>
+		<lldpIfPol adminRxSt="enabled" adminTxSt="enabled" descr="" dn="uni/infra/lldpIfP-LLDP-enabled" name="LLDP-enabled" ownerKey="" ownerTag="" />
 		<lldpIfPol adminRxSt="disabled" adminTxSt="disabled" descr="" dn="uni/infra/lldpIfP-LLDP-disabled" name="LLDP-disabled" ownerKey="" ownerTag="" />
 		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active" maxLinks="16" minLinks="1" mode="active" name="LACP-active" ownerKey="" ownerTag="" />
 		<lacpLagPol ctrl="fast-sel-hot-stdby,graceful-conv,susp-individual" descr="description" dn="uni/infra/lacplagp-LACP-active-min1-max1" maxLinks="1" minLinks="1" mode="active" name="LACP-active-min1-max1" ownerKey="" ownerTag="" />
