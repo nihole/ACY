@@ -15,9 +15,10 @@
                                 {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
                                 {%if not action=="ignore"%}
                                 {% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
-                                {% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+				{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+				{% set sw_pol_group %}{%if j.sw_pol_group%}{{j.sw_pol_group}}{%else%}{{global.sw_pol_group}}{%endif%}{% endset %}
                                 {% if from_port != "" %}
-				<infraRsAccNodePGrp tDn="uni/infra/funcprof/accnodepgrp-{{j.sw_pol_group}}"/>
+				<infraRsAccNodePGrp tDn="uni/infra/funcprof/accnodepgrp-{{sw_pol_group}}"/>
                                 <infraNodeBlk name="{{name}}" descr="{{description}}" to_="{{j.to_node_id}}"  from_="{{j.from_node_id}}" status="{{action}}"/>
                                 {% endif %}{%endif%}{%endfor%}
 			</infraLeafS>

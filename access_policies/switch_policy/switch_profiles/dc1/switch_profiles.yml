@@ -2,10 +2,7 @@ global:
   name: ""
   description: ""
   action: "ignore"
-  policy_group:
-
-  policy_group:
-  action:
+  sw_pol_group: "test1_sw_pol_group"
 
 switch_profiles:
 - name: test1_int_profile
@@ -18,6 +15,7 @@ switch_profiles:
     action: "created,modified"
     switch_ranges:
     - name: 12011201
+      sw_pol_group: "test1_sw_pol_group"
       from_node_id: 1201
       to_node_id: 1201
       action: "created,modified"
@@ -32,6 +30,7 @@ switch_profiles:
     action: "created,modified"
     switch_ranges:
     - name: 12021202
+      sw_pol_group: "test2_sw_pol_group"
       from_node_id: 1202
       to_node_id: 1202
       action: "created,modified"
