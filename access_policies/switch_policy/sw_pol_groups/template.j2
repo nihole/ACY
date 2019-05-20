@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
          <infraInfra>
-                <infraFuncP>
-			<infraAccNodePGrp  descr="" dn="uni/infra/funcprof/accnodepgrp-leaf_switch_polgroup" name="leaf_switch_polgroup" nameAlias="" ownerKey="" ownerTag="">
-  				<infraRsNetflowNodePol  tnNetflowNodePolName="default"/>
-  				<infraRsBfdIpv6InstPol  tnBfdIpv6InstPolName="default"/>
-  				<infraRsMonNodeInfraPol  tnMonInfraPolName="default"/>
-  				<infraRsFcInstPol  tnFcInstPolName=""/>
-  				<infraRsBfdIpv4InstPol  tnBfdIpv4InstPolName="default"/>
-  
-  				
-  				<infraRsFcFabricPol  tnFcFabricPolName=""/>
-  				<infraRsMstInstPol  tnStpInstPolName="default"/>
+		 <infraFuncP>
+			{% for j in sw_pol_group %}
+                        {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                        {%if not action=="ignore"%}
+                        {% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
+                        {% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+			{% set netflow_node_policy %}{%if j.netflow_node_policy%}{{j.netflow_node_policy}}{%else%}{{global.netflow_node_policy}}{%endif%}{% endset %}
+			{% set bfd_ipv4_policy %}{%if j.bfd_ipv4_policy%}{{j.bfd_ipv4_policy}}{%else%}{{global.bfd_ipv4_policy}}{%endif%}{% endset %}
+			{% set bfd_ipv6_policy %}{%if j.bfd_ipv6_policy%}{{j.bfd_ipv6_policy}}{%else%}{{global.bfd_ipv6_policy}}{%endif%}{% endset %}
+			{% set monitoring_policy %}{%if j.monitoring_policy%}{{j.monitoring_policy}}{%else%}{{global.monitoring_policy}}{%endif%}{% endset %}
+			{% set stp_policy %}{%if j.stp_policy%}{{j.stp_policy}}{%else%}{{global.stp_policy}}{%endif%}{% endset %}
+			<infraAccNodePGrp  descr="" dn="uni/infra/funcprof/accnodepgrp-{{name}}" name="{{name}}" nameAlias="" ownerKey="" ownerTag="">
+				<infraRsNetflowNodePol  tnNetflowNodePolName="{{netflow_node_policy}}"/>
+				<infraRsBfdIpv6InstPol  tnBfdIpv6InstPolName="{{bfd_ipv6_policy}}"/>
+				<infraRsMonNodeInfraPol  tnMonInfraPolName="{{monitoring_policy}}"/>
+				<infraRsBfdIpv4InstPol  tnBfdIpv4InstPolName="{{bfd_ipv4_policy}}"/>
+				<infraRsMstInstPol  tnStpInstPolName="{{stp_policy}}"/>
 			</infraAccNodePGrp>
+			{%endif%}{%endfor%}
 		</infraFuncP>
 	</infraInfra>
 </polUni>

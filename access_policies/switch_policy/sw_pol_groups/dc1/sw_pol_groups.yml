@@ -18,3 +18,5 @@ global:
 sw_pol_group:
 - name: "test1_sw_pol_group"
   action: "created, modified"
+- name: "test2_sw_pol_group"
+  action: "created, modified"
