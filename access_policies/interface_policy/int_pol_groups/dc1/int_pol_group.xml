@@ -11,7 +11,7 @@
 				<infraRsMcpIfPol tnMcpIfPolName=""/>
 				<infraRsAttEntP tDn="uni/infra/attentp-test1_aaep"/>
 				<infraRsStormctrlIfPol tnStormctrlIfPolName=""/>
-				<infraRsHIfPol tnFabricHIfPolName="40gig-auto"/>
+				<infraRsHIfPol tnFabricHIfPolName="Link-40Gbs"/>
 				<infraRsLacpPol tnLacpLagPolName="LACP-active-min2-max4"/>
 			</infraAccBndlGrp>
 			<infraAccBndlGrp ownerTag="" ownerKey="" name="test2_int_pol_group" lagT="node" descr="" status="created,modified">
@@ -23,7 +23,7 @@
 				<infraRsMcpIfPol tnMcpIfPolName=""/>
 				<infraRsAttEntP tDn="uni/infra/attentp-test2_aaep"/>
 				<infraRsStormctrlIfPol tnStormctrlIfPolName=""/>
-				<infraRsHIfPol tnFabricHIfPolName="10gig-auto"/>
+				<infraRsHIfPol tnFabricHIfPolName="Link-10Gbs"/>
 				<infraRsLacpPol tnLacpLagPolName="LACP-active-min2-max4"/>
 			</infraAccBndlGrp>
 		</infraFuncP>
