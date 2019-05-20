@@ -8,14 +8,14 @@ vpc_domains:
   domain_policy: default
   left_node_id: 1201
   right_node_id: 1202
-  logical_paer_id: 1
+  logical_pair_id: 1
   action: "created,modified"
   description:
 - name: leaf_1203_1204_vpcgrp
   domain_policy: default
   left_node_id: 1203
   right_node_id: 1204
-  logical_paer_id: 2
+  logical_pair_id: 2
   action: "created,modified"
   description:
 
