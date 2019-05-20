@@ -2,9 +2,9 @@ global:
   action: ignore
   name: ""
   description: ""
-  lldp_pol: lldp-enabled
+  lldp_pol: LLDP-enabled
   stp_pol: bpdu-guard-filter-enabled
-  cdp_pol: cdp-disabled
+  cdp_pol: CDP-disabled
   monitor: default
   l2_int_pol: global-vlan-scope
   mcp_pol: ""
@@ -21,7 +21,7 @@ int_pol_group:
   aaep: test1_aaep
   lacp_pol: LACP-active-min2-max4
   storm_pol: 
-  link_pol: 40gig_auto
+  link_pol: 40gig-auto
   action: created,modified
   description:
 - name: test2_int_pol_group
@@ -29,7 +29,7 @@ int_pol_group:
   aaep: test2_aaep
   lacp_pol: LACP-active-min2-max4
   storm_pol: ""
-  link_pol: 10gig_auto
+  link_pol: 10gig-auto
   action: created,modified
   description:
 
