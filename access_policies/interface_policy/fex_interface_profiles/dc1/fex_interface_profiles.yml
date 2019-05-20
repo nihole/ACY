@@ -9,6 +9,7 @@ interface_profiles:
   action: created,modified
   interface_selectors: 
   - name: test1_fex_int_selector
+    int_pol_group: test1_int_pol_group
     description:
     action: created,modified
     interface_ranges:
@@ -25,6 +26,7 @@ interface_profiles:
       action: created,modified
       description:
   - name: test2_fex_int_selector
+    int_pol_group: test1_int_pol_group
     description:
     action: created,modified
     interface_ranges:
@@ -45,6 +47,7 @@ interface_profiles:
   action: created,modified
   interface_selectors:
   - name: test1_fex_int_selector
+    int_pol_group: test1_int_pol_group
     description:
     action: created,modified
     interface_ranges:
@@ -61,6 +64,7 @@ interface_profiles:
       action: created,modified
       description:
   - name: test2_fex_int_selector
+    int_pol_group: test1_int_pol_group
     description:
     action: created,modified
     interface_ranges:
