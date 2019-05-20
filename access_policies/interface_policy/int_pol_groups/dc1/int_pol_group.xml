@@ -6,7 +6,7 @@
 				<infraRsMonIfInfraPol tnMonInfraPolName=""/>
 				<infraRsLldpIfPol tnLldpIfPolName="LLDP-enabled"/>
 				<infraRsStpIfPol tnStpIfPolName="bpdu-guard-filter-enabled"/>
-				<infraRsL2IfPol tnL2IfPolName="global-vlan-scope"/>
+				<infraRsL2IfPol tnL2IfPolName="L2-GLOBAL-VLAN"/>
 				<infraRsCdpIfPol tnCdpIfPolName="CDP-disabled"/>
 				<infraRsMcpIfPol tnMcpIfPolName=""/>
 				<infraRsAttEntP tDn="uni/infra/attentp-test1_aaep"/>
@@ -18,7 +18,7 @@
 				<infraRsMonIfInfraPol tnMonInfraPolName=""/>
 				<infraRsLldpIfPol tnLldpIfPolName="LLDP-enabled"/>
 				<infraRsStpIfPol tnStpIfPolName="bpdu-guard-filter-enabled"/>
-				<infraRsL2IfPol tnL2IfPolName="global-vlan-scope"/>
+				<infraRsL2IfPol tnL2IfPolName="L2-GLOBAL-VLAN"/>
 				<infraRsCdpIfPol tnCdpIfPolName="CDP-disabled"/>
 				<infraRsMcpIfPol tnMcpIfPolName=""/>
 				<infraRsAttEntP tDn="uni/infra/attentp-test2_aaep"/>

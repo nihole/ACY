@@ -6,7 +6,7 @@ global:
   stp_pol: bpdu-guard-filter-enabled
   cdp_pol: CDP-disabled
   monitor: default
-  l2_int_pol: global-vlan-scope
+  l2_int_pol: L2-GLOBAL-VLAN
   mcp_pol: ""
   ipv4_netflow: netflow-ipv4
   ipv6_netflow: netflow-ipv6
