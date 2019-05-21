@@ -1,0 +1,6 @@
+{%for j in files%}
+  {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+  {%if action == "yes" %}}
+  "{{j.name}}"
+  "{{j.path}}"
+{%endif%}{%endfor%}

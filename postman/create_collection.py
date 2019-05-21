@@ -27,7 +27,7 @@ else:
     quit()
 
 loader = jinja2.FileSystemLoader('/tmp')
-env = jinja2.Environment(autoescape=True, loader=loader)
+env = jinja2.Environment(autoescape=False, loader=loader)
 
 my_config=''
 f = open( "./%s" % yaml_file )		
@@ -39,8 +39,7 @@ for j in yaml_data["files"]:
     j_str = take_data(j["path"])
     j_str = j_str.replace('\n', "\\n").replace('\t',"\\t")
     j_str = j_str.encode(encoding='ascii', errors='strict')
-
-    print (j_str)
+#    print (j_str)
     j["path"] = str(j_str)
 
 
@@ -63,6 +62,7 @@ my_comfig[-3] = my_comfig[-3].replace(",","")
 
 # Create str
 my_config_txt = "".join(my_comfig)
+my_config_txt = my_config_txt.replace("b\'","")
 
 print(my_config_txt)
 
