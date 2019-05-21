@@ -5,6 +5,38 @@
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
+        	{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\\"aaaUser\\" : { \\"attributes\\": {\\"name\\":\\"{{global.username}}\\",\\"pwd\\":\\"{{global.password}}\\" } } } "
+				},
+				"url": {
+					"raw": "https://{{global.hostname}}/api/aaaLogin.json",
+					"protocol": "https",
+					"host": [
+						"198",
+						"18",
+						"133",
+						"200"
+					],
+					"path": [
+						"api",
+						"aaaLogin.json"
+					]
+				},
+				"description": "login"
+			},
+			"response": []
+		},
 		{%for j in files%}
 		{% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
                 {%if action=="yes"%}
