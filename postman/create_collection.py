@@ -22,7 +22,7 @@ if (len(sys.argv)==3):
     yaml_file = sys.argv[2]
 else:
     print ("   ######################################################\n")
-    print ("   python3 ../compile.pl template.j2 device_name.yml\n")
+    print ("   python3 create_collection template.j2 collection.yml\n")
     print ("   ######################################################\n")
     quit()
 
@@ -36,14 +36,19 @@ f.close()
 
 yaml_data = yaml.load( data1 )
 for j in yaml_data["files"]:
-    j_str = take_data(j["path"])
-    j_str = j_str.replace('\"', '\\"').replace('\t','\\t').replace('\n','\\n')
-#    j_str = j_str.encode(encoding='ascii', errors='strict')
-#    print (j_str)
-    j["path"] = str(j_str)
+    if j["action"] == "yes":
+        action = "yes"
+    else:
+        if yaml_data["global"]["action"] == "yes":
+            action = "yes"
+        else:
+            action = "no"
+    if action == "yes":
+        j_str = take_data(j["path"])
+        j_str = j_str.replace('\"', '\\"').replace('\t','\\t').replace('\n','\\n')
+        j["path"] = str(j_str)
 
 
-#print (yaml_data)
 
 f = open( "./%s" % j2_file )
 data2 = f.read()
