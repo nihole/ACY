@@ -1,0 +1,19 @@
+global:
+  name: ""
+  enable_infra_vlan:
+  phys_dom: ""
+  l3_ext_dom: ""
+  vmm_dom: ""
+  action: "ignore"
+  description: ""
+
+
+aaep:
+- name: 
+  enable_infra_vlan: 
+  phys_dom: 
+  l3_ext_dom:
+  vmm_dom:
+  action: 
+  operational_status:
+  description:

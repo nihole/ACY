@@ -1,0 +1,27 @@
+global:
+  action: ignore
+  name: ""
+  description: ""
+  lldp_pol: LLDP-enabled
+  stp_pol: bpdu-guard-filter-enabled
+  cdp_pol: CDP-disabled
+  monitor: default
+  l2_int_pol: L2-GLOBAL-VLAN
+  mcp_pol: ""
+  ipv4_netflow: netflow-ipv4
+  ipv6_netflow: netflow-ipv6
+  ingress_pol: no-policing
+  egress_pol: no-policing
+  port_security: port-security-disabled
+
+
+int_pol_group: 
+- name: 
+  type: 
+  aaep: 
+  lacp_pol: LACP-active-min2-max4
+  storm_pol: 
+  link_pol: 
+  action: 
+  description:
+

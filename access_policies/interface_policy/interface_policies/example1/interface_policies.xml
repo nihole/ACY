@@ -17,6 +17,7 @@
 		<fabricHIfPol autoNeg="on" descr="" dn="uni/infra/hintfpol-Link-10Gbps" linkDebounce="100" name="Link-10Gbps" ownerKey="" ownerTag="" speed="10G"/>
 		<fabricHIfPol autoNeg="on" descr="" dn="uni/infra/hintfpol-Link-1Gbps-auto" linkDebounce="100" name="Link-1Gbps-auto" ownerKey="" ownerTag="" speed="1G"/>
 		<fabricHIfPol autoNeg="off" descr="" dn="uni/infra/hintfpol-Link-1Gbps" linkDebounce="100" name="Link-1Gbps" ownerKey="" ownerTag="" speed="1G"/>
+		<cdpIfPol adminSt="enabled" descr="" dn="uni/infra/cdpIfP-CDP-enabled" name="CDP-enabled" ownerKey="" ownerTag="" />
 		<cdpIfPol adminSt="disabled" descr="" dn="uni/infra/cdpIfP-CDP-disabled" name="CDP-disabled" ownerKey="" ownerTag="" />
 		<l2IfPol descr="" dn="uni/infra/l2IfP-L2-GLOBAL-VLAN" name="L2-GLOBAL-VLAN" ownerKey="" ownerTag="" vlanScope="global" />
 		<l2IfPol descr="" dn="uni/infra/l2IfP-L2-LOCAL-VLAN" name="L2-LOCAL-VLAN" ownerKey="" ownerTag="" vlanScope="portlocal" />

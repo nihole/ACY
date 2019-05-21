@@ -1,0 +1,18 @@
+global:
+  name: ""
+  description: ""
+  action: "ignore"
+  pod_id: 1
+
+inband:
+- node_id: 
+  inband_ip: 
+  inband_gw: 
+  action: 
+
+oob:
+- node_id: 
+  oob_ip: 
+  oob_gw: 
+  action: 
+  

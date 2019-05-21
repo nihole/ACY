@@ -1,0 +1,61 @@
+global:
+  name: ""
+  description: ""
+  action: ignore
+
+link_level:
+- name: 
+  auto_negotiation:
+  speed:
+  debounce_interval: 
+  description:
+  action: 
+cdp:
+- name: 
+  admin_state: 
+  action: 
+
+lldp:
+- name: 
+  receive_state: 
+  transmit_state: 
+  action: 
+
+port_channel:
+- name: 
+  mode: 
+  min_links: 
+  max_links: 
+  control: 
+  description:
+  action: 
+
+stp:
+- name: 
+  control: 
+  description: 
+  description:
+  action: 
+
+storm:
+- name: 
+  rate_type: 
+  rate: 
+  max_burst: 
+  description:
+  action: 
+
+port_channel_memeber:
+- name: 
+  priority: 
+  transmit_rate: 
+  description:
+  action: 
+
+l2_interface:
+- name: 
+  vlan_scope: 
+  description:
+  action: 
+
+

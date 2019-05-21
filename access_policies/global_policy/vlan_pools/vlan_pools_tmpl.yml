@@ -1,0 +1,17 @@
+global:
+  action: "ignore"
+  name: ""
+  description: ""
+  alloc_mode: static
+
+vlan_pool:
+- name: 
+  action:
+  vlan_range:
+  - name:
+    start_vlan: 
+    stop_vlan: 
+    alloc_mode:
+    action: 
+
+  

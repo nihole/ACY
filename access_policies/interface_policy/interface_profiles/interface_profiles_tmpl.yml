@@ -1,0 +1,22 @@
+global:
+  action: ignore
+  name: ""
+  description: ""
+  
+interface_profiles:
+- name: 
+  description:
+  action: 
+  interface_selectors: 
+  - name: 
+    int_pol_group: 
+    int_pol_group_type: 
+    description:
+    action: 
+    interface_ranges:
+    - name: 
+      slot_id: 
+      from_port: 
+      to_port: 
+      action: 
+      description:

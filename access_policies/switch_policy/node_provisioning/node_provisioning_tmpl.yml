@@ -1,0 +1,16 @@
+global:
+  name: ""
+  description: ""
+  action: "ignore"
+  pod_id: 1
+  role: "unspecified"
+
+nodes:
+- name: 
+  serial_number: 
+  node_id: 
+  device_type: 
+  pod_id: 
+  role: 
+  action: 
+  description: 
