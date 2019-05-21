@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<fvTenant name="test2_tenant" >	
+		<fvBD unkMcastAct="flood" unkMacUcastAct="proxy" unicastRoute="yes" name="test1_bd" multiDstPktAct="bd-flood"  limitIpLearnToSubnets="no" descr="" arpFlood="no" status="created,modified">
+			<fvRsCtx tnFvCtxName=""/>
+			<fvRsIgmpsn tnIgmpSnoopPolName=""/>
+			<fvRsBdToEpRet tnFvEpRetPolName="" resolveAct="resolve"/>
+			<fvSubnet ctrl="" descr="description" ip="10.100.100.1/24" name="" preferred="no" scope=""/>
+			<fvRsBDToOut tnL3extOutName="test2_l3out"/>
+		</fvBD>
+		<fvBD unkMcastAct="flood" unkMacUcastAct="proxy" unicastRoute="yes" name="test4_bd" multiDstPktAct="bd-flood"  limitIpLearnToSubnets="no" descr="" arpFlood="no" status="created,modified">
+			<fvRsCtx tnFvCtxName=""/>
+			<fvRsIgmpsn tnIgmpSnoopPolName=""/>
+			<fvRsBdToEpRet tnFvEpRetPolName="" resolveAct="resolve"/>
+			<fvSubnet ctrl="" descr="description" ip="10.100.200.1/24" name="" preferred="no" scope=""/>
+		</fvBD>
+	</fvTenant>
+</polUni>
