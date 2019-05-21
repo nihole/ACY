@@ -37,8 +37,8 @@ f.close()
 yaml_data = yaml.load( data1 )
 for j in yaml_data["files"]:
     j_str = take_data(j["path"])
-#    j_str = j_str.replace('\n', "\\n").replace('\t',"\\t")
-    j_str = j_str.encode(encoding='ascii', errors='strict')
+    j_str = j_str.replace('\"', '\\"').replace('\t','\\t').replace('\n','\\n')
+#    j_str = j_str.encode(encoding='ascii', errors='strict')
 #    print (j_str)
     j["path"] = str(j_str)
 
@@ -62,7 +62,6 @@ my_comfig[-3] = my_comfig[-3].replace(",","")
 
 # Create str
 my_config_txt = "".join(my_comfig)
-my_config_txt = my_config_txt.replace("b\'","")
 
 print(my_config_txt)
 
