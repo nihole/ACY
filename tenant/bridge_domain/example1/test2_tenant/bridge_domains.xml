@@ -5,13 +5,13 @@
 			<fvRsCtx tnFvCtxName=""/>
 			<fvRsIgmpsn tnIgmpSnoopPolName=""/>
 			<fvRsBdToEpRet tnFvEpRetPolName="" resolveAct="resolve"/>
-			<fvSubnet ctrl="" descr="" ip="10.100.100.1/24" name="" preferred="no" scope=""/>
+			<fvSubnet ctrl="" descr="" ip="10.200.3.1/24" name="" preferred="no" scope=""/>
 		</fvBD>
 		<fvBD unkMcastAct="flood" unkMacUcastAct="proxy" unicastRoute="yes" name="test4_bd" multiDstPktAct="bd-flood"  limitIpLearnToSubnets="no" descr="" arpFlood="no" status="created,modified">
 			<fvRsCtx tnFvCtxName=""/>
 			<fvRsIgmpsn tnIgmpSnoopPolName=""/>
 			<fvRsBdToEpRet tnFvEpRetPolName="" resolveAct="resolve"/>
-			<fvSubnet ctrl="" descr="" ip="10.100.200.1/24" name="" preferred="no" scope=""/>
+			<fvSubnet ctrl="" descr="" ip="10.200.4.1/24" name="" preferred="no" scope=""/>
 		</fvBD>
 	</fvTenant>
 </polUni>

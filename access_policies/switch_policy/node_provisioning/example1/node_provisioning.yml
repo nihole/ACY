@@ -22,3 +22,20 @@ nodes:
   role: "leaf"
   action: "created,modified"
   description:
+- name: "test3_node"
+  serial_number: 123451
+  node_id: "1203"
+  device_type: "N93108TC-EX"
+  pod_id: 1
+  role: "leaf"
+  action: "created,modified"
+  description:
+- name: "test4_node"
+  serial_number: 244567
+  node_id: "1204"
+  device_type: "N93108TC-EX"
+  pod_id: 1
+  role: "leaf"
+  action: "created,modified"
+  description:
+

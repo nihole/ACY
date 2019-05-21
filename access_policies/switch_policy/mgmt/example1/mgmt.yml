@@ -13,6 +13,14 @@ inband:
   inband_ip: "10.10.10.3/24"
   inband_gw: "10.10.10.1"
   action: "created,modified"
+- node_id: 1203
+  inband_ip: "10.10.10.4/24"
+  inband_gw: "10.10.10.1"
+  action: "created,modified"
+- node_id: 1204
+  inband_ip: "10.10.10.5/24"
+  inband_gw: "10.10.10.1"
+  action: "created,modified"
 
 oob:
 - node_id: 1201
@@ -23,4 +31,13 @@ oob:
   oob_ip: "10.100.100.3/24"
   oob_gw: "100.100.100.1"
   action: "created,modified"
+- node_id: 1203
+  oob_ip: "10.100.100.4/24"
+  oob_gw: "10.100.100.1"
+  action: "created,modified"
+- node_id: 1204
+  oob_ip: "10.100.100.5/24"
+  oob_gw: "100.100.100.1"
+  action: "created,modified"
+
   
