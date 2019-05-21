@@ -16,14 +16,14 @@
 		{% set dns_label %}{%if j.dns_label%}{{j.dns_label}}{%else%}{{global.dns_label}}{%endif%}{% endset %}
 		{% set route_tag_policy %}{%if j.route_tag_policy%}{{j.route_tag_policy}}{%else%}{{global.route_tag_policy}}{%endif%}{% endset %}
 
-		<fvCtx descr="{{description}}" knwMcastAct="permit" name="{{name}}" pcEnfPref="{{policy_enforcement}}" status="{{action}}">
+		<fvCtx descr="{{description}}" knwMcastAct="permit" name="{{j.name}}" pcEnfPref="{{policy_enforcement}}" status="{{action}}">
 			<fvRsBgpCtxPol tnBgpCtxPolName="{{bgp_timers}}"/>
 			<fvRsCtxToExtRouteTagPol tnL3extRouteTagPolName="{{route_tag_policy}}"/>
 			<fvRsOspfCtxPol tnOspfCtxPolName="{{ospf_timers}}"/>
 			<vzAny descr="" matchT="AtleastOne" name=""/>
 			<fvRsCtxToEpRet tnFvEpRetPolName="{{ep_retention}}"/>
 		</fvCtx>
-		{%endfor%}
+		{%endif%}{%endfor%}
 	</fvTenant>
 	{%endif%}{%endfor%}
 </polUni>
