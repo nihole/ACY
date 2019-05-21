@@ -13,7 +13,6 @@
 		{% set aci_path %}{%if j.aci_path%}{{j.aci_path}}{%else%}{{global.aci_path}}{%endif%}{% endset %}
 		{% set username %}{%if j.username%}{{j.username}}{%else%}{{global.username}}{%endif%}{% endset %}
 		{% set password %}{%if j.password%}{{j.password}}{%else%}{{global.password}}{%endif%}{% endset %}
-		{% set request %}{%if j.request%}{{j.request}}{%else%}{{global.request}}{%endif%}{% endset %}
 		{	
 			"name": "{{j.name}}",
 			"request": {
@@ -28,7 +27,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw":"{{request}}"
+					"raw":"{{j.path}}"
 				},
 				"url": {
 					"raw": "https://{{hostname}}{{aci_path}}",

@@ -1,3 +1,4 @@
+
 import re
 import paramiko
 import sys
@@ -35,7 +36,13 @@ f.close()
 
 yaml_data = yaml.load( data1 )
 for j in yaml_data["files"]:
-    j["path"] = take_data(j["path"])
+    j_str = take_data(j["path"])
+    j_str = j_str.replace('\n', "\\n").replace('\t',"\\t")
+    j_str = j_str.encode(encoding='ascii', errors='strict')
+
+    print (j_str)
+    j["path"] = str(j_str)
+
 
 #print (yaml_data)
 
