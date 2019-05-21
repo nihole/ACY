@@ -8,13 +8,13 @@ global:
 
 
 tenant: "test1_tenant"
-action: "modified"
+action: "created,modified"
 app:
 - name: "test1_app"
-  action: "modified"
+  action: "created,modified"
   epg:
   - name: "test1_epg"
-    action: "modified"
+    action: "created,modified"
     static_bindings:
     - access_port_id:
       int_pol_group: test1_int_pol_group
@@ -24,7 +24,7 @@ app:
       encap_vlan_id: 101
       action: "created,modified"
   - name: "test2_epg"
-    action: "modified"
+    action: "created,modified"
     static_bindings:
     - access_port_id: 
       int_pol_group: test2_int_pol_group
