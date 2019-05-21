@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
 	<fvTenant name="test1_tenant">
-		<fvAp prio="unspecified" desc = "description" name="test1_app">
+		<fvAp prio="unspecified" descr = "" name="test1_app">
 			<fvAEPg prio="unspecified" name="test1_epg" matchT="AtleastOne" descr="" status="created,modified">
         			<fvRsCustQosPol tnQosCustomPolName=""/>
         			<fvRsBd tnFvBDName="" />
@@ -13,7 +13,7 @@
         			<fvRsDomAtt tDn="uni/phys-test1_phys_domain" instrImedcy="immediate" encap="unknown" resImedcy="immediate" />
 			</fvAEPg>
 		</fvAp>
-		<fvAp prio="unspecified" desc = "description" name="test2_app">
+		<fvAp prio="unspecified" descr = "" name="test2_app">
 			<fvAEPg prio="unspecified" name="test3_epg" matchT="AtleastOne" descr="" status="created,modified">
         			<fvRsCustQosPol tnQosCustomPolName=""/>
         			<fvRsBd tnFvBDName="" />
