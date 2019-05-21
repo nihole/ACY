@@ -55,7 +55,7 @@ def rest_header(n):
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json"
+						"value": "application/xml"
 					}
 				],
 				"body": {
@@ -91,25 +91,16 @@ def rest_tail():
     return re_tail
 
 
-def aci_json_correction(cfg_json):
+def aci_json_correction(*args):
+    data = ""
+    for file_name in args:
+        fl = open(file_name, "r")
+        data = data + rest_header(file_name) + fl.read() + "}}}"
+        fl.close()
+    
+    collction = collection_header() + data + rest_tail()
+    
 
-    cmd_list = cfg_json.splitlines()
-    l = len(cmd_list)
-    if l:
-        cfg_json_ = collection_header()
-        n = 0
-        for line in cmd_list:
-            if not line:
-                continue
-            new_line = line.replace('\"', '\\"')
-            if n == 0:
-                cfg_json_ = cfg_json_.rstrip()  + rest_header(n).rstrip() + new_line.rstrip() + rest_tail()
-            else:
-                cfg_json_ = cfg_json_.rstrip().rstrip()  + "," + rest_header(n).rstrip() + new_line.rstrip() + rest_tail()
-            
-            n = n + 1
-        cfg_json_ = cfg_json_ + '\t ]' +'\n}'
-    else:
-        cfg_json_ = ''
+    return collction
 
-return cfg_json_
+print aci_json_correction ("/home/nihole/python_test/test1", "/home/nihole/python_test/test2")

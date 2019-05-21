@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
 	<infraInfra>
-		{% for j in fexes %}
-                {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+		{% for i in fexes %}
+                {% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
                 {%if not action=="ignore"%}
-                {% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
-                {% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-    		<infraNodeP name="leaf_{{j.parent_leaf_id}}_fex_swprof" status="{{action}}">
-      			<infraLeafS descr="" name="leaf{{j.parent_leaf_id}}_swsel" type="range">
+                {% set name %}{%if i.name%}{{i.name}}{%else%}{{global.name}}{%endif%}{% endset %}
+                {% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+		<infraNodeP name="{{name}}" status="{{action}}">
+			{% for k in i.fex_selectors %}
+                        {% set action %}{%if k.action%}{{k.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                        {% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+			{%if not action=="ignore"%}
+			<infraRsAccPortP tDn="uni/infra/acccardprof-leaf{{k.parent_leaf_id}}_fex_inselector" />
+                        <infraRsAccCardP tDn="uni/infra/acccardprof-leaf{{k.parent_leaf_id}}_access_module" />
+
+			<infraLeafS descr="" name="{{k.name}}" type="range">
+				{% for j in k.fex_ranges %}
+                                {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                                {%if not action=="ignore"%}
+                                {% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
+                                {% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
         			<infraNodeBlk from_="{{j.parent_leaf_id}}" name="bl{{j.parent_leaf_id}}" to_="{{j.parent_leaf_id}}" />
       			</infraLeafS>
-      			<infraRsAccPortP tDn="uni/infra/accportprof-leaf{{j.parent_leaf_id}}_fex_ifselector" />
-      			<infraRsAccCardP tDn="uni/infra/acccardprof-leaf{{j.parent_leaf_id}}_access_module" />
     		</infraNodeP>
     		<infraAccCardP descr="" name="leaf{{j.parent_leaf_id}}_access_module" ownerKey="" ownerTag="" status="{{action}}">
       			<infraCardS descr="" name="leaf{{j.parent_leaf_id}}FexCardSelector" ownerKey="" ownerTag="" type="chExtender">
