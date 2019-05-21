@@ -1,0 +1,13 @@
+global:
+  name: ""
+  description: ""
+  action: "ignore"
+
+tenant: "test1_tenant"
+action: "created,modified"
+app:
+- name: "test1_app"
+  action: "created,modified"
+- name: "test2_app"
+  action: "created,modified"
+
