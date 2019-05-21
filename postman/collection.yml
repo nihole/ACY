@@ -1,5 +1,9 @@
 global:
   action: "yes"
+  hostname: "198.18.133.200"
+  aci_path: "/api/mo/uni.xml"
+  username: "admin"
+  password: "password"
 
 collection:
 - name: "vlan_pools"
