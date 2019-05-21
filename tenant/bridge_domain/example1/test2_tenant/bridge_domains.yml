@@ -18,7 +18,7 @@ bridge_domains:
   contex: test3_vrf
   bd_type: "L3"
   bd_gateway_ip: "10.100.100.1/24"
-  l3_out: "test2_l3out"
+  l3_out: 
   legacy_bd: ""
   e_r_policy: ""
   ep_retention_policy: ""
