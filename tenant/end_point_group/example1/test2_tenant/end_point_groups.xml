@@ -5,24 +5,24 @@
 			<fvAEPg prio="unspecified" name="test5_epg" matchT="AtleastOne" descr="" status="created,modified">
         			<fvRsCustQosPol tnQosCustomPolName=""/>
         			<fvRsBd tnFvBDName="" />
-        			<fvRsDomAtt tDn="uni/phys-test1_phys_domain" instrImedcy="immediate" encap="unknown" resImedcy="immediate" />
+        			<fvRsDomAtt tDn="uni/phys-test1_phys_dom" instrImedcy="immediate" encap="unknown" resImedcy="immediate" />
 			</fvAEPg>
 			<fvAEPg prio="unspecified" name="test6_epg" matchT="AtleastOne" descr="" status="created,modified">
         			<fvRsCustQosPol tnQosCustomPolName=""/>
         			<fvRsBd tnFvBDName="" />
-        			<fvRsDomAtt tDn="uni/phys-test1_phys_domain" instrImedcy="immediate" encap="unknown" resImedcy="immediate" />
+        			<fvRsDomAtt tDn="uni/phys-test1_phys_dom" instrImedcy="immediate" encap="unknown" resImedcy="immediate" />
 			</fvAEPg>
 		</fvAp>
 		<fvAp prio="unspecified" descr = "" name="test4_app">
 			<fvAEPg prio="unspecified" name="test7_epg" matchT="AtleastOne" descr="" status="created,modified">
         			<fvRsCustQosPol tnQosCustomPolName=""/>
         			<fvRsBd tnFvBDName="" />
-        			<fvRsDomAtt tDn="uni/phys-test1_phys_domain" instrImedcy="immediate" encap="unknown" resImedcy="immediate" />
+        			<fvRsDomAtt tDn="uni/phys-test1_phys_dom" instrImedcy="immediate" encap="unknown" resImedcy="immediate" />
 			</fvAEPg>
 			<fvAEPg prio="unspecified" name="test8_epg" matchT="AtleastOne" descr="" status="created,modified">
         			<fvRsCustQosPol tnQosCustomPolName=""/>
         			<fvRsBd tnFvBDName="" />
-        			<fvRsDomAtt tDn="uni/phys-test1_phys_domain" instrImedcy="immediate" encap="unknown" resImedcy="immediate" />
+        			<fvRsDomAtt tDn="uni/phys-test1_phys_dom" instrImedcy="immediate" encap="unknown" resImedcy="immediate" />
 			</fvAEPg>
 		</fvAp>
 	</fvTenant>
