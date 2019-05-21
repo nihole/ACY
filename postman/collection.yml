@@ -6,7 +6,7 @@ global:
   password: "password"
 
 files:
-- name: <vlan_pools>
+- name: "vlan_pools"
   path: "/home/nihole/DAFT/access_policies/global_policy/vlan_pools/dc1/vlan_pools.xml"
   action: "yes" 
 - name: "test1_phys_dom"
