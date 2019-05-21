@@ -19,11 +19,11 @@
 			<fvRsCtx tnFvCtxName="{{j.context}}"/>
 			<fvRsIgmpsn tnIgmpSnoopPolName="{{j.igmp_snoop}}"/>
 			{% if j.legacy_bd %}
-			<fvAccP descr="description" encap="vlan-{{j.legacy_bd}}" name="" ownerKey="" ownerTag=""/>
+			<fvAccP descr="{{description}}" encap="vlan-{{j.legacy_bd}}" name="" ownerKey="" ownerTag=""/>
 			{% endif %}
 			<fvRsBdToEpRet tnFvEpRetPolName="{{j.e_r_policy}}" resolveAct="resolve"/>
 			{% if j.bd_gateway_ip %}
-			<fvSubnet ctrl="" descr="description" ip="{{j.bd_gateway_ip}}" name="" preferred="no" scope="{{j.subnet_type}}"/>
+			<fvSubnet ctrl="" descr="{{description}}" ip="{{j.bd_gateway_ip}}" name="" preferred="no" scope="{{j.subnet_type}}"/>
 			{% endif %}
 			{% if j.l3_out %}
 			<fvRsBDToOut tnL3extOutName="{{j.l3_out}}"/>
