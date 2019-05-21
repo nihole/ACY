@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
-	<fvTenant descr="description" name="">
+	<fvTenant descr="description" name="test1_tenant">
 		<fvAp descr="description" name="" prio="unspecified" status="created,modified">
 		</fvAp>
 		<fvAp descr="description" name="" prio="unspecified" status="created,modified">
 		</fvAp>
 	</fvTenant>
-	<fvTenant descr="description" name="">
+	<fvTenant descr="description" name="test2_tenant">
 		<fvAp descr="description" name="" prio="unspecified" status="created,modified">
 		</fvAp>
 		<fvAp descr="description" name="" prio="unspecified" status="created,modified">
