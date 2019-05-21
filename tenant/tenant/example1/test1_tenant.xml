@@ -2,6 +2,4 @@
 <polUni>
 	<fvTenant descr="" name="test1_tenant" status="created,modified">
 	</fvTenant>
-	<fvTenant descr="" name="test2_tenant" status="created,modified">
-	</fvTenant>
 </polUni>

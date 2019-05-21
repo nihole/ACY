@@ -1,0 +1,9 @@
+tenants:
+  name: "test2_tenant"
+  tags: ""
+  mon_policy: ""
+  ctrl_mgmt_policy: ""
+  security_domain: ""
+  description: ""
+  action: "created,modified"
+
