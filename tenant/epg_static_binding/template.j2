@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
-	{% for i in tenants %}
-        {% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
-        {% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
         {%if not action=="ignore"%}
-        <fvTenant name="{{name}}">
-                {% for k in i.app %}
+        <fvTenant name="{{tenant}}">
+                {% for k in app %}
                 {% set action %}{%if k.action%}{{k.action}}{%else%}{{global.action}}{%endif%}{% endset %}
                 {%if not action=="ignore"%}
                 {% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-                <fvAp prio="unspecified" desc = "description" name="{{name}}">
+		<fvAp prio="unspecified" descr = "{{description}}" name="{{k.name}}">
                         {% for l in k.epg %}
                         {% set action %}{%if l.action%}{{l.action}}{%else%}{{global.action}}{%endif%}{% endset %}
                         {%if not action=="ignore"%}
@@ -36,5 +33,5 @@
 		</fvAp>
 		{%endif%}{%endfor%}
 	</fvTenant>
-	{%endif%}{%endfor%}
+	{%endif%}
 </polUni>
