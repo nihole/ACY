@@ -1,14 +1,15 @@
 global:
-  action: "yes"
+  action: "no"
   hostname: "198.18.133.200"
   aci_path: "/api/mo/uni.xml"
+  request: "qwewqeqwewq"
   username: "admin"
   password: "password"
 
-collection:
+files:
 - name: "vlan_pools"
   path: "/home/nihole/DAFT/access_policies/global_policy/vlan_pools/dc1/vlan_pools.xml"
-  action: 
+  action: "yes" 
 - name: "test1_phys_dom"
   path: "/home/nihole/DAFT/access_policies/global_policy/phys_domains/dc1/test1_phys_dom.xml"
   action:
@@ -17,9 +18,9 @@ collection:
   action:
 - name: "aaep"
   path: "/home/nihole/DAFT/access_policies/global_policy/aaep/dc1/aaep.xml"
-  action:
+  action: "yes"
 - name: "vmm_domains"
-  path: "/home/nihole/DAFT/access_policies/global_policy/aaep/dc1/vmm_domains.xml"
+  path: "/home/nihole/DAFT/access_policies/global_policy/vmm_domains/dc1/vmm_domains.xml"
   action:
 - name: "interface_policies"
   path: "/home/nihole/DAFT/access_policies/interface_policy/interface_policies/dc1/interface_policies.xml"

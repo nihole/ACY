@@ -14,3 +14,15 @@ fexes:
   action: "created,modified"
   description:
 
+fexes:
+- name: test1_fex
+  description:
+  action: "created,modified"
+  fex_selectors:
+  - name: test1_fex_selector
+    description:
+    action: "created,modified"
+    fex_ranges:
+    - name: 12011201
+      parent_leaf_id:
+
