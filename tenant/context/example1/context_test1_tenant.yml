@@ -1,0 +1,21 @@
+global:
+  name: ""
+  tenant: ""
+  description: ""
+  policy_enforcement: "enforced"
+  bgp_timers: "default"
+  ospf_timers: "default"
+  ep_retention: "default"
+  monitoring_policy: "default"
+  dns_label: "default"
+  route_tag_policy: "default"
+  action: "ignore"
+
+tenant: test1_tenant
+action: "created,modified"
+vrfs:
+- name: test1_vrf
+  action: "created,modified"
+- name: test2_vrf
+  action: "created,modified"
+

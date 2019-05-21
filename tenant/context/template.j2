@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
-	{% for i in tenants %}
-        {% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
-        {% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
 	{%if not action=="ignore"%}
-	<fvTenant name="{{name}}" status="{{action}}">
-		{% for j in i.vrfs %}
+	<fvTenant name="{{tenant}}" status="{{action}}">
+		{% for j in vrfs %}
                 {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
 		{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
 		{%if not action=="ignore"%}
@@ -25,5 +22,5 @@
 		</fvCtx>
 		{%endif%}{%endfor%}
 	</fvTenant>
-	{%endif%}{%endfor%}
+	{%endif%}
 </polUni>
