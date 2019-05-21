@@ -310,6 +310,40 @@
 			"response": []
 		},
 		{	
+			"name": "interface_profiles",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<polUni>\n\t<infraInfra>\n\t\t<infraAccPortP name=\"test1_int_profile\" descr=\"description\" status=\"created,modified\">\n\t\t\t<infraHPortS name=\"test1_int_selector\" descr=\"\" status=\"created,modified\"  type=\"range\">\n                                <infraRsAccBaseGrp tDn=\"uni/infra/funcprof/accbundle-test1_int_pol_group\" fexId=\"101\"/>\n\t\t\t\t<infraPortBlk name=\"1315\" descr=\"\" toPort=\"15\" toCard=\"1\" fromPort=\"13\" fromCard=\"1\" status=\"created,modified\"/>\n\t\t\t\t<infraPortBlk name=\"1616\" descr=\"\" toPort=\"16\" toCard=\"1\" fromPort=\"16\" fromCard=\"1\" status=\"created,modified\"/>\n\t\t\t</infraHPortS>\n\t\t\t<infraHPortS name=\"test2_int_selector\" descr=\"\" status=\"created,modified\"  type=\"range\">\n                                <infraRsAccBaseGrp tDn=\"uni/infra/funcprof/accbundle-test1_int_pol_group\" fexId=\"101\"/>\n\t\t\t\t<infraPortBlk name=\"1315\" descr=\"\" toPort=\"15\" toCard=\"2\" fromPort=\"13\" fromCard=\"2\" status=\"created,modified\"/>\n\t\t\t\t<infraPortBlk name=\"1616\" descr=\"\" toPort=\"16\" toCard=\"2\" fromPort=\"16\" fromCard=\"2\" status=\"created,modified\"/>\n\t\t\t</infraHPortS>\n\t\t</infraAccPortP>\n\t\t<infraAccPortP name=\"test2_int_profile\" descr=\"description\" status=\"created,modified\">\n\t\t\t<infraHPortS name=\"test1_int_selector\" descr=\"\" status=\"created,modified\"  type=\"range\">\n                                <infraRsAccBaseGrp tDn=\"uni/infra/funcprof/accbundle-test2_int_pol_group\" fexId=\"101\"/>\n\t\t\t\t<infraPortBlk name=\"1315\" descr=\"\" toPort=\"15\" toCard=\"1\" fromPort=\"13\" fromCard=\"1\" status=\"created,modified\"/>\n\t\t\t\t<infraPortBlk name=\"1616\" descr=\"\" toPort=\"16\" toCard=\"1\" fromPort=\"16\" fromCard=\"1\" status=\"created,modified\"/>\n\t\t\t</infraHPortS>\n\t\t\t<infraHPortS name=\"test2_int_selector\" descr=\"\" status=\"created,modified\"  type=\"range\">\n                                <infraRsAccBaseGrp tDn=\"uni/infra/funcprof/accbundle-test2_int_pol_group\" fexId=\"101\"/>\n\t\t\t\t<infraPortBlk name=\"1315\" descr=\"\" toPort=\"15\" toCard=\"2\" fromPort=\"13\" fromCard=\"2\" status=\"created,modified\"/>\n\t\t\t\t<infraPortBlk name=\"1616\" descr=\"\" toPort=\"16\" toCard=\"2\" fromPort=\"16\" fromCard=\"2\" status=\"created,modified\"/>\n\t\t\t</infraHPortS>\n\t\t</infraAccPortP>\n   </infraInfra>\n</polUni>\n"
+				},
+				"url": {
+					"raw": "https://198.18.133.200/api/mo/uni.xml",
+					"protocol": "https",
+					"host": [
+						"198",
+						"18",
+						"133",
+						"200"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{	
 			"name": "fex_interface_profiles",
 			"request": {
 				"method": "POST",

@@ -30,6 +30,9 @@ files:
 - name: "interface_policies"
   path: "/home/nihole/DAFT/access_policies/interface_policy/interface_policies/example1/interface_policies.xml"
   action:
+- name: "interface_profiles"
+  path: "/home/nihole/DAFT/access_policies/interface_policy/interface_profiles/example1/interface_profiles.xml"
+  action:
 - name: "fex_interface_profiles"
   path: "/home/nihole/DAFT/access_policies/interface_policy/fex_interface_profiles/example1/fex_interface_profiles.xml"
   action:
