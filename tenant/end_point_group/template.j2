@@ -6,7 +6,7 @@
                 {% set action %}{%if k.action%}{{k.action}}{%else%}{{global.action}}{%endif%}{% endset %}
                 {%if not action=="ignore"%}
                 {% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-		<fvAp prio="unspecified" desc = "description" name="{{k.name}}">
+		<fvAp prio="unspecified" descr = "{{description}}" name="{{k.name}}">
 			{% for j in k.epg %}
                         {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
                         {%if not action=="ignore"%}

@@ -1,0 +1,38 @@
+global:
+  name: ""
+  description: ""
+  action: "ignore"
+  phys_domain: ""
+  vmm_domain: ""
+  custom_qos_policy: ""
+
+tenant: "test2_tenant"
+action: "modified"
+app:
+- name: "test3_app"
+  action: "modified"
+  epg:
+  - name: "test5_epg"
+    brigge_domane: "test1_bd"
+    phys_domain: "test1_phys_domain"
+    description: ""
+    action: "created,modified"
+  - name: "test6_epg"
+    brigge_domane: "test1_bd"
+    phys_domain: "test1_phys_domain"
+    description: ""
+    action: "created,modified"
+- name: "test4_app"
+  action: "modified"
+  epg:
+  - name: "test7_epg"
+    brigge_domane: "test2_bd"
+    phys_domain: "test1_phys_domain"
+    description: ""
+    action: "created,modified"
+  - name: "test8_epg"
+    brigge_domane: "test2_bd"
+    phys_domain: "test1_phys_domain"
+    description: ""
+    action: "created,modified"
+
