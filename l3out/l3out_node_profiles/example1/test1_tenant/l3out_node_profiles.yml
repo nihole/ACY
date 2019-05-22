@@ -1,0 +1,41 @@
+global:
+  action: ""
+  description: ""
+
+tenant: "test1_tenant"
+action: "modified"
+l3outs:
+- name: "test1_l3out"
+  action: "modified"
+  l3out_node_profiles:
+  - name: "test1_l3out_node_profile"
+    action: "created,modified"
+    nodes:
+    - node_id: 1201
+      router_id: 172.16.1.1
+    - node_id: 1202
+      router_id: 172.16.1.2
+  - name: "test2_l3out_node_profile"
+    action: "created,modified"
+    nodes:
+    - node_id: 1202
+      router_id: 172.16.1.3
+    - node_id: 1203
+      router_id: 172.16.1.4
+- name: "test2_l3out"
+  action: "modified"
+  l3out_node_profiles:
+  - name: "test3_l3out_node_profile"
+    action: "created,modified"
+    nodes:
+    - node_id: 1201
+      router_id: 172.16.1.1
+    - node_id: 1202
+      router_id: 172.16.1.2
+  - name: "test4_l3out_node_profile"
+    action: "created,modified"
+    nodes:
+    - node_id: 1202
+      router_id: 172.16.1.3
+    - node_id: 1203
+      router_id: 172.16.1.4
