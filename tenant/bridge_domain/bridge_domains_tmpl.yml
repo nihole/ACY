@@ -1,0 +1,26 @@
+global:
+  name: ""
+  description: ""
+  action: "ignore"
+  l2_unknown_unicast: "proxy"
+  l3_unknown_multicast: "flood"
+  multi_dest_flood: "bd-flood"
+  arp_flood: "no"
+  unicast_routing: "yes"
+  subnet_type: "public,shared"
+  monitoring_policy: ""
+  igmp_snoop: "default"
+
+tenant: 
+ction: 
+bridge_domains: 
+- name: 
+  contex: 
+  bd_type: 
+  bd_gateway_ip: 
+  l3_out: 
+  legacy_bd: 
+  e_r_policy: 
+  ep_retention_policy: 
+  action: "created,modified"
+    

@@ -1,0 +1,20 @@
+global:
+  name: ""
+  description: ""
+  action: "ignore"
+  phys_domain: ""
+  vmm_domain: ""
+  custom_qos_policy: ""
+
+tenant: 
+action: 
+app:
+- name: 
+  action: 
+  epg:
+  - name: 
+    brigge_domane: 
+    phys_domain: 
+    description: 
+    action: 
+

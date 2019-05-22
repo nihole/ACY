@@ -1,0 +1,25 @@
+global:
+  name: ""
+  description: ""
+  action: "ignore"
+  mode: "regular"
+  pod_id: "1"
+  access_port_id: ""
+
+
+tenant: 
+action: 
+app:
+- name: 
+  action: 
+  epg:
+  - name: 
+    action: 
+    static_bindings:
+    - access_port_id:
+      int_pol_group: 
+      static_binding_type: 
+      left_node_id: 
+      right_node:
+      encap_vlan_id: 
+      action: 
