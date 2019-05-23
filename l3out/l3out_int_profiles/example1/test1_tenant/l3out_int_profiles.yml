@@ -1,0 +1,32 @@
+global:
+  action: "ignore"
+  description: ""
+  ospf_interface_policy: ""
+  pod_id: ""
+
+tenant: "test1_tenant"
+action: "modified"
+l3outs:
+- name: "test1_l3out"
+  action: "modified"
+  l3out_node_profiles:
+  - name: "test1_l3out_node_profile"
+    action: "modified"
+    nodes:
+    - node_id: 1201
+      router_id: "172.16.1.1"
+      action: "created,modified"
+    - node_id: 1202
+      router_id: "172.16.1.2"
+      action: "created,modified"
+    l3out_int_profilces:
+    - name: "test1_l3out_int_profile"
+      int_pol_group: "test1_int_pol_group"
+      vlan_id: 100
+      left_node_id: 1201
+      right_node_id: 1202
+      svi_1: "10.11.11.2/24"
+      svi_2: "10.11.11.3/24"
+      action: "created,modified"
+
+

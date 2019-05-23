@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<fvTenant name="{{config['tenant']}}">
+		<l3extOut name="{{config['l3_out']}}">
+			<l3extInstP descr=""  matchT="AtleastOne" name="{{config['name']}}" prio="unspecified" targetDscp="unspecified" status="{{config['action']}}">
+				{% if config['consumed_contract'] !="" %}
+				<fvRsCons prio="unspecified" tnVzBrCPName="{{config['consumed_contract']}}"/>
+				{% endif %}
+				{% if config['provided_contract'] !="" %}
+				<fvRsProv matchT="AtleastOne" prio="unspecified" tnVzBrCPName="{{config['provided_contract']}}"/>
+				{% endif %}
+				<fvRsCustQosPol tnQosCustomPolName="" />
+				<l3extSubnet aggregate="" descr="" ip="{{config['subnet']}}" name="" scope="import-security" />
+			</l3extInstP>
+		</l3extOut>
+	</fvTenant>
+</polUni>
