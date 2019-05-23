@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<fvTenant name="{{config['tenant']}}">
+		<vzBrCP name="{{config['contract']}}">
+			<vzSubj name="{{config['name']}}">
+				{% if config['direction'] == "N/A" %}	
+				<vzRsSubjFiltAtt directives="{{config['directives']}}" tnVzFilterName="{{config['filter']}}" status="{{config['action']}}"/>
+				{% elif config['direction'] == "in" %}
+				<vzInTerm name= "{{config['name']}}" >
+					<vzRsFiltAtt directives="{{config['directives']}}" tnVzFilterName="{{config['filter']}}" status="{{config['action']}}"/>
+				</vzInTerm>
+				{% elif config['direction'] == "out" %}
+				<vzOutTerm name = "{{config['name']}}">
+					<vzRsFiltAtt directives="{{config['directives']}}" tnVzFilterName="{{config['filter']}}" status="{{config['action']}}"/>
+				</vzOutTerm>
+			{% endif %}
+			</vzSubj>
+		</vzBrCP>
+	</fvTenant>
+</polUni>

@@ -35,7 +35,7 @@ files:
   action:
 - name: "fex_interface_profiles"
   path: "/home/nihole/DAFT/access_policies/interface_policy/fex_interface_profiles/example1/fex_interface_profiles.xml"
-  action:
+  action: "no"
 - name: "node_provisioning"
   path: "/home/nihole/DAFT/access_policies/switch_policy/node_provisioning/example1/node_provisioning.xml"
   action:
@@ -53,7 +53,7 @@ files:
   action:
 - name: "fex_provisioning"
   path: "/home/nihole/DAFT/access_policies/switch_policy/fex_provisioning/example1/fex_provisioning.xml"
-  action:
+  action: "no"
 - name: "tenant"
   path: "/home/nihole/DAFT/tenant/tenants/example1/test1_tenant/tenant.yml"
   action:

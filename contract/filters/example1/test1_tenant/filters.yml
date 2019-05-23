@@ -1,0 +1,37 @@
+global:
+  action: "ignore"
+  description: ""
+  ether_type: "IP"
+  match_only_fragments: "FALSE" 
+  arp_flag: ""
+  match_DSCP: ""
+  icmp_message: ""
+  icmpv6_message: ""
+  tcp_flags: ""
+  stateful: "FALSE"
+
+tenant: "rest1_tenant"
+action: "modified"
+filters:
+- name: "http"
+  action: "created,modified"
+  entries:
+  - name: "tcp_80"
+    IP_protocol: "tcp"
+    from_source_port: ""
+    to_sourcw_port: ""
+    from_destination_port: 80
+    to_destination_port: 80
+    tcp_flags: ""
+    action: "created,modified"
+- name: "https"
+  action: "created,modified"
+  entries:
+  - name: "tcp_443"
+    IP_protocol: "tcp"
+    from_source_port: ""
+    to_sourcw_port: ""
+    from_destination_port: 443
+    to_destination_port: 443
+    tcp_flags: ""
+    action: "created,modified"
