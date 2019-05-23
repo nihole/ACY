@@ -1,5 +1,5 @@
 global:
-  action: ""
+  action: "ignore"
   description: ""
 
 tenant: "test1_tenant"
@@ -13,14 +13,18 @@ l3outs:
     nodes:
     - node_id: 1201
       router_id: 172.16.1.1
+      action: "created,modified"
     - node_id: 1202
+      action: "created,modified"
       router_id: 172.16.1.2
   - name: "test2_l3out_node_profile"
     action: "created,modified"
     nodes:
     - node_id: 1202
+      action: "created,modified"
       router_id: 172.16.1.3
     - node_id: 1203
+      action: "created,modified"
       router_id: 172.16.1.4
 - name: "test2_l3out"
   action: "modified"
@@ -30,12 +34,16 @@ l3outs:
     nodes:
     - node_id: 1201
       router_id: 172.16.1.1
+      action: "created,modified"
     - node_id: 1202
       router_id: 172.16.1.2
+      action: "created,modified"
   - name: "test4_l3out_node_profile"
     action: "created,modified"
     nodes:
     - node_id: 1202
       router_id: 172.16.1.3
+      action: "created,modified"
     - node_id: 1203
       router_id: 172.16.1.4
+      action: "created,modified"
