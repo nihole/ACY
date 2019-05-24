@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
-	<fvTenant name="{{config['tenant']}}">
-		<l3extOut name="{{config['l3_out']}}">
-			<l3extInstP descr=""  matchT="AtleastOne" name="{{config['name']}}" prio="unspecified" targetDscp="unspecified" status="{{config['action']}}">
-				{% if config['consumed_contract'] !="" %}
-				<fvRsCons prio="unspecified" tnVzBrCPName="{{config['consumed_contract']}}"/>
+	{%if not action=="ignore"%}
+        <fvTenant name="{{tenant}}" >
+                {% for j in l3outs %}
+                {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                {% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+		{%if not action=="ignore"%}
+		<l3extOut name="{{j.name}}" status="{{action}}">
+			{% for i in j.external_epg %}
+                	{% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                	{% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+			{%if not action=="ignore"%}
+			<l3extInstP descr="{{description}}"  matchT="AtleastOne" name="{{i.name}}" prio="unspecified" targetDscp="unspecified" status="{{action}}">
+				{% if i.consumed_contract !="" %}
+				<fvRsCons prio="unspecified" tnVzBrCPName="{{i.consumed_contract}}"/>
 				{% endif %}
-				{% if config['provided_contract'] !="" %}
-				<fvRsProv matchT="AtleastOne" prio="unspecified" tnVzBrCPName="{{config['provided_contract']}}"/>
+				{% if i.provided_contract !="" %}
+				<fvRsProv matchT="AtleastOne" prio="unspecified" tnVzBrCPName="{{i.provided_contract}}"/>
 				{% endif %}
 				<fvRsCustQosPol tnQosCustomPolName="" />
-				<l3extSubnet aggregate="" descr="" ip="{{config['subnet']}}" name="" scope="import-security" />
+				<l3extSubnet aggregate="" descr="" ip="{{i.subnet}}" name="" scope="import-security" />
 			</l3extInstP>
+			{%endif%}{%endfor%}
 		</l3extOut>
+		{%endif%}{%endfor%}
 	</fvTenant>
+	{%endif%}
 </polUni>
