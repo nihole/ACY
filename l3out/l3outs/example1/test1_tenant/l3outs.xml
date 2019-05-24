@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
 	<fvTenant name="test1_tenant" >
-	 	 <l3extOut descr="" enforceRtctrl="export" name="test1_l3out" targetDscp="unspecified" status="cfeated,modified">
+	 	 <l3extOut descr="" enforceRtctrl="export" name="test1_l3out" targetDscp="unspecified" status="created,modified">
 			<l3extRsEctx tnFvCtxName="test1_vrf" />
 			<l3extRsL3DomAtt tDn="uni/l3dom-test2_l3out_dom" />
 			<bgpExtP descr="" nameAlias=""/>
 		</l3extOut>
-	 	 <l3extOut descr="" enforceRtctrl="export" name="test2_l3out" targetDscp="unspecified" status="cfeated,modified">
+	 	 <l3extOut descr="" enforceRtctrl="export" name="test2_l3out" targetDscp="unspecified" status="created,modified">
 			<l3extRsEctx tnFvCtxName="test2_vrf" />
 			<l3extRsL3DomAtt tDn="uni/l3dom-test2_l3out_dom" />
 			<bgpExtP descr="" nameAlias=""/>

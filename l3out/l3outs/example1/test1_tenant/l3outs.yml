@@ -12,9 +12,9 @@ l3outs:
 - name: "test1_l3out"
   vrf: "test1_vrf"
   l3out_domain: "test2_l3out_dom"
-  action: "cfeated,modified"
+  action: "created,modified"
 - name: "test2_l3out"
   vrf: "test2_vrf"
   l3out_domain: "test2_l3out_dom"
-  action: "cfeated,modified"
+  action: "created,modified"
 
