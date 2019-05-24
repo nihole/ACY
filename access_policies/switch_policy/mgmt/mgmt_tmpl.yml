@@ -6,13 +6,13 @@ global:
 
 inband:
 - node_id: 
-  inband_ip: 
-  inband_gw: 
-  action: 
+  inband_ip: ""
+  inband_gw: ""
+  action: ""
 
 oob:
 - node_id: 
-  oob_ip: 
-  oob_gw: 
-  action: 
+  oob_ip: ""
+  oob_gw: ""
+  action: ""
   

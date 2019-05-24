@@ -5,13 +5,13 @@ global:
   alloc_mode: static
 
 vlan_pool:
-- name: 
-  action:
-  vlan_range:
-  - name:
+- name: "" 
+  action: ""
+  vlan_range: 
+  - name: ""
     start_vlan: 
     stop_vlan: 
-    alloc_mode:
-    action: 
+    alloc_mode: ""
+    action: ""
 
   

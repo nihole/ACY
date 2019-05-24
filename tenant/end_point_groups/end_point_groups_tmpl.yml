@@ -6,15 +6,15 @@ global:
   vmm_domain: ""
   custom_qos_policy: ""
 
-tenant: 
-action: 
+tenant: ""
+action: ""
 app:
-- name: 
-  action: 
+- name: ""
+  action: ""
   epg:
-  - name: 
-    brigge_domane: 
-    phys_domain: 
-    description: 
-    action: 
+  - name: ""
+    brigge_domane: ""
+    phys_domain: ""
+    description: ""
+    action: ""
 

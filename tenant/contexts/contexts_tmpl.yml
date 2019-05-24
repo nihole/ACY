@@ -11,9 +11,9 @@ global:
   route_tag_policy: "default"
   action: "ignore"
 
-tenant: 
-action: 
+tenant: ""
+action: ""
 vrfs:
-- name: 
-  action: 
+- name: ""
+  action: ""
 

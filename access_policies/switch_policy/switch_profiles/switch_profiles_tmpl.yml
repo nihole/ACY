@@ -5,20 +5,20 @@ global:
   sw_pol_group: "test1_sw_pol_group"
 
 switch_profiles:
-- name: 
-  description:
-  action: 
+- name: ""
+  description: ""
+  action: ""
   switch_selectors:
-  - name: 
-    interface_profile: 
-    description:
-    action: 
+  - name: ""
+    interface_profile: ""
+    description: ""
+    action: ""
     switch_ranges:
-    - name: 
-      sw_pol_group: 
-      from_node_id: 
-      to_node_id: 
-      action: 
-      description:
+    - name: ""
+      sw_pol_group: ""
+      from_node_id: ""
+      to_node_id: ""
+      action: ""
+      description: ""
 
 

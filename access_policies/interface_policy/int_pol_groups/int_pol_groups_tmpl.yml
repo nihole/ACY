@@ -16,12 +16,12 @@ global:
 
 
 int_pol_group: 
-- name: 
-  type: 
-  aaep: 
-  lacp_pol: LACP-active-min2-max4
-  storm_pol: 
-  link_pol: 
-  action: 
-  description:
+- name: ""
+  type: ""
+  aaep: ""
+  lacp_pol: ""
+  storm_pol: ""
+  link_pol: ""
+  action: ""
+  description: ""
 

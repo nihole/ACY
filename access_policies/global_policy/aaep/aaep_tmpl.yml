@@ -9,11 +9,10 @@ global:
 
 
 aaep:
-- name: 
-  enable_infra_vlan: 
-  phys_dom: 
-  l3_ext_dom:
-  vmm_dom:
-  action: 
-  operational_status:
-  description:
+- name: ""
+  enable_infra_vlan: ""
+  phys_dom: ""
+  l3_ext_dom: ""
+  vmm_dom: ""
+  action: ""
+  description: ""

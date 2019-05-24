@@ -1,9 +1,9 @@
 tenants:
-  name: 
-  tags: 
-  mon_policy: 
-  ctrl_mgmt_policy: 
-  security_domain: 
-  description: 
-  action: 
+  name: ""
+  tags: ""
+  mon_policy: ""
+  ctrl_mgmt_policy: ""
+  security_domain: ""
+  description: ""
+  action: ""
 

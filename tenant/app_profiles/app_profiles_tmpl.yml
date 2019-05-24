@@ -3,9 +3,9 @@ global:
   description: ""
   action: "ignore"
 
-tenant: 
-action: 
+tenant: ""
+action: ""
 app:
-- name: 
-  action: 
+- name: ""
+  action: ""
 

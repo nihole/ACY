@@ -11,16 +11,16 @@ global:
   monitoring_policy: ""
   igmp_snoop: "default"
 
-tenant: 
-ction: 
+tenant: ""
+action: ""
 bridge_domains: 
-- name: 
-  contex: 
-  bd_type: 
-  bd_gateway_ip: 
-  l3_out: 
-  legacy_bd: 
-  e_r_policy: 
-  ep_retention_policy: 
-  action: "created,modified"
+- name: ""
+  contex: ""
+  bd_type: ""
+  bd_gateway_ip: ""
+  l3_out: ""
+  legacy_bd: "" 
+  e_r_policy: ""
+  ep_retention_policy: ""
+  action: ""
     

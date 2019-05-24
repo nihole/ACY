@@ -7,19 +7,19 @@ global:
   access_port_id: ""
 
 
-tenant: 
-action: 
+tenant: ""
+action: ""
 app:
-- name: 
-  action: 
+- name: ""
+  action: ""
   epg:
-  - name: 
-    action: 
+  - name: ""
+    action: ""
     static_bindings:
-    - access_port_id:
-      int_pol_group: 
-      static_binding_type: 
-      left_node_id: 
-      right_node:
+    - access_port_id: ""
+      int_pol_group: ""
+      static_binding_type: "" 
+      left_node_id:
+      right_node: 
       encap_vlan_id: 
-      action: 
+      action: ""

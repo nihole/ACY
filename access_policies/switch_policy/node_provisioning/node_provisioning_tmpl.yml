@@ -6,11 +6,11 @@ global:
   role: "unspecified"
 
 nodes:
-- name: 
+- name: ""
   serial_number: 
   node_id: 
-  device_type: 
+  device_type: ""
   pod_id: 
-  role: 
-  action: 
-  description: 
+  role: ""
+  action: ""
+  description: ""

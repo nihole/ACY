@@ -4,58 +4,58 @@ global:
   action: ignore
 
 link_level:
-- name: 
-  auto_negotiation:
+- name: ""
+  auto_negotiation: ""
   speed:
   debounce_interval: 
-  description:
-  action: 
+  description: ""
+  action: ""
 cdp:
-- name: 
-  admin_state: 
-  action: 
+- name: ""
+  admin_state: ""
+  action: ""
 
 lldp:
-- name: 
-  receive_state: 
-  transmit_state: 
-  action: 
+- name: ""
+  receive_state: ""
+  transmit_state: ""
+  action: ""
 
 port_channel:
-- name: 
-  mode: 
+- name: ""
+  mode: ""
   min_links: 
   max_links: 
-  control: 
-  description:
-  action: 
+  control: ""
+  description: ""
+  action: ""
 
 stp:
-- name: 
-  control: 
-  description: 
-  description:
-  action: 
+- name: ""
+  control: "" 
+  description: ""
+  description: ""
+  action: ""
 
 storm:
-- name: 
-  rate_type: 
+- name: ""
+  rate_type: ""
   rate: 
-  max_burst: 
-  description:
-  action: 
+  max_burst: ""
+  description: ""
+  action: ""
 
 port_channel_memeber:
-- name: 
-  priority: 
+- name: ""
+  priority: ""
   transmit_rate: 
-  description:
-  action: 
+  description: ""
+  action: ""
 
 l2_interface:
-- name: 
-  vlan_scope: 
-  description:
-  action: 
+- name: ""
+  vlan_scope: ""
+  description: ""
+  action: ""
 
 

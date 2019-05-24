@@ -1,0 +1,20 @@
+global:
+  action: "ignore"
+  description: ""
+  direction: "N/A"
+  directives: ""
+  reverse: "no"
+
+tenant: ""
+action: ""
+contracts:
+- name: ""
+  action: ""
+  subjects: 
+  - name: ""
+    action: ""
+    filters:
+    - name: ""
+      action: ""
+    
+
