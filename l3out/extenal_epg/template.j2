@@ -3,13 +3,13 @@
 	{%if not action=="ignore"%}
         <fvTenant name="{{tenant}}" >
                 {% for j in l3outs %}
-                {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
-                {% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                {% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+                {% set description %}{%if j.description%}{{j.description}}{%else%}{{default.description}}{%endif%}{% endset %}
 		{%if not action=="ignore"%}
 		<l3extOut name="{{j.name}}" status="{{action}}">
 			{% for i in j.external_epg %}
-                	{% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
-                	{% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                	{% set action %}{%if i.action%}{{i.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+                	{% set description %}{%if i.description%}{{i.description}}{%else%}{{default.description}}{%endif%}{% endset %}
 			{%if not action=="ignore"%}
 			<l3extInstP descr="{{description}}"  matchT="AtleastOne" name="{{i.name}}" prio="unspecified" targetDscp="unspecified" status="{{action}}">
 				{% if i.consumed_contract !="" %}

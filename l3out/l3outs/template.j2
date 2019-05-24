@@ -3,12 +3,12 @@
 	{%if not action=="ignore"%}
 	<fvTenant name="{{tenant}}" >
 		{% for j in l3outs %}
-                {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
-		{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-		{% set enable_bgp %}{%if j.enable_bgp%}{{j.enable_bgp}}{%else%}{{global.enable_bgp}}{%endif%}{% endset %}
-		{% set enable_ospf %}{%if j.enable_ospf%}{{j.enable_ospf}}{%else%}{{global.enable_ospf}}{%endif%}{% endset %}
-		{% set area_type %}{%if j.area_type%}{{j.area_type}}{%else%}{{global.area_type}}{%endif%}{% endset %}
-		{% set ospf_area_id %}{%if j.ospf_area_id%}{{j.ospf_area_id}}{%else%}{{global.ospf_area_id}}{%endif%}{% endset %}
+                {% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+		{% set description %}{%if j.description%}{{j.description}}{%else%}{{default.description}}{%endif%}{% endset %}
+		{% set enable_bgp %}{%if j.enable_bgp%}{{j.enable_bgp}}{%else%}{{default.enable_bgp}}{%endif%}{% endset %}
+		{% set enable_ospf %}{%if j.enable_ospf%}{{j.enable_ospf}}{%else%}{{default.enable_ospf}}{%endif%}{% endset %}
+		{% set area_type %}{%if j.area_type%}{{j.area_type}}{%else%}{{default.area_type}}{%endif%}{% endset %}
+		{% set ospf_area_id %}{%if j.ospf_area_id%}{{j.ospf_area_id}}{%else%}{{default.ospf_area_id}}{%endif%}{% endset %}
                 {%if not action=="ignore"%}
 	 	 <l3extOut descr="" enforceRtctrl="export" name="{{j.name}}" targetDscp="unspecified" status="{{action}}">
 			<l3extRsEctx tnFvCtxName="{{j.vrf}}" />

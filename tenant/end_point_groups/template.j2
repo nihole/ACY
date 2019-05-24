@@ -3,18 +3,18 @@
         {%if not action=="ignore"%}
 	<fvTenant name="{{tenant}}">
 		{% for k in app %}
-                {% set action %}{%if k.action%}{{k.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                {% set action %}{%if k.action%}{{k.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                 {%if not action=="ignore"%}
-                {% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                {% set description %}{%if k.description%}{{k.description}}{%else%}{{default.description}}{%endif%}{% endset %}
 		<fvAp prio="unspecified" descr = "{{description}}" name="{{k.name}}">
 			{% for j in k.epg %}
-                        {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                        {% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                         {%if not action=="ignore"%}
-                        {% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
-			{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-			{% set phys_domain %}{%if j.phys_domain%}{{j.phys_domain}}{%else%}{{global.phys_domain}}{%endif%}{% endset %}
-			{% set vmm_domain %}{%if j.vmm_domain%}{{j.vmm_domain}}{%else%}{{global.vmm_domain}}{%endif%}{% endset %}
-			{% set custom_qos_policy %}{%if j.custom_qos_policy%}{{j.custom_qos_policy}}{%else%}{{global.custom_qos_policy}}{%endif%}{% endset %}
+                        {% set name %}{%if j.name%}{{j.name}}{%else%}{{default.name}}{%endif%}{% endset %}
+			{% set description %}{%if j.description%}{{j.description}}{%else%}{{default.description}}{%endif%}{% endset %}
+			{% set phys_domain %}{%if j.phys_domain%}{{j.phys_domain}}{%else%}{{default.phys_domain}}{%endif%}{% endset %}
+			{% set vmm_domain %}{%if j.vmm_domain%}{{j.vmm_domain}}{%else%}{{default.vmm_domain}}{%endif%}{% endset %}
+			{% set custom_qos_policy %}{%if j.custom_qos_policy%}{{j.custom_qos_policy}}{%else%}{{default.custom_qos_policy}}{%endif%}{% endset %}
 
 			<fvAEPg prio="unspecified" name="{{name}}" matchT="AtleastOne" descr="{{description}}" status="{{action}}">
         			<fvRsCustQosPol tnQosCustomPolName="{{custom_qos_policy}}"/>

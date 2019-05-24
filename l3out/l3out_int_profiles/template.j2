@@ -3,27 +3,27 @@
 	{%if not action=="ignore"%}
 	<fvTenant descr="" name="{{tenant}}">
 		{% for i in l3outs %}
-                {% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
-                {% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                {% set action %}{%if i.action%}{{i.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+                {% set description %}{%if i.description%}{{i.description}}{%else%}{{default.description}}{%endif%}{% endset %}
 		{%if not action=="ignore"%}
 		<l3extOut descr="" name="{{i.name}}" status="{{action}}">
 			{% for l in i.l3out_node_profiles %}
-                	{% set action %}{%if l.action%}{{l.action}}{%else%}{{global.action}}{%endif%}{% endset %}
-                	{% set description %}{%if l.description%}{{l.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                	{% set action %}{%if l.action%}{{l.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+                	{% set description %}{%if l.description%}{{l.description}}{%else%}{{default.description}}{%endif%}{% endset %}
                 	{%if not action=="ignore"%}
 			
 			<l3extLNodeP descr="" name="{{l.name}}" tag="yellow-green" targetDscp="unspecified" status="{{action}}">
 				{% for j in l.nodes %}
-				{% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+				{% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
 				{%if not action=="ignore"%}
 				<l3extRsNodeL3OutAtt rtrId="{{j.router_id}}" rtrIdLoopBack="yes" tDn="topology/pod-1/node-{{j.node_id}}" status="{{action}}" />
 				{%endif%}{%endfor%}
 				
 				{% for n in l.l3out_int_profilces %}
-                                {% set action %}{%if n.action%}{{n.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                                {% set action %}{%if n.action%}{{n.action}}{%else%}{{default.action}}{%endif%}{% endset %}
 				{%if not action=="ignore"%}
-				{% set pod_id %}{%if n.pod_id%}{{n.pod_id}}{%else%}{{global.pod_id}}{%endif%}{% endset %}
-				{% set ospf_interface_policy %}{%if n.ospf_interface_policy%}{{n.ospf_interface_policy}}{%else%}{{global.ospf_interface_policy}}{%endif%}{% endset %}
+				{% set pod_id %}{%if n.pod_id%}{{n.pod_id}}{%else%}{{default.pod_id}}{%endif%}{% endset %}
+				{% set ospf_interface_policy %}{%if n.ospf_interface_policy%}{{n.ospf_interface_policy}}{%else%}{{default.ospf_interface_policy}}{%endif%}{% endset %}
 				<l3extLIfP descr="" name="{{n.name}}" tag="yellow-green" status="{{action}}">
 
 					<ospfIfP authKey = "" authKeyId="1" authType="md5" descr="" name="">

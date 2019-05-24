@@ -3,26 +3,26 @@
    	 <infraInfra>
 	    	<infraFuncP>
 			{% for j in int_pol_group %}
-			{% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+			{% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
 			{%if not action=="ignore"%}
-			{% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
-			{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-			{% set type %}{%if j.type%}{{j.type}}{%else%}{{global.type}}{%endif%}{% endset %}
-			{% set lldp_pol %}{%if j.lldp_pol%}{{j.lldp_pol}}{%else%}{{global.lldp_pol}}{%endif%}{% endset %}
-			{% set l2_int_pol %}{%if j.l2_int_pol%}{{j.l2_int_pol}}{%else%}{{global.l2_int_pol}}{%endif%}{% endset %}
-			{% set ipv4_netflow %}{%if j.ipv4_netflow%}{{j.ipv4_netflow}}{%else%}{{global.ipv4_netflow}}{%endif%}{% endset %}
-			{% set ipv6_netflow %}{%if j.ipv6_netflow%}{{j.ipv6_netflow}}{%else%}{{global.ipv6_netflow}}{%endif%}{% endset %}
-			{% set ingress_pol %}{%if j.ingress_pol%}{{j.ingress_pol}}{%else%}{{global.ingress_pol}}{%endif%}{% endset %}
-			{% set egress_pol %}{%if j.egress_pol%}{{j.egress_pol}}{%else%}{{global.egress_pol}}{%endif%}{% endset %}
-			{% set monitor_pol %}{%if j.monitor_pol%}{{j.monitor_pol}}{%else%}{{global.monitor_pol}}{%endif%}{% endset %}
-			{% set stp_pol %}{%if j.stp_pol%}{{j.stp_pol}}{%else%}{{global.stp_pol}}{%endif%}{% endset %}
-			{% set int_pol %}{%if j.l2_int_pol%}{{j.l2_int_pol}}{%else%}{{global.l2_int_pol}}{%endif%}{% endset %}
-			{% set cdp_pol %}{%if j.cdp_pol%}{{j.cdp_pol}}{%else%}{{global.cdp_pol}}{%endif%}{% endset %}
-			{% set mcp_pol %}{%if j.mcp_pol%}{{j.mcp_pol}}{%else%}{{global.mcp_pol}}{%endif%}{% endset %}
-			{% set aaep %}{%if j.aaep%}{{j.aaep}}{%else%}{{global.aaep}}{%endif%}{% endset %}
-			{% set storm_pol %}{%if j.storm_pol%}{{j.storm_pol}}{%else%}{{global.storm_pol}}{%endif%}{% endset %}
-			{% set link_pol %}{%if j.link_pol%}{{j.link_pol}}{%else%}{{global.link_pol}}{%endif%}{% endset %}
-			{% set lacp_pol %}{%if j.lacp_pol%}{{j.lacp_pol}}{%else%}{{global.lacp_pol}}{%endif%}{% endset %}
+			{% set name %}{%if j.name%}{{j.name}}{%else%}{{default.name}}{%endif%}{% endset %}
+			{% set description %}{%if j.description%}{{j.description}}{%else%}{{default.description}}{%endif%}{% endset %}
+			{% set type %}{%if j.type%}{{j.type}}{%else%}{{default.type}}{%endif%}{% endset %}
+			{% set lldp_pol %}{%if j.lldp_pol%}{{j.lldp_pol}}{%else%}{{default.lldp_pol}}{%endif%}{% endset %}
+			{% set l2_int_pol %}{%if j.l2_int_pol%}{{j.l2_int_pol}}{%else%}{{default.l2_int_pol}}{%endif%}{% endset %}
+			{% set ipv4_netflow %}{%if j.ipv4_netflow%}{{j.ipv4_netflow}}{%else%}{{default.ipv4_netflow}}{%endif%}{% endset %}
+			{% set ipv6_netflow %}{%if j.ipv6_netflow%}{{j.ipv6_netflow}}{%else%}{{default.ipv6_netflow}}{%endif%}{% endset %}
+			{% set ingress_pol %}{%if j.ingress_pol%}{{j.ingress_pol}}{%else%}{{default.ingress_pol}}{%endif%}{% endset %}
+			{% set egress_pol %}{%if j.egress_pol%}{{j.egress_pol}}{%else%}{{default.egress_pol}}{%endif%}{% endset %}
+			{% set monitor_pol %}{%if j.monitor_pol%}{{j.monitor_pol}}{%else%}{{default.monitor_pol}}{%endif%}{% endset %}
+			{% set stp_pol %}{%if j.stp_pol%}{{j.stp_pol}}{%else%}{{default.stp_pol}}{%endif%}{% endset %}
+			{% set int_pol %}{%if j.l2_int_pol%}{{j.l2_int_pol}}{%else%}{{default.l2_int_pol}}{%endif%}{% endset %}
+			{% set cdp_pol %}{%if j.cdp_pol%}{{j.cdp_pol}}{%else%}{{default.cdp_pol}}{%endif%}{% endset %}
+			{% set mcp_pol %}{%if j.mcp_pol%}{{j.mcp_pol}}{%else%}{{default.mcp_pol}}{%endif%}{% endset %}
+			{% set aaep %}{%if j.aaep%}{{j.aaep}}{%else%}{{default.aaep}}{%endif%}{% endset %}
+			{% set storm_pol %}{%if j.storm_pol%}{{j.storm_pol}}{%else%}{{default.storm_pol}}{%endif%}{% endset %}
+			{% set link_pol %}{%if j.link_pol%}{{j.link_pol}}{%else%}{{default.link_pol}}{%endif%}{% endset %}
+			{% set lacp_pol %}{%if j.lacp_pol%}{{j.lacp_pol}}{%else%}{{default.lacp_pol}}{%endif%}{% endset %}
 			{% if type == 'vPC' %}
 				{% set tag %}infraAccBndlGrp{% endset %}
 				{% set bundle %}lagT="node"{% endset %}

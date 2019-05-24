@@ -1,4 +1,4 @@
-global:
+default:
   action: "ignore"
   description: ""
   ospf_interface_policy: ""

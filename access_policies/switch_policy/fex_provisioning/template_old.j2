@@ -2,10 +2,10 @@
 <polUni>
 	<infraInfra>
 		{% for j in fexes %}
-                {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                {% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                 {%if not action=="ignore"%}
-                {% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
-                {% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                {% set name %}{%if j.name%}{{j.name}}{%else%}{{default.name}}{%endif%}{% endset %}
+                {% set description %}{%if j.description%}{{j.description}}{%else%}{{default.description}}{%endif%}{% endset %}
     		<infraNodeP name="leaf_{{j.parent_leaf_id}}_fex_swprof" status="{{action}}">
       			<infraLeafS descr="" name="leaf{{j.parent_leaf_id}}_swsel" type="range">
         			<infraNodeBlk from_="{{j.parent_leaf_id}}" name="bl{{j.parent_leaf_id}}" to_="{{j.parent_leaf_id}}" />

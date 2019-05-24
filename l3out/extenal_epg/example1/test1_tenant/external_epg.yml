@@ -1,4 +1,4 @@
-global:
+default:
   action: "ignore"
   description: ""
   enable_bgp: "yes"

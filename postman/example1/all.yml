@@ -1,4 +1,4 @@
-global:
+default:
   action: "yes"
   hostname: "198.18.133.200"
   aci_path: "/api/mo/uni.xml"
@@ -58,7 +58,7 @@ files:
 
 
  
-global:
+default:
   action: "yes"
   hostname: "198.18.133.200"
   aci_path: "/api/mo/uni.xml"
@@ -87,7 +87,7 @@ files:
   action:
 
 
-global:
+default:
   action: "yes"
   hostname: "198.18.133.200"
   aci_path: "/api/mo/uni.xml"
@@ -109,7 +109,7 @@ files:
   path: "/home/nihole/DAFT/l3out/extenal_epg/example1/test1_tenant/extenal_epg.xml"
   action: "no"
 
-global:
+default:
   action: "yes"
   hostname: "198.18.133.200"
   aci_path: "/api/mo/uni.xml"

@@ -3,18 +3,18 @@
 	{%if not action=="ignore"%}
 	<fvTenant name="{{tenant}}" >	
 		{% for j in bridge_domains %}
-                {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
-                {% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                {% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+                {% set description %}{%if j.description%}{{j.description}}{%else%}{{default.description}}{%endif%}{% endset %}
                 {%if not action=="ignore"%}
-                {% set l2_unknown_unicast %}{%if j.l2_unknown_unicast %}{{j.l2_unknown_unicast}}{%else%}{{global.l2_unknown_unicast}}{%endif%}{% endset %}
-                {% set l3_unknown_multicast %}{%if j.l3_unknown_multicast%}{{j.l3_unknown_multicast}}{%else%}{{global.l3_unknown_multicast}}{%endif%}{% endset %}
-                {% set multi_dest_flood %}{%if j.multi_dest_flood%}{{j.multi_dest_flood}}{%else%}{{global.multi_dest_flood}}{%endif%}{% endset %}
-                {% set arp_flood %}{%if j.arp_flood%}{{j.arp_flood}}{%else%}{{global.arp_flood}}{%endif%}{% endset %}
-                {% set unicast_routing %}{%if j.unicast_routing%}{{j.unicast_routing}}{%else%}{{global.unicast_routing}}{%endif%}{% endset %}
-		{% set monitoring_policy %}{%if j.monitoring_policy%}{{j.monitoring_policy}}{%else%}{{global.monitoring_policy}}{%endif%}{% endset %}
-		{% set limit_ip_learn_to_subnet %}{%if j.limit_ip_learn_to_subnet%}{{j.limit_ip_learn_to_subnet}}{%else%}{{global.limit_ip_learn_to_subnet}}{%endif%}{% endset %}
-		{% set subnet_type %}{%if j.subnet_type%}{{j.subnet_type}}{%else%}{{global.subnet_type}}{%endif%}{% endset %}
-		{% set igmp_snoop %}{%if j.igmp_snoop%}{{j.igmp_snoop}}{%else%}{{global.igmp_snoop}}{%endif%}{% endset %}
+                {% set l2_unknown_unicast %}{%if j.l2_unknown_unicast %}{{j.l2_unknown_unicast}}{%else%}{{default.l2_unknown_unicast}}{%endif%}{% endset %}
+                {% set l3_unknown_multicast %}{%if j.l3_unknown_multicast%}{{j.l3_unknown_multicast}}{%else%}{{default.l3_unknown_multicast}}{%endif%}{% endset %}
+                {% set multi_dest_flood %}{%if j.multi_dest_flood%}{{j.multi_dest_flood}}{%else%}{{default.multi_dest_flood}}{%endif%}{% endset %}
+                {% set arp_flood %}{%if j.arp_flood%}{{j.arp_flood}}{%else%}{{default.arp_flood}}{%endif%}{% endset %}
+                {% set unicast_routing %}{%if j.unicast_routing%}{{j.unicast_routing}}{%else%}{{default.unicast_routing}}{%endif%}{% endset %}
+		{% set monitoring_policy %}{%if j.monitoring_policy%}{{j.monitoring_policy}}{%else%}{{default.monitoring_policy}}{%endif%}{% endset %}
+		{% set limit_ip_learn_to_subnet %}{%if j.limit_ip_learn_to_subnet%}{{j.limit_ip_learn_to_subnet}}{%else%}{{default.limit_ip_learn_to_subnet}}{%endif%}{% endset %}
+		{% set subnet_type %}{%if j.subnet_type%}{{j.subnet_type}}{%else%}{{default.subnet_type}}{%endif%}{% endset %}
+		{% set igmp_snoop %}{%if j.igmp_snoop%}{{j.igmp_snoop}}{%else%}{{default.igmp_snoop}}{%endif%}{% endset %}
 		<fvBD unkMcastAct="{{l3_unknown_multicast}}" unkMacUcastAct="{{l2_unknown_unicast}}" unicastRoute="{{unicast_routing}}" name="{{j.name}}" multiDstPktAct="{{multi_dest_flood}}"  limitIpLearnToSubnets="no" descr="{{description}}" arpFlood="{{arp_flood}}" status="{{action}}">
 			<fvRsCtx tnFvCtxName="{{j.context}}"/>
 			<fvRsIgmpsn tnIgmpSnoopPolName="{{j.igmp_snoop}}"/>

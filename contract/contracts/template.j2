@@ -3,22 +3,22 @@
 	{%if not action=="ignore"%}
         <fvTenant name="{{tenant}}">
                 {% for k in contracts %}
-                {% set action %}{%if k.action%}{{k.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                {% set action %}{%if k.action%}{{k.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                 {%if not action=="ignore"%}
-                {% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                {% set description %}{%if k.description%}{{k.description}}{%else%}{{default.description}}{%endif%}{% endset %}
 		<vzBrCP name="{{k.name}}" status="{{action}}">
 			{% for j in k.subjects %}
-                	{% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                	{% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                 	{%if not action=="ignore"%}
-			{% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-			{% set reverse %}{%if j.reverse%}{{j.reverse}}{%else%}{{global.reverse}}{%endif%}{% endset %}
+			{% set description %}{%if k.description%}{{k.description}}{%else%}{{default.description}}{%endif%}{% endset %}
+			{% set reverse %}{%if j.reverse%}{{j.reverse}}{%else%}{{default.reverse}}{%endif%}{% endset %}
 			<vzSubj name="{{j.name}}" status="{{action}}" revFltPorts="{{reverse}}">
 				{% for l in j.filters %}
-                        	{% set action %}{%if l.action%}{{l.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                        	{% set action %}{%if l.action%}{{l.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                         	{%if not action=="ignore"%}
-				{% set description %}{%if l.description%}{{l.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-				{% set direction %}{%if l.direction%}{{l.direction}}{%else%}{{global.direction}}{%endif%}{% endset %}
-				{% set directives %}{%if l.directives%}{{l.directives}}{%else%}{{global.directives}}{%endif%}{% endset %}
+				{% set description %}{%if l.description%}{{l.description}}{%else%}{{default.description}}{%endif%}{% endset %}
+				{% set direction %}{%if l.direction%}{{l.direction}}{%else%}{{default.direction}}{%endif%}{% endset %}
+				{% set directives %}{%if l.directives%}{{l.directives}}{%else%}{{default.directives}}{%endif%}{% endset %}
 
 				{% if direction == "N/A" %}	
 				<vzRsSubjFiltAtt directives="{{directives}}" tnVzFilterName="{{l.name}}" status="{{action}}"/>

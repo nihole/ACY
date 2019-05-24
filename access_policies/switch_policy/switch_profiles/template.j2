@@ -2,21 +2,21 @@
 <polUni>
         <infraInfra>
                 {% for i in switch_profiles %}
-                {% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
-		{% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                {% set action %}{%if i.action%}{{i.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+		{% set description %}{%if i.description%}{{i.description}}{%else%}{{default.description}}{%endif%}{% endset %}
 		{%if not action=="ignore"%}
                 <infraNodeP name="{{i.name}}" dn="uni/infra/nprof-{{i.name}}" descr="description" status="{{action}}">
 			{% for k in i.switch_selectors %}
-			{% set action %}{%if k.action%}{{k.action}}{%else%}{{global.action}}{%endif%}{% endset %}
-			{% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+			{% set action %}{%if k.action%}{{k.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+			{% set description %}{%if k.description%}{{k.description}}{%else%}{{default.description}}{%endif%}{% endset %}
 			{%if not action=="ignore"%}
                         <infraLeafS name="{{k.name}}" descr="{{description}}" status="{{action}}"  type="range">
                                 {% for j in k.switch_ranges %}
-                                {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                                {% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                                 {%if not action=="ignore"%}
-                                {% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
-				{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-				{% set sw_pol_group %}{%if j.sw_pol_group%}{{j.sw_pol_group}}{%else%}{{global.sw_pol_group}}{%endif%}{% endset %}
+                                {% set name %}{%if j.name%}{{j.name}}{%else%}{{default.name}}{%endif%}{% endset %}
+				{% set description %}{%if j.description%}{{j.description}}{%else%}{{default.description}}{%endif%}{% endset %}
+				{% set sw_pol_group %}{%if j.sw_pol_group%}{{j.sw_pol_group}}{%else%}{{default.sw_pol_group}}{%endif%}{% endset %}
                                 {% if from_port != "" %}
 				<infraRsAccNodePGrp tDn="uni/infra/funcprof/accnodepgrp-{{sw_pol_group}}"/>
                                 <infraNodeBlk name="{{name}}" descr="{{description}}" to_="{{j.to_node_id}}"  from_="{{j.from_node_id}}" status="{{action}}"/>

@@ -3,8 +3,8 @@
 	{%if not action=="ignore"%}
 	<fvTenant descr="description" name="{{tenant}}">
 		{% for j in app %}
-                {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
-		{% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                {% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+		{% set description %}{%if j.description%}{{j.description}}{%else%}{{default.description}}{%endif%}{% endset %}
 		{%if not action=="ignore"%}
 		<fvAp descr="description" name="{{j.name}}" prio="unspecified" status="{{action}}">
 		</fvAp>

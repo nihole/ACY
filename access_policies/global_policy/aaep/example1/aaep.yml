@@ -1,4 +1,4 @@
-global:
+default:
   name: ""
   enable_infra_vlan:
   phys_dom: ""

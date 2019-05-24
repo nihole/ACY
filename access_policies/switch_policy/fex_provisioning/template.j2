@@ -2,24 +2,24 @@
 <polUni>
 	<infraInfra>
 		{% for i in fexes %}
-                {% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                {% set action %}{%if i.action%}{{i.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                 {%if not action=="ignore"%}
-                {% set name %}{%if i.name%}{{i.name}}{%else%}{{global.name}}{%endif%}{% endset %}
-                {% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                {% set name %}{%if i.name%}{{i.name}}{%else%}{{default.name}}{%endif%}{% endset %}
+                {% set description %}{%if i.description%}{{i.description}}{%else%}{{default.description}}{%endif%}{% endset %}
 		<infraNodeP name="{{name}}" status="{{action}}">
 			{% for k in i.fex_selectors %}
-                        {% set action %}{%if k.action%}{{k.action}}{%else%}{{global.action}}{%endif%}{% endset %}
-                        {% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                        {% set action %}{%if k.action%}{{k.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+                        {% set description %}{%if k.description%}{{k.description}}{%else%}{{default.description}}{%endif%}{% endset %}
 			{%if not action=="ignore"%}
 			<infraRsAccPortP tDn="uni/infra/acccardprof-leaf{{k.parent_leaf_id}}_fex_inselector" />
                         <infraRsAccCardP tDn="uni/infra/acccardprof-leaf{{k.parent_leaf_id}}_access_module" />
 
 			<infraLeafS descr="" name="{{k.name}}" type="range">
 				{% for j in k.fex_ranges %}
-                                {% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                                {% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                                 {%if not action=="ignore"%}
-                                {% set name %}{%if j.name%}{{j.name}}{%else%}{{global.name}}{%endif%}{% endset %}
-                                {% set description %}{%if j.description%}{{j.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+                                {% set name %}{%if j.name%}{{j.name}}{%else%}{{default.name}}{%endif%}{% endset %}
+                                {% set description %}{%if j.description%}{{j.description}}{%else%}{{default.description}}{%endif%}{% endset %}
         			<infraNodeBlk from_="{{j.parent_leaf_id}}" name="bl{{j.parent_leaf_id}}" to_="{{j.parent_leaf_id}}" />
       			</infraLeafS>
     		</infraNodeP>
