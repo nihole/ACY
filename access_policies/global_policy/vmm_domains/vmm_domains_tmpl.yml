@@ -1,4 +1,4 @@
-# action: "ignore|created|modified|deleted"
+# action: "ignore|created|modified|deleted|created,modified"
 
 vmm_domain:
   name: "" 
