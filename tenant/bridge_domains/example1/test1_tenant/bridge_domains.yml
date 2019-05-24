@@ -1,3 +1,13 @@
+# action: "ignore|created|modified|created,modified|deleted"
+# l2_unknown_unicast: "flood,proxy"
+# l3_unknown_multicast: "flood,proxy"
+# multi_dest_flood: "bd-flood"
+# arp_flood: "yes|no"
+# unicast_routing: "yes|no"
+# subnet_type: "private|public|shared|private,shared|public,shared"
+# bd_type: "L2|L3"
+
+
 default:
   name: ""
   description: ""
