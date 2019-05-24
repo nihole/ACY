@@ -1,3 +1,5 @@
+# action: "ignore|created|modified|created,modified|deleted"
+
 default:
   action: ignore
   name: ""
@@ -5,13 +7,11 @@ default:
   
 interface_profiles:
 - name: ""
-  description: ""
   action: ""
   interface_selectors: 
   - name: ""
     int_pol_group: ""
     int_pol_group_type: ""
-    description: ""
     action: ""
     interface_ranges:
     - name: ""
@@ -19,4 +19,3 @@ interface_profiles:
       from_port: 
       to_port: 
       action: ""
-      description: ""

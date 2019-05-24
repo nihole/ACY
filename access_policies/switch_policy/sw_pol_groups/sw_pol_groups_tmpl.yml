@@ -1,3 +1,5 @@
+# action: "ignore|created|modified|created,modified|deleted"
+
 default:
   name: ""
   description: ""
@@ -16,7 +18,5 @@ default:
   copp_pre-filter: ""
 
 sw_pol_group:
-- name: ""
-  action: ""
 - name: ""
   action: ""

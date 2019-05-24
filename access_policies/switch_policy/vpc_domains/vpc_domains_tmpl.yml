@@ -1,3 +1,5 @@
+# action: "ignore|created|modified|created,modified|deleted"
+
 default:
   name: ""
   description: ""
@@ -10,7 +12,6 @@ vpc_domains:
   right_node_id: 
   logical_pair_id: 
   action: ""
-  description: ""
 
   
 

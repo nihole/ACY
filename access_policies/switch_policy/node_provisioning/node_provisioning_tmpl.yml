@@ -1,9 +1,12 @@
+# action: "ignore|created|modified|created,modified|deleted"
+# role: "leaf|spine"
+
 default:
   name: ""
   description: ""
   action: "ignore"
   pod_id: 1
-  role: "unspecified"
+  role: "leaf"
 
 nodes:
 - name: ""
@@ -13,4 +16,3 @@ nodes:
   pod_id: 
   role: ""
   action: ""
-  description: ""

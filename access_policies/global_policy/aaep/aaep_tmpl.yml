@@ -1,18 +1,18 @@
+# action: "ignore|created|modified|deleted"
+# enable_infra_vlan: "yes|no"
+
 default:
   name: ""
-  enable_infra_vlan:
+  enable_infra_vlan: "no"
   phys_dom: ""
   l3_ext_dom: ""
   vmm_dom: ""
   action: "ignore"
   description: ""
 
-
 aaep:
 - name: ""
-  enable_infra_vlan: ""
   phys_dom: ""
   l3_ext_dom: ""
   vmm_dom: ""
   action: ""
-  description: ""
