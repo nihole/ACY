@@ -6,7 +6,7 @@
                 {% set action %}{%if i.action%}{{i.action}}{%else%}{{global.action}}{%endif%}{% endset %}
                 {% set description %}{%if i.description%}{{i.description}}{%else%}{{global.description}}{%endif%}{% endset %}
 		{%if not action=="ignore"%}
-		<l3extOut descr="" name="{{i.l3out}}" status="{{action}}">
+		<l3extOut descr="" name="{{i.name}}" status="{{action}}">
 			{% for l in i.l3out_node_profiles %}
                 	{% set action %}{%if l.action%}{{l.action}}{%else%}{{global.action}}{%endif%}{% endset %}
                 	{% set description %}{%if l.description%}{{l.description}}{%else%}{{global.description}}{%endif%}{% endset %}
