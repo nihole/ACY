@@ -2,7 +2,7 @@
 <polUni>
 	{% set j = tenants %}
         {%if not j.action=="ignore"%}
-	<fvTenant descr="" name="{{j.name}}" status="{{j.action}}">
+	<fvTenant descr="{{description}}" name="{{j.name}}" status="{{j.action}}">
 	</fvTenant>
 	{%endif%}
 </polUni>

@@ -10,14 +10,14 @@
 		{% set area_type %}{%if j.area_type%}{{j.area_type}}{%else%}{{default.area_type}}{%endif%}{% endset %}
 		{% set ospf_area_id %}{%if j.ospf_area_id%}{{j.ospf_area_id}}{%else%}{{default.ospf_area_id}}{%endif%}{% endset %}
                 {%if not action=="ignore"%}
-	 	 <l3extOut descr="" enforceRtctrl="export" name="{{j.name}}" targetDscp="unspecified" status="{{action}}">
+	 	 <l3extOut descr="{{description}}" enforceRtctrl="export" name="{{j.name}}" targetDscp="unspecified" status="{{action}}">
 			<l3extRsEctx tnFvCtxName="{{j.vrf}}" />
 			<l3extRsL3DomAtt tDn="uni/l3dom-{{j.l3out_domain}}" />
 			{% if enable_ospf == "yes" %}
-			<ospfExtP areaCost="1" areaCtrl="redistribute,summary" areaId="{{ospf_area_id}}" areaType="{{area_type}}" descr="" />
+			<ospfExtP areaCost="1" areaCtrl="redistribute,summary" areaId="{{ospf_area_id}}" areaType="{{area_type}}" descr="{{description}}" />
 			{% endif %}
 			{% if enable_bgp == "yes" %}
-			<bgpExtP descr="" nameAlias=""/>
+			<bgpExtP descr="{{description}}" nameAlias=""/>
 			{% endif %}
 		</l3extOut>
 		{%endif%}{%endfor%}

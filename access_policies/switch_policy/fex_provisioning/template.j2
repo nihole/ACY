@@ -14,7 +14,7 @@
 			<infraRsAccPortP tDn="uni/infra/acccardprof-leaf{{k.parent_leaf_id}}_fex_inselector" />
                         <infraRsAccCardP tDn="uni/infra/acccardprof-leaf{{k.parent_leaf_id}}_access_module" />
 
-			<infraLeafS descr="" name="{{k.name}}" type="range">
+			<infraLeafS descr="{{description}}" name="{{k.name}}" type="range">
 				{% for j in k.fex_ranges %}
                                 {% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                                 {%if not action=="ignore"%}
@@ -23,16 +23,16 @@
         			<infraNodeBlk from_="{{j.parent_leaf_id}}" name="bl{{j.parent_leaf_id}}" to_="{{j.parent_leaf_id}}" />
       			</infraLeafS>
     		</infraNodeP>
-    		<infraAccCardP descr="" name="leaf{{j.parent_leaf_id}}_access_module" ownerKey="" ownerTag="" status="{{action}}">
-      			<infraCardS descr="" name="leaf{{j.parent_leaf_id}}FexCardSelector" ownerKey="" ownerTag="" type="chExtender">
+    		<infraAccCardP descr="{{description}}" name="leaf{{j.parent_leaf_id}}_access_module" ownerKey="" ownerTag="" status="{{action}}">
+      			<infraCardS descr="{{description}}" name="leaf{{j.parent_leaf_id}}FexCardSelector" ownerKey="" ownerTag="" type="chExtender">
         			<infraRsCardPGrp tDn="uni/infra/funcprof/acccardpgrp-leaf{{j.parent_leaf_id}}_access_card" />
       			</infraCardS>
     		</infraAccCardP>
     		<infraFuncP>
-      			<infraAccCardPGrp descr="" name="leaf{{j.parent_leaf_id}}_access_card" ownerKey="" ownerTag="" status="{{action}}" />
+      			<infraAccCardPGrp descr="{{description}}" name="leaf{{j.parent_leaf_id}}_access_card" ownerKey="" ownerTag="" status="{{action}}" />
     		</infraFuncP>
     		<infraAccPortP name="leaf{{j.parent_leaf_id}}_fex_ifselector" ownerKey="" ownerTag="" status="{{action}}">
-      			<infraHPortS descr="" name="Fex{{j.fex_id}}" ownerKey="" ownerTag="" type="range">
+      			<infraHPortS descr="{{description}}" name="Fex{{j.fex_id}}" ownerKey="" ownerTag="" type="range">
         			<infraRsAccBaseGrp fexId="{{j.fex_id}}" tDn="uni/infra/fexprof-leaf{{j.parent_leaf_id}}_fex{{j.fex_id}}_fexprofile/fexbundle-fex{{j.fex_id}}_Bndle" />
 				<infraPortBlk fromCard="{{j.from_slot}}" fromPort="{{j.from_port}}" name="block{{j.from_port}}{{j.to_port}}" toCard="{{j.to_slot}}" toPort="{{j.to_port}}" />
       			</infraHPortS>

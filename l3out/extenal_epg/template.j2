@@ -19,7 +19,7 @@
 				<fvRsProv matchT="AtleastOne" prio="unspecified" tnVzBrCPName="{{i.provided_contract}}"/>
 				{% endif %}
 				<fvRsCustQosPol tnQosCustomPolName="" />
-				<l3extSubnet aggregate="" descr="" ip="{{i.subnet}}" name="" scope="import-security" />
+				<l3extSubnet aggregate="" descr="{{description}}" ip="{{i.subnet}}" name="" scope="import-security" />
 			</l3extInstP>
 			{%endif%}{%endfor%}
 		</l3extOut>

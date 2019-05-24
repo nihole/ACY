@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
 	<fabricInst>
-		<fabricProtPol descr="" name="default" pairT="explicit">
+		<fabricProtPol descr="{{description}}" name="default" pairT="explicit">
 			{% for j in vpc_domains %}
                 	{% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                 	{%if not action=="ignore"%}
@@ -9,8 +9,8 @@
 			{% set description %}{%if j.description%}{{j.description}}{%else%}{{default.description}}{%endif%}{% endset %}
 			<fabricExplicitGEp id="{{j.logical_pair_id}}" name="{{j.name}}" status="{{action}}"> 
 				<fabricRsVpcInstPol tnVpcInstPolName="{{j.domain_policy}}"/>
-				<fabricNodePEp descr="" id="{{j.left_node_id}}" name=""/>
-				<fabricNodePEp descr="" id="{{j.right_node_id}}" name=""/>
+				<fabricNodePEp descr="{{description}}" id="{{j.left_node_id}}" name=""/>
+				<fabricNodePEp descr="{{description}}" id="{{j.right_node_id}}" name=""/>
 			</fabricExplicitGEp>
 			{%endif%}{%endfor%}
 		</fabricProtPol>

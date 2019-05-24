@@ -22,11 +22,11 @@
 				{% set access_port_id %}{%if j.access_port_id%}{{j.access_port_id}}{%else%}{{default.access_port_id}}{%endif%}{% endset %}
 
 				{% if j.static_binding_type == "vPC" %}
-				<fvRsPathAtt descr="" tDn="topology/pod-{{pod_id}}/protpaths-{{j.left_node_id}}-{{j.right_node_id}}/pathep-[{{j.int_pol_group}}]" mode="{{mode}}" instrImedcy="immediate" encap="vlan-{{j.encap_vlan_id}}" status="{{action}}"/>
+				<fvRsPathAtt descr="{{description}}" tDn="topology/pod-{{pod_id}}/protpaths-{{j.left_node_id}}-{{j.right_node_id}}/pathep-[{{j.int_pol_group}}]" mode="{{mode}}" instrImedcy="immediate" encap="vlan-{{j.encap_vlan_id}}" status="{{action}}"/>
 				{% elif j.static_binding_type == "PC" %}
-				<fvRsPathAtt descr="" tDn="topology/pod-{{pod_id}}/paths-{{j.left_node_id}}/pathep-[{{j.int_pol_group}}]" mode="{{mode}}" instrImedcy="immediate" encap="vlan-{{j.encap_vlan_id}}" status="{{action}}"/>
+				<fvRsPathAtt descr="{{description}}" tDn="topology/pod-{{pod_id}}/paths-{{j.left_node_id}}/pathep-[{{j.int_pol_group}}]" mode="{{mode}}" instrImedcy="immediate" encap="vlan-{{j.encap_vlan_id}}" status="{{action}}"/>
 				{% elif j.static_binding_type == "Access" %}
-				<fvRsPathAtt descr="" tDn="topology/pod-{{pod_id}}/paths-{{j.left_node_id}}/pathep-[eth{{j.access_port_id}}]" mode="{{mode}}" instrImedcy="immediate" encap="vlan-{{j.encap_vlan_id}}" status="{{action}}"/>
+				<fvRsPathAtt descr="{{description}}" tDn="topology/pod-{{pod_id}}/paths-{{j.left_node_id}}/pathep-[eth{{j.access_port_id}}]" mode="{{mode}}" instrImedcy="immediate" encap="vlan-{{j.encap_vlan_id}}" status="{{action}}"/>
 				{% endif %}{%endif%}{%endfor%}
 			</fvAEPg>
 			{%endif%}{%endfor%}

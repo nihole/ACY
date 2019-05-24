@@ -12,7 +12,7 @@
 			{% set bfd_ipv6_policy %}{%if j.bfd_ipv6_policy%}{{j.bfd_ipv6_policy}}{%else%}{{default.bfd_ipv6_policy}}{%endif%}{% endset %}
 			{% set monitoring_policy %}{%if j.monitoring_policy%}{{j.monitoring_policy}}{%else%}{{default.monitoring_policy}}{%endif%}{% endset %}
 			{% set stp_policy %}{%if j.stp_policy%}{{j.stp_policy}}{%else%}{{default.stp_policy}}{%endif%}{% endset %}
-			<infraAccNodePGrp  descr="" dn="uni/infra/funcprof/accnodepgrp-{{name}}" name="{{name}}" nameAlias="" ownerKey="" ownerTag="">
+			<infraAccNodePGrp  descr="{{description}}" dn="uni/infra/funcprof/accnodepgrp-{{name}}" name="{{name}}" nameAlias="" ownerKey="" ownerTag="">
 				<infraRsNetflowNodePol  tnNetflowNodePolName="{{netflow_node_policy}}"/>
 				<infraRsBfdIpv6InstPol  tnBfdIpv6InstPolName="{{bfd_ipv6_policy}}"/>
 				<infraRsMonNodeInfraPol  tnMonInfraPolName="{{monitoring_policy}}"/>

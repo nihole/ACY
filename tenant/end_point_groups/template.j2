@@ -26,7 +26,7 @@
         			{%- if vmm_domain %}
 
         			<fvRsDomAtt encap="unknown" instrImedcy="immediate" resImedcy="immediate" tDn="uni/vmmp-VMware/dom-{{vmm_domain}}">
-          				<vmmSecP allowPromiscuous="reject" descr="" forgedTransmits="reject" macChanges="reject" name="" ownerKey="" ownerTag="" />
+          				<vmmSecP allowPromiscuous="reject" descr="{{description}}" forgedTransmits="reject" macChanges="reject" name="" ownerKey="" ownerTag="" />
         			</fvRsDomAtt>
         			{% endif %}
 			</fvAEPg>

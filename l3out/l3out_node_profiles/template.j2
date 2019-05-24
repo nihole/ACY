@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
 	{%if not action=="ignore"%}
-	<fvTenant descr="" name="{{tenant}}">
+	<fvTenant descr="{{description}}" name="{{tenant}}">
 		{% for i in l3outs %}
                 {% set action %}{%if i.action%}{{i.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                 {% set description %}{%if i.description%}{{i.description}}{%else%}{{default.description}}{%endif%}{% endset %}
 		{%if not action=="ignore"%}
-		<l3extOut descr="" name="{{i.name}}" status="{{action}}">
+		<l3extOut descr="{{description}}" name="{{i.name}}" status="{{action}}">
 			{% for l in i.l3out_node_profiles %}
                 	{% set action %}{%if l.action%}{{l.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                 	{% set description %}{%if l.description%}{{l.description}}{%else%}{{default.description}}{%endif%}{% endset %}
                 	{%if not action=="ignore"%}
 			
-			<l3extLNodeP descr="" name="{{l.name}}" tag="yellow-green" targetDscp="unspecified" status="{{action}}">
+			<l3extLNodeP descr="{{description}}" name="{{l.name}}" tag="yellow-green" targetDscp="unspecified" status="{{action}}">
 				{% for j in l.nodes %}
 				{% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
 				{%if not action=="ignore"%}
