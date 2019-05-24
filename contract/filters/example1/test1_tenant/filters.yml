@@ -1,7 +1,7 @@
 global:
   action: "ignore"
   description: ""
-  ether_type: "IP"
+  ether_type: "ip"
   match_only_fragments: "FALSE" 
   arp_flag: ""
   match_DSCP: ""
