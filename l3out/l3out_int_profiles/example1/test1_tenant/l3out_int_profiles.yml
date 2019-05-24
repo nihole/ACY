@@ -2,7 +2,7 @@ global:
   action: "ignore"
   description: ""
   ospf_interface_policy: ""
-  pod_id: ""
+  pod_id: 1
 
 tenant: "test1_tenant"
 action: "modified"
