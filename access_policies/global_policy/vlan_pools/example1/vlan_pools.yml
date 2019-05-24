@@ -1,3 +1,5 @@
+# action: "ignore|created|modified|deleted"
+
 default:
   action: ignore
   name: ""
@@ -16,9 +18,6 @@ vlan_pool:
     start_vlan: 1101
     stop_vlan: 1200
     action: created,modified
-- name: test2
-  action: deleted
-
 - name: ACILab_VMM-VLANs-test
   action: created,modified
   alloc_mode: dynamic

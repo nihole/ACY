@@ -5,8 +5,6 @@
 			<fvnsEncapBlk allocMode="static" from="vlan-1000" name="" status="created,modified" to="vlan-1100"/>
 			<fvnsEncapBlk allocMode="static" from="vlan-1101" name="" status="created,modified" to="vlan-1200"/>
 		</fvnsVlanInstP>
-  		<fvnsVlanInstP allocMode="static" name="test2" status="deleted">
-		</fvnsVlanInstP>
   		<fvnsVlanInstP allocMode="dynamic" name="ACILab_VMM-VLANs-test" status="created,modified">
 			<fvnsEncapBlk allocMode="dynamic" from="vlan-2000" name="" status="created,modified" to="vlan-2100"/>
 		</fvnsVlanInstP>
