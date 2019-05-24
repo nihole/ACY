@@ -20,10 +20,10 @@ l3outs:
   - name: "test2_l3out_node_profile"
     action: "created,modified"
     nodes:
-    - node_id: 1202
+    - node_id: 1203
       action: "created,modified"
       router_id: 172.16.1.3
-    - node_id: 1203
+    - node_id: 1204
       action: "created,modified"
       router_id: 172.16.1.4
 - name: "test2_l3out"
@@ -41,9 +41,9 @@ l3outs:
   - name: "test4_l3out_node_profile"
     action: "created,modified"
     nodes:
-    - node_id: 1202
+    - node_id: 1203
       router_id: 172.16.1.3
       action: "created,modified"
-    - node_id: 1203
+    - node_id: 1204
       router_id: 172.16.1.4
       action: "created,modified"
