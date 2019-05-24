@@ -10,7 +10,7 @@ global:
   tcp_flags: ""
   stateful: "FALSE"
 
-tenant: "rest1_tenant"
+tenant: "test1_tenant"
 action: "modified"
 filters:
 - name: "http"
