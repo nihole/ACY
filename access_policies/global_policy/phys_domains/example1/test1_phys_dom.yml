@@ -1,3 +1,5 @@
+# action: "ignore|created|modified|deleted|created,modified"
+
 phys_domain:
   name: "test1_phys_dom"
   type: "physical"
