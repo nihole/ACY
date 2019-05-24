@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "9a35ff0b-2b32-466d-8303-b886757f8ad4",
+		"name": "contracts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+        	{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"aaaUser\" : { \"attributes\": {\"name\":\"admin\",\"pwd\":\"password\" } } } "
+				},
+				"url": {
+					"raw": "https://198.18.133.200/api/aaaLogin.json",
+					"protocol": "https",
+					"host": [
+						"198",
+						"18",
+						"133",
+						"200"
+					],
+					"path": [
+						"api",
+						"aaaLogin.json"
+					]
+				},
+				"description": "login"
+			},
+			"response": []
+		},
+		{	
+			"name": "contracts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<polUni>\n        <fvTenant name=\"test1_tenant\">\n\t\t<vzBrCP name=\"test1_contract\" status=\"created,modified\">\n\t\t\t<vzSubj name=\"test1_subject\" status=\"created,modified\" revFltPorts=\"no\">\n\t\t\t\t<vzRsSubjFiltAtt directives=\"\" tnVzFilterName=\"http\" status=\"created,modified\"/>\n\t\t\t\t<vzRsSubjFiltAtt directives=\"\" tnVzFilterName=\"https\" status=\"created,modified\"/>\n\t\t\t</vzSubj>\n\t\t</vzBrCP>\n\t</fvTenant>\n</polUni>\n"
+				},
+				"url": {
+					"raw": "https://198.18.133.200/api/mo/uni.xml",
+					"protocol": "https",
+					"host": [
+						"198",
+						"18",
+						"133",
+						"200"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{	
+			"name": "filters",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<polUni>\n\t<fvTenant name=\"test1_tenant\">\n\t\t<vzFilter  name=\"http\" status=\"created,modified\" >\n\t\t\t<vzEntry descr=\"\" etherT=\"IP\" name=\"tcp_80\" applyToFrag=\"no\" arpOpc=\"unspecified\" dFromPort=\"unspecified\" dToPort=\"unspecified\" icmpv4T=\"unspecified\" icmpv6T=\"unspecified\" matchDscp=\"unspecified\" nameAlias=\"\" prot=\"unspecified\" sFromPort=\"unspecified\" sToPort=\"unspecified\" stateful=\"no\" tcpRules=\"\" status=\"created,modified\"/>\n\t\t</vzFilter>\n\t\t<vzFilter  name=\"https\" status=\"created,modified\" >\n\t\t\t<vzEntry descr=\"\" etherT=\"IP\" name=\"tcp_443\" applyToFrag=\"no\" arpOpc=\"unspecified\" dFromPort=\"unspecified\" dToPort=\"unspecified\" icmpv4T=\"unspecified\" icmpv6T=\"unspecified\" matchDscp=\"unspecified\" nameAlias=\"\" prot=\"unspecified\" sFromPort=\"unspecified\" sToPort=\"unspecified\" stateful=\"no\" tcpRules=\"\" status=\"created,modified\"/>\n\t\t</vzFilter>\n\t</fvTenant>\n</polUni>\n\n"
+				},
+				"url": {
+					"raw": "https://198.18.133.200/api/mo/uni.xml",
+					"protocol": "https",
+					"host": [
+						"198",
+						"18",
+						"133",
+						"200"
+					],
+					"path": [
+						"api",
+						"mo",
+						"uni.xml"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
