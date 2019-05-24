@@ -1,3 +1,7 @@
+# action: "ignore|created|modified|created,modified|deleted"
+# role: "leaf|spine"
+
+
 default:
   name: ""
   description: ""
