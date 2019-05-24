@@ -1,3 +1,7 @@
+# action: "ignore|created|modified|deleted"
+# enable_infra_vlan: "yes|no"
+
+
 default:
   name: ""
   enable_infra_vlan:
@@ -16,7 +20,6 @@ aaep:
   vmm_dom:
   action: created,modified
   operational_status:
-  description:
 - name: test2_aaep
   enable_infra_vlan: yes
   phys_dom:
@@ -24,5 +27,4 @@ aaep:
   vmm_dom:
   action: created,modified
   operational_status:
-  description:
 
