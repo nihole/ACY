@@ -1,3 +1,5 @@
+# action: "ignore|created|modified|deleted|created,modified"
+
 default:
   action: ignore
   name: ""
