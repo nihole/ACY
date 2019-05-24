@@ -1,3 +1,25 @@
+# action: "ignore|created|modified|created,modified|deleted"
+# link_level:
+#       auto_negotiation: "on|off"
+#       speed: "1G|10G|40G"
+# cdp:
+#       admin_state: "enabled|disabled"
+# lldp:
+#       receive_state: "enabled|disabled"
+#       transmit_state: "enabled|disabled"
+# port_channel:
+#       mode: "active|passive|off|mac-pin|mac-pin-nicload"
+#       control: "fast-sel-hot-stdby,graceful-conv,susp-individual,symmetric-hash,load-defer-member-ports"
+# stp:
+#       control: "bpdu-guard,bpdu-filter"
+# storm:
+#       rate_type: "percentage|pps"
+# port_channel_member:
+#       transmit_rate: "normal|fast"
+# l2_interface:
+#       vlan_scope: "global|portlocal"
+
+
 default:
   name: ""
   description: ""
