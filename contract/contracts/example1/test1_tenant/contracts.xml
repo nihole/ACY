@@ -2,7 +2,7 @@
 <polUni>
         <fvTenant name="test1_tenant">
 		<vzBrCP name="test1_contract" status="created,modified">
-			<vzSubj name="test1_subject" status="created,modified">
+			<vzSubj name="test1_subject" status="created,modified" revFltPorts="no">
 				<vzRsSubjFiltAtt directives="" tnVzFilterName="http" status="created,modified"/>
 				<vzRsSubjFiltAtt directives="" tnVzFilterName="https" status="created,modified"/>
 			</vzSubj>

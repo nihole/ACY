@@ -3,6 +3,7 @@ global:
   description: ""
   direction: "N/A"
   directives: ""
+  reverse: "no"
 
 tenant: "test1_tenant"
 action: "modified"

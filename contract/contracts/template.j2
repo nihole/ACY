@@ -10,8 +10,9 @@
 			{% for j in k.subjects %}
                 	{% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
                 	{%if not action=="ignore"%}
-                	{% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
-			<vzSubj name="{{j.name}}" status="{{action}}">
+			{% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+			{% set reverse %}{%if j.reverse%}{{j.reverse}}{%else%}{{global.reverse}}{%endif%}{% endset %}
+			<vzSubj name="{{j.name}}" status="{{action}}" revFltPorts="{{reverse}}">
 				{% for l in j.filters %}
                         	{% set action %}{%if l.action%}{{l.action}}{%else%}{{global.action}}{%endif%}{% endset %}
                         	{%if not action=="ignore"%}
