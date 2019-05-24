@@ -55,24 +55,73 @@ files:
 - name: "fex_provisioning"
   path: "/home/nihole/DAFT/access_policies/switch_policy/fex_provisioning/example1/fex_provisioning.xml"
   action: "no"
-- name: "tenant"
-  path: "/home/nihole/DAFT/tenant/tenants/example1/test1_tenant/tenant.yml"
-  action: "no"
-- name: "app_profiles"
-  path: "/home/nihole/DAFT/tenant/app_profiles/example1/test1_tenant/app_profiles.yml"
-  action: "no"
-- name: "bridge_domains"
-  path: "/home/nihole/DAFT/tenant/bridge_domains/example1/test1_tenant/bridge_domains.yml"
-  action: "no"
-- name: "contexts"
-  path: "/home/nihole/DAFT/tenant/contexts/example1/test1_tenant/contexts.yml"
-  action: "no"
-- name:  "end_point_groups"
-  path: "/home/nihole/DAFT/tenant/end_point_groups/example1/test1_tenant/end_point_groups.yml"
-  action: "no"
-- name: "epg_static_bindings"
-  path: "/home/nihole/DAFT/tenant/epg_static_bindings/example1/test1_tenant/epg_static_bindings.yml"
-  action: "no"
 
 
  
+global:
+  action: "yes"
+  hostname: "198.18.133.200"
+  aci_path: "/api/mo/uni.xml"
+  username: "admin"
+  password: "password"
+  collection_name: "tenant"
+
+files:
+- name: "tenant"
+  path: "/home/nihole/DAFT/tenant/tenants/example1/test1_tenant/tenant.xml"
+  action:
+- name: "app_profiles"
+  path: "/home/nihole/DAFT/tenant/app_profiles/example1/test1_tenant/app_profiles.xml"
+  action:
+- name: "bridge_domains"
+  path: "/home/nihole/DAFT/tenant/bridge_domains/example1/test1_tenant/bridge_domains.xml"
+  action:
+- name: "contexts"
+  path: "/home/nihole/DAFT/tenant/contexts/example1/test1_tenant/contexts.xml"
+  action:
+- name:  "end_point_groups"
+  path: "/home/nihole/DAFT/tenant/end_point_groups/example1/test1_tenant/end_point_groups.xml"
+  action:
+- name: "epg_static_bindings"
+  path: "/home/nihole/DAFT/tenant/epg_static_bindings/example1/test1_tenant/epg_static_bindings.xml"
+  action:
+
+
+global:
+  action: "yes"
+  hostname: "198.18.133.200"
+  aci_path: "/api/mo/uni.xml"
+  username: "admin"
+  password: "password"
+  collection_name: "l3out"
+
+files:
+- name: "l3outs"
+  path: "/home/nihole/DAFT/l3out/l3outs/example1/test1_tenant/l3outs.xml"
+  action: "yes"
+- name: "l3out_node_profiles"
+  path: "/home/nihole/DAFT/l3out/l3out_node_profiles/example1/test1_tenant/l3out_node_profiles.xml"
+  action:
+- name: "l3out_int_profiles"
+  path: "/home/nihole/DAFT/l3out/l3out_int_profiles/example1/test1_tenant/l3out_int_profiles.xml"
+  action:
+- name: "extenal_epg"
+  path: "/home/nihole/DAFT/l3out/extenal_epg/example1/test1_tenant/extenal_epg.xml"
+  action: "no"
+
+global:
+  action: "yes"
+  hostname: "198.18.133.200"
+  aci_path: "/api/mo/uni.xml"
+  username: "admin"
+  password: "password"
+  collection_name: "contracts"
+
+files:
+- name: "contracts"
+  path: "/home/nihole/DAFT/contract/contracts/example1/test1_tenant/contracts.xml"
+  action: "yes"
+- name: "filters"
+  path: "/home/nihole/DAFT/contract/filters/example1/test1_tenant/filters.xml"
+  action:
+
