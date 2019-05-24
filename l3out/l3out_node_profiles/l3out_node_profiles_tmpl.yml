@@ -1,0 +1,16 @@
+global:
+  action: "ignore"
+  description: ""
+
+tenant: ""
+action: ""
+l3outs:
+- name: ""
+  action: ""
+  l3out_node_profiles:
+  - name: ""
+    action: ""
+    nodes: 
+    - node_id: ""
+      router_id: ""
+      action: ""

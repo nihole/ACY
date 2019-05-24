@@ -1,0 +1,16 @@
+global:
+  action: "ignore"
+  description: ""
+  enable_bgp: "yes"
+  enable_ospf: "no"
+  area_type: ""
+  ospf_area_id: ""
+
+tenant: ""
+action: ""
+l3outs:
+- name: ""
+  vrf: ""
+  l3out_domain: ""
+  action: ""
+

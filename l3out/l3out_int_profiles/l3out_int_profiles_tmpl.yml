@@ -1,0 +1,29 @@
+global:
+  action: "ignore"
+  description: ""
+  ospf_interface_policy: ""
+  pod_id: 1
+
+tenant: ""
+action: ""
+l3outs:
+- name: ""
+  action: ""
+  l3out_node_profiles:
+  - name: ""
+    action: ""
+    nodes:
+    - node_id: "" 
+      router_id: ""
+      action: ""
+    l3out_int_profilces:
+    - name: ""
+      int_pol_group: "" 
+      vlan_id: ""
+      left_node_id: ""
+      right_node_id: ""
+      svi_1: ""
+      svi_2: ""
+      action: ""
+
+

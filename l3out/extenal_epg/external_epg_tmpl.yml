@@ -1,0 +1,22 @@
+global:
+  action: "ignore"
+  description: ""
+  enable_bgp: "yes"
+  enable_ospf: "no"
+  area_type: ""
+  ospf_area_id: ""
+
+tenant: ""
+action: ""
+l3outs: 
+- name: ""
+  action: ""
+  external_epg: 
+  - name: ""
+    subnet: ""
+    provided_contract: ""
+    consumed_contract: ""
+    action: ""
+
+
+
