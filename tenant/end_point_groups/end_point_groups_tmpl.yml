@@ -1,3 +1,6 @@
+# action: "ignore|created|modified|created,modified|deleted"
+
+
 default:
   name: ""
   description: ""
@@ -13,8 +16,7 @@ app:
   action: ""
   epg:
   - name: ""
-    brigge_domane: ""
+    bridge_domain: ""
     phys_domain: ""
-    description: ""
     action: ""
 

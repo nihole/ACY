@@ -19,11 +19,11 @@
 			<fvAEPg prio="unspecified" name="{{name}}" matchT="AtleastOne" descr="{{description}}" status="{{action}}">
         			<fvRsCustQosPol tnQosCustomPolName="{{custom_qos_policy}}"/>
         			<fvRsBd tnFvBDName="{{j.bridge_domain}}" />
-       				 {%- if phys_domain%}
+       				 {%if phys_domain%}
 
         			<fvRsDomAtt tDn="uni/phys-{{phys_domain}}" instrImedcy="immediate" encap="unknown" resImedcy="immediate" />
         			{% endif %}
-        			{%- if vmm_domain %}
+        			{%if vmm_domain %}
 
         			<fvRsDomAtt encap="unknown" instrImedcy="immediate" resImedcy="immediate" tDn="uni/vmmp-VMware/dom-{{vmm_domain}}">
           				<vmmSecP allowPromiscuous="reject" descr="{{description}}" forgedTransmits="reject" macChanges="reject" name="" ownerKey="" ownerTag="" />

@@ -1,3 +1,14 @@
+# action: "ignore|created|modified|created,modified|deleted"
+# ether_type: "ip|arp|fcoe|mac_security|mpls_ucast|trill|unspecified"
+# IP_protocol: "udp|tcp|pim|ospf|l2tp|igp|icmp|igmp"
+# match_only_fragments: "yes|no|N/A"
+# arp_flag: "reply|request|unspecified|N/A"
+# match_DSCP: ""
+# tcp_flags: "ack|est|fin|reset|syn|reset,syn,ack,fin|fin,reset|syn,ack"
+# icmp_message: "dst-unreach|echo|echo-rep|src-quench|time-exceeded|unspecified|N/A"
+# icmpv6_message: "dst-unreach|echo-req|echo-rep|nbr-unreach|nbr-solicit|time-exceeded|unspecified|redirect|"
+# stateful: "yes|no|N/A"
+
 default:
   action: "ignore"
   description: ""
