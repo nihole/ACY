@@ -36,13 +36,13 @@ f.close()
 
 yaml_data = yaml.load( data1 )
 for j in yaml_data["files"]:
-    if j["action"] == "yes":
-        action = "yes"
-    else:
+    action = "no"
+    if (not j["action"]):
         if yaml_data["global"]["action"] == "yes":
             action = "yes"
-        else:
-            action = "no"
+    else:
+        if j["action"] == "yes":
+            action = "yes"
     if action == "yes":
         j_str = take_data(j["path"])
         j_str = j_str.replace('\"', '\\"').replace('\t','\\t').replace('\n','\\n')

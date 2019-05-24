@@ -1,0 +1,21 @@
+global:
+  action: "yes"
+  hostname: "198.18.133.200"
+  aci_path: "/api/mo/uni.xml"
+  username: "admin"
+  password: "password"
+
+files:
+- name: "l3outs"
+  path: "/home/nihole/DAFT/l3out/l3outs/example1/test1_tenant/l3outs.yml"
+  action: "yes"
+- name: "l3out_node_profiles"
+  path: "/home/nihole/DAFT/l3out/l3out_node_profiles/example1/test1_tenant/l3out_node_profiles.yml"
+  action:
+- name: "l3out_int_profiles"
+  path: "/home/nihole/DAFT/l3out/l3out_int_profiles/example1/test1_tenant/l3out_int_profiles.yml"
+  action:
+- name: "extenal_epg"
+  path: "/home/nihole/DAFT/l3out/extenal_epg/example1/test1_tenant/extenal_epg.yml"
+  action: "no"
+

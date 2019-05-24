@@ -22,12 +22,15 @@ print ("\n> These POST API requests will be used:\n")
 print ("####################################################\n")
 yaml_data = yaml.load( data1 )
 for j in yaml_data["files"]:
+    action = "no"
     if (not j["action"]):
         if yaml_data["global"]["action"] == "yes":
-            print ("name: %s\npath: %s\n" % (j["name"], j["path"]))
+            action = "yes"
     else:
         if j["action"] == "yes":
-            print ("name: %s\npath: %s\n" % (j["name"], j["path"]))
+            action = "yes"
+    if action == "yes":
+        print ("name: %s\npath: %s\n" % (j["name"], j["path"]))
 
 print ("####################################################\n")
 
