@@ -1,0 +1,21 @@
+global:
+  action: "ignore"
+  description: ""
+  direction: "N/A"
+  directives: ""
+
+tenant: "test1_tenant"
+action: "modified"
+contracts:
+- name: "test1_contract"
+  action: "created,modified"
+  subjects: 
+  - name: "test1_subject"
+    action: "created,modified"
+    filters:
+    - name: "http"
+      action: "created,modified"
+    - name: "https"
+      action: "created,modified"
+    
+

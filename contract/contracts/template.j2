@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
-	<fvTenant name="{{config['tenant']}}">
-		<vzBrCP descr="" name="{{config['name']}}" prio="unspecified" scope="{{config['scope']}}" status="{{config['action']}}">
+	{%if not action=="ignore"%}
+        <fvTenant name="{{tenant}}">
+                {% for k in contracts %}
+                {% set action %}{%if k.action%}{{k.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                {%if not action=="ignore"%}
+                {% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+		<vzBrCP name="{{k.name}}" status="{{action}}">
+			{% for j in k.subjects %}
+                	{% set action %}{%if j.action%}{{j.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                	{%if not action=="ignore"%}
+                	{% set description %}{%if k.description%}{{k.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+			<vzSubj name="{{j.name}}" status="{{action}}">
+				{% for l in j.filters %}
+                        	{% set action %}{%if l.action%}{{l.action}}{%else%}{{global.action}}{%endif%}{% endset %}
+                        	{%if not action=="ignore"%}
+				{% set description %}{%if l.description%}{{l.description}}{%else%}{{global.description}}{%endif%}{% endset %}
+				{% set direction %}{%if l.direction%}{{l.direction}}{%else%}{{global.direction}}{%endif%}{% endset %}
+				{% set directives %}{%if l.directives%}{{l.directives}}{%else%}{{global.directives}}{%endif%}{% endset %}
+
+				{% if direction == "N/A" %}	
+				<vzRsSubjFiltAtt directives="{{directives}}" tnVzFilterName="{{l.name}}" status="{{action}}"/>
+				{% elif direction == "in" %}
+				<vzInTerm name= "{{j.name}}" >
+					<vzRsFiltAtt directives="{{directives}}" tnVzFilterName="{{l.name}}" status="{{action}}"/>
+				</vzInTerm>
+				{% elif direction == "out" %}
+				<vzOutTerm name = "{{j.name}}">
+					<vzRsFiltAtt directives="{{directives}}" tnVzFilterName="{{l.filter}}" status="{{action}}"/>
+				</vzOutTerm>
+				{%endif%}{% endif %}{%endfor%}
+			</vzSubj>
+			{%endif%}{%endfor%}
 		</vzBrCP>
+		{%endif%}{%endfor%}
 	</fvTenant>
+	{%endif%}
 </polUni>
