@@ -4,6 +4,7 @@ global:
   aci_path: "/api/mo/uni.xml"
   username: "admin"
   password: "password"
+  collection_name: "l3out"
 
 files:
 - name: "l3outs"
