@@ -21,7 +21,6 @@ There are 4 different types of files in this project.
 
 - Python files:
   - <b>render.py</b> - used for generating of XML file for ACI configuration from YAML and JINJA2 files
-  - postman/<b>create_collection.py</b> - used for creation POSTMAN collection from the individual API requests
 - JINJA2 files:
   - <b>template.j2</b> - templates, used for generating of XML files for ACI configuration from YAML files. 
 - YAML files:
