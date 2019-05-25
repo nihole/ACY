@@ -14,10 +14,9 @@ The last point is a significant advantage over some other deployment methods (fo
 - Access policies:
   - Global access policies:
     - vlan pools
-    - domains
-    - physical
-    - l3out
-    - vmm
+    - physical domain
+    - l3out domain
+    - vmm domain
     - aaep
   - Interface access policies:
     - interface policies
