@@ -1,6 +1,6 @@
 <h4>What is ACY</h4>
 
-ACY = deployment <b>AC</b>I from <b>Y</b>aml
+ACY = deployment Cisco <b>AC</b>I from <b>Y</b>aml
 
 The idea is to manage the Cisco ACI configuration via text files in YAML format. It allows you to
 - use a simple interface for ACI configuration
