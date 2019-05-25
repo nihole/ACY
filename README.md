@@ -61,12 +61,12 @@ The last point is a significant advantage over some other deployment methods (fo
 │   │   │── interface_profiles</br>
 │   │   │── int_pol_groups</br>
 │   │── switch_policy</br>
-│       │── fex_provisioning</br>
-│       │── mgmt</br>
-│       │── node_provisioning</br>
-│       │── switch_profiles</br>
-│       │── sw_pol_groups</br>
-│       │── vpc_domains</br>
+│   │   │── fex_provisioning</br>
+│   │   │── mgmt</br>
+│   │   │── node_provisioning</br>
+│   │   │── switch_profiles</br>
+│   │   │── sw_pol_groups</br>
+│   │   │── vpc_domains</br>
 │── contract</br>
 │   │── contracts</br>
 │   │── epg_contracts</br>
@@ -77,10 +77,10 @@ The last point is a significant advantage over some other deployment methods (fo
 │   │── l3out_node_profiles</br>
 │   │── l3outs</br>
 │── tenant</br>
-    │── app_profiles</br>
-    │── bridge_domains</br>
-    │── contexts</br>
-    │── end_point_groups</br>
-    │── epg_static_bindings</br>
-    │── tenants</br>
+│   │── app_profiles</br>
+│   │── bridge_domains</br>
+│   │── contexts</br>
+│   │── end_point_groups</br>
+│   │── epg_static_bindings</br>
+│   │── tenants</br>
 
