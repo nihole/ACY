@@ -1,4 +1,4 @@
-<h4>What is ACY</h4>
+<h3>What is ACY</h3>
 
 ACY = deployment Cisco <b>AC</b>I from <b>Y</b>aml = <b>AC</b>I from <b>Y</b>aml
 
@@ -15,7 +15,7 @@ The last point is a significant advantage over some other deployment methods (fo
 - install python3 with yaml and jinja2 packages
 - install Postman
 
-<h4>Which ACI objects can be managed with ACY</h4>
+<h3>Which ACI objects can be managed with ACY</h3>
 
 - Access policies:
   - Global access policies:
@@ -52,7 +52,7 @@ The last point is a significant advantage over some other deployment methods (fo
   - contracts
   - EPG attachment
   
-<h4>Start configuration</h4>
+<h3>Start configuration</h3>
 
 Let's consider for example that we want to create a new vlan pool. 
 
@@ -80,7 +80,7 @@ cd ./example1/
 5. Generate xml file for ACI configuration
 
 ```
-../../../../render.py ../template vlan_pools.yml > vlan_pools.xml
+../../../../render.py ../template.j2 vlan_pools.yml > vlan_pools.xml
 ```
 
 6. Upload this file to ACI (see the next chapter).
@@ -94,4 +94,5 @@ l3out/l3out_int_profiles/example1/test_tenant1/
 l3out/extenal_epg/example1/test_tenant1/
 ```
 
+<h3>Upload to ACI</h3>
 
