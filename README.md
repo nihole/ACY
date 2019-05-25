@@ -24,12 +24,12 @@ There are 4 different types of files in this project.
 - JINJA2:
   - <b>template.j2</b> - templates, used for generating of XML files for ACI configuration from YAML files. 
 - YAML:
-  - <b>aaep_tmpl.yml</b>, <b>phys_domains_tmpl.yml</b>, <b>vlan_pools_tmpl.yml</b>,..., <b>epg_contract_tmpl.yml</b> - corresponds to created or modified Cisco ACI objects. These are templates for new YAML files creation. These files are located in the same folders as template.j2 files
-  - <b>aaep.yml</b>, <b>phys_domains.yml</b>, <b>vlan_pools.yml</b>,..., <b>epg_contract.yml</b> - these files have been created for demonstration purposes from the corresponding tmpl files. For example, aaep_tmpl.yml was used to create aaep.yml.
+  - <b>aaep_tmpl.yml</b>, <b>phys_domains_tmpl.yml</b>, <b>vlan_pools_tmpl.yml</b>,..., <b>epg_contract_tmpl.yml</b> - corresponds to created or modified Cisco ACI objects. These are templates for creating new YAML files 
+  - <b>aaep.yml</b>, <b>phys_domains.yml</b>, <b>vlan_pools.yml</b>,..., <b>epg_contract.yml</b> - these files have been created for demonstration purposes from the corresponding tmpl files. For example, aaep_tmpl.yml -> aaep.yml
 
-<h4>Syntax</h4>
+Syntax:
 
-python3 _path_/render.py _path_/template.j2 _path_/configuration_yaml_file.yml
+python3 _root_/render.py _path_/template.j2 _path_/configuration_yaml_file.yml
 
 
 <h4>How to start ACI configuration</h4>
