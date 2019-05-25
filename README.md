@@ -52,3 +52,20 @@ The last point is a significant advantage over some other deployment methods (fo
   - contracts
   - EPG attachment
   
+<h4>Start configuration</h4>
+
+Let's consider for example that we want to create a new vlan pool. 
+
+1. go to the correspondent folder. In this case it is access_policies/global_policy/vlan_pools. 
+
+There are 2 files already there: <b>template.j2</b> and <b>vlan_pools_tmpl.yml</b>.
+- <b>template.j2</b> - is jinja2 template. You usually don'r need to change it.
+- <b>vlan_pools_tmpl.yml</b> - this file we are going to use for our yaml file creation (if it has not been done before)
+
+2. Now we need to create and fill in a yaml file. You may do it in any folder, but it looks reasonable to creare a new folder in the curent one. Let's create folder "example1". 
+
+- <b>mkdir example1</b>
+
+Copy file vlan_pools_tmpl.yml to this folder and rename it:
+
+- <b>cp vlan_pools_tmpl.yml ./example1/vlan_pools.yml</b>
