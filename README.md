@@ -17,14 +17,16 @@ The last point is a significant advantage over some other deployment methods (fo
 
 <h4>How to start ACI configuration</h4>
 
-- fill in the appropriate YAML file with configuration parameter
-- use the python render.py file with the corresponding JINJA2 and YAML files as arguments to create an ACI configuration file. As a result, you will have an XML file for the API reques
-- if necessary, repeat these steps for other configuration objects
-- if necessary, create a POSTMAN collection. Use postman/create_collection.py for this
-- use Postman to upload your individual API requests or collections to ACI
-
-You don't need to change python scripts and generally you don't need to touch jinja temlates.
+You don't need to change python scripts and generally you don't need to touch jinja temlates!!
 You change only yaml file.
+
+You usial steps are:
+
+1. fill in the appropriate YAML file with configuration parameters
+2. use the python render.py file with the corresponding JINJA2 and YAML files as arguments to create an ACI configuration file. As a result, you will have an XML file for the API reques
+3. if necessary, repeat these steps for other configuration objects
+4. if necessary, create a POSTMAN collection. Use postman/create_collection.py for this
+5. use Postman to upload your individual API requests or collections to ACI
 
 <h4>Example</h4>
 
