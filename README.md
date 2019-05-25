@@ -25,7 +25,7 @@ There are 4 different types of files in this project.
   - <b>template.j2</b> - templates, used for generating of XML files for ACI configuration from YAML files. 
 - YAML:
   - <b>aaep_tmpl.yml</b>, <b>phys_domains_tmpl.yml</b>, <b>vlan_pools_tmpl.yml</b>,..., <b>epg_contract_tmpl.yml</b> - corresponds to created or modified Cisco ACI objects. These are templates for new YAML files creation. These files are located in the same folders as template.j2 files
-  - <b>aaep.yml</b>, <b>phys_domains.yml</b>, <b>vlan_pools.yml</b>,..., <b>epg_contract.yml</b> - these files were created for demonstration purposes. They are created from the corresponding tmpl files. For example, aaep_tmpl.yml was used to create aaep.yml.
+  - <b>aaep.yml</b>, <b>phys_domains.yml</b>, <b>vlan_pools.yml</b>,..., <b>epg_contract.yml</b> - these files have been created for demonstration purposes from the corresponding tmpl files. For example, aaep_tmpl.yml was used to create aaep.yml.
 
 <h4>How to start ACI configuration</h4>
 
