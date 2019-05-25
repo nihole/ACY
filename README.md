@@ -49,7 +49,7 @@ The last point is a significant advantage over some other deployment methods (fo
   
 <h4>Directory tree</h4>
   
-Folders tree is in accordance with ACI policy model.
+Folders tree is in accordance with ACI policy model (only the main folders are represented here):
 
 access_policies/global_policy/aaep/</br>
 access_policies/global_policy/phys_domains/</br>
