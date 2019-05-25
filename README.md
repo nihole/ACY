@@ -20,7 +20,7 @@ The last point is a significant advantage over some other deployment methods (fo
 You don't need to change python scripts and generally you don't need to touch JINJA2 temlates!!
 You change only YAML files.
 
-You usial steps are:
+Your usual steps are:
 
 1. fill in the appropriate YAML file with configuration parameters
 2. use the python <b>render.py</b> file with the corresponding JINJA2 and YAML files as arguments to create an ACI configuration file. As a result, you will have an XML file for the API reques
