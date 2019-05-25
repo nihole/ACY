@@ -28,9 +28,9 @@ There are 4 different types of files in this project.
   - <b>aaep.yml</b>, <b>phys_domains.yml</b>, <b>vlan_pools.yml</b>,..., <b>epg_contract.yml</b> - these files have been created for demonstration purposes from the corresponding tmpl files. For example, aaep_tmpl.yml was used to create aaep.yml.
 
 <h4>Syntax</h4>
-<blockquote>
+
 python3 _path_/render.py _path_/template.j2 _path_/configuration_yaml_file.yml
-</blockquote>
+
 
 <h4>How to start ACI configuration</h4>
 
