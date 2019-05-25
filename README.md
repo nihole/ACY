@@ -64,12 +64,16 @@ There are 2 files already there: <b>template.j2</b> and <b>vlan_pools_tmpl.yml</
 
 2. Create new folder (if it has not been done before). Really you may use any folder, but it looks reasonable to creare a new folder in the curent one. Let's create a folder "example1". 
 
-<b>mkdir example1</b>
+```
+mkdir example1
+```
 
 3. Copy file vlan_pools_tmpl.yml (if it has not been done before) to this folder and rename it:
 
-<b>cp vlan_pools_tmpl.yml ./example1/vlan_pools.yml</b>
-<b>cd ./example1/</b>
+```
+cp vlan_pools_tmpl.yml ./example1/vlan_pools.yml
+cd ./example1/
+```
 
 4. Fill in <b>vlan_pools.yml</b> with configuration parameters (see access_policies/global_policy/vlan_pools//example1/vlan_pools.yml file)
 
