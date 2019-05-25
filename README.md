@@ -47,7 +47,7 @@ The last point is a significant advantage over some other deployment methods (fo
   - EPG attachment
   
   
-<h4>Directory tree</h4>
+<h4>Directory structure</h4>
   
 Folders tree is in accordance with ACI policy model (only the main folders are represented here):
 
