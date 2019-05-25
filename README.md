@@ -49,38 +49,36 @@ The last point is a significant advantage over some other deployment methods (fo
   
 <h4>Directory tree</h4>
   
-│── access_policies</br>
-│   │── global_policy</br>
-│   │   │── aaep</br>
-│   │   │── phys_domains</br>
-│   │   │── vlan_pools</br>
-│   │   │── vmm_domains</br>
-│   │── interface_policy</br>
-│   │   │── fex_interface_profiles</br>
-│   │   │── interface_policies</br>
-│   │   │── interface_profiles</br>
-│   │   │── int_pol_groups</br>
-│   │── switch_policy</br>
-│   │   │── fex_provisioning</br>
-│   │   │── mgmt</br>
-│   │   │── node_provisioning</br>
-│   │   │── switch_profiles</br>
-│   │   │── sw_pol_groups</br>
-│   │   │── vpc_domains</br>
-│── contract</br>
-│   │── contracts</br>
-│   │── epg_contracts</br>
-│   │── filters</br>
-│── l3out</br>
-│   │── extenal_epg</br>
-│   │── l3out_int_profiles</br>
-│   │── l3out_node_profiles</br>
-│   │── l3outs</br>
-│── tenant</br>
-│   │── app_profiles</br>
-│   │── bridge_domains</br>
-│   │── contexts</br>
-│   │── end_point_groups</br>
-│   │── epg_static_bindings</br>
-│   │── tenants</br>
+Folders tree is in accordance with ACI policy model.
+
+access_policies/global_policy/aaep/</br>
+access_policies/global_policy/phys_domains/</br>
+access_policies/global_policy/vlan_pools/</br>
+access_policies/global_policy/vmm_domains/</br>
+
+access_policies/interface_policy/fex_interface_profiles/</br>
+access_policies/interface_policy/interface_policies/</br>
+access_policies/interface_policy/interface_profiles/</br>
+access_policies/interface_policy/int_pol_groups/</br>
+
+access_policies/switch_policy/fex_provisioning/</br>
+access_policies/switch_policy/mgmt/</br>
+access_policies/switch_policy/ode_provisioning/</br>
+access_policies/switch_policy/switch_profiles/</br>
+access_policies/switch_policy/sw_pol_groups/</br>
+access_policies/switch_policy/vpc_domains/</br>
+
+tenant/app_profiles/bridge_domains/</br>
+tenant/app_profiles/contexts/</br>
+tenant/app_profiles/end_point_groups/</br>
+tenant/app_profiles/epg_static_bindings/</br>
+tenant/app_profiles/tenants/</br>
+
+l3out/extenal_epg/l3out_int_profiles/</br>
+l3out/extenal_epg/l3out_node_profiles/</br>
+l3out/extenal_epg/l3outs/</br>
+
+contract/contracts/epg_contracts/</br>
+contract/contracts/filters/</br>
+contract/contracts/epg_attach/</br>
 
