@@ -54,6 +54,9 @@ The last point is a significant advantage over some other deployment methods (fo
   
 <h3>Start configuration</h3>
 
+The idea is that you only need to change YAML files!! 
+You never change the python rendering file and generally you don't need to change jinja templates.
+
 Let's consider for example that we want to create a new vlan pool. 
 
 1. Go to the correspondent folder. In this case it is access_policies/global_policy/vlan_pools. 
@@ -62,7 +65,7 @@ There are 2 files already there: <b>template.j2</b> and <b>vlan_pools_tmpl.yml</
 - <b>template.j2</b> - is jinja2 template. You usually don'r need to change it.
 - <b>vlan_pools_tmpl.yml</b> - this file we are going to use for our yaml file creation (if it has not been done before)
 
-2. Create new folder (if it has not been done before). Really you may use any folder, but it looks reasonable to creare a new folder in the curent one. Let's create a folder "example1". 
+2. Create new folder (if it has not been done before). Actually you may use any folder, but it looks reasonable to creare a new folder in the curent one. Let's create a folder "example1". 
 
 ```
 mkdir example1
@@ -95,4 +98,41 @@ l3out/extenal_epg/example1/test_tenant1/
 ```
 
 <h3>Upload to ACI</h3>
+
+Let's assume that we created a lot of XML files. We can use many API requests to upload this configuration, but it doesn’t look very scalable. 
+
+This project provides a tool to combine individual API requests into a single POSTMAN collection.
+
+1. Go to the folder postman. From the root folder the command will be
+```
+cd postman
+```
+There are 3 files here: 
+- <b>create_collection.py</b> - is a python script used for the postman collection file generation (with using of jinja template and yaml configuration files as input)
+- <b>template.j2</b> - jinja template file used as input for the create_collection.py
+- <b>collection_tmpl.yml</b> - we use this file as a template for new collection yaml files.
+
+2. Create new folder (if it has not been done before). Actually you may use any folder, but it looks reasonable to creare a new folder in the curent one.
+
+```
+mkdir example1
+```
+3. Copy file <b>collection_tmpl.yml</b> to the new folder with renaming. For example a new name maybe all.yml
+
+```
+cp collection_tmpl.yml example1/all.yml
+```
+
+4. Fill in a new file (see postman/example1/all.yml)
+
+5. Generate collection file all.json (json format) 
+
+```
+cd example1
+../create_collection.py ../template.j2 all.yml > all.json
+```
+6. Upload this file in POSTMAN
+
+7. RUN this collection
+
 
