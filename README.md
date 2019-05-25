@@ -15,6 +15,18 @@ The last point is a significant advantage over some other deployment methods (fo
 - install python3 with yaml and jinja2 packages
 - install Postman
 
+<h4>Python, JINJA2, YAML, XML</h4>
+
+There 4 different types of files in this project.
+
+- Python files:
+  - <b>render.py</b> - used for generating of XML file for ACI configuration from YAML and JINJA2 files
+  - postman/<b>create_collection.py</b> - used for creation POSTMAN collection from the individual API requests
+- JINJA2 files:
+  - <b>template.j2</b> - templates, used for generating of XML file for ACI configuration from YAML files. The same name is used for all configurated objects. It is not a problem because for each configuration object a separate folder has been created. For example, for aaep configuration the file access_policies/global_policy/aaep/template.j2 is used but for the physical domain configuration we take access_policies/global_policy/phys_domain/template.j2 file
+- YAML files:
+  - <b>aaep_tmpl.yml</b>, <b>phys_domains_tmpl.yml</b>, <b>vlan_pools_tmpl.yml</b>,..., <b>epg_contract_tmpl.yml</b> - corresponds to created or modified Cisco ACI objects. These are templates for new YAML files creation. These files are located in the same folders as template.j2
+
 <h4>How to start ACI configuration</h4>
 
 You don't need to change python scripts and generally you don't need to touch JINJA2 temlates!!
