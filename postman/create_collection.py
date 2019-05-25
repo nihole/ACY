@@ -1,14 +1,7 @@
-
 import re
-import paramiko
 import sys
 import yaml
 import jinja2
-from jinja2 import Template
-from jinja2 import environment as env
-from jinja2 import *
-from pprintpp import pprint
-import ipaddress
 
 def take_data(path):
     fl = open(path, "r")
@@ -38,7 +31,7 @@ yaml_data = yaml.load( data1 )
 for j in yaml_data["files"]:
     action = "no"
     if (not j["action"]):
-        if yaml_data["global"]["action"] == "yes":
+        if yaml_data["default"]["action"] == "yes":
             action = "yes"
     else:
         if j["action"] == "yes":

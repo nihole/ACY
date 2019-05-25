@@ -1,13 +1,7 @@
 import re
-import paramiko
 import sys
 import yaml
 import jinja2
-from jinja2 import Template
-from jinja2 import environment as env
-from jinja2 import *
-from pprintpp import pprint
-import ipaddress
 
     ######### get file's names ####################
 if (len(sys.argv)==3):
