@@ -29,7 +29,7 @@ There are 4 different types of files in this project.
 
 Syntax:
 
-python3 _root_/render.py _path_/template.j2 _path_/configuration_yaml_file.yml
+<b>python3 _root_/render.py _path_/template.j2 _path_/configuration_yaml_file.yml</b>
 
 
 <h4>How to start ACI configuration</h4>
