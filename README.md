@@ -9,6 +9,25 @@ The idea is to manage the Cisco ACI configuration via text files in YAML format.
 
 The last point is a significant advantage over some other deployment methods (for example Deployment ACI From Excel).
 
+<h4>Installation</h4>
+
+- clone this project to your local folder
+- install python3 with yaml and jinja2 packages
+- install Postman
+
+<h4>How to start ACI configuration</h4>
+
+- fill in the appropriate YAML file with configuration parameter
+- use the python render.py file with the corresponding JINJA2 and YAML files as arguments to create an ACI configuration file. As a result, you will have an XML file for the API reques
+- if necessary, repeat these steps for other configuration objects
+- if necessary, create a POSTMAN collection. Use postman/create_collection.py for this
+- use Postman to upload your individual API requests or collections to ACI
+
+You don't need to change python scripts and generally you don't need to touch jinja temlates.
+You change only yaml file.
+
+<h4>Example</h4>
+
 <h4>Which ACI objects can been managed with ACY</h4>
 
 - Access policies:
