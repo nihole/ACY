@@ -15,7 +15,7 @@ The last point is a significant advantage over some other deployment methods (fo
 - install python3 with yaml and jinja2 packages
 - install Postman
 
-<h4>Which ACI objects can been managed with ACY</h4>
+<h4>Which ACI objects can be managed with ACY</h4>
 
 - Access policies:
   - Global access policies:
