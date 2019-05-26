@@ -52,10 +52,17 @@ The last point is important because, from my point of view, it is a significant 
   - contracts
   - EPG attachment
   
-<h3>Start configuration</h3>
+<h3>Configuration procedure</h3>
 
-The idea is that you only need to change YAML files!! 
+The procedure is simple and mainly consists of three steps: you need to 
+
+- fill in the YAML file
+- generate the XML configuration file 
+- upload it to ACI.  
+
 You never change the python rendering file <a href="https://github.com/nihole/ACY/blob/master/render.py">render.py</a> and generally you don't need to change Jinja2 templates.
+
+<h3>Example</h3>
 
 Let's consider, for example, that we want to create a new VLAN pool.
 
@@ -125,7 +132,7 @@ cp collection_tmpl.yml example1/all.yml
 
 4. Fill in a new file <a href="https://github.com/nihole/ACY/blob/master/postman/example1/all.yml">all.yml</a>
 
-5. Generate collection file <a href="https://github.com/nihole/ACY/blob/master/postman/example1/all.json">all.yml</a>
+5. Generate collection file <a href="https://github.com/nihole/ACY/blob/master/postman/example1/all.json">all.json</a>
 
 ```
 cd example1
