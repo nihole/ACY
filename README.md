@@ -12,7 +12,7 @@ The last point is important because, from my point of view, it is a significant 
 <h3>Installation</h3>
 
 - clone this project to your local folder
-- install python3 with YAML and Jinja2 packages
+- install Python3 with YAML and Jinja2 packages
 - install Postman
 
 <h3>Which ACI objects can be managed with ACY</h3>
@@ -60,7 +60,7 @@ The procedure is simple and mainly consists of three steps: you need to
 - generate the XML configuration file 
 - upload it to ACI.  
 
-You never change the python rendering file <a href="https://github.com/nihole/ACY/blob/master/render.py">render.py</a> and generally you don't need to change Jinja2 templates.
+You never change the Python rendering file <a href="https://github.com/nihole/ACY/blob/master/render.py">render.py</a> and generally you don't need to change Jinja2 templates.
 
 <h3>Example</h3>
 
@@ -69,8 +69,8 @@ Let's consider, for example, that we want to create a new VLAN pool.
 1. Go to the correspondent folder. In this case it is <a href="https://github.com/nihole/ACY/tree/master/access_policies/global_policy/aaep">access_policies/global_policy/vlan_pools</a>
 
 There are 2 files already there: <a href="https://github.com/nihole/ACY/blob/master/access_policies/global_policy/aaep/template.j2">template.j2</a> and <a href="https://github.com/nihole/ACY/blob/master/access_policies/global_policy/aaep/aaep_tmpl.yml">vlan_pools_tmpl.yml</a>.
-- template.j2 - is jinja2 template. You usually don't need to change it.
-- vlan_pools_tmpl.yml - this file we are going to use for our yaml file creation (if it has not been done before)
+- template.j2 - is Jinja2 template. You usually don't need to change it.
+- vlan_pools_tmpl.yml - this YAML file we are going to use for our YAML file creation (if it has not been done before)
 
 2. Create a new folder (if it has not been done before). Actually you may use any folder, but it looks reasonable to creare a new folder in the curent one. Let's create a folder <a href="https://github.com/nihole/ACY/tree/master/access_policies/global_policy/aaep/example1">example1</a> 
 
@@ -115,7 +115,7 @@ This project provides a tool to collect individual API requests into one Postman
 cd postman
 ```
 There are 3 files here: 
-- <a href="https://github.com/nihole/ACY/blob/master/postman/check_collection.py">create_collection.py</a> - is a python script used for the Postman collection file generation (with using of Jinja template and YAML configuration files as input)
+- <a href="https://github.com/nihole/ACY/blob/master/postman/check_collection.py">create_collection.py</a> - is a Python script used for the Postman collection file generation (with using of Jinja template and YAML configuration files as input)
 - <a href="https://github.com/nihole/ACY/blob/master/postman/template.j2">template.j2</b> - Jinja2 template used as input for the create_collection.py
 - <a href="https://github.com/nihole/ACY/blob/master/postman/collection_tmpl.yml">collection_tmpl.yml</a> - we use this file as a template for new collection YAML files.
 
@@ -138,7 +138,7 @@ cp collection_tmpl.yml example1/all.yml
 cd example1
 ../create_collection.py ../template.j2 all.yml > all.json
 ```
-6. Upload this file in POSTMAN
+6. Upload this file in Postman
 
 7. RUN this collection
 
