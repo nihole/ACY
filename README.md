@@ -12,7 +12,7 @@ The last point is important because, from my point of view, it is a significant 
 <h3>Installation</h3>
 
 - clone this project to your local folder
-- install python3 with yaml and jinja2 packages
+- install python3 with YAML and Jinja2 packages
 - install Postman
 
 <h3>Which ACI objects can be managed with ACY</h3>
@@ -106,9 +106,9 @@ l3out/extenal_epg/example1/test_tenant1/
 
 <h3>Upload to ACI</h3>
 
-Let's assume that we created a lot of XML files. We can use many API requests to upload these files to ACI, but it doesn’t look very scalable. 
+The described approach can result in many XML files. We can use many API requests to load these files into ACI, but this does not look very scalable.
 
-This project provides a tool to collect the individual API requests into a single POSTMAN collection.
+This project provides a tool to collect individual API requests into one Postman collection.
 
 1. Go to the folder <a href="https://github.com/nihole/ACY/tree/master/postman">postman</a>
 ```
