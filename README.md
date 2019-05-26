@@ -119,7 +119,7 @@ There are 3 files here:
 - <a href="https://github.com/nihole/ACY/blob/master/postman/template.j2">template.j2</b> - Jinja2 template used as input for the create_collection.py
 - <a href="https://github.com/nihole/ACY/blob/master/postman/collection_tmpl.yml">collection_tmpl.yml</a> - we use this file as a template for new collection YAML files.
 
-2. Create a folder <a href="<a href="https://github.com/nihole/ACY/tree/master/postman">">example1</a> (if it has not been done before). Actually you may use any folder, but it looks reasonable to creare a new folder in the curent one.
+2. Create a folder <a href="https://github.com/nihole/ACY/tree/master/postman">">example1</a> (if it has not been done before). Actually you may use any folder, but it looks reasonable to creare a new folder in the curent one.
 
 ```
 mkdir example1
