@@ -56,7 +56,7 @@ In the current version of ACY, you can create, modify, or delete the following A
   
 <h3>Configuration procedure</h3>
 
-The procedure is simple and mainly consists of three steps: you need to 
+The procedure is simple and mainly consists of three steps:
 
 - fill in the YAML file
 - generate the XML configuration file 
