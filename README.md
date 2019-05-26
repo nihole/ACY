@@ -55,15 +55,15 @@ The last point is important because, from my point of view, it is a significant 
 <h3>Start configuration</h3>
 
 The idea is that you only need to change YAML files!! 
-You never change the python rendering file (<b>render.py</>) and generally you don't need to change Jinja templates (template.j2).
+You never change the python rendering file <a href="https://github.com/nihole/ACY/blob/master/render.py">render.py</a> and generally you don't need to change Jinja2 templates.
 
 Let's consider, for example, that we want to create a new VLAN pool.
 
 1. Go to the correspondent folder. In this case it is access_policies/global_policy/vlan_pools.
 
-There are 2 files already there: <b>template.j2</b> and <b>vlan_pools_tmpl.yml</b>.
-- <b>template.j2</b> - is jinja2 template. You usually don't need to change it.
-- <b>vlan_pools_tmpl.yml</b> - this file we are going to use for our yaml file creation (if it has not been done before)
+There are 2 files already there: <a href="https://github.com/nihole/ACY/blob/master/access_policies/global_policy/aaep/template.j2">template.j2</a> and <a href="https://github.com/nihole/ACY/blob/master/access_policies/global_policy/aaep/aaep_tmpl.yml">vlan_pools_tmpl.yml</a>.
+- template.j2 - is jinja2 template. You usually don't need to change it.
+- vlan_pools_tmpl.yml - this file we are going to use for our yaml file creation (if it has not been done before)
 
 2. Create a new folder (if it has not been done before). Actually you may use any folder, but it looks reasonable to creare a new folder in the curent one. Let's create a folder "example1". 
 
@@ -78,9 +78,9 @@ cp vlan_pools_tmpl.yml ./example1/vlan_pools.yml
 cd ./example1/
 ```
 
-4. Fill in <b>vlan_pools.yml</b> with configuration parameters (see <a href="https://github.com/nihole/ACY/blob/master/access_policies/global_policy/aaep/example1/aaep.yml">vlan_pools.yml</a> file)
+4. Fill in <a href="https://github.com/nihole/ACY/blob/master/access_policies/global_policy/aaep/example1/aaep.yml">vlan_pools.yml</a> with configuration parameters
 
-5. Generate xml file for ACI configuration (see <a href="https://github.com/nihole/ACY/blob/master/access_policies/global_policy/aaep/example1/aaep.xml">aaep.xml</a>)
+5. Generate <a href="https://github.com/nihole/ACY/blob/master/access_policies/global_policy/aaep/example1/aaep.xml">aaep.xml</a> file for ACI configuration 
 
 ```
 ../../../../render.py ../template.j2 vlan_pools.yml > vlan_pools.xml
@@ -108,16 +108,16 @@ This project provides a tool to collect the individual API requests into a singl
 cd postman
 ```
 There are 3 files here: 
-- <b>create_collection.py</b> - is a python script used for the Postman collection file generation (with using of Jinja template and YAML configuration files as input)
-- <b>template.j2</b> - Jinja template file used as input for the create_collection.py
-- <b>collection_tmpl.yml</b> - we use this file as a template for new collection YAML files.
+- <a href="https://github.com/nihole/ACY/blob/master/postman/check_collection.py">create_collection.py</a> - is a python script used for the Postman collection file generation (with using of Jinja template and YAML configuration files as input)
+- <a href="https://github.com/nihole/ACY/blob/master/postman/template.j2">template.j2</b> - Jinja2 template used as input for the create_collection.py
+- <a href="https://github.com/nihole/ACY/blob/master/postman/collection_tmpl.yml">collection_tmpl.yml</a> - we use this file as a template for new collection YAML files.
 
 2. Create new folder (if it has not been done before). Actually you may use any folder, but it looks reasonable to creare a new folder in the curent one.
 
 ```
 mkdir example1
 ```
-3. Copy file <b>collection_tmpl.yml</b> to the new folder with renaming. For example a new name maybe all.yml
+3. Copy file collection_tmpl.yml to the new folder with renaming. For example a new name maybe all.yml
 
 ```
 cp collection_tmpl.yml example1/all.yml
@@ -125,7 +125,7 @@ cp collection_tmpl.yml example1/all.yml
 
 4. Fill in a new file <a href="https://github.com/nihole/ACY/blob/master/postman/example1/all.yml">all.yml</a>
 
-5. Generate collection file all.json (json format) 
+5. Generate collection file <a href="https://github.com/nihole/ACY/blob/master/postman/example1/all.json">all.yml</a>
 
 ```
 cd example1
