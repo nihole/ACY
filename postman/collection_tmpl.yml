@@ -1,0 +1,12 @@
+default:
+  action: "yes"
+  hostname: ""
+  aci_path: "/api/mo/uni.xml"
+  username: ""
+  password: ""
+  collection_name: ""
+
+files:
+- name: ""
+  path: ""
+  action: ""
