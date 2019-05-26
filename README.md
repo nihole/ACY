@@ -17,6 +17,8 @@ The last point is important because, from my point of view, it is a significant 
 
 <h3>Which ACI objects can be managed with ACY</h3>
 
+In the current version of ACY, you can create, modify, or delete the following ACI objects:
+
 - Access policies:
   - Global access policies:
     - vlan pools
