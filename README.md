@@ -66,13 +66,13 @@ You never change the python rendering file <a href="https://github.com/nihole/AC
 
 Let's consider, for example, that we want to create a new VLAN pool.
 
-1. Go to the correspondent folder. In this case it is access_policies/global_policy/vlan_pools.
+1. Go to the correspondent folder. In this case it is <a href="https://github.com/nihole/ACY/tree/master/access_policies/global_policy/aaep">access_policies/global_policy/vlan_pools</a>
 
 There are 2 files already there: <a href="https://github.com/nihole/ACY/blob/master/access_policies/global_policy/aaep/template.j2">template.j2</a> and <a href="https://github.com/nihole/ACY/blob/master/access_policies/global_policy/aaep/aaep_tmpl.yml">vlan_pools_tmpl.yml</a>.
 - template.j2 - is jinja2 template. You usually don't need to change it.
 - vlan_pools_tmpl.yml - this file we are going to use for our yaml file creation (if it has not been done before)
 
-2. Create a new folder (if it has not been done before). Actually you may use any folder, but it looks reasonable to creare a new folder in the curent one. Let's create a folder "example1". 
+2. Create a new folder (if it has not been done before). Actually you may use any folder, but it looks reasonable to creare a new folder in the curent one. Let's create a folder <a href="https://github.com/nihole/ACY/tree/master/access_policies/global_policy/aaep/example1">example1</a> 
 
 ```
 mkdir example1
@@ -110,7 +110,7 @@ Let's assume that we created a lot of XML files. We can use many API requests to
 
 This project provides a tool to collect the individual API requests into a single POSTMAN collection.
 
-1. Go to the folder postman
+1. Go to the folder <a href="https://github.com/nihole/ACY/tree/master/postman">postman</a>
 ```
 cd postman
 ```
@@ -119,7 +119,7 @@ There are 3 files here:
 - <a href="https://github.com/nihole/ACY/blob/master/postman/template.j2">template.j2</b> - Jinja2 template used as input for the create_collection.py
 - <a href="https://github.com/nihole/ACY/blob/master/postman/collection_tmpl.yml">collection_tmpl.yml</a> - we use this file as a template for new collection YAML files.
 
-2. Create new folder (if it has not been done before). Actually you may use any folder, but it looks reasonable to creare a new folder in the curent one.
+2. Create a folder <a href="<a href="https://github.com/nihole/ACY/tree/master/postman">">example1</a> (if it has not been done before). Actually you may use any folder, but it looks reasonable to creare a new folder in the curent one.
 
 ```
 mkdir example1
