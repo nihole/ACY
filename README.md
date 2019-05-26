@@ -9,8 +9,6 @@ The idea is to manage the Cisco ACI configuration via text files in YAML format.
 - think about the configuration parameters only and not about the command's syntax or GUI-navigation
 - use version control systems (for example, based on git) and follow the best practices of development for network infrastructure changes control
 
-The last point is important because, from my point of view, it is a significant advantage over some other deployment methods (for example, Deployment ACI From Excel).
-
 <h3>Installation</h3>
 
 - clone this project to your local folder
