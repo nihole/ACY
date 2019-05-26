@@ -97,16 +97,7 @@ cd ./example1/
 
 6. Upload this file to ACI (see the next chapter).
 
-For demonstration purpose I have created such a files for each ACI objects. For example, if you want to see how to configure L3out refer to the folders:
-
-```
-l3out/l3outs/example1/test_tenant1/
-l3out/l3out_node_profiles/example1/test_tenant1/
-l3out/l3out_int_profiles/example1/test_tenant1/
-l3out/extenal_epg/example1/test_tenant1/
-```
-
-<h3>Upload to ACI</h3>
+<h3>Upload configuration to ACI</h3>
 
 The described approach can result in many XML files. We can use many API requests to load these files into ACI, but this does not look very scalable.
 
