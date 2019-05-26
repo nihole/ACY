@@ -1,6 +1,7 @@
 <h3>What is ACY</h3>
 
 ACY = deployment Cisco <b>AC</b>I from <b>Y</b>aml = <b>AC</b>I from <b>Y</b>aml
+Thus, ACY is rather the name of the approach, than the name of the software product.
 
 The idea is to manage the Cisco ACI configuration via text files in YAML format. It allows you to
 - use a simple interface for ACI configuration
