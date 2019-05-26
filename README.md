@@ -140,7 +140,7 @@ cp collection_tmpl.yml example1/all.yml
 cd example1
 ../create_collection.py ../template.j2 all.yml > all.json
 ```
-6. Upload this collection to Postman
+6. Start Postmat and import this collection
 
 7. Run this collection in Postman
 
