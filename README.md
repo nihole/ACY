@@ -140,6 +140,6 @@ cd example1
 ```
 6. Upload this file in Postman
 
-7. run this collection in Postman
+7. Run this collection in Postman
 
 
