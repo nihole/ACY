@@ -7,12 +7,12 @@ default:
   sw_pol_group: "test1_sw_pol_group"
 
 switch_profiles:
-- name: test1_int_profile
+- name: "test1_sw_profile"
   description:
   action: "created,modified"
   switch_selectors:
-  - name: test1_sw_selector
-    interface_profile: test1_int_profile
+  - name: "test1_sw_selector"
+    interface_profile: "test1_int_profile"
     description:
     action: "created,modified"
     switch_ranges:
@@ -22,16 +22,16 @@ switch_profiles:
       to_node_id: 101
       action: "created,modified"
       description:
-- name: test2_int_profile
+- name: "test2_sw_profile"
   description:
   action: "created,modified"
   switch_selectors:
-  - name: test2_sw_selector
-    interface_profile: test2_int_profile
+  - name: "test2_sw_selector"
+    interface_profile: "test2_int_profile"
     description:
     action: "created,modified"
     switch_ranges:
-    - name: 1021202
+    - name: 102102
       sw_pol_group: "test2_sw_pol_group"
       from_node_id: 102
       to_node_id: 102
