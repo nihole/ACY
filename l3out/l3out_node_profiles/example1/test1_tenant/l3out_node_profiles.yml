@@ -22,7 +22,7 @@ l3outs:
 - name: "test2_l3out"
   action: "modified"
   l3out_node_profiles:
-  - name: "test3_l3out_node_profile"
+  - name: "test2_l3out_node_profile"
     action: "created,modified"
     nodes:
     - node_id: 101
