@@ -24,7 +24,7 @@ l3outs:
     l3out_int_profilces:
     - name: "test1_l3out_int_profile"
       int_pol_group: "test1_int_pol_group"
-      vlan_id: 100
+      vlan_id: 1050
       left_node_id: 101
       right_node_id: 102
       svi_1: "10.11.11.2/24"
