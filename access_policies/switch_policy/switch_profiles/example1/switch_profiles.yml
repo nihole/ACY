@@ -16,10 +16,10 @@ switch_profiles:
     description:
     action: "created,modified"
     switch_ranges:
-    - name: 12011201
+    - name: 101101
       sw_pol_group: "test1_sw_pol_group"
-      from_node_id: 1201
-      to_node_id: 1201
+      from_node_id: 101
+      to_node_id: 101
       action: "created,modified"
       description:
 - name: test2_int_profile
@@ -31,10 +31,10 @@ switch_profiles:
     description:
     action: "created,modified"
     switch_ranges:
-    - name: 12021202
+    - name: 1021202
       sw_pol_group: "test2_sw_pol_group"
-      from_node_id: 1202
-      to_node_id: 1202
+      from_node_id: 102
+      to_node_id: 102
       action: "created,modified"
       description:
 
