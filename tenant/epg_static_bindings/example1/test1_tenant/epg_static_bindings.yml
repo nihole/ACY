@@ -22,7 +22,7 @@ app:
       int_pol_group: test1_int_pol_group
       static_binding_type: "PC"
       left_node_id: 101
-      right_node: 101
+      right_node: 
       encap_vlan_id: 1001
       action: "created,modified"
   - name: "test2_epg"
@@ -32,7 +32,7 @@ app:
       int_pol_group: test1_int_pol_group
       static_binding_type: "vPC"
       left_node_id: 101
-      right_node_id: 101
+      right_node_id: 
       encap_vlan_id: 1002
       action: "created,modified"
 - name: "test2_app"
@@ -44,8 +44,8 @@ app:
     - access_port_id:
       int_pol_group: test1_int_pol_group
       static_binding_type: "PC"
-      left_node_id: 101
-      right_node: 101
+      left_node_id: 102
+      right_node: 
       encap_vlan_id: 1101
       action: "created,modified"
   - name: "test4_epg"
@@ -54,8 +54,8 @@ app:
     - access_port_id:
       int_pol_group: test1_int_pol_group
       static_binding_type: "vPC"
-      left_node_id: 101
-      right_node_id: 101
+      left_node_id: 102
+      right_node_id: 
       encap_vlan_id: 1102
       action: "created,modified"
 
