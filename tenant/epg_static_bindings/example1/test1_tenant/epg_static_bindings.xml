@@ -3,10 +3,18 @@
         <fvTenant name="test1_tenant">
 		<fvAp prio="unspecified" descr = "" name="test1_app">
 			<fvAEPg prio="unspecified" name="test1_epg" matchT="AtleastOne" >
-				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-101/pathep-[test1_int_pol_group]" mode="regular" instrImedcy="immediate" encap="vlan-1101" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-101/pathep-[test1_int_pol_group]" mode="regular" instrImedcy="immediate" encap="vlan-1001" status="created,modified"/>
 			</fvAEPg>
 			<fvAEPg prio="unspecified" name="test2_epg" matchT="AtleastOne" >
-				<fvRsPathAtt descr="" tDn="topology/pod-1/protpaths-101-102/pathep-[test2_int_pol_group]" mode="regular" instrImedcy="immediate" encap="vlan-1101" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/protpaths-101-102/pathep-[test1_int_pol_group]" mode="regular" instrImedcy="immediate" encap="vlan-1002" status="created,modified"/>
+			</fvAEPg>
+		</fvAp>
+		<fvAp prio="unspecified" descr = "" name="test2_app">
+			<fvAEPg prio="unspecified" name="test3_epg" matchT="AtleastOne" >
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-101/pathep-[test1_int_pol_group]" mode="regular" instrImedcy="immediate" encap="vlan-1101" status="created,modified"/>
+			</fvAEPg>
+			<fvAEPg prio="unspecified" name="test4_epg" matchT="AtleastOne" >
+				<fvRsPathAtt descr="" tDn="topology/pod-1/protpaths-101-102/pathep-[test1_int_pol_group]" mode="regular" instrImedcy="immediate" encap="vlan-1102" status="created,modified"/>
 			</fvAEPg>
 		</fvAp>
 	</fvTenant>
