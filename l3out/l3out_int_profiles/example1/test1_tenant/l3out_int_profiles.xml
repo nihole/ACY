@@ -3,14 +3,14 @@
 	<fvTenant descr="" name="test1_tenant">
 		<l3extOut descr="" name="test1_l3out" status="modified">
 			<l3extLNodeP descr="" name="test1_l3out_node_profile" tag="yellow-green" targetDscp="unspecified" status="modified">
-				<l3extRsNodeL3OutAtt rtrId="172.16.1.1" rtrIdLoopBack="yes" tDn="topology/pod-1/node-1201" status="created,modified" />
-				<l3extRsNodeL3OutAtt rtrId="172.16.1.2" rtrIdLoopBack="yes" tDn="topology/pod-1/node-1202" status="created,modified" />
+				<l3extRsNodeL3OutAtt rtrId="172.16.1.1" rtrIdLoopBack="yes" tDn="topology/pod-1/node-101" status="created,modified" />
+				<l3extRsNodeL3OutAtt rtrId="172.16.1.2" rtrIdLoopBack="yes" tDn="topology/pod-1/node-102" status="created,modified" />
 				<l3extLIfP descr="" name="test1_l3out_int_profile" tag="yellow-green" status="created,modified">
 					<ospfIfP authKey = "" authKeyId="1" authType="md5" descr="" name="">
 			  			<ospfRsIfPol tnOspfIfPolName=""/>
 					</ospfIfP>
 					<l3extRsNdIfPol tnNdIfPolName="" />
-					<l3extRsPathL3OutAtt addr="0.0.0.0" descr="" encap="vlan-100" encapScope="local" ifInstT="ext-svi" llAddr="::" mode="regular" mtu="1500" tDn="topology/pod-1/protpaths-1201-1202/pathep-test1_int_pol_group" targetDscp="unspecified">
+					<l3extRsPathL3OutAtt addr="0.0.0.0" descr="" encap="vlan-100" encapScope="local" ifInstT="ext-svi" llAddr="::" mode="regular" mtu="1500" tDn="topology/pod-1/protpaths-101-102/pathep-test1_int_pol_group" targetDscp="unspecified">
 			  			<l3extMember addr="10.11.11.2/24" descr="" llAddr="::" name="" side="A" />
 			  			<l3extMember addr="10.11.11.3/24" descr="" llAddr="::" name="" side="B" />
 					</l3extRsPathL3OutAtt>
