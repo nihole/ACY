@@ -82,9 +82,9 @@ files:
 - name: "l3out_int_profiles"
   path: "/home/nihole/DAFT/l3out/l3out_int_profiles/example1/test1_tenant/l3out_int_profiles.xml"
   action:
-- name: "extenal_epg"
-  path: "/home/nihole/DAFT/l3out/extenal_epg/example1/test1_tenant/extenal_epg.xml"
-  action: "no"
+- name: "external_epg"
+  path: "/home/nihole/DAFT/l3out/external_epg/example1/test1_tenant/external_epg.xml"
+  action: "yes"
 - name: "contracts"
   path: "/home/nihole/DAFT/contract/contracts/example1/test1_tenant/contracts.xml"
   action: "yes"
