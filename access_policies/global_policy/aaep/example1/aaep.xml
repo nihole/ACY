@@ -5,7 +5,7 @@
 		  	<infraRsDomP tDn="uni/phys-test1_phys_dom"/>
 		</infraAttEntityP>
 		<infraAttEntityP name="test2_aaep" descr="" status="created,modified">
-		  	<infraRsDomP tDn="uni/phys-tets1_phys_dom"/>
+		  	<infraRsDomP tDn="uni/phys-test1_phys_dom"/>
 			<infraRsDomP tDn="uni/l3dom-test2_l3out_dom"/>
 		</infraAttEntityP>
    	</infraInfra>
