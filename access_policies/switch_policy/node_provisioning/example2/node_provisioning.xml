@@ -2,10 +2,10 @@
 <polUni>
 	<ctrlrInst>
 		<fabricNodeIdentPol>
-			<fabricNodeIdentP serial="123456" name="test1_node" nodeId="1201" podId="1" role="leaf" descr="description" status="created,modified"/>
-			<fabricNodeIdentP serial="234567" name="test2_node" nodeId="1202" podId="1" role="leaf" descr="description" status="created,modified"/>
-			<fabricNodeIdentP serial="123451" name="test3_node" nodeId="1203" podId="1" role="leaf" descr="description" status="created,modified"/>
-			<fabricNodeIdentP serial="244567" name="test4_node" nodeId="1204" podId="1" role="leaf" descr="description" status="created,modified"/>
+			<fabricNodeIdentP serial="TEP-1-101" name="Leaf1:" nodeId="101" podId="1" role="leaf" descr="description" status="created,modified"/>
+			<fabricNodeIdentP serial="TEP-1-102" name="Leaf2:" nodeId="102" podId="1" role="leaf" descr="description" status="created,modified"/>
+			<fabricNodeIdentP serial="TEP-1-103" name="Spine1:" nodeId="103" podId="1" role="leaf" descr="description" status="created,modified"/>
+			<fabricNodeIdentP serial="TEP-1-101" name="Spine2:" nodeId="104" podId="1" role="leaf" descr="description" status="created,modified"/>
 	</fabricNodeIdentPol>
 	</ctrlrInst>
 </polUni>
