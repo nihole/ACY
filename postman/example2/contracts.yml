@@ -1,0 +1,16 @@
+default:
+  action: "yes"
+  hostname: "198.18.133.200"
+  aci_path: "/api/mo/uni.xml"
+  username: "admin"
+  password: "password"
+  collection_name: "contracts"
+
+files:
+- name: "contracts"
+  path: "/home/nihole/DAFT/contract/contracts/example1/test1_tenant/contracts.xml"
+  action: "yes"
+- name: "filters"
+  path: "/home/nihole/DAFT/contract/filters/example1/test1_tenant/filters.xml"
+  action:
+

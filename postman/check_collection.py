@@ -29,7 +29,7 @@ yaml_data = yaml.load( data1 )
 for j in yaml_data["files"]:
     action = "no"
     if (not j["action"]):
-        if yaml_data["global"]["action"] == "yes":
+        if yaml_data["default"]["action"] == "yes":
             action = "yes"
     else:
         if j["action"] == "yes":
