@@ -13,18 +13,20 @@ default:
 
 
 aaep:
-- name: test1_aaep
-  enable_infra_vlan: no
-  phys_dom: test1_phys_dom
-  l3_ext_dom:
-  vmm_dom:
-  action: created,modified
-  operational_status:
-- name: test2_aaep
+- name: "test1_aaep"
+  enable_infra_vlan: "no"
+  domains:
+  - phys_dom: "test1_phys_dom"
+    l3_ext_dom:
+    vmm_dom:
+    action: "created,modified"
+  action: "created,modified"
+- name: "test2_aaep"
   enable_infra_vlan: yes
-  phys_dom:
-  l3_ext_dom: test2_l3out_dom
-  vmm_dom:
-  action: created,modified
-  operational_status:
+  domains:
+  - phys_dom: "tets1_phys_dom"
+    l3_ext_dom: "test2_l3out_dom"
+    vmm_dom:
+    action: "created,modified"
+  action: "created,modified"
 

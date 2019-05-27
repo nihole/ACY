@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
 	<infraInfra>
-		{% for j in aaep %}
-                {% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+		{% for i in aaep %}
+                {% set action %}{%if i.action%}{{i.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                 {%if not action=="ignore"%}
-		{% set name %}{%if j.name%}{{j.name}}{%else%}{{default.name}}{%endif%}{% endset %}
-		{% set description %}{%if j.description%}{{j.description}}{%else%}{{default.description}}{%endif%}{% endset %}
-		{% set phys_dom %}{%if j.phys_dom%}{{j.phys_dom}}{%else%}{{default.phys_dom}}{%endif%}{% endset %}
-		{% set l3_ext_dom %}{%if j.l3_ext_dom%}{{j.l3_ext_dom}}{%else%}{{default.l3_ext_dom}}{%endif%}{% endset %}
-		{% set vmm_dom %}{%if j.vmm_dom%}{{j.vmm_dom}}{%else%}{{default.vmm_dom}}{%endif%}{% endset %}
-		<infraAttEntityP name="{{name}}" descr="{{description}}" status="{{action}}">
-		{% if phys_dom != "" %} 
+		{% set description %}{%if i.description%}{{i.description}}{%else%}{{default.description}}{%endif%}{% endset %}
+		<infraAttEntityP name="{{i.name}}" descr="{{description}}" status="{{action}}">
+			{% for j in i.domains %}
+			{% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+                	{%if not action=="ignore"%}
+                	{% set description %}{%if j.description%}{{j.description}}{%else%}{{default.description}}{%endif%}{% endset %}
+                	{% set phys_dom %}{%if j.phys_dom%}{{j.phys_dom}}{%else%}{{default.phys_dom}}{%endif%}{% endset %}
+                	{% set l3_ext_dom %}{%if j.l3_ext_dom%}{{j.l3_ext_dom}}{%else%}{{default.l3_ext_dom}}{%endif%}{% endset %}
+                	{% set vmm_dom %}{%if j.vmm_dom%}{{j.vmm_dom}}{%else%}{{default.vmm_dom}}{%endif%}{% endset %}
+			
+			{% if phys_dom != "" %} 
 		  	<infraRsDomP tDn="uni/phys-{{phys_dom}}"/>
-		{% endif %}
-		{% if l3_ext_dom != "" %} 
+			{% endif %}
+			{% if l3_ext_dom != "" %} 
 			<infraRsDomP tDn="uni/l3dom-{{l3_ext_dom}}"/>
-		{% endif %}
-		{% if vmm_dom != "" %} 
+			{% endif %}
+			{% if vmm_dom != "" %} 
 		<infraRsDomP tDn="uni/vmmp-VMware/dom-{{vmm_dom}}"/>
-		{% endif %}
+			{% endif %}{%endif%}{%endfor%}
 		</infraAttEntityP>
 		{%endif%}{%endfor%}
    	</infraInfra>
