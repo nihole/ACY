@@ -36,6 +36,7 @@ interface_profiles:
       slot_id: 1
       from_port: 13
       to_port: 16
+      action: created,modified
       description: "for PC"
 - name: test3_int_profile
   description:
@@ -51,4 +52,5 @@ interface_profiles:
       slot_id: 1
       from_port: 10
       to_port: 12
+      action: created,modified
       description: "for vPC"
