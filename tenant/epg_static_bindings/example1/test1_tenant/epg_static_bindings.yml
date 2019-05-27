@@ -21,7 +21,7 @@ app:
     - access_port_id:
       int_pol_group: test1_int_pol_group
       static_binding_type: "PC"
-      left_node_id: 1201
+      left_node_id: 101
       right_node:
       encap_vlan_id: 101
       action: "created,modified"
@@ -31,7 +31,7 @@ app:
     - access_port_id: 
       int_pol_group: test2_int_pol_group
       static_binding_type: "vPC"
-      left_node_id: 1201
-      right_node_id: 1202
+      left_node_id: 101
+      right_node_id: 102
       encap_vlan_id: 101
       action: "created,modified"
