@@ -25,7 +25,7 @@ tenant: test1_tenant
 action: "modified"
 bridge_domains: 
 - name: "test1_bd"
-  contex: test1_vrf
+  context: "test1_vrf"
   bd_type: "L3"
   bd_gateway_ip: "10.200.1.1/24"
   l3_out: 
@@ -34,7 +34,7 @@ bridge_domains:
   ep_retention_policy: ""
   action: "created,modified"
 - name: "test2_bd"
-  contex: test2_vrf
+  context: "test2_vrf"
   bd_type: "L3"
   bd_gateway_ip: "10.200.2.1/24"
   l3_out: 
