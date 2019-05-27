@@ -29,10 +29,10 @@ app:
     action: "created,modified"
     static_bindings:
     - access_port_id: 
-      int_pol_group: test1_int_pol_group
+      int_pol_group: test2_int_pol_group
       static_binding_type: "vPC"
       left_node_id: 101
-      right_node_id: 
+      right_node_id: 102 
       encap_vlan_id: 1002
       action: "created,modified"
 - name: "test2_app"
@@ -52,10 +52,10 @@ app:
     action: "created,modified"
     static_bindings:
     - access_port_id:
-      int_pol_group: test1_int_pol_group
+      int_pol_group: test2_int_pol_group
       static_binding_type: "vPC"
-      left_node_id: 102
-      right_node_id: 
+      left_node_id: 101
+      right_node_id: 102
       encap_vlan_id: 1102
       action: "created,modified"
 
