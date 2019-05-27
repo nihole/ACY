@@ -16,73 +16,39 @@ interface_profiles:
     description:
     action: created,modified
     interface_ranges:
-    - name: 1315
+    - name: 1316
       slot_id: 1
       from_port: 13
-      to_port: 15
-      action: created,modified
-      description:
-    - name: 1616
-      slot_id: 1
-      from_port: 16
       to_port: 16
       action: created,modified
-      description:
+      description: "for PC"
+- name: test2_int_profile
+  description:
+  action: created,modified
+  interface_selectors:
   - name: test2_int_selector
     int_pol_group: test1_int_pol_group
     int_pol_group_type: PC
     description:
     action: created,modified
     interface_ranges:
-    - name: 1315
-      slot_id: 2
+    - name: 1316
+      slot_id: 1
       from_port: 13
-      to_port: 15
-      action: created,modified
-      description:
-    - name: 1616
-      slot_id: 2
-      from_port: 16
       to_port: 16
-      action: created,modified
-      description:
-- name: test2_int_profile
+      description: "for PC"
+- name: test3_int_profile
   description:
   action: created,modified
   interface_selectors:
-  - name: test1_int_selector
+  - name: test3_int_selector
     int_pol_group: test2_int_pol_group
     int_pol_group_type: vPC
     description:
     action: created,modified
     interface_ranges:
-    - name: 1315
+    - name: 1316
       slot_id: 1
       from_port: 13
-      to_port: 15
-      action: created,modified
-      description:
-    - name: 1616
-      slot_id: 1
-      from_port: 16
       to_port: 16
-      action: created,modified
-      description:
-  - name: test2_int_selector
-    int_pol_group: test2_int_pol_group
-    int_pol_group_type: vPC
-    description:
-    action: created,modified
-    interface_ranges:
-    - name: 1315
-      slot_id: 2
-      from_port: 13
-      to_port: 15
-      action: created,modified
-      description:
-    - name: 1616
-      slot_id: 2
-      from_port: 16
-      to_port: 16
-      action: created,modified
-      description:
+      description: "for vPC"
