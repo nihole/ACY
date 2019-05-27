@@ -5,7 +5,7 @@
 		{% set action %}{%if i.action%}{{i.action}}{%else%}{{default.action}}{%endif%}{% endset %}
 		{% set description %}{%if i.description%}{{i.description}}{%else%}{{default.description}}{%endif%}{% endset %}
 		{%if not action=="ignore"%}
-		<infraAccPortP name="{{i.name}}" descr="description" status="{{action}}">
+		<infraAccPortP name="{{i.name}}" descr="{{description}}" status="{{action}}">
 			{% for k in i.interface_selectors %}
 			{% set action %}{%if k.action%}{{k.action}}{%else%}{{default.action}}{%endif%}{% endset %}
 			{%if not action=="ignore"%}
