@@ -1,0 +1,44 @@
+# action: "ignore|created|modified|created,modified|deleted"
+
+default:
+  name: ""
+  description: ""
+  action: "ignore"
+  pod_id: 1
+
+inband:
+- node_id: 101
+  inband_ip: "10.0.40.95/24"
+  inband_gw: "10.0.40.1"
+  action: "created,modified"
+- node_id: 102
+  inband_ip: "10.0.40.96/24"
+  inband_gw: "10.0.40.1"
+  action: "created,modified"
+- node_id: 103
+  inband_ip: "10.0.40.94/24"
+  inband_gw: "10.0.40.1"
+  action: "created,modified"
+- node_id: 104
+  inband_ip: "10.0.40.93/24"
+  inband_gw: "10.0.40.1"
+  action: "created,modified"
+  
+oob:
+- node_id: 101
+  oob_ip: "10.100.100.2/24"
+  oob_gw: "10.100.100.1"
+  action: "created,modified"
+- node_id: 102
+  oob_ip: "10.100.100.3/24"
+  oob_gw: "100.100.100.1"
+  action: "created,modified"
+- node_id: 103
+  oob_ip: "10.100.100.4/24"
+  oob_gw: "10.100.100.1"
+  action: "created,modified"
+- node_id: 104
+  oob_ip: "10.100.100.5/24"
+  oob_gw: "100.100.100.1"
+  action: "created,modified"
+
