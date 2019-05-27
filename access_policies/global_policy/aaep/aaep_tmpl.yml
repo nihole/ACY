@@ -12,7 +12,10 @@ default:
 
 aaep:
 - name: ""
-  phys_dom: ""
-  l3_ext_dom: ""
-  vmm_dom: ""
+  enable_infra_vlan: ""
+  domains:
+  - phys_dom: ""
+    l3_ext_dom:
+    vmm_dom:
+    action: ""
   action: ""
