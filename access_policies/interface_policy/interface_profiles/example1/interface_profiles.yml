@@ -47,8 +47,8 @@ interface_profiles:
     description:
     action: created,modified
     interface_ranges:
-    - name: 1316
+    - name: 1012
       slot_id: 1
-      from_port: 13
-      to_port: 16
+      from_port: 10
+      to_port: 12
       description: "for vPC"
