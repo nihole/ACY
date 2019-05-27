@@ -55,18 +55,6 @@ files:
 - name: "fex_provisioning"
   path: "/home/nihole/DAFT/access_policies/switch_policy/fex_provisioning/example1/fex_provisioning.xml"
   action: "no"
-
-
- 
-default:
-  action: "yes"
-  hostname: "198.18.133.200"
-  aci_path: "/api/mo/uni.xml"
-  username: "admin"
-  password: "password"
-  collection_name: "tenant"
-
-files:
 - name: "tenant"
   path: "/home/nihole/DAFT/tenant/tenants/example1/test1_tenant/tenant.xml"
   action:
@@ -85,17 +73,6 @@ files:
 - name: "epg_static_bindings"
   path: "/home/nihole/DAFT/tenant/epg_static_bindings/example1/test1_tenant/epg_static_bindings.xml"
   action:
-
-
-default:
-  action: "yes"
-  hostname: "198.18.133.200"
-  aci_path: "/api/mo/uni.xml"
-  username: "admin"
-  password: "password"
-  collection_name: "l3out"
-
-files:
 - name: "l3outs"
   path: "/home/nihole/DAFT/l3out/l3outs/example1/test1_tenant/l3outs.xml"
   action: "yes"
@@ -108,16 +85,6 @@ files:
 - name: "extenal_epg"
   path: "/home/nihole/DAFT/l3out/extenal_epg/example1/test1_tenant/extenal_epg.xml"
   action: "no"
-
-default:
-  action: "yes"
-  hostname: "198.18.133.200"
-  aci_path: "/api/mo/uni.xml"
-  username: "admin"
-  password: "password"
-  collection_name: "contracts"
-
-files:
 - name: "contracts"
   path: "/home/nihole/DAFT/contract/contracts/example1/test1_tenant/contracts.xml"
   action: "yes"
