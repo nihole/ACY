@@ -2,15 +2,10 @@
 <polUni>
 	<fabricInst>
 		<fabricProtPol descr="" name="default" pairT="explicit">
-			<fabricExplicitGEp id="1" name="leaf_1201_1202_vpcgrp" status="created,modified"> 
+			<fabricExplicitGEp id="1" name="leaf_101_102_vpcgrp" status="created,modified"> 
 				<fabricRsVpcInstPol tnVpcInstPolName="default"/>
-				<fabricNodePEp descr="" id="1201" name=""/>
-				<fabricNodePEp descr="" id="1202" name=""/>
-			</fabricExplicitGEp>
-			<fabricExplicitGEp id="2" name="leaf_1203_1204_vpcgrp" status="created,modified"> 
-				<fabricRsVpcInstPol tnVpcInstPolName="default"/>
-				<fabricNodePEp descr="" id="1203" name=""/>
-				<fabricNodePEp descr="" id="1204" name=""/>
+				<fabricNodePEp descr="" id="101" name=""/>
+				<fabricNodePEp descr="" id="102" name=""/>
 			</fabricExplicitGEp>
 		</fabricProtPol>
  	</fabricInst>
