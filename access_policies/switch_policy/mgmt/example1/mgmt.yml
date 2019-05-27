@@ -31,7 +31,7 @@ oob:
   action: "created,modified"
 - node_id: 1202
   oob_ip: "10.100.100.3/24"
-  oob_gw: "100.100.100.1"
+  oob_gw: "10.100.100.1"
   action: "created,modified"
 - node_id: 1203
   oob_ip: "10.100.100.4/24"
@@ -39,7 +39,7 @@ oob:
   action: "created,modified"
 - node_id: 1204
   oob_ip: "10.100.100.5/24"
-  oob_gw: "100.100.100.1"
+  oob_gw: "10.100.100.1"
   action: "created,modified"
 
   
