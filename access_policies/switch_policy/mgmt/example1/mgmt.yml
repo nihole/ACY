@@ -8,20 +8,20 @@ default:
 
 inband:
 - node_id: 1201
-  inband_ip: "10.10.10.2/24"
-  inband_gw: "10.10.10.1"
+  inband_ip: "172.16.100.2/24"
+  inband_gw: "172.16.100.1"
   action: "created,modified"
 - node_id: 1202
-  inband_ip: "10.10.10.3/24"
-  inband_gw: "10.10.10.1"
+  inband_ip: "172.16.100.3/24"
+  inband_gw: "172.16.100.1"
   action: "created,modified"
 - node_id: 1203
-  inband_ip: "10.10.10.4/24"
-  inband_gw: "10.10.10.1"
+  inband_ip: "172.16.100.4/24"
+  inband_gw: "172.16.100.1"
   action: "created,modified"
 - node_id: 1204
-  inband_ip: "10.10.10.5/24"
-  inband_gw: "10.10.10.1"
+  inband_ip: "172.16.100.5/24"
+  inband_gw: "172.16.100.1"
   action: "created,modified"
 
 oob:
