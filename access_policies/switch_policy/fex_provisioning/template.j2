@@ -31,12 +31,7 @@
     		<infraFuncP>
 			<infraAccCardPGrp descr="{{description}}" name="{{k.access_card}}" ownerKey="" ownerTag="" status="{{action}}" />
     		</infraFuncP>
-    		<infraAccPortP name="{{k.if_selector}}" ownerKey="" ownerTag="" status="{{action}}">
-      			<infraHPortS descr="{{description}}" name="Fex{{k.fex_id}}" ownerKey="" ownerTag="" type="range">
-        			<infraRsAccBaseGrp fexId="{{k.fex_id}}" tDn="uni/infra/fexprof-leaf{{k.parent_leaf_id}}_fex{{k.fex_id}}_fexprofile/fexbundle-fex{{k.fex_id}}_Bndle" />
-				<infraPortBlk fromCard="{{k.from_slot}}" fromPort="{{k.from_port}}" name="block{{k.from_port}}{{k.to_port}}" toCard="{{k.to_slot}}" toPort="{{k.to_port}}" />
-      			</infraHPortS>
-    		</infraAccPortP>
+		<infraAccPortP name="{{k.if_selector}}" ownerKey="" ownerTag="" status="{{action}}"/>
 		<infraFexP name="{{k.name}}" ownerKey="" ownerTag="" status="{{action}}">
       			<infraFexBndlGrp name="fex{{k.fex_id}}_Bndle" ownerKey="" ownerTag="" />
 		</infraFexP>

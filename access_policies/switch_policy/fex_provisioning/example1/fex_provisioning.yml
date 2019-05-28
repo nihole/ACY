@@ -12,7 +12,7 @@ fexes:
     access_module: "test1_module"
     card_selector: "test1_card_selector"
     access_card: "test1_access_card"
-    if_selector: "test1_fex_int_selector"
+    if_selector: "test1_fex_int_profile"
     parent_leaf_id: 101
     fex_id: 105
     action: "created,modified"
