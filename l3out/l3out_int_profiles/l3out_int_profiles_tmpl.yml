@@ -1,4 +1,5 @@
 # action: "ignore|created|modified|created,modified|deleted"
+# type: "PC|vPC|Access"
 
 default:
   action: "ignore"
@@ -7,25 +8,31 @@ default:
   pod_id: 1
 
 tenant: ""
-action: ""
+action: "modified"
 l3outs:
 - name: ""
-  action: ""
+  action: "modified"
   l3out_node_profiles:
   - name: ""
-    action: ""
+    action: "modified"
     nodes:
-    - node_id: "" 
+    - node_id: 
       router_id: ""
       action: ""
     l3out_int_profilces:
     - name: ""
-      int_pol_group: "" 
-      vlan_id: ""
-      left_node_id: ""
-      right_node_id: ""
-      svi_1: ""
-      svi_2: ""
       action: ""
-
-
+      nodes:
+      - type: "vPC"
+        int_pol_group: ""
+        vlan_id: 
+        left_node_id: 
+        right_node_id: 
+        svi_1: ""
+        svi_2: ""
+        action: ""
+      - type: "PC"
+        int_pol_group: ""
+        vlan_id: 
+        node_id: 
+        ip_address: ""
