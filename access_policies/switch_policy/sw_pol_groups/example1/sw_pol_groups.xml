@@ -3,14 +3,12 @@
          <infraInfra>
 		 <infraFuncP>
 			<infraAccNodePGrp  descr="" dn="uni/infra/funcprof/accnodepgrp-test1_sw_pol_group" name="test1_sw_pol_group"  ownerKey="" ownerTag="">
-				<infraRsNetflowNodePol  tnNetflowNodePolName="default"/>
 				<infraRsBfdIpv6InstPol  tnBfdIpv6InstPolName="default"/>
 				<infraRsMonNodeInfraPol  tnMonInfraPolName="default"/>
 				<infraRsBfdIpv4InstPol  tnBfdIpv4InstPolName="default"/>
 				<infraRsMstInstPol  tnStpInstPolName="default"/>
 			</infraAccNodePGrp>
 			<infraAccNodePGrp  descr="" dn="uni/infra/funcprof/accnodepgrp-test2_sw_pol_group" name="test2_sw_pol_group"  ownerKey="" ownerTag="">
-				<infraRsNetflowNodePol  tnNetflowNodePolName="default"/>
 				<infraRsBfdIpv6InstPol  tnBfdIpv6InstPolName="default"/>
 				<infraRsMonNodeInfraPol  tnMonInfraPolName="default"/>
 				<infraRsBfdIpv4InstPol  tnBfdIpv4InstPolName="default"/>
