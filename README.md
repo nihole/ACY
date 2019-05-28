@@ -36,7 +36,7 @@ In the current version of ACY, you can create, modify, or delete the following A
     - mgmt ip addresses
     - switch policy groups
     - switch profiles
-    - FEX provisioning
+    - FEX provisioning (not ready)
 - Tenants:
   - tenants
   - contexts 
