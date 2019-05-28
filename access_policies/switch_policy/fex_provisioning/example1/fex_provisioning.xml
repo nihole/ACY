@@ -3,7 +3,7 @@
 	<infraInfra>
 		<infraNodeP name="test1_fex_sw_prof" status="created,modified">
 			<infraRsAccPortP tDn="uni/infra/accportprof-test1_fex_selector" />
-                        <infraRsAccCardP tDn="uni/infra/accportprof-test1_module" />
+                        <infraRsAccCardP tDn="uni/infra/acccardprof-test1_module" />
 			<infraLeafS descr="" name="test1_fex_selector" type="range">
 			</infraLeafS>
     		</infraNodeP>

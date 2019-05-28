@@ -11,7 +11,7 @@
                         {% set description %}{%if k.description%}{{k.description}}{%else%}{{default.description}}{%endif%}{% endset %}
 			{%if not action=="ignore"%}
 			<infraRsAccPortP tDn="uni/infra/accportprof-{{k.name}}" />
-                        <infraRsAccCardP tDn="uni/infra/accportprof-{{k.access_module}}" />
+                        <infraRsAccCardP tDn="uni/infra/acccardprof-{{k.access_module}}" />
 
 			<infraLeafS descr="{{description}}" name="{{k.name}}" type="range">
 				{% for j in k.fex_ranges %}
