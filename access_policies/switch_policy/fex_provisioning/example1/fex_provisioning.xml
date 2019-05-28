@@ -9,11 +9,11 @@
     		</infraNodeP>
 		<infraAccCardP descr="" name="test1_module" ownerKey="" ownerTag="" status="created,modified">
 			<infraCardS descr="" name="test1_card_selector" ownerKey="" ownerTag="" type="chExtender">
-				<infraRsCardPGrp tDn="uni/infra/funcprof/acccardpgrp-leaf" />
+				<infraRsCardPGrp tDn="uni/infra/funcprof/acccardpgrp-leaftest1_access_card" />
       			</infraCardS>
     		</infraAccCardP>
     		<infraFuncP>
-			<infraAccCardPGrp descr="" name="" ownerKey="" ownerTag="" status="created,modified" />
+			<infraAccCardPGrp descr="" name="test1_access_card" ownerKey="" ownerTag="" status="created,modified" />
     		</infraFuncP>
     		<infraAccPortP name="test1_fex_int_selector" ownerKey="" ownerTag="" status="created,modified">
       			<infraHPortS descr="" name="Fex105" ownerKey="" ownerTag="" type="range">
