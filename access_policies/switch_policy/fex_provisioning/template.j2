@@ -10,8 +10,8 @@
                         {% set action %}{%if k.action%}{{k.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                         {% set description %}{%if k.description%}{{k.description}}{%else%}{{default.description}}{%endif%}{% endset %}
 			{%if not action=="ignore"%}
-			<infraRsAccPortP tDn="uni/infra/acccardprof-leaf{{k.name}}" />
-                        <infraRsAccCardP tDn="uni/infra/acccardprof-leaf{{k.access_module}}" />
+			<infraRsAccPortP tDn="uni/infra/acccardprof-{{k.name}}" />
+                        <infraRsAccCardP tDn="uni/infra/acccardprof-{{k.access_module}}" />
 
 			<infraLeafS descr="{{description}}" name="{{k.name}}" type="range">
 				{% for j in k.fex_ranges %}

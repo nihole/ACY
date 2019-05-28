@@ -2,8 +2,8 @@
 <polUni>
 	<infraInfra>
 		<infraNodeP name="test1_fex_sw_prof" status="created,modified">
-			<infraRsAccPortP tDn="uni/infra/acccardprof-leaftest1_fex_selector" />
-                        <infraRsAccCardP tDn="uni/infra/acccardprof-leaftest1_module" />
+			<infraRsAccPortP tDn="uni/infra/acccardprof-test1_fex_selector" />
+                        <infraRsAccCardP tDn="uni/infra/acccardprof-test1_module" />
 			<infraLeafS descr="" name="test1_fex_selector" type="range">
 			</infraLeafS>
     		</infraNodeP>
