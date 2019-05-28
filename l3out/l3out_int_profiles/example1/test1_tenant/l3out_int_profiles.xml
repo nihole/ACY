@@ -18,8 +18,8 @@
 				<l3extRsNodeL3OutAtt rtrId="172.16.1.1" rtrIdLoopBack="yes" tDn="topology/pod-1/node-101" status="created,modified" />
 				<l3extRsNodeL3OutAtt rtrId="172.16.1.2" rtrIdLoopBack="yes" tDn="topology/pod-1/node-102" status="created,modified" />
 				<l3extLIfP descr="" name="test1_l3out_int_profile" tag="yellow-green" status="created,modified">
-					<l3extRsPathL3OutAtt descr=""  targetDscp="unspecified" tDn="topology/pod-1/paths-101/pathep-[test1_int_pol_group]" mtu="inherit" mode="regular" llAddr="0.0.0.0"  ifInstT="ext-svi" encapScope="local" encap="1051"  addr="10.12.12.2/24">
-					<l3extRsPathL3OutAtt descr=""  targetDscp="unspecified" tDn="topology/pod-1/paths-102/pathep-[test1_int_pol_group]" mtu="inherit" mode="regular" llAddr="0.0.0.0"  ifInstT="ext-svi" encapScope="local" encap="1051"  addr="10.12.12.3/24">
+					<l3extRsPathL3OutAtt descr=""  targetDscp="unspecified" tDn="topology/pod-1/paths-101/pathep-[test1_int_pol_group]" mtu="inherit" mode="regular" llAddr="0.0.0.0"  ifInstT="ext-svi" encapScope="local" encap="vlan-1051"  addr="10.12.12.2/24"/>
+					<l3extRsPathL3OutAtt descr=""  targetDscp="unspecified" tDn="topology/pod-1/paths-102/pathep-[test1_int_pol_group]" mtu="inherit" mode="regular" llAddr="0.0.0.0"  ifInstT="ext-svi" encapScope="local" encap="vlan-1051"  addr="10.12.12.3/24"/>
 				</l3extLIfP>
 			</l3extLNodeP>
 		</l3extOut>
