@@ -31,9 +31,9 @@
 					{% if p.type=="PC" %} 
 					<l3extRsPathL3OutAtt descr="{{description}}"  targetDscp="unspecified" tDn="topology/pod-{{pod-id}}/paths-{{p.node_id}}/pathep-[{{p.int_pol_group}}]" mtu="inherit" mode="regular" llAddr="0.0.0.0"  ifInstT="ext-svi" encapScope="local" encap="{{p.vlan_id}}"  addr="{{p.ip_address}}">
 					{% elif p.type=="vPC" %}
-					<l3extRsPathL3OutAtt addr="0.0.0.0" descr="{{description}}" encap="vlan-{{n.vlan_id}}" encapScope="local" ifInstT="ext-svi" llAddr="::" mode="regular" mtu="1500" tDn="topology/pod-{{pod_id}}/protpaths-{{n.left_node_id}}-{{n.right_node_id}}/pathep-{{n.int_pol_group}}" targetDscp="unspecified">
-			  			<l3extMember addr="{{n.svi_1}}" descr="{{description}}" llAddr="::" name="" side="A" />
-			  			<l3extMember addr="{{n.svi_2}}" descr="{{description}}" llAddr="::" name="" side="B" />
+					<l3extRsPathL3OutAtt addr="0.0.0.0" descr="{{description}}" encap="vlan-{{p.vlan_id}}" encapScope="local" ifInstT="ext-svi" llAddr="::" mode="regular" mtu="1500" tDn="topology/pod-{{pod_id}}/protpaths-{{p.left_node_id}}-{{p.right_node_id}}/pathep-{{p.int_pol_group}}" targetDscp="unspecified">
+			  			<l3extMember addr="{{p.svi_1}}" descr="{{description}}" llAddr="::" name="" side="A" />
+			  			<l3extMember addr="{{p.svi_2}}" descr="{{description}}" llAddr="::" name="" side="B" />
 					</l3extRsPathL3OutAtt>
 					{%endif%}{%endif%}{%endfor%}
 				</l3extLIfP>
