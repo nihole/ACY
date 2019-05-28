@@ -17,7 +17,7 @@
 			<ospfExtP areaCost="1" areaCtrl="redistribute,summary" areaId="{{ospf_area_id}}" areaType="{{area_type}}" descr="{{description}}" />
 			{% endif %}
 			{% if enable_bgp == "yes" %}
-			<bgpExtP descr="{{description}}" nameAlias=""/>
+			<bgpExtP descr="{{description}}" />
 			{% endif %}
 		</l3extOut>
 		{%endif%}{%endfor%}

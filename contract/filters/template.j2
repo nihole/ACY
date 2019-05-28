@@ -28,9 +28,9 @@
 			{% elif (ether_type == "ip") and (IP_protocol == "icmpv6")  %}
 			<vzEntry applyToFrag="{{match_only_fragments}}" dFromPort="unspecified" dToPort="unspecified" descr="{{description}}" etherT="{{ether_type}}" icmpv4T="unspecified" icmpv6T="{{icmpv6_message}}" matchDscp="{{match_DSCP}}" name="{{j.name}}" prot="{{IP_protocol}}" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules="" status="{{action}}"/>
 			{% elif ether_type == "arp" %}
-			<vzEntry descr="{{description}}" etherT="{{ether_type}}" name="{{j.name}}" arpOpc="{{arp_flag}}" applyToFrag="no" dFromPort="unspecified" dToPort="unspecified" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" nameAlias="" prot="unspecified" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules="" status="{{action}}"/>
+			<vzEntry descr="{{description}}" etherT="{{ether_type}}" name="{{j.name}}" arpOpc="{{arp_flag}}" applyToFrag="no" dFromPort="unspecified" dToPort="unspecified" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified"  prot="unspecified" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules="" status="{{action}}"/>
 			{% else %}
-			<vzEntry descr="{{description}}" etherT="{{ether_type}}" name="{{j.name}}" applyToFrag="no" arpOpc="unspecified" dFromPort="unspecified" dToPort="unspecified" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" nameAlias="" prot="unspecified" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules="" status="{{action}}"/>
+			<vzEntry descr="{{description}}" etherT="{{ether_type}}" name="{{j.name}}" applyToFrag="no" arpOpc="unspecified" dFromPort="unspecified" dToPort="unspecified" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified"  prot="unspecified" sFromPort="unspecified" sToPort="unspecified" stateful="no" tcpRules="" status="{{action}}"/>
 			{% endif %}
 			{%endif%}{%endfor%}
 		</vzFilter>
