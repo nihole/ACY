@@ -66,7 +66,7 @@ You never change the Python rendering file <a href="https://github.com/nihole/AC
 
 <h3>Example</h3>
 
-_All the steps described here have already been fulfilled. Thus, you actually don't need to do anything and may just verify all created and filled in files. The configuration of all objects in Example 1 was tested on Cisco dCloud LAB._
+<b><em>All the steps described here have already been fulfilled. Thus, you actually don't need to do anything and may just verify all created and edited files. The configuration of all objects in the example 1 was tested on Cisco dCloud LAB.</em></b>
 
 Let's consider, for example, that we want to create a new VLAN pool.
 
