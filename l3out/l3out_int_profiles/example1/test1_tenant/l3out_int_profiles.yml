@@ -55,10 +55,12 @@ l3outs:
         vlan_id: "1051"
         node_id: "101"
         ip_address: "10.12.12.2/24"
+        action: "created,modified"
       - type: "PC"
         int_pol_group: "test1_int_pol_group"
         vlan_id: "1051"
         node_id: "102"
         ip_address: "10.12.12.3/24"
+        action: "created,modified"
 
 
