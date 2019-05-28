@@ -76,7 +76,7 @@ There are 2 files already there: <a href="https://github.com/nihole/ACY/blob/mas
 - template.j2 - is Jinja2 template. You usually don't need to change it.
 - vlan_pools_tmpl.yml - this YAML file we are going to use for our YAML file creation (if it has not been done before)
 
-2. Create a new folder (if it has not been done before). Actually you may use any folder, but it looks reasonable to creare a new folder in the curent one. Let's create a folder <a href="https://github.com/nihole/ACY/tree/master/access_policies/global_policy/aaep/example1">example1</a> 
+2. Create a new folder (if it has not been done before). Actually you may use any folder, but it looks reasonable to create a new folder in the current one. Let's create a folder <a href="https://github.com/nihole/ACY/tree/master/access_policies/global_policy/aaep/example1">example1</a> 
 
 ```
 mkdir example1
