@@ -8,7 +8,8 @@
 		{%if not action=="ignore"%}
 		<l3extOut descr="{{description}}" name="{{i.name}}" status="{{action}}">
 			{% for l in i.l3out_node_profiles %}
-                	{% set action %}{%if l.action%}{{l.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+			{% set action %}{%if l.action%}{{l.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+			{% set pod_id %}{%if l.pod_id%}{{l.pod_id}}{%else%}{{default.pod_id}}{%endif%}{% endset %}
                 	{% set description %}{%if l.description%}{{l.description}}{%else%}{{default.description}}{%endif%}{% endset %}
                 	{%if not action=="ignore"%}
 			
@@ -16,7 +17,6 @@
 				{% for j in l.nodes %}
 				{% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
 				{%if not action=="ignore"%}
-				{% set pod_id %}{%if j.pod_id%}{{j.pod_id}}{%else%}{{default.pod_id}}{%endif%}{% endset %}
 				<l3extRsNodeL3OutAtt rtrId="{{j.router_id}}" rtrIdLoopBack="yes" tDn="topology/pod-{{pod_id}}/node-{{j.node_id}}" status="{{action}}" />
 				{%endif%}{%endfor%}
 				
@@ -31,6 +31,7 @@
 					{% if p.type=="PC" %} 
 					<l3extRsPathL3OutAtt descr="{{description}}"  targetDscp="unspecified" tDn="topology/pod-{{pod_id}}/paths-{{p.node_id}}/pathep-[{{p.int_pol_group}}]" mtu="inherit" mode="regular" llAddr="0.0.0.0"  ifInstT="ext-svi" encapScope="local" encap="{{p.vlan_id}}"  addr="{{p.ip_address}}">
 					{% elif p.type=="vPC" %}
+
 					<l3extRsPathL3OutAtt addr="0.0.0.0" descr="{{description}}" encap="vlan-{{p.vlan_id}}" encapScope="local" ifInstT="ext-svi" llAddr="::" mode="regular" mtu="1500" tDn="topology/pod-{{pod_id}}/protpaths-{{p.left_node_id}}-{{p.right_node_id}}/pathep-{{p.int_pol_group}}" targetDscp="unspecified">
 			  			<l3extMember addr="{{p.svi_1}}" descr="{{description}}" llAddr="::" name="" side="A" />
 			  			<l3extMember addr="{{p.svi_2}}" descr="{{description}}" llAddr="::" name="" side="B" />
