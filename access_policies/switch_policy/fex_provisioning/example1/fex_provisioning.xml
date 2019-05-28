@@ -16,13 +16,13 @@
 			<infraAccCardPGrp descr="" name="" ownerKey="" ownerTag="" status="created,modified" />
     		</infraFuncP>
     		<infraAccPortP name="" ownerKey="" ownerTag="" status="created,modified">
-      			<infraHPortS descr="" name="Fex1201" ownerKey="" ownerTag="" type="range">
-        			<infraRsAccBaseGrp fexId="1201" tDn="uni/infra/fexprof-leaf101_fex1201_fexprofile/fexbundle-fex1201_Bndle" />
+      			<infraHPortS descr="" name="Fex105" ownerKey="" ownerTag="" type="range">
+        			<infraRsAccBaseGrp fexId="105" tDn="uni/infra/fexprof-leaf101_fex105_fexprofile/fexbundle-fex105_Bndle" />
 				<infraPortBlk fromCard="1" fromPort="15" name="block1516" toCard="1" toPort="16" />
       			</infraHPortS>
     		</infraAccPortP>
 		<infraFexP name="test1_fex_selector" ownerKey="" ownerTag="" status="created,modified">
-      			<infraFexBndlGrp name="fex1201_Bndle" ownerKey="" ownerTag="" />
+      			<infraFexBndlGrp name="fex105_Bndle" ownerKey="" ownerTag="" />
 		</infraFexP>
   	</infraInfra>
 </polUni>

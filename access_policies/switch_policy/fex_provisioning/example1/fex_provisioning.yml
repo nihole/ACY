@@ -13,7 +13,7 @@ fexes:
     card_selector: "test1_card_selector"
     if_selector: 
     parent_leaf_id: 101
-    fex_id: 1201
+    fex_id: 105
     action: "created,modified"
     from_slot: 1
     to_slot: 1
