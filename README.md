@@ -66,6 +66,8 @@ You never change the Python rendering file <a href="https://github.com/nihole/AC
 
 <h3>Example</h3>
 
+_All the steps described here have already been fulfilled. Thus, you actually don't need to do anything and may just verify all created and filled in files._
+
 Let's consider, for example, that we want to create a new VLAN pool.
 
 1. Go to the correspondent folder. In this case it is <a href="https://github.com/nihole/ACY/tree/master/access_policies/global_policy/aaep">access_policies/global_policy/vlan_pools</a>
