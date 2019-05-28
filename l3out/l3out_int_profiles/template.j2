@@ -12,6 +12,7 @@
                 	{% set description %}{%if l.description%}{{l.description}}{%else%}{{default.description}}{%endif%}{% endset %}
                 	{%if not action=="ignore"%}
 			
+			<l3extRsPathL3OutAtt descr="{{description}}" targetDscp="unspecified" tDn="topology/pod-1/paths-1204/pathep-[pc-ofgam-d1-fw01s-stg-01]" mtu="inherit" mode="regular" mac="00:22:BD:F8:19:FF" llAddr="0.0.0.0" ipv6Dad="enabled" ifInstT="ext-svi" encapScope="local" encap="vlan-123" autostate="disabled" addr="172.16.32.27/29">
 			<l3extLNodeP descr="{{description}}" name="{{l.name}}" tag="yellow-green" targetDscp="unspecified" status="{{action}}">
 				{% for j in l.nodes %}
 				{% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
@@ -30,6 +31,7 @@
 			  			<ospfRsIfPol tnOspfIfPolName="{{ospf_interface_policy}}"/>
 					</ospfIfP>
 					<l3extRsNdIfPol tnNdIfPolName="" />
+					<l3extRsPathL3OutAtt descr="" annotation="" targetDscp="unspecified" tDn="topology/pod-1/paths-1204/pathep-[pc-ofgam-d1-fw01s-stg-01]" mtu="inherit" mode="regular" mac="00:22:BD:F8:19:FF" llAddr="0.0.0.0" ipv6Dad="enabled" ifInstT="ext-svi" encapScope="local" encap="vlan-123" autostate="disabled" addr="172.16.32.27/29">
 					<l3extRsPathL3OutAtt addr="0.0.0.0" descr="{{description}}" encap="vlan-{{n.vlan_id}}" encapScope="local" ifInstT="ext-svi" llAddr="::" mode="regular" mtu="1500" tDn="topology/pod-{{pod_id}}/protpaths-{{n.left_node_id}}-{{n.right_node_id}}/pathep-{{n.int_pol_group}}" targetDscp="unspecified">
 			  			<l3extMember addr="{{n.svi_1}}" descr="{{description}}" llAddr="::" name="" side="A" />
 			  			<l3extMember addr="{{n.svi_2}}" descr="{{description}}" llAddr="::" name="" side="B" />
