@@ -4,15 +4,14 @@
 		{% for i in fexes %}
                 {% set action %}{%if i.action%}{{i.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                 {%if not action=="ignore"%}
-                {% set name %}{%if i.name%}{{i.name}}{%else%}{{default.name}}{%endif%}{% endset %}
                 {% set description %}{%if i.description%}{{i.description}}{%else%}{{default.description}}{%endif%}{% endset %}
-		<infraNodeP name="{{name}}" status="{{action}}">
+		<infraNodeP name="{{i.name}}" status="{{action}}">
 			{% for k in i.fex_selectors %}
                         {% set action %}{%if k.action%}{{k.action}}{%else%}{{default.action}}{%endif%}{% endset %}
                         {% set description %}{%if k.description%}{{k.description}}{%else%}{{default.description}}{%endif%}{% endset %}
 			{%if not action=="ignore"%}
-			<infraRsAccPortP tDn="uni/infra/acccardprof-leaf{{k.parent_leaf_id}}_fex_inselector" />
-                        <infraRsAccCardP tDn="uni/infra/acccardprof-leaf{{k.parent_leaf_id}}_access_module" />
+			<infraRsAccPortP tDn="uni/infra/acccardprof-leaf{{k.name}}" />
+                        <infraRsAccCardP tDn="uni/infra/acccardprof-leaf{{k.access_module}}" />
 
 			<infraLeafS descr="{{description}}" name="{{k.name}}" type="range">
 				{% for j in k.fex_ranges %}
@@ -20,26 +19,27 @@
                                 {%if not action=="ignore"%}
                                 {% set name %}{%if j.name%}{{j.name}}{%else%}{{default.name}}{%endif%}{% endset %}
                                 {% set description %}{%if j.description%}{{j.description}}{%else%}{{default.description}}{%endif%}{% endset %}
-        			<infraNodeBlk from_="{{j.parent_leaf_id}}" name="bl{{j.parent_leaf_id}}" to_="{{j.parent_leaf_id}}" />
-      			</infraLeafS>
+				<infraNodeBlk from_="{{j.parent_leaf_id}}" name="bl{{j.parent_leaf_id}}" to_="{{j.parent_leaf_id}}" />
+				{%endif%}{%endfor%}
+			</infraLeafS>
     		</infraNodeP>
-    		<infraAccCardP descr="{{description}}" name="leaf{{j.parent_leaf_id}}_access_module" ownerKey="" ownerTag="" status="{{action}}">
-      			<infraCardS descr="{{description}}" name="leaf{{j.parent_leaf_id}}FexCardSelector" ownerKey="" ownerTag="" type="chExtender">
-        			<infraRsCardPGrp tDn="uni/infra/funcprof/acccardpgrp-leaf{{j.parent_leaf_id}}_access_card" />
+		<infraAccCardP descr="{{description}}" name="{{k.access_module}}" ownerKey="" ownerTag="" status="{{action}}">
+			<infraCardS descr="{{description}}" name="{{k.card_selector}}" ownerKey="" ownerTag="" type="chExtender">
+				<infraRsCardPGrp tDn="uni/infra/funcprof/acccardpgrp-leaf{{k.access_card}}" />
       			</infraCardS>
     		</infraAccCardP>
     		<infraFuncP>
-      			<infraAccCardPGrp descr="{{description}}" name="leaf{{j.parent_leaf_id}}_access_card" ownerKey="" ownerTag="" status="{{action}}" />
+			<infraAccCardPGrp descr="{{description}}" name="{{k.access_card}}" ownerKey="" ownerTag="" status="{{action}}" />
     		</infraFuncP>
-    		<infraAccPortP name="leaf{{j.parent_leaf_id}}_fex_ifselector" ownerKey="" ownerTag="" status="{{action}}">
-      			<infraHPortS descr="{{description}}" name="Fex{{j.fex_id}}" ownerKey="" ownerTag="" type="range">
-        			<infraRsAccBaseGrp fexId="{{j.fex_id}}" tDn="uni/infra/fexprof-leaf{{j.parent_leaf_id}}_fex{{j.fex_id}}_fexprofile/fexbundle-fex{{j.fex_id}}_Bndle" />
-				<infraPortBlk fromCard="{{j.from_slot}}" fromPort="{{j.from_port}}" name="block{{j.from_port}}{{j.to_port}}" toCard="{{j.to_slot}}" toPort="{{j.to_port}}" />
+    		<infraAccPortP name="{{k.test1_fex_int_selecor}}" ownerKey="" ownerTag="" status="{{action}}">
+      			<infraHPortS descr="{{description}}" name="Fex{{k.fex_id}}" ownerKey="" ownerTag="" type="range">
+        			<infraRsAccBaseGrp fexId="{{k.fex_id}}" tDn="uni/infra/fexprof-leaf{{k.parent_leaf_id}}_fex{{k.fex_id}}_fexprofile/fexbundle-fex{{k.fex_id}}_Bndle" />
+				<infraPortBlk fromCard="{{k.from_slot}}" fromPort="{{k.from_port}}" name="block{{k.from_port}}{{k.to_port}}" toCard="{{k.to_slot}}" toPort="{{k.to_port}}" />
       			</infraHPortS>
     		</infraAccPortP>
-    		<infraFexP name="leaf{{j.parent_leaf_id}}_fex{{j.fex_id}}_fexprofile" ownerKey="" ownerTag="" status="{{action}}">
-      			<infraFexBndlGrp name="fex{{j.fex_id}}_Bndle" ownerKey="" ownerTag="" />
+		<infraFexP name="{{k.name}}" ownerKey="" ownerTag="" status="{{action}}">
+      			<infraFexBndlGrp name="fex{{k.fex_id}}_Bndle" ownerKey="" ownerTag="" />
 		</infraFexP>
-		{%endif%}{%endfor%}
+		{%endif%}{%endfor%}{%endif%}{%endfor%}
   	</infraInfra>
 </polUni>

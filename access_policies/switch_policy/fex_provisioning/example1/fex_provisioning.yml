@@ -4,25 +4,22 @@ default:
   action: "ignore"
 
 fexes:
-- name: test1_fex
-  parent_leaf_id: 1201
-  fex_id: 111
-  from_slot: 1
-  from_port: 21
-  to_slot: 1
-  to_port: 21
-  action: "created,modified"
-  description:
-
-fexes:
-- name: test1_fex
+- name: test1_fex_sw_prof
   description:
   action: "created,modified"
   fex_selectors:
-  - name: test1_fex_selector
-    description:
+  - name: "test1_fex_selector"
+    access_module: "test1_module"
+    card_selector: "test1_card_selector"
+    if_selector: 
+    parent_leaf_id: 101
+    fex_id: 1201
     action: "created,modified"
+    from_slot: 1
+    to_slot: 1
+    from_port: 15
+    to_port: 16
     fex_ranges:
-    - name: 12011201
-      parent_leaf_id:
+    - name: 101101
+      parent_leaf_id: 101
 

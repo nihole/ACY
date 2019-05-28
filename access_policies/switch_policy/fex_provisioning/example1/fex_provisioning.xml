@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
 	<infraInfra>
-    		<infraNodeP name="leaf_1201_fex_swprof" status="created,modified">
-      			<infraLeafS descr="" name="leaf1201_swsel" type="range">
-        			<infraNodeBlk from_="1201" name="bl1201" to_="1201" />
-      			</infraLeafS>
-      			<infraRsAccPortP tDn="uni/infra/accportprof-leaf1201_fex_ifselector" />
-      			<infraRsAccCardP tDn="uni/infra/acccardprof-leaf1201_access_module" />
+		<infraNodeP name="test1_fex_sw_prof" status="created,modified">
+			<infraRsAccPortP tDn="uni/infra/acccardprof-leaftest1_fex_selector" />
+                        <infraRsAccCardP tDn="uni/infra/acccardprof-leaftest1_module" />
+			<infraLeafS descr="" name="test1_fex_selector" type="range">
+			</infraLeafS>
     		</infraNodeP>
-    		<infraAccCardP descr="" name="leaf1201_access_module" ownerKey="" ownerTag="" status="created,modified">
-      			<infraCardS descr="" name="leaf1201FexCardSelector" ownerKey="" ownerTag="" type="chExtender">
-        			<infraRsCardPGrp tDn="uni/infra/funcprof/acccardpgrp-leaf1201_access_card" />
+		<infraAccCardP descr="" name="test1_module" ownerKey="" ownerTag="" status="created,modified">
+			<infraCardS descr="" name="test1_card_selector" ownerKey="" ownerTag="" type="chExtender">
+				<infraRsCardPGrp tDn="uni/infra/funcprof/acccardpgrp-leaf" />
       			</infraCardS>
     		</infraAccCardP>
     		<infraFuncP>
-      			<infraAccCardPGrp descr="" name="leaf1201_access_card" ownerKey="" ownerTag="" status="created,modified" />
+			<infraAccCardPGrp descr="" name="" ownerKey="" ownerTag="" status="created,modified" />
     		</infraFuncP>
-    		<infraAccPortP name="leaf1201_fex_ifselector" ownerKey="" ownerTag="" status="created,modified">
-      			<infraHPortS descr="" name="Fex111" ownerKey="" ownerTag="" type="range">
-        			<infraRsAccBaseGrp fexId="111" tDn="uni/infra/fexprof-leaf1201_fex111_fexprofile/fexbundle-fex111_Bndle" />
-				<infraPortBlk fromCard="1" fromPort="21" name="block2121" toCard="1" toPort="21" />
+    		<infraAccPortP name="" ownerKey="" ownerTag="" status="created,modified">
+      			<infraHPortS descr="" name="Fex1201" ownerKey="" ownerTag="" type="range">
+        			<infraRsAccBaseGrp fexId="1201" tDn="uni/infra/fexprof-leaf101_fex1201_fexprofile/fexbundle-fex1201_Bndle" />
+				<infraPortBlk fromCard="1" fromPort="15" name="block1516" toCard="1" toPort="16" />
       			</infraHPortS>
     		</infraAccPortP>
-    		<infraFexP name="leaf1201_fex111_fexprofile" ownerKey="" ownerTag="" status="created,modified">
-      			<infraFexBndlGrp name="fex111_Bndle" ownerKey="" ownerTag="" />
+		<infraFexP name="test1_fex_selector" ownerKey="" ownerTag="" status="created,modified">
+      			<infraFexBndlGrp name="fex1201_Bndle" ownerKey="" ownerTag="" />
 		</infraFexP>
   	</infraInfra>
 </polUni>
