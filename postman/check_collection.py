@@ -25,7 +25,14 @@ f.close()
 
 print ("\n> These POST API requests will be used:\n")
 print ("####################################################\n")
-yaml_data = yaml.load( data1 )
+
+yaml_version = yaml.__version__
+
+if (float(yaml_version) < 5.1):
+    yaml_data = yaml.load(data1)
+else:
+    yaml_data = yaml.load(data1,Loader=yaml.FullLoader)
+
 for j in yaml_data["files"]:
     action = "no"
     if (not j["action"]):

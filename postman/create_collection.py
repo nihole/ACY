@@ -30,7 +30,13 @@ f = open( "./%s" % yaml_file )
 data1 = f.read()
 f.close()
 
-yaml_data = yaml.load( data1 )
+yaml_version = yaml.__version__
+
+if (float(yaml_version) < 5.1):
+    yaml_data = yaml.load(data1)
+else:
+    yaml_data = yaml.load(data1,Loader=yaml.FullLoader)
+
 
    ######### Take data from YAML. Only if action == "yes"  ####################
 
