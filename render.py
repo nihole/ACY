@@ -23,7 +23,7 @@ f = open( "./%s" % yaml_file )
 data1 = f.read()
 f.close()
 
-yaml_data = yaml.load( data1 )
+yaml_data = yaml.load(data1, Loader=yaml.FullLoader)
 
    ######### read templates from Jinja2 file ####################
 f = open( "./%s" % j2_file )
