@@ -77,7 +77,7 @@ There are 2 files already there: <a href="https://github.com/nihole/ACY/blob/mas
 - vlan_pools_tmpl.yml - this YAML file we are going to use for our YAML file creation (if it has not been done before)
 
 2. Create a new folder (if it has not been done before). Actually you may use any folder, but it looks reasonable to create a new folder in the current one. Let's create a folder <a href="https://github.com/nihole/ACY/tree/master/access_policies/global_policy/aaep/example1">example1</a> 
-
+/render
 ```
 mkdir example1
 ```
@@ -94,7 +94,7 @@ cd ./example1/
 5. Generate <a href="https://github.com/nihole/ACY/blob/master/access_policies/global_policy/aaep/example1/aaep.xml">aaep.xml</a> file for ACI configuration 
 
 ```
-../../../../render.py ../template.j2 vlan_pools.yml > vlan_pools.xml
+python3 ../../../../render.py ../template.j2 vlan_pools.yml > vlan_pools.xml
 ```
 
 6. Upload this file to ACI (see the next chapter).
