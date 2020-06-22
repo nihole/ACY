@@ -1,7 +1,0 @@
-# action: "ignore|created|modified|deleted|created,modified"
-
-phys_domain:
-  name: ""
-  type: ""
-  vlan_pool: ""
-  action: ""

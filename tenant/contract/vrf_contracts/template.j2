@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<fvTenant name="{{tenant}}" status="{{action}}">
+		{% for j in vrfs %}
+                {% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+		{%if not action=="ignore"%}
+
+		<fvCtx name="{{j.name}}" status="{{action}}">
+			<vzAny descr="{{description}}" matchT="AtleastOne" name="">
+				{% for l in j.consumer_cntr %}{%if l.name%}
+				 <vzRsAnyToCons annotation="" tnVzBrCPName="Con_L3outNSXT_VRF" prio="unspecified" intent="install"/>
+                                {%endif%}{%endfor%}
+                                {% for m in j.provider_cntr %}{%if m.name%}
+				 <vzRsAnyToProv matchT="AtleastOne" annotation="" tnVzBrCPName="Con_L3outNSXT_VRF" prio="unspecified" intent="install"/>
+				{%endif%}{%endfor%}
+			</vzAny>
+		</fvCtx>
+		{%endif%}{%endfor%}
+	</fvTenant>
+</polUni>

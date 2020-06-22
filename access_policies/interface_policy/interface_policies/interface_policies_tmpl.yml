@@ -1,3 +1,10 @@
+#########################################################
+#                                                       #
+#          Interface Policies configuration             #
+#                                                       #
+#########################################################
+
+
 # action: "ignore|created|modified|created,modified|deleted"
 # link_level:
 #       auto_negotiation: "on|off"
@@ -18,12 +25,19 @@
 #       transmit_rate: "normal|fast"
 # l2_interface:
 #       vlan_scope: "global|portlocal"
+#
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used.
 
 
 default:
   name: ""
   description: ""
-  action: ignore
+  action: "ignore"
+
+### Main section ###
+
 
 link_level:
 - name: ""

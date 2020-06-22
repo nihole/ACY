@@ -1,21 +1,36 @@
+#########################################################
+#                                                       #
+#           Interface Profies configuration             #
+#                                                       #
+#########################################################
+
+
 # action: "ignore|created|modified|created,modified|deleted"
 
+### Default parameters ###
+# If there is no any data in the main section then default values are used.
+
 default:
-  action: ignore
+  action: "ignore"
   name: ""
   description: ""
   
+### Main section ###
+
 interface_profiles:
 - name: ""
-  action: ""
+  description:
+  action: "created,modified"
   interface_selectors: 
   - name: ""
     int_pol_group: ""
     int_pol_group_type: ""
-    action: ""
+    description:
+    action: "created,modified"
     interface_ranges:
-    - name: ""
+    - name: 
       slot_id: 
       from_port: 
       to_port: 
-      action: ""
+      action: "created,modified"
+      description: ""

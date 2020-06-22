@@ -1,4 +1,15 @@
+#########################################################
+#                                                       #
+#             Static Bindong configuration              #
+#                                                       #
+#########################################################
+
+
 # action: "ignore|created|modified|created,modified|deleted"
+#
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used
 
 default:
   name: ""
@@ -7,6 +18,9 @@ default:
   mode: "regular"
   pod_id: "1"
   access_port_id: ""
+
+### Main Section ###
+
 
 
 tenant: ""

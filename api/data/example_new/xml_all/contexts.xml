@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<fvTenant name="tenant_test1" status="created,modified">
+		<fvCtx descr="" knwMcastAct="permit" name="VRF_1" pcEnfPref="enforced" status="created,modified">
+			<fvRsBgpCtxPol tnBgpCtxPolName="default"/>
+			<fvRsCtxToExtRouteTagPol tnL3extRouteTagPolName="default"/>
+			<fvRsOspfCtxPol tnOspfCtxPolName=""/>
+			<vzAny descr="" matchT="AtleastOne" name=""/>
+			<fvRsCtxToEpRet tnFvEpRetPolName="default"/>
+		</fvCtx>
+	</fvTenant>
+</polUni>

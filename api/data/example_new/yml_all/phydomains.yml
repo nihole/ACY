@@ -1,0 +1,24 @@
+#########################################################
+#                                                       #
+#            Physical Domains configuration             #
+#                                                       #
+#########################################################
+
+# action: "ignore|created|modified|deleted|created,modified"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used.
+
+default:
+  name: ""
+  action: "ignore"
+  description: ""
+
+### Main section ###
+
+phys_domain:
+  name: "PhyDom_1"
+  type: "physical"
+  vlan_pool: "VLPool_Static_1"
+  description: "For 1 EPGs"
+  action: "created,modified"

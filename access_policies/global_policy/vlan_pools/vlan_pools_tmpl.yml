@@ -1,19 +1,29 @@
+#########################################################
+#                                                       #
+#                VLAN pools configuration               #
+#                                                       #
+#########################################################
+
 # action: "ignore|created|modified|deleted"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used.
+
 
 default:
   action: "ignore"
   name: ""
   description: ""
-  alloc_mode: static
+  alloc_mode: "static"
+
+### Main section ###
 
 vlan_pool:
-- name: "" 
-  action: ""
-  vlan_range: 
-  - name: ""
+- name: ""
+  description: ""
+  action: "created,modified"
+  vlan_range:
+  - name:
     start_vlan: 
     stop_vlan: 
-    alloc_mode: ""
-    action: ""
-
-  
+    action: "created,modified"

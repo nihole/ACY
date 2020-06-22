@@ -1,0 +1,45 @@
+#########################################################
+#                                                       #
+#                VLAN pools configuration               #
+#                                                       #
+#########################################################
+
+# action: "ignore|created|modified|deleted"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used.
+
+
+default:
+  action: "ignore"
+  name: ""
+  description: "1 VLAN pool"
+  alloc_mode: "static"
+
+### Main section ###
+
+vlan_pool:
+- name: "VLPool_Static_1"
+  description: "VLANs for EPGs"
+  action: "created,modified"
+  vlan_range:
+  - name:
+    start_vlan: 1640
+    stop_vlan: 1646
+    action: "created,modified"
+  - name:
+    start_vlan: 1649
+    stop_vlan: 1649
+    action: "created,modified"
+  - name:
+    start_vlan: 3939
+    stop_vlan: 3939
+    action: "created,modified"
+- name: "VLPool_L3Out_1"
+  description: "VLANs for N/S traffice (L3Out)"
+  action: "created,modified"
+  vlan_range:
+  - name:
+    start_vlan: 1667
+    stop_vlan: 1668
+    action: "created,modified"

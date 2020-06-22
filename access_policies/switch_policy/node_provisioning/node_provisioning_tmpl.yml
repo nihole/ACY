@@ -1,5 +1,15 @@
-# action: "ignore|created|modified|created,modified|deleted"
+#########################################################
+#                                                       #
+#                Node provisioning                      #
+#                                                       #
+#########################################################
+
+
+# action: "ignore|created|modified|deleted|created,modified"
 # role: "leaf|spine"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used.
 
 default:
   name: ""
@@ -7,6 +17,8 @@ default:
   action: "ignore"
   pod_id: 1
   role: "leaf"
+
+### Main section ###
 
 nodes:
 - name: ""

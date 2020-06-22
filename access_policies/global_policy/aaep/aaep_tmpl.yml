@@ -1,21 +1,35 @@
+#########################################################
+#                                                       #
+#                AAEP configuration                     #
+#                                                       #
+#########################################################
+
+
 # action: "ignore|created|modified|deleted|created,modified"
 # enable_infra_vlan: "yes|no"
 
+### Default parameters ###
+# If there is no any data in the main section then default values are used.
+
 default:
   name: ""
-  enable_infra_vlan: "no"
+  enable_infra_vlan:
   phys_dom: ""
   l3_ext_dom: ""
   vmm_dom: ""
   action: "ignore"
   description: ""
 
+### Main section ###
+
 aaep:
 - name: ""
-  enable_infra_vlan: ""
+  enable_infra_vlan: "no"
   domains:
   - phys_dom: ""
-    l3_ext_dom:
+    l3_ext_dom: ""
     vmm_dom:
-    action: ""
-  action: ""
+    description: ""
+    action: "created,modified"
+  action: "created,modified"
+
