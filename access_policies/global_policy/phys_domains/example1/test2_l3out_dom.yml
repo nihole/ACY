@@ -1,8 +1,0 @@
-# action: "ignore|created|modified|deleted|created,modified"
-
-phys_domain:
-  name: "test2_l3out_dom"
-  type: "external_l3"
-  vlan_pool: "test1_vlan_pool"
-  action: "created,modified"
-  description: ""

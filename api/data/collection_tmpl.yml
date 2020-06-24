@@ -1,9 +1,0 @@
-default:
-  action: "yes"
-  aci_path: "/api/mo/uni.xml"
-  collection_name: ""
-
-files:
-- name: ""
-  path: ""
-  action: ""
