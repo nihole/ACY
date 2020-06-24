@@ -16,10 +16,10 @@ files:
   action: 
 - name: "phydomains"
   path: "access_policies/global_policy/phys_domains/phydomains.xml"
-  action:
+  action: 'no'
 - name: "l3outdomains"
   path: "access_policies/global_policy/phys_domains/l3domains.xml"
-  action:
+  action: 'no'
 - name: "aaep"
   path: "access_policies/global_policy/aaep/aaep.xml"
   action: 
@@ -68,69 +68,69 @@ files:
 ###### Tenant ######
 
 - name: "tenant"
-  path: "tenant/tenant_test1/tenants/tenant.xml"
-  action: 
+  path: "tenant/test1_tenent/tenants/tenant.xml"
+  action: 'no' 
 
 ###### APP/EPG ######
 
 - name: "app_profiles"
-  path: "tenant/tenant_test1/app_profiles/app_profiles.xml"
-  action:
+  path: "tenant/test1_tenent/app_profiles/app_profiles.xml"
+  action: 'no'
 - name:  "end_point_groups"
-  path: "tenant/tenant_test1/end_point_groups/end_point_groups.xml"
-  action:
+  path: "tenant/test1_tenent/end_point_groups/end_point_groups.xml"
+  action: 'no'
 - name: "epg_static_bindings"
-  path: "tenant/tenant_test1/epg_static_bindings/epg_static_bindings.xml"
-  action:
+  path: "tenant/test1_tenent/epg_static_bindings/epg_static_bindings.xml"
+  action: 'no'
 
 ###### BD ######
 
 - name: "bridge_domains"
-  path: "tenant/tenant_test1/bridge_domains/bridge_domains.xml"
-  action:
+  path: "tenant/test1_tenent/bridge_domains/bridge_domains.xml"
+  action: 'no'
 
 ###### VRF ######
 
 - name: "contexts"
-  path: "tenant/tenant_test1/contexts/contexts.xml"
-  action: 
+  path: "tenant/test1_tenent/contexts/contexts.xml"
+  action:  'no'
 
 ###### L3OUT ######  
 
 - name: "l3outs"
-  path: "tenant/tenant_test1/l3out/l3outs/l3outs.xml"
+  path: "tenant/test1_tenent/l3out/l3outs/l3outs.xml"
   action: "no"
 - name: "l3out_node_profiles"
-  path: "tenant/tenant_test1/l3out/l3out_node_profiles/l3out_node_profiles.xml"
+  path: "tenant/test1_tenent/l3out/l3out_node_profiles/l3out_node_profiles.xml"
   action: 'no'
 - name: "l3out_int_profiles"
-  path: "tenant/tenant_test1/l3out/l3out_int_profiles/l3out_int_profiles.xml"
+  path: "tenant/test1_tenent/l3out/l3out_int_profiles/l3out_int_profiles.xml"
   action: 'no'
 - name: "l3out_bgp_profiles_int"
-  path: "tenant/tenant_test1/l3out/l3out_bgp/l3out_bgp_profiles_int.xml"
+  path: "tenant/test1_tenent/l3out/l3out_bgp/l3out_bgp_profiles_int.xml"
   action: 'no'
 - name: "l3out_bgp_profiles_loo"
-  path: "tenant/tenant_test1/l3out/l3out_bgp/l3out_bgp_profiles_loo.xml"
+  path: "tenant/test1_tenent/l3out/l3out_bgp/l3out_bgp_profiles_loo.xml"
   action: 'no'
 - name: "external_epg"
-  path: "tenant/tenant_test1/l3out/external_epg/external_epg.xml"
+  path: "tenant/test1_tenent/l3out/external_epg/external_epg.xml"
   action: "no"
 
 ####### Contracts #######
 
 - name: "contracts"
-  path: "tenant/tenant_test1/contract/contracts/contracts.xml"
+  path: "tenant/test1_tenent/contract/contracts/contracts.xml"
   action: "no"
 - name: "filters"
-  path: "tenant/tenant_test1/contract/filters/filters.xml"
+  path: "tenant/test1_tenent/contract/filters/filters.xml"
   action: 'no'
 - name: "epg_contracts"
-  path: "tenant/tenant_test1/contract/epg_contracts/epg_contracts.xml"
+  path: "tenant/test1_tenent/contract/epg_contracts/epg_contracts.xml"
   action: 'no'
 - name: "ext_epg_contracts"
-  path: "tenant/tenant_test1/contract/extepg_contracts/extepg_contracts.xml"
+  path: "tenant/test1_tenent/contract/extepg_contracts/extepg_contracts.xml"
   action: 'no'
 - name: "vrf_contracts"
-  path: "tenant/tenant_test1/contract/vrf_contracts/vrf_contracts.xml"
+  path: "tenant/test1_tenent/contract/vrf_contracts/vrf_contracts.xml"
   action: 'no'
 
