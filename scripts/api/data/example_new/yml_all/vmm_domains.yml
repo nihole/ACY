@@ -1,0 +1,22 @@
+#########################################################
+#                                                       #
+#             WMM DOMAIN configuration                  #
+#                                                       #
+#########################################################
+
+
+# action: "ignore|created|modified|deleted|created,modified"
+
+vmm_domain:
+  name: "ACILab-vDS-test1"
+  action: "created,modified"
+  vlan_dynamic_pool: "ACILab_VMM-VLANs-test"
+  vcenter_hostname_ip: "198.18.133.30"
+  vcenter_controller_name: "VC"
+  vcenter_datacenter_name: "dCloud-DC"
+  vcenter_credential_profile: "administrator"
+  vcenter_username: "administrator@vsphere.local"
+  vcenter_password: "C1sco12345!"
+  description: ""
+
+

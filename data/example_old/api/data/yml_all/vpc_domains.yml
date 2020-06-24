@@ -1,0 +1,29 @@
+#########################################################
+#                                                       #
+#           VPC Domain Configuration                    #
+#                                                       #
+#########################################################
+
+# action: "ignore|created|modified|created,modified|deleted"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used.
+
+default:
+  name: ""
+  description: ""
+  action: "ignore"
+
+### Main Section ###
+
+vpc_domains:
+- name: leaf_101_102_vpcgrp
+  domain_policy: default
+  left_node_id: 1101
+  right_node_id: 1102
+  logical_pair_id: 1
+  action: "created,modified"
+  description:
+
+  
+

@@ -1,0 +1,45 @@
+# action: "ignore|created|modified|created,modified|deleted"
+# l2_unknown_unicast: "flood,proxy"
+# l3_unknown_multicast: "flood,proxy"
+# multi_dest_flood: "bd-flood"
+# arp_flood: "yes|no"
+# unicast_routing: "yes|no"
+# subnet_type: "private|public|shared|private,shared|public,shared"
+# bd_type: "L2|L3"
+
+
+default:
+  name: ""
+  description: ""
+  action: "ignore"
+  l2_unknown_unicast: "proxy"
+  l3_unknown_multicast: "flood"
+  multi_dest_flood: "bd-flood"
+  arp_flood: "no"
+  unicast_routing: "yes"
+  subnet_type: "public,shared"
+  monitoring_policy: ""
+  igmp_snoop: "default"
+
+tenant: test1_tenant
+action: "modified"
+bridge_domains: 
+- name: "test1_bd"
+  context: "test1_vrf"
+  bd_type: "L3"
+  bd_gateway_ip: "10.200.1.1/24"
+  l3_out: 
+  legacy_bd: ""
+  e_r_policy: ""
+  ep_retention_policy: ""
+  action: "created,modified"
+- name: "test2_bd"
+  context: "test2_vrf"
+  bd_type: "L3"
+  bd_gateway_ip: "10.200.2.1/24"
+  l3_out: 
+  legacy_bd: ""
+  e_r_policy: ""
+  ep_retention_policy: ""
+  action: "created,modified"
+    

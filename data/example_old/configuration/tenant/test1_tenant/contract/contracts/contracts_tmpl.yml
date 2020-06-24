@@ -1,0 +1,25 @@
+# action: "ignore|created|modified|created,modified|deleted"
+# direction: "N/A|in|out"
+# directives: ""
+# reverse: "yes|no"
+
+default:
+  action: "ignore"
+  description: ""
+  direction: "N/A"
+  directives: ""
+  reverse: "no"
+
+tenant: ""
+action: ""
+contracts:
+- name: ""
+  action: ""
+  subjects: 
+  - name: ""
+    action: ""
+    filters:
+    - name: ""
+      action: ""
+    
+

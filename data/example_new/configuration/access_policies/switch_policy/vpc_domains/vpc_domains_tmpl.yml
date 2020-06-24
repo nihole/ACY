@@ -1,0 +1,17 @@
+# action: "ignore|created|modified|created,modified|deleted"
+
+default:
+  name: ""
+  description: ""
+  action: "ignore"
+
+vpc_domains:
+- name: ""
+  domain_policy: ""
+  left_node_id: 
+  right_node_id: 
+  logical_pair_id: 
+  action: ""
+
+  
+

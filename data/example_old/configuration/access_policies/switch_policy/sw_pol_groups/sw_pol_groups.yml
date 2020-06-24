@@ -1,0 +1,24 @@
+# action: "ignore|created|modified|created,modified|deleted"
+
+default:
+  name: ""
+  description: ""
+  action: "ignored"
+  stp_policy: "default"
+  bfd_ipv4_policy: "default"
+  bfd_ipv6_policy: "default"
+  fibre_channel_node_policy: ""
+  fibre_channel_san_policy: ""
+  monitoring_policy: "default"
+  netflow_node_policy: "default"
+  copp_leaf_policy: ""
+  forward_scale_profile_policy: ""
+  fast_link_failover_policy: ""
+  dot1.x_policy: ""
+  copp_pre-filter: ""
+
+sw_pol_group:
+- name: "test1_sw_pol_group"
+  action: "created, modified"
+- name: "test2_sw_pol_group"
+  action: "created, modified"

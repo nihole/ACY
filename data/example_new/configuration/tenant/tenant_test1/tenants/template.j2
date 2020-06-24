@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	{% set j = tenants %}
+        {%if not j.action=="ignore"%}
+	<fvTenant descr="{{description}}" name="{{j.name}}" status="{{j.action}}">
+	</fvTenant>
+	{%endif%}
+</polUni>

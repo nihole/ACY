@@ -1,0 +1,18 @@
+#########################################################
+#                                                       #
+#                Tenant configuration                   #
+#                                                       #
+#########################################################
+
+
+# action: "ignore|created|modified|created,modified|deleted"
+
+tenants:
+  name: ""
+  tags: ""
+  mon_policy: ""
+  ctrl_mgmt_policy: ""
+  security_domain: ""
+  description: ""
+  action: ""
+

@@ -1,0 +1,43 @@
+#########################################################
+#                                                       #
+#    L3Out Logical Interface Profiles configuration     #
+#                                                       #
+#########################################################
+
+
+# action: "ignore|created|modified|created,modified|deleted"
+# type: "PC|vPC|Access"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used
+
+default:
+  action: "ignore"
+  description: ""
+  ospf_interface_policy: ""
+  pod_id: 1
+
+### Main section ###
+
+tenant: ""
+action: "modified"
+l3outs:
+- name: ""
+  action: "modified"
+  l3out_node_profiles:
+  - name: ""
+    action: "modified"
+    nodes:
+    - node_id: 
+      router_id: ""
+      action: "modified"
+    l3out_int_profiles:
+    - name: ""
+      action: "created,modified"
+      nodes:
+      - type: ""
+        interface: ""
+        vlan_id: 
+        node_id: 
+        ip_address: ""
+        action: "created,modified"

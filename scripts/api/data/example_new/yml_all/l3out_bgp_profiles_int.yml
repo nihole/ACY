@@ -1,0 +1,172 @@
+#########################################################
+#                                                       #
+#                L3 BGP configuration               #
+#                                                       #
+#########################################################
+
+
+# action: "ignore|created|modified|created,modified|deleted"
+# type: "PC|vPC|Access"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used
+
+
+default:
+  action: "ignore"
+  description: ""
+  ospf_interface_policy: ""
+  pod_id: 1
+
+### Main section ###
+
+loopback: "no"
+inteface: "yes"
+
+
+tenant: "tenant_test1"
+action: "modified"
+l3outs:
+- name: "L3Out_1"
+  l3out_node_profiles:
+  - name: "L3Out_NodeProf_L1101"
+    nodes:
+    - node_id: 1101
+      action: "modified"
+      pod_id: 1
+    l3out_int_profiles:
+    - name: "L3Out_IntProf_SVI_VL1667"
+      action: "modified"
+      nodes:
+      - type: "Access"
+        interface: "11"
+        vlan_id: 1667
+        node_id: 1101
+        ip_address: "172.47.1.1/24"
+        action: "modified"
+        bgp_profiles:
+        - peer_ip_address: "172.47.1.11"
+          remote_as: "65000"
+          local_as: "65001"
+          action: "created,modified"
+        - peer_ip_address: "172.47.1.12"
+          remote_as: "65000"
+          local_as: "65001"
+          action: "created,modified"
+      - type: "Access"
+        interface: "13"
+        vlan_id: 1667
+        node_id: 1101
+        ip_address: "172.47.1.1/24"
+        action: "modified"
+        bgp_profiles:
+        - peer_ip_address: "172.47.1.11"
+          remote_as: "65000"
+          local_as: "65001"
+          action: "created,modified"
+        - peer_ip_address: "172.47.1.12"
+          remote_as: "65000"
+          local_as: "65001"
+          action: "created,modified"
+      - type: "Access"
+        interface: "15"
+        vlan_id: 1667
+        node_id: 1101
+        ip_address: "172.47.1.1/24"
+        action: "modified"
+        bgp_profiles:
+        - peer_ip_address: "172.47.1.11"
+          remote_as: "65000"
+          local_as: "65001"
+          action: "created,modified"
+        - peer_ip_address: "172.47.1.12"
+          remote_as: "65000"
+          local_as: "65001"
+          action: "created,modified"
+      - type: "Access"
+        interface: "17"
+        vlan_id: 1667
+        node_id: 1101
+        ip_address: "172.47.1.1/24"
+        action: "modified"
+        bgp_profiles:
+        - peer_ip_address: "172.47.1.11"
+          remote_as: "65000"
+          local_as: "65001"
+          action: "created,modified"
+        - peer_ip_address: "172.47.1.12"
+          remote_as: "65000"
+          local_as: "65001"
+          action: "created,modified"
+  - name: "L3Out_NodeProf_L1102"
+    action: "modified"
+    nodes:
+    - node_id: 1102
+      pod_id: 1
+      action: "modified"
+    l3out_int_profiles:
+    - name: "L3Out_IntProf_SVI_VL1668"
+      action: "modified"
+      nodes:
+      - type: "Access"
+        interface: "11"
+        vlan_id: 1668
+        node_id: 1102
+        ip_address: "172.48.1.1/24"
+        action: "modified"
+        bgp_profiles:
+        - peer_ip_address: "172.48.1.11"
+          remote_as: "65000"
+          local_as: "65001"
+          action: "created,modified"
+        - peer_ip_address: "172.48.1.12"
+          remote_as: "65000"
+          local_as: "65001"
+          action: "created,modified"
+      - type: "Access"
+        interface: "13"
+        vlan_id: 1668
+        node_id: 1102
+        ip_address: "172.48.1.1/24"
+        action: "modified"
+        bgp_profiles:
+        - peer_ip_address: "172.48.1.11"
+          remote_as: "65000"
+          local_as: "65001"
+          action: "created,modified"
+        - peer_ip_address: "172.48.1.12"
+          remote_as: "65000"
+          local_as: "65001"
+          action: "created,modified"
+      - type: "Access"
+        interface: "15"
+        vlan_id: 1668
+        node_id: 1102
+        ip_address: "172.48.1.1/24"
+        action: "modified"
+        bgp_profiles:
+        - peer_ip_address: "172.48.1.11"
+          remote_as: "65000"
+          local_as: "65001"
+          action: "created,modified"
+        - peer_ip_address: "172.48.1.12"
+          remote_as: "65000"
+          local_as: "65001"
+          action: "created,modified"
+      - type: "Access"
+        interface: "17"
+        vlan_id: 1668
+        node_id: 1102
+        ip_address: "172.48.1.1/24"
+        action: "modified"
+        bgp_profiles:
+        - peer_ip_address: "172.48.1.11"
+          remote_as: "65000"
+          local_as: "65001"
+          action: "created,modified"
+        - peer_ip_address: "172.48.1.12"
+          remote_as: "65000"
+          local_as: "65001"
+          action: "created,modified"
+
+

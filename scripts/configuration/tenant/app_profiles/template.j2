@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	{%if not action=="ignore"%}
+	<fvTenant descr="description" name="{{tenant}}">
+		{% for j in app %}
+                {% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+		{% set description %}{%if j.description%}{{j.description}}{%else%}{{default.description}}{%endif%}{% endset %}
+		{%if not action=="ignore"%}
+		<fvAp descr="description" name="{{j.name}}" prio="unspecified" status="{{action}}">
+		</fvAp>
+		{%endif%}{%endfor%}
+	</fvTenant>
+	{%endif%}
+</polUni>

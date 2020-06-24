@@ -1,0 +1,63 @@
+#########################################################
+#                                                       #
+#                Filters configuration                  #
+#                                                       #
+#########################################################
+
+
+# action: "ignore|created|modified|created,modified|deleted"
+# ether_type: "ip|arp|fcoe|mac_security|mpls_ucast|trill|unspecified"
+# IP_protocol: "udp|tcp|pim|ospf|l2tp|igp|icmp|igmp"
+# match_only_fragments: "yes|no|N/A"
+# arp_flag: "reply|request|unspecified|N/A"
+# match_DSCP: ""
+# tcp_flags: "ack|est|fin|reset|syn|reset,syn,ack,fin|fin,reset|syn,ack"
+# icmp_message: "dst-unreach|echo|echo-rep|src-quench|time-exceeded|unspecified|N/A"
+# icmpv6_message: "dst-unreach|echo-req|echo-rep|nbr-unreach|nbr-solicit|time-exceeded|unspecified|redirect|"
+# stateful: "true|false|N/A"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used
+
+
+default:
+  action: "ignore"
+  description: ""
+  ether_type: "ip"
+  IP_protocol: "unspecified"
+  from_source_port: "unspecified"
+  to_source_port: "unspecified"
+  from_destination_port: "unspecified"
+  to_destination_port: "unspecified"
+  match_only_fragments: "no"
+  arp_flag: ""
+  match_DSCP: "unspecified"
+  icmp_message: ""
+  icmpv6_message: ""
+  tcp_flags: ""
+  stateful: "false"
+
+
+### Main Section ### 
+
+tenant: "tenant_test1"
+action: "modified"
+filters:
+- name: "http"
+  action: "created,modified"
+  entries:
+  - name: "tcp_80"
+    IP_protocol: "tcp"
+    from_destination_port: 80
+    to_destination_port: 80
+    tcp_flags: ""
+    action: "created,modified"
+- name: "https"
+  action: "created,modified"
+  entries:
+  - name: "tcp_443"
+    IP_protocol: "tcp"
+    from_destination_port: 443
+    to_destination_port: 443
+    tcp_flags: ""
+    action: "created,modified"

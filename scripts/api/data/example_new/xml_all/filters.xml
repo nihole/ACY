@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<fvTenant name="tenant_test1">
+		<vzFilter  name="http" status="created,modified" >
+			<vzEntry applyToFrag="no" dFromPort="80" dToPort="80" descr="" etherT="ip" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" name="tcp_80" prot="tcp" sFromPort="unspecified" sToPort="unspecified" stateful="false" tcpRules="" status="created,modified"/>
+		</vzFilter>
+		<vzFilter  name="https" status="created,modified" >
+			<vzEntry applyToFrag="no" dFromPort="443" dToPort="443" descr="" etherT="ip" icmpv4T="unspecified" icmpv6T="unspecified" matchDscp="unspecified" name="tcp_443" prot="tcp" sFromPort="unspecified" sToPort="unspecified" stateful="false" tcpRules="" status="created,modified"/>
+		</vzFilter>
+	</fvTenant>
+</polUni>
+

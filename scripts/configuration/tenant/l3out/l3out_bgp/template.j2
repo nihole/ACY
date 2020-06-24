@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<fvTenant descr="{{description}}" name="{{tenant}}">
+		{% for i in l3outs %}
+		<l3extOut name="{{i.name}}" status="modified">
+			{% for l in i.l3out_node_profiles %}
+			
+			<l3extLNodeP  name="{{l.name}}" status="modified">
+				{%if loopback == "yes"%}
+				{% for m in l.nodes %}
+				 {% set pod_id %}{%if m.pod_id %}{{m.pod_id}}{%else%}{{default.pod_id}}{%endif%}{% endset %}
+				<l3extRsNodeL3OutAtt annotation="" tDn="topology/pod-{{pod_id}}/node-{{m.node_id}}" configIssues="" status="modified">
+				{% for n in m.static_routes %}
+				{% set action %}{%if n.action%}{{n.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+				{% if not action=="ignore" %}
+					<ipRouteP nameAlias="" name="" descr="" annotation="" rtCtrl="" pref="1" ip="{{n.prefix}}" aggregate="no" status="{{action}}">
+						<ipNexthopP nameAlias="" name="" descr="" annotation="" pref="unspecified" type="prefix" nhAddr="{{n.next_hop}}"/>
+					</ipRouteP>
+				{% endif %}
+				{% endfor %}
+				</l3extRsNodeL3OutAtt>
+				{% endfor %}
+				{% for p in l.bgp_profiles %}
+				{% set action %}{%if p.action%}{{p.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+				{% if not action=="ignore" %}
+				<bgpPeerP nameAlias="" name="" descr="" annotation="" addr="{{p.peer_ip_address}}" weight="0" ttl="2" privateASctrl="" adminSt="enabled" status="{{action}}">
+					<bgpLocalAsnP nameAlias="" name="" descr="" annotation="" localAsn="{{p.local_as}}" asnPropagate="none"/>
+					<bgpAsP nameAlias="" name="" descr="" annotation="" asn="{{p.remote_as}}"/>
+				</bgpPeerP>
+				{% endif %}
+				{% endfor %}
+				{% else %}
+				{% for n in l.l3out_int_profiles %}
+				<l3extLIfP name="{{n.name}}" status="modified">
+					{%for p in n.nodes %}
+					{% set pod_id %}{%if p.pod_id %}{{p.pod_id}}{%else%}{{default.pod_id}}{%endif%}{% endset %}
+					{% if p.type=="PC" or p.type=="Access" %} 
+					<l3extRsPathL3OutAtt tDn="topology/pod-{{pod_id}}/paths-{{p.node_id}}/pathep-[eth1/{{p.interface}}]"  ifInstT="ext-svi" status="modified">
+						{%for s in p.bgp_profiles %}
+						<bgpPeerP nameAlias="" name="" descr="" addr="{{s.peer_ip_address}}" weight="0" ttl="1" privateASctrl="" peerCtrl="" ctrl="" adminSt="enabled" addrTCtrl="af-ucast">
+                                            		<bgpRsPeerPfxPol annotation="" tnBgpPeerPfxPolName=""/>
+							<bgpLocalAsnP nameAlias="" name="" descr="" annotation="" localAsn="{{s.local_as}}" asnPropagate="none"/>
+							<bgpAsP nameAlias="" name="" descr="" annotation="" asn="{{s.remote_as}}"/>
+						</bgpPeerP>
+						{%endfor%}
+					</l3extRsPathL3OutAtt>
+					{% elif p.type=="vPC" %}
+
+					<l3extRsPathL3OutAtt ifInstT="ext-svi" tDn="topology/pod-{{pod_id}}/protpaths-{{p.left_node_id}}-{{p.right_node_id}}/pathep-[eth1/{{p.intergface}}]" status="modified">
+			  			<l3extMember addr="{{p.svi_1}}" descr="{{description}}" llAddr="::" name="" side="A" />
+			  			<l3extMember addr="{{p.svi_2}}" descr="{{description}}" llAddr="::" name="" side="B" />
+					</l3extRsPathL3OutAtt>
+					{%endif%}{%endfor%}
+				</l3extLIfP>
+				{%endfor%}
+				{% endif %}
+
+			</l3extLNodeP>
+			{%endfor%}
+		</l3extOut>
+		{%endfor%}
+	</fvTenant>
+</polUni>

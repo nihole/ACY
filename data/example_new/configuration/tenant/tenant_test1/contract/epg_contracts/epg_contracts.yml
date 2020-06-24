@@ -1,0 +1,61 @@
+#########################################################
+#                                                       #
+#       Contracts between EPG configuration             #
+#                                                       #
+#########################################################
+
+
+# action: "ignore|created|modified|created,modified|deleted"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used.
+
+default:
+  name: ""
+  description: ""
+  action: "ignore"
+
+### Main section ###
+
+tenant: "tenant_test1"
+action: "modified"
+app:
+- name: "APP_1"
+  action: "modified"
+  epg:
+  - name: "EPG_3939_INT_MGMT"
+    consumer_cntr:
+    - name: 
+    provider_cntr:
+    - name:
+    action: "modified"
+  - name: "EPG_1640_EXT_MGMT"
+    consumer_cntr:
+    - name: "Con_EXT_MGMT"
+    provider_cntr:
+    - name:
+    action: "modified"
+  - name: "EPG_1642_VMOTION"
+    consumer_cntr:
+    - name: 
+    provider_cntr:
+    - name: "Con_EXT_MGMT"
+    action: "modified"
+  - name: "EPG_1643_VSAN"
+    consumer_cntr:
+    - name:
+    provider_cntr:
+    - name: "Con_EXT_MGMT"
+    action: "modified"
+  - name: "EPG_1644_HOST_TEP"
+    consumer_cntr:
+    - name:
+    provider_cntr:
+    - name: "Con_EXT_MGMT"
+    action: "modified"
+  - name: "EPG_1649_EDGE_TEP"
+    consumer_cntr:
+    - name:
+    provider_cntr:
+    - name: "Con_EXT_MGMT"
+    action: "modified"

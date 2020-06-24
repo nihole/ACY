@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<infraInfra>
+		<infraAccPortP name="test1_int_profile" descr="" status="created,modified">
+			<infraHPortS name="test1_int_selector" descr="" status="created,modified"  type="range">
+                                <infraRsAccBaseGrp tDn="uni/infra/funcprof/accbundle-test1_int_pol_group" fexId="101"/>
+				<infraPortBlk name="1316" descr="for PC" toPort="16" toCard="1" fromPort="13" fromCard="1" status="created,modified"/>
+			</infraHPortS>
+		</infraAccPortP>
+		<infraAccPortP name="test2_int_profile" descr="" status="created,modified">
+			<infraHPortS name="test2_int_selector" descr="" status="created,modified"  type="range">
+                                <infraRsAccBaseGrp tDn="uni/infra/funcprof/accbundle-test1_int_pol_group" fexId="101"/>
+				<infraPortBlk name="1316" descr="for PC" toPort="16" toCard="1" fromPort="13" fromCard="1" status="created,modified"/>
+			</infraHPortS>
+		</infraAccPortP>
+		<infraAccPortP name="test3_int_profile" descr="" status="created,modified">
+			<infraHPortS name="test3_int_selector" descr="" status="created,modified"  type="range">
+                                <infraRsAccBaseGrp tDn="uni/infra/funcprof/accbundle-test2_int_pol_group" fexId="101"/>
+				<infraPortBlk name="1012" descr="for vPC" toPort="12" toCard="1" fromPort="10" fromCard="1" status="created,modified"/>
+			</infraHPortS>
+		</infraAccPortP>
+   </infraInfra>
+</polUni>

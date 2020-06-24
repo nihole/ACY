@@ -1,0 +1,15 @@
+# action: "ignore|created|modified|deleted|created,modified"
+
+vmm_domain:
+  name: "" 
+  action: ""
+  vlan_dynamic_pool: ""
+  vcenter_hostname_ip: ""
+  vcenter_controller_name: ""
+  vcenter_datacenter_name: ""
+  vcenter_credential_profile: ""
+  vcenter_username: ""
+  vcenter_password: ""
+  description: ""
+
+

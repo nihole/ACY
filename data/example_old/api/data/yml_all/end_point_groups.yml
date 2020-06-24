@@ -1,0 +1,59 @@
+#########################################################
+#                                                       #
+#                   EPGs configuration                  #
+#                                                       #
+#########################################################
+
+
+# action: "ignore|created|modified|created,modified|deleted"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used
+
+
+default:
+  name: ""
+  description: ""
+  action: "ignore"
+  phys_domain: ""
+  vmm_domain: ""
+  custom_qos_policy: ""
+
+### Main section ###
+
+tenant: "tenant_test1"
+action: "modified"
+app:
+- name: "APP_1"
+  action: "modified"
+  epg:
+  - name: "EPG_3939_INT_MGMT"
+    bridge_domain: "BD_VL13939"
+    phys_domain: "PhyDom_1"
+    description: "Internal Management"
+    action: "created,modified"
+  - name: "EPG_1640_EXT_MGMT"
+    bridge_domain: "BD_VL1640"
+    phys_domain: "PhyDom_1"
+    description: "External Management"
+    action: "created,modified"
+  - name: "EPG_1642_VMOTION"
+    bridge_domain: "BD_VL1642"
+    phys_domain: "PhyDom_1"
+    description: "vMotion"
+    action: "created,modified"
+  - name: "EPG_1643_VSAN"
+    bridge_domain: "BD_VL1643"
+    phys_domain: "PhyDom_1"
+    description: "vSAN"
+    action: "created,modified"
+  - name: "EPG_1644_HOST_TEP"
+    bridge_domain: "BD_VL1644"
+    phys_domain: "PhyDom_1"
+    description: "Host TEPs"
+    action: "created,modified"
+  - name: "EPG_1649_EDGE_TEP"
+    bridge_domain: "BD_VL1649"
+    phys_domain: "PhyDom_1"
+    description: "Edge TEPs"
+    action: "created,modified"

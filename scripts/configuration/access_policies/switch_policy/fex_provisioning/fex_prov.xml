@@ -1,0 +1,28 @@
+<polUni>
+  <infraInfra>
+    <infraNodeP name="leaf_{{config['parent_leaf_id']}}_fex_swprof" status="{{config['action']}}">
+      <infraLeafS descr="" name="leaf{{config['parent_leaf_id']}}_swsel" type="range">
+        <infraNodeBlk from_="{{config['parent_leaf_id']}}" name="bl{{config['parent_leaf_id']}}" to_="{{config['parent_leaf_id']}}" />
+      </infraLeafS>
+      <infraRsAccPortP tDn="uni/infra/accportprof-leaf{{config['parent_leaf_id']}}_fex_ifselector" />
+      <infraRsAccCardP tDn="uni/infra/acccardprof-leaf{{config['parent_leaf_id']}}_access_module" />
+    </infraNodeP>
+    <infraAccCardP descr="" name="leaf{{config['parent_leaf_id']}}_access_module" ownerKey="" ownerTag="" status="{{config['action']}}">
+      <infraCardS descr="" name="leaf{{config['parent_leaf_id']}}FexCardSelector" ownerKey="" ownerTag="" type="chExtender">
+        <infraRsCardPGrp tDn="uni/infra/funcprof/acccardpgrp-leaf{{config['parent_leaf_id']}}_access_card" />
+      </infraCardS>
+    </infraAccCardP>
+    <infraFuncP>
+      <infraAccCardPGrp descr="" name="leaf{{config['parent_leaf_id']}}_access_card" ownerKey="" ownerTag="" status="{{config['action']}}" />
+    </infraFuncP>
+    <infraAccPortP name="leaf{{config['parent_leaf_id']}}_fex_ifselector" ownerKey="" ownerTag="" status="{{config['action']}}">
+      <infraHPortS descr="" name="Fex{{config['fex_id']}}" ownerKey="" ownerTag="" type="range">
+        <infraRsAccBaseGrp fexId="{{config['fex_id']}}" tDn="uni/infra/fexprof-leaf{{config['parent_leaf_id']}}_fex{{config['fex_id']}}_fexprofile/fexbundle-fex{{config['fex_id']}}_Bndle" />
+        <infraPortBlk fromCard="{{config['from_slot']}}" fromPort="{{config['from_port']}}" name="block{{config['from_port']}}{{config['to_port']}}" toCard="{{config['to_slot']}}" toPort="{{config['to_port']}}" />
+      </infraHPortS>
+    </infraAccPortP>
+    <infraFexP name="leaf{{config['parent_leaf_id']}}_fex{{config['fex_id']}}_fexprofile" ownerKey="" ownerTag="" status="{{config['action']}}">
+      <infraFexBndlGrp name="fex{{config['fex_id']}}_Bndle" ownerKey="" ownerTag="" />
+    </infraFexP>
+  </infraInfra>
+</polUni>

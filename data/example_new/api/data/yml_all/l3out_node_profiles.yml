@@ -1,0 +1,38 @@
+#########################################################
+#                                                       #
+#     L3Out Logical Node Profiles configuration         #
+#                                                       #
+#########################################################
+
+
+# action: "ignore|created|modified|created,modified|deleted"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used
+
+default:
+  action: "ignore"
+  description: ""
+  pod_id: 1
+
+### Main section ###
+
+tenant: "tenant_test1"
+action: "modified"
+l3outs:
+- name: "L3Out_1"
+  action: "modified"
+  l3out_node_profiles:
+  - name: "L3Out_NodeProf_L1101"
+    action: "created,modified"
+    nodes:
+    - node_id: 1101
+      router_id: "100.100.100.1"
+      action: "created,modified"
+  - name: "L3Out_NodeProf_L1102"
+    action: "created,modified"
+    nodes:
+    - node_id: 1102
+      router_id: "100.100.100.2"
+      action: "created,modified"
+

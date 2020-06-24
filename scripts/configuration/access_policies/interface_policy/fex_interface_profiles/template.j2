@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<infraInfra>
+		{% for i in interface_profiles %}
+		{% set action %}{%if i.action%}{{i.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+		{% set description %}{%if i.description%}{{i.description}}{%else%}{{default.description}}{%endif%}{% endset %}
+		<infraFexP name="{{i.name}}" descr="description" status="{{action}}">
+			{% for k in i.interface_selectors %}
+                        {% set description %}{%if k.description%}{{k.description}}{%else%}{{default.description}}{%endif%}{% endset %}
+			<infraHPortS name="{{k.name}}" descr="{{description}}" status="{{action}}"  type="range">
+				{% if k.int_pol_group_type == 'Access'%}
+                                {% set port_type %}accportgrp{% endset %}
+                                {% else %}
+                                {% set port_type %}accbundle{% endset %}
+                                {% endif %}
+				<infraRsAccBaseGrp tDn="uni/infra/funcprof/{{port_type}}-{{k.int_pol_group}}" fexId="101"/>
+				{% for j in k.interface_ranges %}
+        			{% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+        			{%if not j.action=="ignore"%}
+        			{% set name %}{%if j.name%}{{j.name}}{%else%}{{default.name}}{%endif%}{% endset %}
+				{% set description %}{%if j.description%}{{j.description}}{%else%}{{default.description}}{%endif%}{% endset %}
+				{% if from_port != "" %}
+
+				<infraPortBlk name="{{name}}" descr="{{description}}" toPort="{{j.to_port}}" toCard="{{j.slot_id}}" fromPort="{{j.from_port}}" fromCard="{{j.slot_id}}" status="{{action}}"/>
+				{% endif %}{%endif%}{%endfor%}		
+			</infraHPortS>
+			{%endfor%}
+		
+		</infraFexP>
+		{%endfor%}
+   </infraInfra>
+</polUni>

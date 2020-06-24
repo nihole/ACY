@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<infraInfra>
+		<infraAccPortP name="IntProf_L1101" descr="" status="created,modified">
+			<infraHPortS name="IntSel_1101_10_17" descr="" status="created,modified"  type="range">
+                                <infraRsAccBaseGrp tDn="uni/infra/funcprof/accportgrp-IntPolGrp_ACCESS_1" fexId="101"/>
+				<infraPortBlk name="1017" descr="for xxx" toPort="17" toCard="1" fromPort="10" fromCard="1" status="created,modified"/>
+			</infraHPortS>
+		</infraAccPortP>
+		<infraAccPortP name="IntProf_L1102" descr="" status="created,modified">
+			<infraHPortS name="IntSel_1102_10_17" descr="" status="created,modified"  type="range">
+                                <infraRsAccBaseGrp tDn="uni/infra/funcprof/accportgrp-IntPolGrp_ACCESS_1" fexId="101"/>
+				<infraPortBlk name="1017" descr="for xxx" toPort="17" toCard="1" fromPort="10" fromCard="1" status="created,modified"/>
+			</infraHPortS>
+		</infraAccPortP>
+   </infraInfra>
+</polUni>

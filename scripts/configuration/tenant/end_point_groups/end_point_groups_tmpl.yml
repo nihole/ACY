@@ -1,0 +1,22 @@
+# action: "ignore|created|modified|created,modified|deleted"
+
+
+default:
+  name: ""
+  description: ""
+  action: "ignore"
+  phys_domain: ""
+  vmm_domain: ""
+  custom_qos_policy: ""
+
+tenant: ""
+action: ""
+app:
+- name: ""
+  action: ""
+  epg:
+  - name: ""
+    bridge_domain: ""
+    phys_domain: ""
+    action: ""
+

@@ -1,0 +1,31 @@
+#########################################################
+#                                                       #
+#       Contracts between EPG configuration             #
+#                                                       #
+#########################################################
+
+
+# action: "ignore|created|modified|created,modified|deleted"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used.
+
+default:
+  name: ""
+  description: ""
+  action: "ignore"
+
+### Main section ###
+
+tenant: ""
+action: "modified"
+app:
+- name: ""
+  action: "modified"
+  epg:
+  - name: ""
+    consumer_cntr:
+    - name: 
+    provider_cntr:
+    - name:
+    action: "modified"

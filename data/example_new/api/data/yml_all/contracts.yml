@@ -1,0 +1,48 @@
+#########################################################
+#                                                       #
+#                Contracts configuration               #
+#                                                       #
+#########################################################
+
+
+# action: "ignore|created|modified|created,modified|deleted"
+# direction: "N/A|in|out"
+# directives: ""
+# reverse: "yes|no"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used
+
+
+default:
+  action: "ignore"
+  description: ""
+  direction: "N/A"
+  directives: ""
+  reverse: "yes"
+  scope: "context"
+
+### Main section ###
+
+tenant: "tenant_test1"
+action: "modified"
+contracts:
+- name: "Con_EXT_MGMT"
+  description: "For 1 external management"
+  action: "created,modified"
+  subjects: 
+  - name: "Sbj_EXT_MGMT"
+    action: "created,modified"
+    filters:
+    - name: "http"
+      action: "modified"
+- name: "Con_L3out_VRF"
+  action: "created,modified"
+  description: "For access between external EPG and VRF"
+  subjects:
+  - name: "Sbj_L3out_VRF"
+    action: "created,modified"
+    filters:
+    - name: "https"
+      action: "modified"    
+

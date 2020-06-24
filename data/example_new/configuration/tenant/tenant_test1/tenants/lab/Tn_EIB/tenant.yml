@@ -1,0 +1,18 @@
+#########################################################
+#                                                       #
+#                VLAN pools configuration               #
+#                                                       #
+#########################################################
+
+
+# action: "ignore|created|modified|created,modified|deleted"
+
+tenants:
+  name: "Tn_EIB"
+  tags: ""
+  mon_policy: ""
+  ctrl_mgmt_policy: ""
+  security_domain: ""
+  description: ""
+  action: "created,modified"
+

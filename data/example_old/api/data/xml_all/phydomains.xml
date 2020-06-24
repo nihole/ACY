@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+    	<physDomP name="PhyDom_1" status="created,modified">
+	    	<infraRsVlanNs tDn="uni/infra/vlanns-VLPool_Static_1-static"/> 
+    	</physDomP>
+</polUni>

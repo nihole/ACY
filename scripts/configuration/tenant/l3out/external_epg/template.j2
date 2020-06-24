@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	{%if not action=="ignore"%}
+        <fvTenant name="{{tenant}}" >
+                {% for j in l3outs %}
+                {% set action %}{%if j.action%}{{j.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+                {% set description %}{%if j.description%}{{j.description}}{%else%}{{default.description}}{%endif%}{% endset %}
+		{%if not action=="ignore"%}
+		<l3extOut name="{{j.name}}" status="{{action}}">
+			{% for i in j.external_epg %}
+                	{% set action %}{%if i.action%}{{i.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+                	{% set description %}{%if i.description%}{{i.description}}{%else%}{{default.description}}{%endif%}{% endset %}
+			{%if not action=="ignore"%}
+			<l3extInstP descr="{{description}}"  matchT="AtleastOne" name="{{i.name}}" prio="unspecified" targetDscp="unspecified" status="{{action}}">
+				{% if i.consumed_contract !="" %}
+				<fvRsCons prio="unspecified" tnVzBrCPName="{{i.consumed_contract}}"/>
+				{% endif %}
+				{% if i.provided_contract !="" %}
+				<fvRsProv matchT="AtleastOne" prio="unspecified" tnVzBrCPName="{{i.provided_contract}}"/>
+				{% endif %}
+				<fvRsCustQosPol tnQosCustomPolName="" />
+					{% for k in i.subnets %}
+					{% set action %}{%if k.action%}{{k.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+			                {% set description %}{%if k.description%}{{k.description}}{%else%}{{default.description}}{%endif%}{% endset %}
+					{% set aggregate %}{%if k.aggregate%}{{k.aggregate}}{%else%}{{default.aggregate}}{%endif%}{% endset %}
+					{% set scope %}{%if k.scope%}{{k.scope}}{%else%}{{default.scope}}{%endif%}{% endset %}
+					{%if not action=="ignore"%}
+					<l3extSubnet aggregate="{{aggregate}}" descr="{{description}}" ip="{{k.subnet}}" name="" scope="{{scope}}" status="{{action}}" />
+					{%endif%}{%endfor%}
+			</l3extInstP>
+			{%endif%}{%endfor%}
+		</l3extOut>
+		{%endif%}{%endfor%}
+	</fvTenant>
+	{%endif%}
+</polUni>

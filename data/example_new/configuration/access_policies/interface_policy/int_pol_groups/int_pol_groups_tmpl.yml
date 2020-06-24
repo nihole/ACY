@@ -1,0 +1,27 @@
+#########################################################
+#                                                       #
+#       Interface Policy Groups configuration           #
+#                                                       #
+#########################################################
+
+
+# action: "ignore|created|modified|created,modified|deleted
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used.
+
+default:
+  action: "ignore"
+  name: ""
+  description: ""
+  type: "Access"
+  lldp_pol: ""
+
+### Main section ###
+
+int_pol_group: 
+- name: ""
+  aaep: ""
+  action: "created,modified"
+  description: ""
+

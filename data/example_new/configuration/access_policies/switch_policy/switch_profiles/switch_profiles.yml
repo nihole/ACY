@@ -1,0 +1,49 @@
+#########################################################
+#                                                       #
+#             Switch Profiles configuration             #
+#                                                       #
+#########################################################
+
+
+# action: "ignore|created|modified|created,modified|deleted"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used
+
+default:
+  name: ""
+  description: ""
+  action: "ignore"
+  sw_pol_group: ""
+
+### Main section ###
+
+switch_profiles:
+- name: "SwProf_L1101"
+  description:
+  action: "created,modified"
+  switch_selectors:
+  - name: "test1_sw_selector"
+    interface_profile: "IntProf_L1101"
+    description:
+    action: "created,modified"
+    switch_ranges:
+    - name: 1101
+      from_node_id: 1101
+      to_node_id: 1101
+      action: "created,modified"
+      description: ""
+- name: "SwProf_L1102"
+  description:
+  action: "created,modified"
+  switch_selectors:
+  - name: "test1_sw_selector"
+    interface_profile: "IntProf_L1102"
+    description:
+    action: "created,modified"
+    switch_ranges:
+    - name: 1102
+      from_node_id: 1102
+      to_node_id: 1102
+      action: "created,modified"
+      description: ""

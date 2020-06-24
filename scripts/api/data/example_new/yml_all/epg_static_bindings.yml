@@ -1,0 +1,392 @@
+
+#########################################################
+#                                                       #
+#             Static Bindong configuration              #
+#                                                       #
+#########################################################
+
+
+# action: "ignore|created|modified|created,modified|deleted"
+#
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used
+
+default:
+  name: ""
+  description: ""
+  action: "ignore"
+  mode: "regular"
+  pod_id: "1"
+  access_port_id: ""
+
+### Main Section ###
+
+
+tenant: "tenant_test1"
+action: "modified"
+app:
+- name: "APP_1"
+  action: "modified"
+  epg:
+  - name: "EPG_1640_EXT_MGMT"
+    action: "modified"
+    static_bindings:
+    - access_port_id: 10
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node: 
+      encap_vlan_id: 1640
+      action: "created,modified"
+    - access_port_id: 12
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1640
+      action: "created,modified"
+    - access_port_id: 14
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1640
+      action: "created,modified"
+    - access_port_id: 16
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1640
+      action: "created,modified"
+    - access_port_id: 10
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1640
+      action: "created,modified"
+    - access_port_id: 12
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1640
+      action: "created,modified"
+    - access_port_id: 14
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1640
+      action: "created,modified"
+    - access_port_id: 16
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1640
+      action: "created,modified"
+
+  - name: "EPG_1642_VMOTION"
+    action: "created,modified"
+    static_bindings:
+    - access_port_id: 10
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1642
+      action: "created,modified"
+    - access_port_id: 12
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1642
+      action: "created,modified"
+    - access_port_id: 14
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1642
+      action: "created,modified"
+    - access_port_id: 16
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1642
+      action: "created,modified"
+    - access_port_id: 10
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1642
+      action: "created,modified"
+    - access_port_id: 12
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1642
+      action: "created,modified"
+    - access_port_id: 14
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1642
+      action: "created,modified"
+    - access_port_id: 16
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1642
+      action: "created,modified"
+
+  - name: "EPG_1643_VSAN"
+    action: "modified"
+    static_bindings:
+    - access_port_id: 10
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1643
+      action: "created,modified"
+    - access_port_id: 12
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1643
+      action: "created,modified"
+    - access_port_id: 14
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1643
+      action: "created,modified"
+    - access_port_id: 16
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1643
+      action: "created,modified"
+    - access_port_id: 10
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1643
+      action: "created,modified"
+    - access_port_id: 12
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1643
+      action: "created,modified"
+    - access_port_id: 14
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1643
+      action: "created,modified"
+    - access_port_id: 16
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1643
+      action: "created,modified"
+
+  - name: "EPG_3939_INT_MGMT"
+    action: "modified"
+    static_bindings:
+    - access_port_id: 10
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 3939
+      action: "created,modified"
+    - access_port_id: 12
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 3939
+      action: "created,modified"
+    - access_port_id: 14
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 3939
+      action: "created,modified"
+    - access_port_id: 16
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 3939
+      action: "created,modified"
+    - access_port_id: 10
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 3939
+      action: "created,modified"
+    - access_port_id: 12
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 3939
+      action: "created,modified"
+    - access_port_id: 14
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 3939
+      action: "created,modified"
+    - access_port_id: 16
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 3939
+      action: "created,modified"
+  - name: "EPG_1644_HOST_TEP"
+    action: "modified"
+    static_bindings:
+    - access_port_id: 11
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1644
+      action: "created,modified"
+    - access_port_id: 13
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1644
+      action: "created,modified"
+    - access_port_id: 15
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1644
+      action: "created,modified"
+    - access_port_id: 17
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1644
+      action: "created,modified"
+    - access_port_id: 11
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1644
+      action: "created,modified"
+    - access_port_id: 13
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1644
+      action: "created,modified"
+    - access_port_id: 15
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1644
+      action: "created,modified"
+    - access_port_id: 17
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1644
+      action: "created,modified"
+  - name: "EPG_1649_EDGE_TEP"
+    action: "modified"
+    static_bindings:
+    - access_port_id: 11
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1649
+      action: "created,modified"
+    - access_port_id: 13
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1649
+      action: "created,modified"
+    - access_port_id: 15
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1649
+      action: "created,modified"
+    - access_port_id: 17
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1101
+      right_node:
+      encap_vlan_id: 1649
+      action: "created,modified"
+    - access_port_id: 11
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1649
+      action: "created,modified"
+    - access_port_id: 13
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1649
+      action: "created,modified"
+    - access_port_id: 15
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1649
+      action: "created,modified"
+    - access_port_id: 17
+      int_pol_group: "IntPolGrp_ACCESS_1"
+      static_binding_type: "Access"
+      left_node_id: 1102
+      right_node:
+      encap_vlan_id: 1649
+      action: "created,modified"
+
+ 
+
+

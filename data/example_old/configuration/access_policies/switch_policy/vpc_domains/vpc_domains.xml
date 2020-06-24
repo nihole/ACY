@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+	<fabricInst>
+		<fabricProtPol descr="" name="default" pairT="explicit">
+			<fabricExplicitGEp id="1" name="leaf_101_102_vpcgrp" status="created,modified"> 
+				<fabricRsVpcInstPol tnVpcInstPolName="default"/>
+				<fabricNodePEp descr="" id="101" name=""/>
+				<fabricNodePEp descr="" id="102" name=""/>
+			</fabricExplicitGEp>
+		</fabricProtPol>
+ 	</fabricInst>
+</polUni>

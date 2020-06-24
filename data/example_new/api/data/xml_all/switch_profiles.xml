@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+        <infraInfra>
+                <infraNodeP name="SwProf_L1101" dn="uni/infra/nprof-SwProf_L1101" descr="description" status="created,modified">
+                        <infraLeafS name="test1_sw_selector" descr="" status="created,modified"  type="range">
+				<infraRsAccNodePGrp tDn="uni/infra/funcprof/accnodepgrp-"/>
+                                <infraNodeBlk name="1101" descr="" to_="1101"  from_="1101" status="created,modified"/>
+			</infraLeafS>
+			<infraRsAccPortP tDn="uni/infra/accportprof-IntProf_L1101"/>
+                </infraNodeP>
+                <infraNodeP name="SwProf_L1102" dn="uni/infra/nprof-SwProf_L1102" descr="description" status="created,modified">
+                        <infraLeafS name="test1_sw_selector" descr="" status="created,modified"  type="range">
+				<infraRsAccNodePGrp tDn="uni/infra/funcprof/accnodepgrp-"/>
+                                <infraNodeBlk name="1102" descr="" to_="1102"  from_="1102" status="created,modified"/>
+			</infraLeafS>
+			<infraRsAccPortP tDn="uni/infra/accportprof-IntProf_L1102"/>
+                </infraNodeP>
+   </infraInfra>
+</polUni>
+
