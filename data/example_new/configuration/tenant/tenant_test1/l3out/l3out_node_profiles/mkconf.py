@@ -20,9 +20,15 @@ render_path = 'scripts/render.py'
 
 acy_path = os.environ.get('ACY_PATH')
 
+if not acy_path:
+    print ("ACY_PATH is not set. Please execute the command export ACY_PATH='path', where path is a path to ACY folder with scripts.")
+    quit()
 
-if not re.search('/$', acy_path):
-    acy_path = acy_path + "/"
+else:
+    if not re.search('/$', acy_path):
+        acy_path = acy_path + "/"
+
+
 
 
 ######### get file's names from the command line ####################
@@ -38,9 +44,6 @@ else:
 cmd = 'python %s%s %s%s ./%s' % (acy_path, render_path, acy_path, template_path, yaml_file)
 
 returned_value = os.system(cmd)
-if returned_value=='None':
-    print ("ACY_PATH is not set. Please execute the command export ACY_PATH='path', where path is a path to ACY folder with scripts.")
-    quit()
 
 
 

@@ -20,7 +20,7 @@ env = jinja2.Environment(autoescape=True, loader=loader)
 
    ######### take data from YAML file ####################
 my_config=''
-f = open( "./%s" % yaml_file )		
+f = open( "%s" % yaml_file )		
 data1 = f.read()
 f.close()
 

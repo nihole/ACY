@@ -7,7 +7,7 @@
 # Location of j2 template file
 #
 
-template_path = 'scripts/configuration/access_policies/interface_policy/interface_profiles/template.j2'
+template_path = 'scripts/configuration/tenant/tenants/template.j2'
 
 ######### Main Body ######################
 #### Should be the same for all ACI objects #########
@@ -27,7 +27,6 @@ if not acy_path:
 else:
     if not re.search('/$', acy_path):
         acy_path = acy_path + "/"
-
 
 
 ######### get file's names from the command line ####################
