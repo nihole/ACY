@@ -1,15 +1,6 @@
-#########################################################
-#                                                       #
-#                Node provisioning                      #
-#                                                       #
-#########################################################
-
-
 # action: "ignore|created|modified|created,modified|deleted"
 # role: "leaf|spine"
 
-### Default parameters ###
-# If there is no any data in the main section then default values are used.
 
 default:
   name: ""
@@ -18,36 +9,34 @@ default:
   pod_id: 1
   role: "unspecified"
 
-### Main section ###
-
 nodes:
-- name: "L1101"
+- name: "Leaf1"
   serial_number: "TEP-1-101"
-  node_id: "1101"
+  node_id: "101"
   device_type: "N9K-C9336PX"
   pod_id: 1
   role: "leaf"
   action: "created,modified"
   description: 
-- name: "L1102"
+- name: "Leaf2"
   serial_number: "TEP-1-102"
-  node_id: "1102"
+  node_id: "102"
   device_type: "N9K-C9336PX"
   pod_id: 1
   role: "leaf"
   action: "created,modified"
   description:
-- name: "S101"
+- name: "Spine1"
   serial_number: "TEP-1-103"
-  node_id: "101"
+  node_id: "103"
   device_type: "N9K-C9508"
   pod_id: 1
   role: "spine"
   action: "created,modified"
   description:
-- name: "S102"
+- name: "Spine2"
   serial_number: "TEP-1-104"
-  node_id: "102"
+  node_id: "104"
   device_type: "N9K-C9508"
   pod_id: 1
   role: "spine"

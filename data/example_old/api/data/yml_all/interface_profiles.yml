@@ -1,52 +1,56 @@
-#########################################################
-#                                                       #
-#           Interface Profies configuration             #
-#                                                       #
-#########################################################
-
-
 # action: "ignore|created|modified|created,modified|deleted"
 
-### Default parameters ###
-# If there is no any data in the main section then default values are used.
-
 default:
-  action: "ignore"
+  action: ignore
   name: ""
   description: ""
   
-### Main section ###
-
 interface_profiles:
-- name: "IntProf_L1101"
+- name: test1_int_profile
   description:
-  action: "created,modified"
+  action: created,modified
   interface_selectors: 
-  - name: "IntSel_1101_10_17"
-    int_pol_group: "IntPolGrp_ACCESS_1"
-    int_pol_group_type: "Access"
+  - name: test1_int_selector
+    int_pol_group: test1_int_pol_group
+    int_pol_group_type: PC
     description:
-    action: "created,modified"
+    action: created,modified
     interface_ranges:
-    - name: 10_17
+    - name: 1316
       slot_id: 1
-      from_port: 10
-      to_port: 17
-      action: "created,modified"
-      description: "for xxx"
-- name: "IntProf_L1102"
+      from_port: 13
+      to_port: 16
+      action: created,modified
+      description: "for PC"
+- name: test2_int_profile
   description:
-  action: "created,modified"
+  action: created,modified
   interface_selectors:
-  - name: "IntSel_1102_10_17"
-    int_pol_group: "IntPolGrp_ACCESS_1"
-    int_pol_group_type: "Access"
+  - name: test2_int_selector
+    int_pol_group: test1_int_pol_group
+    int_pol_group_type: PC
     description:
-    action: "created,modified"
+    action: created,modified
     interface_ranges:
-    - name: 10_17
+    - name: 1316
+      slot_id: 1
+      from_port: 13
+      to_port: 16
+      action: created,modified
+      description: "for PC"
+- name: test3_int_profile
+  description:
+  action: created,modified
+  interface_selectors:
+  - name: test3_int_selector
+    int_pol_group: test2_int_pol_group
+    int_pol_group_type: vPC
+    description:
+    action: created,modified
+    interface_ranges:
+    - name: 1012
       slot_id: 1
       from_port: 10
-      to_port: 17
-      action: "created,modified"
-      description: "for xxx"
+      to_port: 12
+      action: created,modified
+      description: "for vPC"

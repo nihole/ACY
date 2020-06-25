@@ -1,13 +1,4 @@
-#########################################################
-#                                                       #
-#              Switch Policy Groups                     #
-#                                                       #
-#########################################################
-
 # action: "ignore|created|modified|created,modified|deleted"
-
-### Default parameters ###
-# If there is no any data in the main section then default values are used.
 
 default:
   name: ""
@@ -25,8 +16,6 @@ default:
   fast_link_failover_policy: ""
   dot1.x_policy: ""
   copp_pre-filter: ""
-
-### Main Section ### 
 
 sw_pol_group:
 - name: "test1_sw_pol_group"

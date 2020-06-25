@@ -1,13 +1,12 @@
 <?xml version="1.0" ?>
 <polUni>
 	<infraInfra>
-  		<fvnsVlanInstP allocMode="static" name="VLPool_Static_1" status="created,modified">
-			<fvnsEncapBlk allocMode="static" from="vlan-1640" name="" status="created,modified" to="vlan-1646"/>
-			<fvnsEncapBlk allocMode="static" from="vlan-1649" name="" status="created,modified" to="vlan-1649"/>
-			<fvnsEncapBlk allocMode="static" from="vlan-3939" name="" status="created,modified" to="vlan-3939"/>
+  		<fvnsVlanInstP allocMode="static" name="test1_vlan_pool" status="created,modified">
+			<fvnsEncapBlk allocMode="static" from="vlan-1000" name="" status="created,modified" to="vlan-1100"/>
+			<fvnsEncapBlk allocMode="static" from="vlan-1101" name="" status="created,modified" to="vlan-1200"/>
 		</fvnsVlanInstP>
-  		<fvnsVlanInstP allocMode="static" name="VLPool_L3Out_1" status="created,modified">
-			<fvnsEncapBlk allocMode="static" from="vlan-1667" name="" status="created,modified" to="vlan-1668"/>
+  		<fvnsVlanInstP allocMode="dynamic" name="ACILab_VMM-VLANs-test" status="created,modified">
+			<fvnsEncapBlk allocMode="dynamic" from="vlan-2000" name="" status="created,modified" to="vlan-2100"/>
 		</fvnsVlanInstP>
         </infraInfra>
 </polUni>

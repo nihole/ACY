@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
         <infraInfra>
-                <infraNodeP name="SwProf_L1101" dn="uni/infra/nprof-SwProf_L1101" descr="description" status="created,modified">
+                <infraNodeP name="test1_sw_profile" dn="uni/infra/nprof-test1_sw_profile" descr="description" status="created,modified">
                         <infraLeafS name="test1_sw_selector" descr="" status="created,modified"  type="range">
-				<infraRsAccNodePGrp tDn="uni/infra/funcprof/accnodepgrp-"/>
-                                <infraNodeBlk name="1101" descr="" to_="1101"  from_="1101" status="created,modified"/>
+				<infraRsAccNodePGrp tDn="uni/infra/funcprof/accnodepgrp-test1_sw_pol_group"/>
+                                <infraNodeBlk name="101101" descr="For access adn PC" to_="101"  from_="101" status="created,modified"/>
 			</infraLeafS>
-			<infraRsAccPortP tDn="uni/infra/accportprof-IntProf_L1101"/>
+			<infraRsAccPortP tDn="uni/infra/accportprof-test1_int_profile"/>
                 </infraNodeP>
-                <infraNodeP name="SwProf_L1102" dn="uni/infra/nprof-SwProf_L1102" descr="description" status="created,modified">
-                        <infraLeafS name="test1_sw_selector" descr="" status="created,modified"  type="range">
-				<infraRsAccNodePGrp tDn="uni/infra/funcprof/accnodepgrp-"/>
-                                <infraNodeBlk name="1102" descr="" to_="1102"  from_="1102" status="created,modified"/>
+                <infraNodeP name="test2_sw_profile" dn="uni/infra/nprof-test2_sw_profile" descr="description" status="created,modified">
+                        <infraLeafS name="test2_sw_selector" descr="" status="created,modified"  type="range">
+				<infraRsAccNodePGrp tDn="uni/infra/funcprof/accnodepgrp-test1_sw_pol_group"/>
+                                <infraNodeBlk name="102102" descr="For access and PC" to_="102"  from_="102" status="created,modified"/>
 			</infraLeafS>
-			<infraRsAccPortP tDn="uni/infra/accportprof-IntProf_L1102"/>
+			<infraRsAccPortP tDn="uni/infra/accportprof-test2_int_profile"/>
+                </infraNodeP>
+                <infraNodeP name="test3_sw_profile" dn="uni/infra/nprof-test3_sw_profile" descr="description" status="created,modified">
+                        <infraLeafS name="test3_sw_selector" descr="" status="created,modified"  type="range">
+				<infraRsAccNodePGrp tDn="uni/infra/funcprof/accnodepgrp-test1_sw_pol_group"/>
+                                <infraNodeBlk name="102102" descr="for vPC" to_="102"  from_="101" status="created,modified"/>
+			</infraLeafS>
+			<infraRsAccPortP tDn="uni/infra/accportprof-test3_int_profile"/>
                 </infraNodeP>
    </infraInfra>
 </polUni>

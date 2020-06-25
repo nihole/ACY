@@ -11,7 +11,7 @@ if (len(sys.argv)==3):
 else:
     print ("   ######################################################\n")
     print ("   Syntax is:\n")
-    print ("   python3 check_collection.py collection_file.yml destinatio_folder_path\n")
+    print ("   python3 copy_all.py collection_file.yml destinatio_folder_path\n")
     print ("   ######################################################\n")
     quit()
 
@@ -19,15 +19,12 @@ else:
    ######### take data from YAML file ####################
 
 my_config=''
-f = open( "./%s" % yaml_file )		
+f = open( "%s" % yaml_file )		
 data1 = f.read()
 f.close()
 
    ######### Take the data from files being pointed in "path". Only if action == "yes" ######
-   ######### Print the name of API request and path to the file ######
 
-print ("\n> These POST API requests will be used:\n")
-print ("####################################################\n")
 
 yaml_version = yaml.__version__
 m = re.match('(\d(\.\d)?)', yaml_version)
@@ -38,6 +35,7 @@ if (float(yaml_ver) < 5.1):
 else:
     yaml_data = yaml.load(data1,Loader=yaml.FullLoader)
 
+root_path =  yaml_data["default"]["root_path"]
 
 for j in yaml_data["files"]:
     action = "no"
@@ -48,8 +46,8 @@ for j in yaml_data["files"]:
         if j["action"] == "yes":
             action = "yes"
     if action == "yes":
-        print ('cp %s %s' % (j["path"], dst_folder))
-        os.system('cp /c/%s %s' % (j["path"], dst_folder))
+        print ('cp %s %s' % (root_path + j["path"], dst_folder))
+        os.system('cp %s %s' % (root_path + j["path"], dst_folder))
 
 print ("####################################################\n")
 

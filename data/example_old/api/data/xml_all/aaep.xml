@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polUni>
 	<infraInfra>
-		<infraAttEntityP name="AEP_1" descr="" status="created,modified">
-		  	<infraRsDomP tDn="uni/phys-PhyDom_1"/>
-			<infraRsDomP tDn="uni/l3dom-L3Dom_1"/>
+		<infraAttEntityP name="test1_aaep" descr="" status="created,modified">
+		  	<infraRsDomP tDn="uni/phys-test1_phys_dom"/>
+			<infraRsDomP tDn="uni/l3dom-test2_l3out_dom"/>
+		</infraAttEntityP>
+		<infraAttEntityP name="test2_aaep" descr="" status="created,modified">
+		  	<infraRsDomP tDn="uni/phys-test1_phys_dom"/>
+			<infraRsDomP tDn="uni/l3dom-test2_l3out_dom"/>
 		</infraAttEntityP>
    	</infraInfra>
 </polUni>
