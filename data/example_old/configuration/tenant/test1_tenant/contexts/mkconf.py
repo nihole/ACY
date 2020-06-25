@@ -1,32 +1,16 @@
-# The environment ACY_PATH must be defined with the export command
-# This environment should point to the location of the ACY scripts
-# For example: export ACY_PATH = '~/PUBLICGIT/ACY/'
+import os
+import sys
 
+ACY_SCRIPT_PATH = '../../../../../../scripts/'
 
-# This is only line which is different for any ACI object
-# Location of j2 template file
-#
-
-template_path = 'scripts/configuration/tenant/contexts/template.j2'
+template_path = ACY_SCRIPT_PATH + 'configuration/tenant/contexts/template.j2'
+render_path = ACY_SCRIPT_PATH + 'render.py'
 
 ######### Main Body ######################
 #### Should be the same for all ACI objects #########
 
 import os
 import sys
-import re
-
-render_path = 'scripts/render.py'
-
-acy_path = os.environ.get('ACY_PATH')
-
-if not acy_path:
-    print ("ACY_PATH is not set. Please execute the command export ACY_PATH='path', where path is a path to ACY folder with scripts.")
-    quit()
-
-else:
-    if not re.search('/$', acy_path):
-        acy_path = acy_path + "/"
 
 
 ######### get file's names from the command line ####################
@@ -39,7 +23,7 @@ else:
     print ("   ######################################################\n")
     quit()
 
-cmd = 'python %s%s %s%s ./%s' % (acy_path, render_path, acy_path, template_path, yaml_file)
+cmd = 'python %s %s %s' % (render_path, template_path, yaml_file)
 
 returned_value = os.system(cmd)
 
