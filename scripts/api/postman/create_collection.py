@@ -68,6 +68,8 @@ else:
 
    ######### Take data from YAML. Only if action == "yes"  ####################
 
+root_path = yaml_data["default"]["root_path"]
+
 for j in yaml_data["files"]:
     action = "no"
     if (not j["action"]):
@@ -77,7 +79,7 @@ for j in yaml_data["files"]:
         if j["action"] == "yes":
             action = "yes"
     if action == "yes":
-        j_str = take_data(acy_data_path + j["path"])
+        j_str = take_data(root_path + j["path"])
         j_str = j_str.replace('\"', '\\"').replace('\t','\\t').replace('\n','\\n')
         j["path"] = str(j_str)
 

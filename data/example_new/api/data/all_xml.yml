@@ -2,7 +2,7 @@ default:
   action: "yes"
   aci_path: "/api/mo/uni.xml"
   collection_name: "example_test"
-  root_path: '$ACY_DATA_PATH'
+  root_path: '../../configuration/'
   use_relative_path: 'yes'
 
 

@@ -33,30 +33,10 @@ loader = jinja2.FileSystemLoader('/tmp')
 env = jinja2.Environment(autoescape=False, loader=loader)
 
 
-   ######### take environment veriables  #################
-
-acy_path = os.environ.get('ACY_PATH')
-acy_data_path = os.environ.get('ACY_DATA_PATH')
-
-
-if not acy_path:
-    print ("ACY_PATH is not set. Please execute the command export ACY_PATH='path', where path is a path to ACY root folder with scripts.")
-    quit()
-else:
-    if not re.search('/$', acy_path):
-        acy_path = acy_path + "/"
-if not acy_data_path:
-    print ("ACY_DATA_PATH is not set. Please execute the command export ACY_DATA_PATH='path', where path is a path to ACY root folder with data.")
-    quit()
-else:
-    if not re.search('/$', acy_data_path):
-        acy_data_path = acy_data_path + "/"
-
-
    ######### take data from YAML file ####################
 
 my_config=''
-f = open( "./%s" % yaml_file )		
+f = open( "%s" % yaml_file )		
 data1 = f.read()
 f.close()
 
@@ -71,6 +51,8 @@ else:
 
    ######### Take data from YAML. Only if action == "yes"  ####################
 
+root_path = yaml_data["default"]["root_path"]
+
 for j in yaml_data["files"]:
     action = "no"
     if (not j["action"]):
@@ -80,7 +62,7 @@ for j in yaml_data["files"]:
         if j["action"] == "yes":
             action = "yes"
     if action == "yes":
-        j_str = take_data(acy_data_path + j["path"])
+        j_str = take_data(root_path + j["path"])
 #        j_str = j_str.replace('\"', '\\"').replace('\t','\\t').replace('\n','\\n')
         j["path"] = str(j_str)
     else:
