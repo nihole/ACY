@@ -9,9 +9,6 @@ render_path = ACY_SCRIPT_PATH + 'render.py'
 ######### Main Body ######################
 #### Should be the same for all ACI objects #########
 
-import os
-import sys
-
 
 ######### get file's names from the command line ####################
 if (len(sys.argv)==2):
