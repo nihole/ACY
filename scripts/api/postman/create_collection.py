@@ -32,22 +32,7 @@ env = jinja2.Environment(autoescape=False, loader=loader)
 
    ######### take environment veriables  #################
 
-acy_path = os.environ.get('ACY_PATH')
-acy_data_path = os.environ.get('ACY_DATA_PATH')
 
-
-if not acy_path:
-    print ("ACY_PATH is not set. Please execute the command export ACY_PATH='path', where path is a path to ACY root folder with scripts.")
-    quit()
-else:
-    if not re.search('/$', acy_path):
-        acy_path = acy_path + "/"
-if not acy_data_path:
-    print ("ACY_DATA_PATH is not set. Please execute the command export ACY_DATA_PATH='path', where path is a path to ACY root folder with data.")
-    quit()
-else:
-    if not re.search('/$', acy_data_path):
-        acy_data_path = acy_data_path + "/"
 
 
    ######### take data from YAML file ####################
@@ -125,7 +110,7 @@ try:
 except NameError:
   print(my_config_txt)
 else:
-  d = open(destination_file, "a")
+  d = open(destination_file, "w")
   d.write(my_config_txt)
   d.close()
 
