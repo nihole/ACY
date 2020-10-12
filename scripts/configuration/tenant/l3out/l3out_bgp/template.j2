@@ -22,9 +22,10 @@
 				{% endfor %}
 				{% for p in l.bgp_profiles %}
 				{% set action %}{%if p.action%}{{p.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+				{% set asnPropagate %}{%if p.asnPropagate%}{{p.asnPropagate}}{%else%}{{default.asnPropagate}}{%endif%}{% endset %}
 				{% if not action=="ignore" %}
 				<bgpPeerP nameAlias="" name="" descr="" annotation="" addr="{{p.peer_ip_address}}" weight="0" ttl="2" privateASctrl="" adminSt="enabled" status="{{action}}">
-					<bgpLocalAsnP nameAlias="" name="" descr="" annotation="" localAsn="{{p.local_as}}" asnPropagate="none"/>
+					<bgpLocalAsnP nameAlias="" name="" descr="" annotation="" localAsn="{{p.local_as}}" asnPropagate="{{asnPropagate}}"/>
 					<bgpAsP nameAlias="" name="" descr="" annotation="" asn="{{p.remote_as}}"/>
 				</bgpPeerP>
 				{% endif %}
@@ -37,9 +38,10 @@
 					{% if p.type=="PC" or p.type=="Access" %} 
 					<l3extRsPathL3OutAtt tDn="topology/pod-{{pod_id}}/paths-{{p.node_id}}/pathep-[eth1/{{p.interface}}]"  ifInstT="ext-svi" status="modified">
 						{%for s in p.bgp_profiles %}
+						{% set asnPropagate %}{%if s.asnPropagate%}{{s.asnPropagate}}{%else%}{{default.asnPropagate}}{%endif%}{% endset %}
 						<bgpPeerP nameAlias="" name="" descr="" addr="{{s.peer_ip_address}}" weight="0" ttl="1" privateASctrl="" peerCtrl="" ctrl="" adminSt="enabled" addrTCtrl="af-ucast">
                                             		<bgpRsPeerPfxPol annotation="" tnBgpPeerPfxPolName=""/>
-							<bgpLocalAsnP nameAlias="" name="" descr="" annotation="" localAsn="{{s.local_as}}" asnPropagate="none"/>
+							<bgpLocalAsnP nameAlias="" name="" descr="" annotation="" localAsn="{{s.local_as}}" asnPropagate="{{asnPropagate}}"/>
 							<bgpAsP nameAlias="" name="" descr="" annotation="" asn="{{s.remote_as}}"/>
 						</bgpPeerP>
 						{%endfor%}

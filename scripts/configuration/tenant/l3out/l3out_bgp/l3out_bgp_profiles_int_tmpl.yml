@@ -16,6 +16,7 @@ default:
   action: "ignore"
   description: ""
   ospf_interface_policy: ""
+  asnPropagate: "none"
   pod_id: 1
 
 ### Main section ###
