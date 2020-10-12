@@ -20,8 +20,8 @@
 					"raw": "{\"aaaUser\" : { \"attributes\": {\"name\":\"{{default.username}}\",\"pwd\":\"{{default.password}}\" } } } "
 				},
 				"url": {
-					"raw": "http://{{default.hostname}}/api/aaaLogin.json",
-					"protocol": "http",
+					"raw": "https://{{default.hostname}}/api/aaaLogin.json",
+					"protocol": "https",
 					"host": [
 						"{{default.hostname}}"
 					],
@@ -55,8 +55,8 @@
 					"raw":"{{j.path}}"
 				},
 				"url": {
-					"raw": "http://{{default.hostname}}{{aci_path}}",
-					"protocol": "http",
+					"raw": "https://{{default.hostname}}{{aci_path}}",
+					"protocol": "https",
 					"host": [
                                                 "{{default.hostname}}"
                                         ],
