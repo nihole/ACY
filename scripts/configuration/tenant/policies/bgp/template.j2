@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imdata totalCount="1">
+	{% for i in timer_policies %}
+	{% set action %}{%if i.action %}{{i.action}}{%else%}{{default.action}}{%endif%}{% endset %}
+	{% set keepalive_time %}{%if i.keepalive_time %}{{i.keepalive_time}}{%else%}{{default.keepalive_time}}{%endif%}{% endset %}
+	{% set hold_time %}{%if i.hold_time %}{{i.hold_time}}{%else%}{{default.hold_time}}{%endif%}{% endset %}
+	{% set stale_interval %}{%if i.stale_interval %}{{i.stale_interval}}{%else%}{{default.stale_interval}}{%endif%}{% endset %}
+	{% set description %}{%if i.description %}{{i.description}}{%else%}{{default.description}}{%endif%}{% endset %}
+	{% set graceful_type %}{%if i.graceful_type %}{{i.graceful_type}}{%else%}{{default.graceful_type}}{%endif%}{% endset %}
+	<bgpCtxPol annotation="" descr="{{description}}" dn="uni/tn-Tn_EIB/bgpCtxP-{{i.name}}" grCtrl="{{graceful_type}}" holdIntvl="{{hold_time}}" kaIntvl="{{keepalive_time}}" maxAsLimit="0" name="{{i.name}}" nameAlias="" staleIntvl="{{stale_interval}}"/>
+	{% endfor%}
+</imdata>
