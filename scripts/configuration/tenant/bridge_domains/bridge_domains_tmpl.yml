@@ -14,6 +14,7 @@
 # unicast_routing: "yes|no"
 # subnet_type: "private|public|shared|private,shared|public,shared"
 # bd_type: "L2|L3"
+# ep_move_detect: ""|"garp"
 
 ### Default parameters ###
 # If there is no any data in the main section then default values are used
@@ -30,6 +31,7 @@ default:
   subnet_type: "public,shared"
   monitoring_policy: ""
   igmp_snoop: "default"
+  ep_move_detect: ""
 
 ### Main Session ###
 

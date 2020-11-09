@@ -14,8 +14,9 @@
 		{% set monitoring_policy %}{%if j.monitoring_policy%}{{j.monitoring_policy}}{%else%}{{default.monitoring_policy}}{%endif%}{% endset %}
 		{% set limit_ip_learn_to_subnet %}{%if j.limit_ip_learn_to_subnet%}{{j.limit_ip_learn_to_subnet}}{%else%}{{default.limit_ip_learn_to_subnet}}{%endif%}{% endset %}
 		{% set subnet_type %}{%if j.subnet_type%}{{j.subnet_type}}{%else%}{{default.subnet_type}}{%endif%}{% endset %}
+		{% set ep_move_detect %}{%if j.ep_move_detect%}{{j.ep_move_detect}}{%else%}{{default.ep_move_detect}}{%endif%}{% endset %}
 		{% set igmp_snoop %}{%if j.igmp_snoop%}{{j.igmp_snoop}}{%else%}{{default.igmp_snoop}}{%endif%}{% endset %}
-		<fvBD unkMcastAct="{{l3_unknown_multicast}}" unkMacUcastAct="{{l2_unknown_unicast}}" unicastRoute="{{unicast_routing}}" name="{{j.name}}" multiDstPktAct="{{multi_dest_flood}}"  limitIpLearnToSubnets="{{limit_ip_learn_to_subnet}}" descr="{{description}}" arpFlood="{{arp_flood}}" status="{{action}}">
+		<fvBD unkMcastAct="{{l3_unknown_multicast}}" unkMacUcastAct="{{l2_unknown_unicast}}" unicastRoute="{{unicast_routing}}" name="{{j.name}}" multiDstPktAct="{{multi_dest_flood}}"  limitIpLearnToSubnets="{{limit_ip_learn_to_subnet}}" descr="{{description}}" arpFlood="{{arp_flood}}" epMoveDetectMode="{{ep_move_detect}}" status="{{action}}">
 			<fvRsCtx tnFvCtxName="{{j.context}}"/>
 			<fvRsIgmpsn tnIgmpSnoopPolName="{{j.igmp_snoop}}"/>
 			{% if j.legacy_bd %}
