@@ -16,6 +16,8 @@ default:
   action: "ignore"
   description: ""
   ospf_interface_policy: ""
+  bgp_policy_name:
+  password:
   pod_id: 1
 
 ### Main section ###

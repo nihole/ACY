@@ -58,7 +58,12 @@
 				</l3extLIfP>
 				{%endfor%}
 				{% endif %}
-
+				{% set bgp_policy_name %}{%if i.bgp_policy_name%}{{i.bgp_policy_name}}{%else%}{{default.bgp_policy_name}}{%endif%}{% endset %}
+				{% if bgp_policy_name %}
+				<bgpProtP nameAlias="" name="" annotation="">
+					<bgpRsBgpNodeCtxPol annotation="" tnBgpCtxPolName="{{bgp_policy_name}}"/>
+				</bgpProtP>
+				{% endif %}
 			</l3extLNodeP>
 			{%endfor%}
 		</l3extOut>

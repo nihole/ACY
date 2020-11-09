@@ -17,6 +17,8 @@ default:
   description: ""
   ospf_interface_policy: ""
   asnPropagate: "none"
+  bgp_policy_name:
+  password: 
   pod_id: 1
 
 ### Main section ###
