@@ -1,0 +1,24 @@
+#########################################################
+#                                                       #
+#                L3 Domains configuration               #
+#                                                       #
+#########################################################
+
+# action: "ignore|created|modified|deleted|created,modified"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used.
+
+default:
+  name: ""
+  action: "ignore"
+  description: ""
+
+### Main section ###
+
+phys_domain:
+  name: ""
+  type: "external_l3"
+  vlan_pool: ""
+  action: "created,modified"
+  description: ""

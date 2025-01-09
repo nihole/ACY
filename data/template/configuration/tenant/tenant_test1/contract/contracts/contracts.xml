@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+        <fvTenant name="tenant_test1">
+		<vzBrCP name="Con_EXT_MGMT" scope = "context" status="created,modified">
+			<vzSubj name="Sbj_EXT_MGMT" status="created,modified" revFltPorts="yes">
+				<vzRsSubjFiltAtt directives="" tnVzFilterName="http" action="permit"/>
+			</vzSubj>
+		</vzBrCP>
+		<vzBrCP name="Con_L3out_VRF" scope = "context" status="created,modified">
+			<vzSubj name="Sbj_L3out_VRF" status="created,modified" revFltPorts="yes">
+				<vzRsSubjFiltAtt directives="" tnVzFilterName="https" action="permit"/>
+			</vzSubj>
+		</vzBrCP>
+	</fvTenant>
+</polUni>

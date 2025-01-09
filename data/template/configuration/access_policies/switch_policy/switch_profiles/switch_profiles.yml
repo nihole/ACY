@@ -1,0 +1,36 @@
+#########################################################
+#                                                       #
+#             Switch Profiles configuration             #
+#                                                       #
+#########################################################
+
+
+# action: "ignore|created|modified|created,modified|deleted"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used
+
+default:
+  name: ""
+  description: ""
+  action: "ignore"
+  sw_pol_group: ""
+
+### Main section ###
+
+switch_profiles:
+- name: ""
+  description:
+  action: "created,modified"
+  switch_selectors:
+  - name: ""
+    interface_profile: ""
+    description:
+    action: "created,modified"
+    switch_ranges:
+    - name:
+      from_node_id: 
+      to_node_id: 
+      action: "created,modified"
+      description: ""
+

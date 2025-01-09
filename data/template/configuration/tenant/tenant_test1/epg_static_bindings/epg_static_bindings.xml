@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polUni>
+        <fvTenant name="tenant_test1">
+		<fvAp prio="unspecified" descr = "" name="APP_1">
+			<fvAEPg prio="unspecified" name="EPG_1640_EXT_MGMT" matchT="AtleastOne" >
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth10]" mode="regular" instrImedcy="immediate" encap="vlan-1640" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth12]" mode="regular" instrImedcy="immediate" encap="vlan-1640" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth14]" mode="regular" instrImedcy="immediate" encap="vlan-1640" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth16]" mode="regular" instrImedcy="immediate" encap="vlan-1640" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth10]" mode="regular" instrImedcy="immediate" encap="vlan-1640" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth12]" mode="regular" instrImedcy="immediate" encap="vlan-1640" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth14]" mode="regular" instrImedcy="immediate" encap="vlan-1640" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth16]" mode="regular" instrImedcy="immediate" encap="vlan-1640" status="created,modified"/>
+			</fvAEPg>
+			<fvAEPg prio="unspecified" name="EPG_1642_VMOTION" matchT="AtleastOne" >
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth10]" mode="regular" instrImedcy="immediate" encap="vlan-1642" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth12]" mode="regular" instrImedcy="immediate" encap="vlan-1642" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth14]" mode="regular" instrImedcy="immediate" encap="vlan-1642" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth16]" mode="regular" instrImedcy="immediate" encap="vlan-1642" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth10]" mode="regular" instrImedcy="immediate" encap="vlan-1642" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth12]" mode="regular" instrImedcy="immediate" encap="vlan-1642" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth14]" mode="regular" instrImedcy="immediate" encap="vlan-1642" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth16]" mode="regular" instrImedcy="immediate" encap="vlan-1642" status="created,modified"/>
+			</fvAEPg>
+			<fvAEPg prio="unspecified" name="EPG_1643_VSAN" matchT="AtleastOne" >
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth10]" mode="regular" instrImedcy="immediate" encap="vlan-1643" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth12]" mode="regular" instrImedcy="immediate" encap="vlan-1643" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth14]" mode="regular" instrImedcy="immediate" encap="vlan-1643" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth16]" mode="regular" instrImedcy="immediate" encap="vlan-1643" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth10]" mode="regular" instrImedcy="immediate" encap="vlan-1643" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth12]" mode="regular" instrImedcy="immediate" encap="vlan-1643" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth14]" mode="regular" instrImedcy="immediate" encap="vlan-1643" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth16]" mode="regular" instrImedcy="immediate" encap="vlan-1643" status="created,modified"/>
+			</fvAEPg>
+			<fvAEPg prio="unspecified" name="EPG_3939_INT_MGMT" matchT="AtleastOne" >
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth10]" mode="regular" instrImedcy="immediate" encap="vlan-3939" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth12]" mode="regular" instrImedcy="immediate" encap="vlan-3939" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth14]" mode="regular" instrImedcy="immediate" encap="vlan-3939" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth16]" mode="regular" instrImedcy="immediate" encap="vlan-3939" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth10]" mode="regular" instrImedcy="immediate" encap="vlan-3939" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth12]" mode="regular" instrImedcy="immediate" encap="vlan-3939" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth14]" mode="regular" instrImedcy="immediate" encap="vlan-3939" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth16]" mode="regular" instrImedcy="immediate" encap="vlan-3939" status="created,modified"/>
+			</fvAEPg>
+			<fvAEPg prio="unspecified" name="EPG_1644_HOST_TEP" matchT="AtleastOne" >
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth11]" mode="regular" instrImedcy="immediate" encap="vlan-1644" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth13]" mode="regular" instrImedcy="immediate" encap="vlan-1644" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth15]" mode="regular" instrImedcy="immediate" encap="vlan-1644" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth17]" mode="regular" instrImedcy="immediate" encap="vlan-1644" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth11]" mode="regular" instrImedcy="immediate" encap="vlan-1644" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth13]" mode="regular" instrImedcy="immediate" encap="vlan-1644" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth15]" mode="regular" instrImedcy="immediate" encap="vlan-1644" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth17]" mode="regular" instrImedcy="immediate" encap="vlan-1644" status="created,modified"/>
+			</fvAEPg>
+			<fvAEPg prio="unspecified" name="EPG_1649_EDGE_TEP" matchT="AtleastOne" >
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth11]" mode="regular" instrImedcy="immediate" encap="vlan-1649" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth13]" mode="regular" instrImedcy="immediate" encap="vlan-1649" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth15]" mode="regular" instrImedcy="immediate" encap="vlan-1649" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1101/pathep-[eth17]" mode="regular" instrImedcy="immediate" encap="vlan-1649" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth11]" mode="regular" instrImedcy="immediate" encap="vlan-1649" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth13]" mode="regular" instrImedcy="immediate" encap="vlan-1649" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth15]" mode="regular" instrImedcy="immediate" encap="vlan-1649" status="created,modified"/>
+				<fvRsPathAtt descr="" tDn="topology/pod-1/paths-1102/pathep-[eth17]" mode="regular" instrImedcy="immediate" encap="vlan-1649" status="created,modified"/>
+			</fvAEPg>
+		</fvAp>
+	</fvTenant>
+</polUni>

@@ -1,0 +1,21 @@
+# action: "ignore|created|modified|deleted|created,modified"
+
+default:
+  action: ignore
+  name: ""
+  description: ""
+  
+interface_profiles:
+- name: ""
+  action: ""
+  interface_selectors:
+  - name: ""
+    int_pol_group: ""
+    int_pol_group_type: ""
+    action: ""
+    interface_ranges: 
+    - name: ""
+      slot_id: 
+      from_port: 
+      to_port: 
+      action: ""
