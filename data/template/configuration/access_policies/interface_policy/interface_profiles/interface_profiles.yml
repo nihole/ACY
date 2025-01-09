@@ -18,35 +18,19 @@ default:
 ### Main section ###
 
 interface_profiles:
-- name: "IntProf_L1101"
+- name: ""
   description:
   action: "created,modified"
   interface_selectors: 
-  - name: "IntSel_1101_10_17"
-    int_pol_group: "IntPolGrp_ACCESS_1"
-    int_pol_group_type: "Access"
+  - name: ""
+    int_pol_group: ""
+    int_pol_group_type: ""
     description:
     action: "created,modified"
     interface_ranges:
-    - name: 10_17
-      slot_id: 1
-      from_port: 10
-      to_port: 17
+    - name: 
+      slot_id: 
+      from_port: 
+      to_port: 
       action: "created,modified"
-      description: "for xxx"
-- name: "IntProf_L1102"
-  description:
-  action: "created,modified"
-  interface_selectors:
-  - name: "IntSel_1102_10_17"
-    int_pol_group: "IntPolGrp_ACCESS_1"
-    int_pol_group_type: "Access"
-    description:
-    action: "created,modified"
-    interface_ranges:
-    - name: 10_17
-      slot_id: 1
-      from_port: 10
-      to_port: 17
-      action: "created,modified"
-      description: "for xxx"
+      description: ""
