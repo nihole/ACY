@@ -82,7 +82,7 @@ The best way to understand is by following the example.
 
  Now let's imagine that you want to make new ACI deployment.
 
-1. Clone the project
+1. Clone the project.
    ```bash
    clone https://github.com/nihole/ACY.git
 
@@ -222,6 +222,6 @@ The best way to understand is by following the example.
    
       (To avoid data leaking, you can use variables that should be defined in Postman )
    
-8. Import postman collection into postman
+8. Import postman collection into postman.
    
-9. Run collection - your ACI will be configured
+9. Run collection - your ACI will be configured.
