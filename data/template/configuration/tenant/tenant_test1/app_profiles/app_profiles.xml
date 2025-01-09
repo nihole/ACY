@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<polUni>
-	<fvTenant descr="description" name="tenant_test1">
-		<fvAp descr="description" name="APP_1" prio="unspecified" status="created,modified">
-		</fvAp>
-	</fvTenant>
-</polUni>

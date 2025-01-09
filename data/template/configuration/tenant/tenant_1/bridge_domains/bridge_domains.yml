@@ -1,0 +1,50 @@
+#########################################################
+#                                                       #
+#             Bridge Domains configuration              #
+#                                                       #
+#########################################################
+
+
+
+# action: "ignore|created|modified|created,modified|deleted"
+# l2_unknown_unicast: "flood,proxy"
+# l3_unknown_multicast: "flood,proxy"
+# multi_dest_flood: "bd-flood"
+# arp_flood: "yes|no"
+# unicast_routing: "yes|no"
+# subnet_type: "private|public|shared|private,shared|public,shared"
+# bd_type: "L2|L3"
+# ep_move_detect: ""|"garp"
+
+### Default parameters ###
+# If there is no any data in the main section then default values are used
+
+default:
+  name: ""
+  description: ""
+  action: "ignore"
+  l2_unknown_unicast: "proxy"
+  l3_unknown_multicast: "flood"
+  multi_dest_flood: "bd-flood"
+  arp_flood: "no"
+  unicast_routing: "yes"
+  subnet_type: "public,shared"
+  monitoring_policy: ""
+  igmp_snoop: "default"
+  ep_move_detect: ""
+
+### Main Session ###
+
+tenant: ""
+action: ""
+bridge_domains: 
+- name: ""
+  contex: ""
+  bd_type: ""
+  bd_gateway_ip: ""
+  l3_out: ""
+  legacy_bd: "" 
+  e_r_policy: ""
+  ep_retention_policy: ""
+  action: ""
+    
