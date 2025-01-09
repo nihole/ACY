@@ -80,9 +80,18 @@ The best way to understand is by following the example.
 
 <b><em>All the steps described here are already completed. So, you don't need to do anything—just click the links to view the configuration files. The setup for all objects in example_new has been tested on Cisco dCloud LAB.</em></b>
 
+1. Clone the project
+   ```bash
+   clone https://github.com/nihole/ACY.git
+
+2. Create new subfolder in the folder `data`. All data related to your configuration will be located in this folder. 
+   ```bash
+   cd data
+
 Let's consider, for example, that we want to create a new VLAN pool.
 
-1. Go to the correspondent folder. In this case it is <a href="https://github.com/nihole/ACY/tree/master/data/example_new/configuration/access_policies/global_policy/vlan_pools">data/example_new/configuration/access_policies/global_policy/vlan_pools </a>
+1. Go to the correspondent folder. In t
+2. his case it is <a href="https://github.com/nihole/ACY/tree/master/data/example_new/configuration/access_policies/global_policy/vlan_pools">data/example_new/configuration/access_policies/global_policy/vlan_pools </a>
 
 There are 3 files already there: <a href="https://github.com/nihole/ACY/blob/master/data/example_new/configuration/access_policies/global_policy/vlan_pools/mkconf.py">mkconf.py</a>, <a href="https://github.com/nihole/ACY/blob/master/data/example_new/configuration/access_policies/global_policy/vlan_pools/vlan_pools.xml">vlan_pools.yml</a>, and <a href="https://github.com/nihole/ACY/blob/master/data/example_new/configuration/access_policies/global_policy/vlan_pools/vlan_pools.xml">vlan_pools.xml</a>.
 

@@ -1,0 +1,134 @@
+default:
+  action: "yes"
+  aci_path: "/api/mo/uni.yml"
+  collection_name: "example_test"
+  root_path: '../../configuration/'
+
+files:
+### Access Policies ###
+
+###### Global Policies  ######
+
+- name: "vlan_pools"
+  path: "access_policies/global_policy/vlan_pools/vlan_pools.yml"
+  action: 
+- name: "phydomains"
+  path: "access_policies/global_policy/phys_domains/phydomains.yml"
+  action:
+- name: "l3outdomains"
+  path: "access_policies/global_policy/phys_domains/l3domains.yml"
+  action:
+- name: "aaep"
+  path: "access_policies/global_policy/aaep/aaep.yml"
+  action: 
+- name: "vmm_domains"
+  path: "access_policies/global_policy/vmm_domains/vmm_domains.yml"
+  action: "no"
+
+###### Interface Policies ######
+
+- name: "interface_policies"
+  path: "access_policies/interface_policy/interface_policies/interface_policies.yml"
+  action: 
+- name: "int_pol_groups"
+  path: "access_policies/interface_policy/int_pol_groups/int_pol_groups.yml"
+  action:
+- name: "interface_profiles"
+  path: "access_policies/interface_policy/interface_profiles/interface_profiles.yml"
+  action:
+- name: "fex_interface_profiles"
+  path: "access_policies/interface_policy/fex_interface_profiles/fex_interface_profiles.yml"
+  action: "no"
+- name: "node_provisioning"
+  path: "access_policies/switch_policy/node_provisioning/node_provisioning.yml"
+  action: 
+
+###### Switch Policies ######
+
+- name: "mgmt"
+  path: "access_policies/switch_policy/mgmt/mgmt.yml"
+  action: 'no'
+- name: "sw_pol_groups"
+  path: "access_policies/switch_policy/sw_pol_groups/sw_pol_groups.yml"
+  action: 
+- name: "switch_profiles"
+  path: "access_policies/switch_policy/switch_profiles/switch_profiles.yml"
+  action:
+- name: "vpc_domains"
+  path: "access_policies/switch_policy/vpc_domains/vpc_domains.yml"
+  action: 'no'
+- name: "fex_provisioning"
+  path: "access_policies/switch_policy/fex_provisioning/fex_provisioning.yml"
+  action: "no" 
+
+### Tenant Configuration ###
+
+###### Tenant ######
+
+- name: "tenant"
+  path: "tenant/tenant_test1/tenants/tenant.yml"
+  action: 'no'
+
+###### APP/EPG ######
+
+- name: "app_profiles"
+  path: "tenant/tenant_test1/app_profiles/app_profiles.yml"
+  action:
+- name:  "end_point_groups"
+  path: "tenant/tenant_test1/end_point_groups/end_point_groups.yml"
+  action:
+- name: "epg_static_bindings"
+  path: "tenant/tenant_test1/epg_static_bindings/epg_static_bindings.yml"
+  action:
+
+###### BD ######
+
+- name: "bridge_domains"
+  path: "tenant/tenant_test1/bridge_domains/bridge_domains.yml"
+  action:
+
+###### VRF ######
+
+- name: "contexts"
+  path: "tenant/tenant_test1/contexts/contexts.yml"
+  action: 
+
+###### L3OUT ######  
+
+- name: "l3outs"
+  path: "tenant/tenant_test1/l3out/l3outs/l3outs.yml"
+  action: "yes"
+- name: "l3out_node_profiles"
+  path: "tenant/tenant_test1/l3out/l3out_node_profiles/l3out_node_profiles.yml"
+  action:
+- name: "l3out_int_profiles"
+  path: "tenant/tenant_test1/l3out/l3out_int_profiles/l3out_int_profiles.yml"
+  action:
+- name: "l3out_bgp_profiles_int"
+  path: "tenant/tenant_test1/l3out/l3out_bgp/l3out_bgp_profiles_int.yml"
+  action:
+- name: "l3out_bgp_profiles_loo"
+  path: "tenant/tenant_test1/l3out/l3out_bgp/l3out_bgp_profiles_loo.yml"
+  action:
+- name: "external_epg"
+  path: "tenant/tenant_test1/l3out/external_epg/external_epg.yml"
+  action: "yes"
+
+####### Contracts #######
+
+- name: "contracts"
+  path: "tenant/tenant_test1/contract/contracts/contracts.yml"
+  action: "yes"
+- name: "filters"
+  path: "tenant/tenant_test1/contract/filters/filters.yml"
+  action: 
+- name: "epg_contracts"
+  path: "tenant/tenant_test1/contract/epg_contracts/epg_contracts.yml"
+  action:
+- name: "ext_epg_contracts"
+  path: "tenant/tenant_test1/contract/extepg_contracts/extepg_contracts.yml"
+  action:
+- name: "vrf_contracts"
+  path: "tenant/tenant_test1/contract/vrf_contracts/vrf_contracts.yml"
+  action:
+
