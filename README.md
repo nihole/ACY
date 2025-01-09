@@ -154,8 +154,8 @@ The best way to understand is by following the example.
    <a href="https://github.com/nihole/ACY/blob/master/data/example_new/configuration/access_policies/global_policy/vlan_pools/vlan_pools.xml">vlan_pools.yml</a>
    
    ...
-   
-   5. Create XML files by going to each leaf folder one by one and executing the command:
+
+5. Create XML files by going to each leaf folder one by one and executing the command:
    
       `python mkconf.py yaml_file.yml > .xml_file.xml`
    
@@ -184,7 +184,7 @@ The best way to understand is by following the example.
    
       Skip folders if you don't want to configure the related ACI object.
    
-   6. Consolidate all YAML and XML files in one location. While a hierarchical structure is convenient for configuration, having all files in one place can also be very helpful. Go to the folder `data/yourproject/api/data`. Edit files `all_yml.yml` and `all_xml.xml` files. The goal is to configure `action: no` for the objects that are will be not configured on ACI (default behavior is "yes").
+6. Consolidate all YAML and XML files in one location. While a hierarchical structure is convenient for configuration, having all files in one place can also be very helpful. Go to the folder `data/yourproject/api/data`. Edit files `all_yml.yml` and `all_xml.xml` files. The goal is to configure `action: no` for the objects that are will be not configured on ACI (default behavior is "yes").
    
       For example:
    
@@ -209,7 +209,7 @@ The best way to understand is by following the example.
    
       XML files will be copied to `xml_all` and YAML files to `yml_all` folders.
    
-   7. Create Postman collection.
+7. Create Postman collection.
    
       ```bash
       python ../postman/mkpostman.py ./all_xml.yml postman.json
@@ -222,6 +222,6 @@ The best way to understand is by following the example.
    
       (To avoid data leaking, you can use variables that should be defined in Postman )
    
-   8. Import postman collection into postman
+8. Import postman collection into postman
    
-   9. Run collection - your ACI will be configured
+9. Run collection - your ACI will be configured
