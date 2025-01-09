@@ -64,25 +64,39 @@ The procedure is simple and mainly consists of three steps:
 
 You never change the Python rendering file <a href="https://github.com/nihole/ACY/blob/master/render.py">render.py</a> and generally you don't need to change Jinja2 templates.
 
+Folder structure is important to understanding this project.
+
+In the root directory there are 2 folders: `data` and `scripts`.
+
+All ACI configuration data is always stored in the `data` folder and its nested subfolders. Any changes made as part of our configuration project should always be in the `data` folder and their subfolders. Users should never modify anything in the `scripts` folder.
+
+The `data` folder can be excluded from git synchronization (using `.gitignore`), copied to another "protected" space, or be part of a separate repository. This is your data and you need to take care of it.
+
+The `scripts` folder provides all the necessary tools and scripts. All Jinja2 templates are located here, along with all the scripts that help you create API calls. You can also find all the YAML templates that should be used for NIP creation. While there are some scripts in the `data` folder, they always call scripts located in the `scripts` folder and its nested subfolders.
+
+The best way to understand is by following the example.
+
 <h3>Example</h3>
 
-<b><em>All steps described here have already been completed. So you don't actually have to do anything, and you can just click the links and view the configuration files. The configuration of all objects in the example 1 has been tested on Cisco dCloud LAB.</em></b>
+<b><em>All the steps described here are already completed. So, you don't need to do anything—just click the links to view the configuration files. The setup for all objects in example_new has been tested on Cisco dCloud LAB.</em></b>
 
 Let's consider, for example, that we want to create a new VLAN pool.
 
-1. Go to the correspondent folder. In this case it is <a href="https://github.com/nihole/ACY/tree/master/access_policies/global_policy/aaep">access_policies/global_policy/vlan_pools</a>
+1. Go to the correspondent folder. In this case it is <a href="https://github.com/nihole/ACY/tree/master/data/example_new/configuration/access_policies/global_policy/vlan_pools">data/example_new/configuration/access_policies/global_policy/vlan_pools </a>
 
-There are 2 files already there: <a href="https://github.com/nihole/ACY/blob/master/access_policies/global_policy/aaep/template.j2">template.j2</a> and <a href="https://github.com/nihole/ACY/blob/master/access_policies/global_policy/aaep/aaep_tmpl.yml">vlan_pools_tmpl.yml</a>.
-- template.j2 - is Jinja2 template. You usually don't need to change it.
-- vlan_pools_tmpl.yml - this YAML file we are going to use for our YAML file creation (if it has not been done before)
+There are 3 files already there: <a href="https://github.com/nihole/ACY/blob/master/data/example_new/configuration/access_policies/global_policy/vlan_pools/mkconf.py">mkconf.py</a>, <a href="https://github.com/nihole/ACY/blob/master/data/example_new/configuration/access_policies/global_policy/vlan_pools/vlan_pools.xml">vlan_pools.yml</a>, and <a href="https://github.com/nihole/ACY/blob/master/data/example_new/configuration/access_policies/global_policy/vlan_pools/vlan_pools.xml">vlan_pools.xml</a>.
 
-2. Create a new folder (if it has not been done before). Actually you may use any folder, but it looks reasonable to create a new folder in the current one. Let's create a folder <a href="https://github.com/nihole/ACY/tree/master/access_policies/global_policy/aaep/example1">example1</a> 
+- vlan_pools.yml - this is YAML file that we are using for keeping configuration of VLAN pools. 
+- vlan_pools.xml - the body for API call that we will use for ACI configuration. This file is created with using of data from vlan_pools.yml file.
+- mkconf.py - python file that creates vlan_pools.xml from vlan_pools.yml file. Actually, this file calls another python script from the folder `scripts` folder: <a href="https://github.com/nihole/ACY/blob/master/scripts/render.py">render.py</a> and this script uses Jinja2 Template that is locates also in corresponding subfolder of `scripts` folder. In this case this Jinja2 template script is <a href="https://github.com/nihole/ACY/blob/master/scripts/configuration/access_policies/global_policy/vlan_pools/template.j2">template.j2</a> 
+
+1. Create a new folder (if it has not been done before). Actually you may use any folder, but it looks reasonable to create a new folder in the current one. Let's create a folder <a href="https://github.com/nihole/ACY/tree/master/access_policies/global_policy/aaep/example1">example1</a> 
 /render
 ```
 mkdir example1
 ```
 
-3. Copy file vlan_pools_tmpl.yml (if it has not been done before) to this folder and rename it:
+1. Copy file vlan_pools_tmpl.yml (if it has not been done before) to this folder and rename it:
 
 ```
 cp vlan_pools_tmpl.yml ./example1/vlan_pools.yml
