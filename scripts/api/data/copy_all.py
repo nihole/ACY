@@ -2,6 +2,7 @@ import sys
 import yaml
 import re
 import os
+import shutil
 
 
 ######### get file's names ####################
@@ -47,7 +48,8 @@ for j in yaml_data["files"]:
             action = "yes"
     if action == "yes":
         print ('cp %s %s' % (root_path + j["path"], dst_folder))
-        os.system('cp %s %s' % (root_path + j["path"], dst_folder))
+        #os.system('cp %s %s' % (root_path + j["path"], dst_folder))
+        shutil.copy(root_path + j["path"], dst_folder)
 
 print ("####################################################\n")
 
