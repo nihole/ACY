@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<polUni>
-        <l3extDomP name="L3Dom_1">
-		<infraRsVlanNs tDn="uni/infra/vlanns-VLPool_L3Out_1-static" status="created,modified"/>
-	</l3extDomP>
-</polUni>
